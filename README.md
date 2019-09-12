@@ -1,16 +1,5 @@
 **ĐỒ ÁN QUẢN LÝ NHÀ HÀNG**
 
-<<<<<<< HEAD
-# Phần mềm quản lý nhà hàng
-### Team 4
-
-
-**Mô tả dự án:**
-Phần mềm hỗ trợ các tính năng tiện ích cho người dùng trong việc quản lý nhà hàng:
-+ Đặt bàn
-+ Gọi món
-+ Thanh toán
-=======
 Các tính năng:
 
 1. ***Quản lý các món ăn đồ uống***
@@ -44,4 +33,3 @@ Các tính năng:
     + Cập nhật nhân viên
     + Hiển thị danh sách nhân viên
 7. ***Thanh toán***
->>>>>>> Update Readme.md
