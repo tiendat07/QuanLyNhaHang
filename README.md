@@ -1,9 +1,15 @@
-**PHẦN MỀM QUẢN LÝ NHÀ HÀNG**
+**ỨNG DỤNG QUẢN LÝ NHÀ HÀNG**
 
-Các tính năng:
+------------------------
+>Giới thiệu:
+------------------------
+    Hiện nay nhu cầu ăn uống ngày càng tăng cao dẫn đến sự phổ biến của các nhà hàng ngày một tăng trên các nẻo đường.
+    Do đó, ứng dụng này sẽ giúp cho việc quản lý nhà hàng một cách tiện lợi và nhanh chóng nhất.
 
+>Các tính năng của ứng dụng:
+------------------------
 1. ***Quản lý các món ăn đồ uống***
-    + Thêm món ăn/ đồ uống
+    - Thêm món ăn/ đồ uống
     + Xóa món ăn/ đồ uống
     + Cập nhật món ăn/ đồ uống
     + Hiển thị danh sách món ăn / đồ uống
