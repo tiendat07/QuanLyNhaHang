@@ -147,7 +147,7 @@
 ## **Thông tin thành viên nhóm**
 Nguyễn Đắc Thiên Ngân 
     - MSSV:  18520109
-    - SĐT:   0769757056)
+    - SĐT:   0769757056
     - Email: nguyendacthienngan@gmail.com
     
 Trần Văn Bảo
@@ -156,6 +156,6 @@ Trần Văn Bảo
      - Email: tranbao250420@gmail.com
 
 Ung Bảo Tiên 
-     - MSSV:  18520109
+     - MSSV:  18520168
      - SĐT:   0971977553 
      - Email: ungbaotien0512@gmail.com
