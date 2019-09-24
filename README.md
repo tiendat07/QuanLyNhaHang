@@ -3,7 +3,7 @@
 
 ## **Giới thiệu**  
 >Hiện nay nhu cầu ăn uống ngày càng tăng cao dẫn đến sự phổ biến của các nhà hàng ngày một tăng trên các nẻo đường.
->Do đó, ứng dụng này sẽ giúp cho các nhà hàng vừa và lớn quản lý nhà hàng một cách tiện lợi và nhanh chóng nhất. 
+>Do đó, ứng dụng này sẽ đem đến quy trình quản lý đơn giản nhanh chóng giúp các nhà hàng vừa và lớn việc quản lý nhanh chóng và tiện lợi nhất.
 
 ## **Các tính năng của ứng dụng:**
  1. ### `Quản lý các món ăn đồ uống `
@@ -139,5 +139,23 @@
 ## **Các công nghệ và ngôn ngữ sẽ sử dụng**
 - Ngôn ngữ C#
 - Winform
-- Bunifu Framework
-- Entity Framework
+- Bunifu Framework: Hỗ trợ tiện ích thiết kế giao diện người dùng
+- SQL Server
+- Entity Framework: Hỗ trợ việc quản lý giữa các đối tượng trong phần mềm với các quan hệ trong cơ sở dữ liệu
+
+
+## **Thông tin thành viên nhóm**
+Nguyễn Đắc Thiên Ngân 
+    - MSSV:  18520109
+    - SĐT:   0769757056
+    - Email: nguyendacthienngan@gmail.com
+    
+Trần Văn Bảo
+     - MSSV:  18520499
+     - SĐT:   0327954919
+     - Email: tranbao250420@gmail.com
+
+Ung Bảo Tiên 
+     - MSSV:  18520168
+     - SĐT:   0971977553 
+     - Email: ungbaotien0512@gmail.com
