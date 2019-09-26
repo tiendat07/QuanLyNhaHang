@@ -2,11 +2,13 @@
 
 
 ## **Giới thiệu**  
-  Đối với các mô hình nhà hàng vừa và lớn, việc lựa chọn phương pháp quản lý chưa bao giờ là dễ dàng. Với mong muốn mang đến sự tin tưởng và tiện ích, chúng tôi xin giới thiệu ứng dụng quản lí nhà hàng ABCXYZ. 
+   Đối với các mô hình nhà hàng vừa và lớn, việc lựa chọn phương pháp quản lý chưa bao giờ là dễ dàng. Với mong muốn mang đến sự tin tưởng và tiện ích, chúng tôi xin giới thiệu ứng dụng quản lí nhà hàng ABCXYZ. 
+  <br>
   Sở hữu giao diện thân thiện, phân quyền rõ ràng cùng với những tính năng nổi bật trong nghiệp vụ bán hàng lẫn quản lý bao gồm: bàn ăn, nhân viên, khách hàng, thanh toán,...
+  <br>
 (Ngoài ra còn cung cấp các tính năng theo dõi doanh thu, đưa ra gợi ý, chương trình khuyến mãi, trò chơi,...)
   ABC tự tin trở thành trợ thủ đắc lực trong quá trình phát triển bền vững !!
-
+<br>
 ## **Các tính năng của ứng dụng:**
  1. ### `Quản lý các món ăn đồ uống `
     + ***Thêm món ăn/ đồ uống***
