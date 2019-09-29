@@ -6,7 +6,6 @@
   <br>
   Sở hữu giao diện thân thiện, phân quyền rõ ràng cùng với những tính năng nổi bật trong nghiệp vụ bán hàng lẫn quản lý bao gồm: bàn ăn, nhân viên, khách hàng, thanh toán,...
   <br>
-(Ngoài ra còn cung cấp các tính năng theo dõi doanh thu, đưa ra gợi ý, chương trình khuyến mãi, trò chơi,...)
   ABC tự tin trở thành trợ thủ đắc lực trong quá trình phát triển bền vững !!
 <br>
 ## **Các tính năng của ứng dụng:**
