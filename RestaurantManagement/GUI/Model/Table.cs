@@ -2,14 +2,20 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Collections;
-
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 namespace Model
 {
     public class Table
     {
-        public string TableID { get; set; }
-        public int status { get; set; }
-        public static Hashtable statuses = new Hashtable()
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int TableID { get; set; }
+        [Required]
+        public string TableName { get; set; }
+        [Required]
+        public int Status { get; set; }
+        public static Hashtable Statuses = new Hashtable()
         {
             {
                 "Empty", 0
