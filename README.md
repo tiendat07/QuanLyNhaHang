@@ -162,3 +162,88 @@ Ung Bảo Tiên
      - MSSV:  18520168
      - SĐT:   0971977553 
      - Email: ungbaotien0512@gmail.com
+
+
+## **Lộ trình thực hiện phần mềm**
+
+Phân công nhiệm vụ:
+
+| Tên thành viên        | Nhiệm vụ                                                                                                            | 
+|-----------------------|--------------------------------------------------------------------------------------------------                  |
+| Nguyễn Đắc Thiên Ngân | 1. Tính năng đặt món  <br> 2. Tính năng đặt bàn trước <br>  3. Tính năng thanh toán <br> 4. Tính năng xem menu  <br>|  
+| Ung Bảo Tiên          | 1. Tính năng quản lý nhân viên <br> 2. Tính năng quản lý báo cáo thống kê                                          | 
+| Trần Văn Bảo          | 1. Tính năng đăng nhập, đăng xuất <br>  2. Tính năng quản lý khách hàng                                            |
+
+
+
+1.	***Version 1.0***:
+-	Ra mắt ngày 30/10/2019
+-	Các tính năng: <br>
+              -	Login – Logout <br>
+              -	Đặt món – Thanh toán <br>
+              -	Quản lý nhân viên <br>
+              -	Quản lý khách hang <br>
+              -	Hiển thị món ăn <br>
+-      Giai đoạn trước 2/10:
+              -      Research Bunifu Framework + Entity Framework
+              -      Tạo các model, kết nối database
+-      Giai đoạn từ ngày 2/10-30/10: <br>
+       +      Ngày 5/10/2019 <br>
+              -      Ngân trainning cho Tiên và Bảo cách dùng Entity Framework 6 để kết nối Database và Source-code <br>
+              -      Ngân trainning cho Tiên và Bảo cách truy vấn cơ sở dữ liệu trong Entity Framework <br>
+       +      Từ ngày 5 - 9/10/2019 <br>
+              -      Bắt đầu hoàn thiện giao diện được giao: <br>
+                     + Ngân: Giao diện Menu và Table <br>
+                     + Tiên: Giao diện Employee Management <br>
+                     + Bảo: Giao diện Login và Customer Management <br>
+              -      Hỗ trợ nhau trong việc sử dụng Winform và Bunifu Framework cũng như Entity Framework <br>
+       +      Ngày 9 - 12/10/2019 <br>
+                    Họp nhóm đóng góp ý kiến, sửa đổi giao diện sao cho phù hợp, tối ưu cũng như thân thiện người dùng nhất <br>
+       +      Ngày 16/10/2019 <br>
+                     Bắt đầu xử lý sự kiện các giao diện tương thích: Chuyển đổi các form, thao tác xử lý khi Click button, Scroll,.. <br>
+       +      Ngày 19/10/2019 <br>
+                     - Tiên + Bảo: Hoàn thiện các tính năng thêm, xóa, sửa <br>
+                     - Ngân: Hoàn thiện các tính năng đặt bàn, thanh toán và thêm xóa, sửa menu <br>
+       +      Ngày 23/10/2019 <br>
+                     Họp nhóm, điều chỉnh giao diện cũng như các xử lý sự kiện <br>
+       +      Ngày 26-31/10/2019 <br>
+                     Điều chỉnh, hoàn thiện và đóng gói version 1.0 <br>
+2.	***Version 1.1***
+-	Ra mắt ngày 28/11/2019
+-	Thêm các tính năng:<br>
+              -	Đặt bàn trước<br>
+              -	Báo cáo các đơn hàng<br>
+              -	Tìm kiếm nhân viên<br>
+              -	Tìm kiếm khách hang<br>
+              -	Tìm kiếm món ăn<br>
+-      Giai đoạn từ ngày 31/10-28/11: <br>
+       +      Ngày 31/10/2019 <br>
+              -      Ghi nhận các ý kiến của thầy và các bạn để hoàn thiện hơn các tính năng của version 1.0 <br>
+              -      Bắt tay vào làm version 1.1 <br>
+                     + Tiên: Thêm tính năng Report và Search trong Employee Management <br>
+                     + Bảo: Thêm tính năng Search trong Customer Management <br>
+                     + Ngân: Thêm tính năng Booking và Search trong Menu <br>
+       +      Từ ngày 6 - 9/11/2019 <br>
+                     Họp nhóm đóng góp ý kiến, fix bug,.. <br>
+       +      Từ ngày 13 - 20/11/2019 <br>
+                     - Hoàn thiện sản phẩm nhất có thể <br>
+                     - Tối ưu việc tìm kiếm sao cho nhanh nhất <br>
+       +      Từ ngày 20 - 28/11/2019 <br>
+                     Hoàn thiện sản phẩm và đóng gói 
+3.	***Version 1.2***
+-	Ra mắt ngày 26/12/2019
+-	Thêm các tính năng:<br>
+              -	Đóng góp ý kiến<br>
+              -	Báo cáo thống kê<br>
+
+-      Giai đoạn từ ngày 28/11-26/12: <br>
+       +      Ngày 28/11/2019 <br>
+              -      Ghi nhận các ý kiến của thầy và các bạn để hoàn thiện hơn các tính năng của version 1.1 <br>
+              -      Bắt tay vào làm version 1.2 <br>
+                     + Tiên: Thêm tính năng Thống kê dữ liệu <br>
+                     + Bảo: Thêm tính năng Đóng góp ý kiến <br>
+                     + Ngân: Thêm tính năng in Order <br>
+       +      Từ ngày 4 - 7/12/2019 <br>
+                     Họp nhóm đóng góp ý kiến, fix bug,.. <br>
+       +      Từ ngày 7 - 26/12/2019 <br>
+                     Hoàn thiện sản phẩm và đóng gói
