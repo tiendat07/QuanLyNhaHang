@@ -189,25 +189,25 @@ Phân công nhiệm vụ:
               -      Tạo các model, kết nối database
 -      Giai đoạn từ ngày 2/10-30/10: <br>
        +      Ngày 5/10/2019 <br>
-              -      Ngân trainning cho Tiên và Bảo cách dùng Entity Framework 6 để kết nối Database và Source-code <br>
-              -      Ngân trainning cho Tiên và Bảo cách truy vấn cơ sở dữ liệu trong Entity Framework <br>
-       +      Từ ngày 5 - 9/10/2019 <br>
-              -      Bắt đầu hoàn thiện giao diện được giao: <br>
-                     + Ngân: Giao diện Menu và Table <br>
-                     + Tiên: Giao diện Employee Management <br>
-                     + Bảo: Giao diện Login và Customer Management <br>
-              -      Hỗ trợ nhau trong việc sử dụng Winform và Bunifu Framework cũng như Entity Framework <br>
-       +      Ngày 9 - 12/10/2019 <br>
-                    Họp nhóm đóng góp ý kiến, sửa đổi giao diện sao cho phù hợp, tối ưu cũng như thân thiện người dùng nhất <br>
-       +      Ngày 16/10/2019 <br>
-                     Bắt đầu xử lý sự kiện các giao diện tương thích: Chuyển đổi các form, thao tác xử lý khi Click button, Scroll,.. <br>
-       +      Ngày 19/10/2019 <br>
-                     - Tiên + Bảo: Hoàn thiện các tính năng thêm, xóa, sửa <br>
-                     - Ngân: Hoàn thiện các tính năng đặt bàn, thanh toán và thêm xóa, sửa menu <br>
-       +      Ngày 23/10/2019 <br>
-                     Họp nhóm, điều chỉnh giao diện cũng như các xử lý sự kiện <br>
-       +      Ngày 26-31/10/2019 <br>
-                     Điều chỉnh, hoàn thiện và đóng gói version 1.0 <br>
+              -      Ngân trainning cho Tiên và Bảo cách dùng Entity Framework 6 để kết nối Database và Source-code 
+              -      Ngân trainning cho Tiên và Bảo cách truy vấn cơ sở dữ liệu trong Entity Framework 
+       +      Từ ngày 5 - 9/10/2019 
+              -      Bắt đầu hoàn thiện giao diện được giao: 
+                     + Ngân: Giao diện Menu và Table 
+                     + Tiên: Giao diện Employee Management 
+                     + Bảo: Giao diện Login và Customer Management 
+              -      Hỗ trợ nhau trong việc sử dụng Winform và Bunifu Framework cũng như Entity Framework 
+       +      Ngày 9 - 12/10/2019 
+                    Họp nhóm đóng góp ý kiến, sửa đổi giao diện sao cho phù hợp, tối ưu cũng như thân thiện người dùng nhất 
+       +      Ngày 16/10/2019 
+                     Bắt đầu xử lý sự kiện các giao diện tương thích: Chuyển đổi các form, thao tác xử lý khi Click button, Scroll,.. 
+       +      Ngày 19/10/2019 
+                     - Tiên + Bảo: Hoàn thiện các tính năng thêm, xóa, sửa 
+                     - Ngân: Hoàn thiện các tính năng đặt bàn, thanh toán và thêm xóa, sửa menu 
+       +      Ngày 23/10/2019 
+                     Họp nhóm, điều chỉnh giao diện cũng như các xử lý sự kiện 
+       +      Ngày 26-31/10/2019 
+                     Điều chỉnh, hoàn thiện và đóng gói version 1.0 
 2.	***Version 1.1***
 -	Ra mắt ngày 28/11/2019
 -	Thêm các tính năng:<br>
@@ -216,19 +216,19 @@ Phân công nhiệm vụ:
               -	Tìm kiếm nhân viên<br>
               -	Tìm kiếm khách hang<br>
               -	Tìm kiếm món ăn<br>
--      Giai đoạn từ ngày 31/10-28/11: <br>
-       +      Ngày 31/10/2019 <br>
-              -      Ghi nhận các ý kiến của thầy và các bạn để hoàn thiện hơn các tính năng của version 1.0 <br>
-              -      Bắt tay vào làm version 1.1 <br>
-                     + Tiên: Thêm tính năng Report và Search trong Employee Management <br>
-                     + Bảo: Thêm tính năng Search trong Customer Management <br>
-                     + Ngân: Thêm tính năng Booking và Search trong Menu <br>
-       +      Từ ngày 6 - 9/11/2019 <br>
-                     Họp nhóm đóng góp ý kiến, fix bug,.. <br>
-       +      Từ ngày 13 - 20/11/2019 <br>
-                     - Hoàn thiện sản phẩm nhất có thể <br>
-                     - Tối ưu việc tìm kiếm sao cho nhanh nhất <br>
-       +      Từ ngày 20 - 28/11/2019 <br>
+-      Giai đoạn từ ngày 31/10-28/11: 
+       +      Ngày 31/10/2019 
+              -      Ghi nhận các ý kiến của thầy và các bạn để hoàn thiện hơn các tính năng của version 1.0 
+              -      Bắt tay vào làm version 1.1 
+                     + Tiên: Thêm tính năng Report và Search trong Employee Management
+                     + Bảo: Thêm tính năng Search trong Customer Management 
+                     + Ngân: Thêm tính năng Booking và Search trong Menu
+       +      Từ ngày 6 - 9/11/2019 
+                     Họp nhóm đóng góp ý kiến, fix bug,.. 
+       +      Từ ngày 13 - 20/11/2019 
+                     - Hoàn thiện sản phẩm nhất có thể 
+                     - Tối ưu việc tìm kiếm sao cho nhanh nhất 
+       +      Từ ngày 20 - 28/11/2019 
                      Hoàn thiện sản phẩm và đóng gói 
 3.	***Version 1.2***
 -	Ra mắt ngày 26/12/2019
@@ -236,14 +236,14 @@ Phân công nhiệm vụ:
               -	Đóng góp ý kiến<br>
               -	Báo cáo thống kê<br>
 
--      Giai đoạn từ ngày 28/11-26/12: <br>
-       +      Ngày 28/11/2019 <br>
-              -      Ghi nhận các ý kiến của thầy và các bạn để hoàn thiện hơn các tính năng của version 1.1 <br>
-              -      Bắt tay vào làm version 1.2 <br>
-                     + Tiên: Thêm tính năng Thống kê dữ liệu <br>
-                     + Bảo: Thêm tính năng Đóng góp ý kiến <br>
-                     + Ngân: Thêm tính năng in Order <br>
-       +      Từ ngày 4 - 7/12/2019 <br>
-                     Họp nhóm đóng góp ý kiến, fix bug,.. <br>
-       +      Từ ngày 7 - 26/12/2019 <br>
+-      Giai đoạn từ ngày 28/11-26/12: 
+       +      Ngày 28/11/2019 
+              -      Ghi nhận các ý kiến của thầy và các bạn để hoàn thiện hơn các tính năng của version 1.1 
+              -      Bắt tay vào làm version 1.2 
+                     + Tiên: Thêm tính năng Thống kê dữ liệu 
+                     + Bảo: Thêm tính năng Đóng góp ý kiến 
+                     + Ngân: Thêm tính năng in Order 
+       +      Từ ngày 4 - 7/12/2019 
+                     Họp nhóm đóng góp ý kiến, fix bug,.. 
+       +      Từ ngày 7 - 26/12/2019 
                      Hoàn thiện sản phẩm và đóng gói
