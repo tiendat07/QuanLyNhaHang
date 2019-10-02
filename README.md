@@ -187,8 +187,8 @@ Phân công nhiệm vụ:
 -      Giai đoạn trước 2/10:
               -      Research Bunifu Framework + Entity Framework
               -      Tạo các model, kết nối database
--      Giai đoạn từ ngày 2/10-30/10: <br>
-       +      Ngày 5/10/2019 <br>
+-      Giai đoạn từ ngày 2/10-30/10: 
+       +      Ngày 5/10/2019 
               -      Ngân trainning cho Tiên và Bảo cách dùng Entity Framework 6 để kết nối Database và Source-code 
               -      Ngân trainning cho Tiên và Bảo cách truy vấn cơ sở dữ liệu trong Entity Framework 
        +      Từ ngày 5 - 9/10/2019 
