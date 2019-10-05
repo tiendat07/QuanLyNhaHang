@@ -6,4 +6,17 @@ QuanLyNhaHang/Model/obj/
 QuanLyNhaHang/.vs/QuanLyNhaHang/v16/.suo
 QuanLyNhaHang/Model/bin/
 QuanLyNhaHang/GUI/bin/
+<<<<<<< HEAD
 QuanLyNhaHang/New Microsoft Word Document.docx
+=======
+RestaurantManagement/GUI/BLL/obj/
+RestaurantManagement/GUI/DAL/obj/
+RestaurantManagement/GUI/GUI/obj/
+RestaurantManagement/GUI/Model/obj/
+RestaurantManagement/GUI/GUI/bin/
+RestaurantManagement/GUI/BLL/bin/
+RestaurantManagement/GUI/DAL/bin/
+RestaurantManagement/GUI/Model/bin/
+RestaurantManagement/GUI/packages/
+RestaurantManagement/GUI/.vs/
+>>>>>>> master
