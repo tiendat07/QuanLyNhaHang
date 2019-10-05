@@ -180,10 +180,52 @@ Phân công nhiệm vụ:
 -	Ra mắt ngày 30/10/2019
 -	Các tính năng: <br>
               -	Login – Logout <br>
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/home.png?raw=true "Home")
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/home%20login.png?raw=true "Login")
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/home%20logout.png?raw=true "Logout")
               -	Đặt món – Thanh toán <br>
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/order.png?raw=true "order")
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/order%20copy.png?raw=true "order copy")
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/Pay.png?raw=true "Pay")
               -	Quản lý nhân viên <br>
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/employee.png?raw=true "Employee")           
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/employee%20edit.png?raw=true "Employee edit")
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/employee%20edit%20search.png?raw=true "Employee edit search")
               -	Quản lý khách hang <br>
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/customer.png?raw=true "Customer")
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/customer%20edit.png?raw=true "Customer edit")
               -	Hiển thị món ăn <br>
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/menu%2001.png?raw=true "menu 01")
+              ![alt text]https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/menu%2001%20edit.png?raw=true( "menu 01 edit")
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/menu%2002%20order.png?raw=true "menu 02 order")
+              
+2.	***Version 1.1***
+-	Ra mắt ngày 28/11/2019
+-	Thêm các tính năng:<br>
+              -	Đặt bàn trước<br>
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/table.png?raw=true "table")
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/table%20edit.png?raw=true "table edit")
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/booking%20table.png?raw=true "booking table")
+              -	Báo cáo các đơn hàng<br>
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/report.png?raw=true "report")
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/report%20search.png?raw=true "report search")
+              -	Tìm kiếm nhân viên<br>
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/employee%20search.png?raw=true "Employee search")
+              -	Tìm kiếm khách hang<br>
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/customer%20search.png?raw=true "Customer search")
+              -	Tìm kiếm món ăn<br>
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/menu%2002%20look%20up%20controls.png?raw=true "menu 02 look up controls")
+       
+3.	***Version 1.2***
+-	Ra mắt ngày 26/12/2019
+-	Thêm các tính năng:<br>
+              -	Đóng góp ý kiến<br>
+              -	Báo cáo thống kê<br>
+
+
+## **PLAN**
+1.	***Version 1.0***:
+-	Ra mắt ngày 30/10/2019
 -      Giai đoạn trước 2/10:
               -      Research Bunifu Framework + Entity Framework
               -      Tạo các model, kết nối database
@@ -210,12 +252,6 @@ Phân công nhiệm vụ:
                      Điều chỉnh, hoàn thiện và đóng gói version 1.0 
 2.	***Version 1.1***
 -	Ra mắt ngày 28/11/2019
--	Thêm các tính năng:<br>
-              -	Đặt bàn trước<br>
-              -	Báo cáo các đơn hàng<br>
-              -	Tìm kiếm nhân viên<br>
-              -	Tìm kiếm khách hang<br>
-              -	Tìm kiếm món ăn<br>
 -      Giai đoạn từ ngày 31/10-28/11: 
        +      Ngày 31/10/2019 
               -      Ghi nhận các ý kiến của thầy và các bạn để hoàn thiện hơn các tính năng của version 1.0 
@@ -232,10 +268,6 @@ Phân công nhiệm vụ:
                      Hoàn thiện sản phẩm và đóng gói 
 3.	***Version 1.2***
 -	Ra mắt ngày 26/12/2019
--	Thêm các tính năng:<br>
-              -	Đóng góp ý kiến<br>
-              -	Báo cáo thống kê<br>
-
 -      Giai đoạn từ ngày 28/11-26/12: 
        +      Ngày 28/11/2019 
               -      Ghi nhận các ý kiến của thầy và các bạn để hoàn thiện hơn các tính năng của version 1.1 
@@ -247,4 +279,3 @@ Phân công nhiệm vụ:
                      Họp nhóm đóng góp ý kiến, fix bug,.. 
        +      Từ ngày 7 - 26/12/2019 
                      Hoàn thiện sản phẩm và đóng gói
->>>>>>> master
