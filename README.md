@@ -187,6 +187,7 @@ Phân công nhiệm vụ:
               ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/order.png?raw=true "order")
               ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/order%20copy.png?raw=true "order copy")
               ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/Pay.png?raw=true "Pay")
+              <br>
               -	Quản lý nhân viên <br>
               ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/employee.png?raw=true "Employee")           
               ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/employee%20edit.png?raw=true "Employee edit")
