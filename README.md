@@ -196,7 +196,7 @@ Phân công nhiệm vụ:
               ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/customer%20edit.png?raw=true "Customer edit")
               -	Hiển thị món ăn <br>
               ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/menu%2001.png?raw=true "menu 01")
-              ![alt text]https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/menu%2001%20edit.png?raw=true( "menu 01 edit")
+              ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/menu%2001%20edit.png?raw=true "menu 01 edit")
               ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/menu%2002%20order.png?raw=true "menu 02 order")
               
 2.	***Version 1.1***
@@ -206,6 +206,7 @@ Phân công nhiệm vụ:
               ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/table.png?raw=true "table")
               ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/table%20edit.png?raw=true "table edit")
               ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/booking%20table.png?raw=true "booking table")
+              <br>
               -	Báo cáo các đơn hàng<br>
               ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/report.png?raw=true "report")
               ![alt text](https://github.com/nguyendacthienngan/QuanLyNhaHang/blob/master/UI/Mockup-details/report%20search.png?raw=true "report search")
