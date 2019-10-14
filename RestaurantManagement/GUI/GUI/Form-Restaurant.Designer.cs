@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Restaurant));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -39,16 +40,20 @@
             this.btn_Menu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Home = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.img_Max = new Bunifu.Framework.UI.BunifuImageButton();
             this.img_Close = new Bunifu.Framework.UI.BunifuImageButton();
             this.img_Min = new Bunifu.Framework.UI.BunifuImageButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlContainer = new System.Windows.Forms.Panel();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -121,7 +126,7 @@
             this.btn_Report.IconVisible = false;
             this.btn_Report.IconZoom = 90D;
             this.btn_Report.IsTab = false;
-            this.btn_Report.Location = new System.Drawing.Point(0, 557);
+            this.btn_Report.Location = new System.Drawing.Point(0, 609);
             this.btn_Report.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btn_Report.Name = "btn_Report";
             this.btn_Report.Normalcolor = System.Drawing.Color.Transparent;
@@ -129,7 +134,7 @@
             this.btn_Report.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Report.selected = false;
             this.btn_Report.Size = new System.Drawing.Size(290, 58);
-            this.btn_Report.TabIndex = 8;
+            this.btn_Report.TabIndex = 15;
             this.btn_Report.Text = "Report";
             this.btn_Report.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Report.Textcolor = System.Drawing.Color.White;
@@ -158,7 +163,7 @@
             this.btn_Employee.IconVisible = false;
             this.btn_Employee.IconZoom = 90D;
             this.btn_Employee.IsTab = false;
-            this.btn_Employee.Location = new System.Drawing.Point(0, 499);
+            this.btn_Employee.Location = new System.Drawing.Point(0, 551);
             this.btn_Employee.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btn_Employee.Name = "btn_Employee";
             this.btn_Employee.Normalcolor = System.Drawing.Color.Transparent;
@@ -166,7 +171,7 @@
             this.btn_Employee.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Employee.selected = false;
             this.btn_Employee.Size = new System.Drawing.Size(290, 58);
-            this.btn_Employee.TabIndex = 7;
+            this.btn_Employee.TabIndex = 14;
             this.btn_Employee.Text = "Employee";
             this.btn_Employee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Employee.Textcolor = System.Drawing.Color.White;
@@ -195,7 +200,7 @@
             this.btn_Customer.IconVisible = false;
             this.btn_Customer.IconZoom = 90D;
             this.btn_Customer.IsTab = false;
-            this.btn_Customer.Location = new System.Drawing.Point(0, 441);
+            this.btn_Customer.Location = new System.Drawing.Point(0, 493);
             this.btn_Customer.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btn_Customer.Name = "btn_Customer";
             this.btn_Customer.Normalcolor = System.Drawing.Color.Transparent;
@@ -203,7 +208,7 @@
             this.btn_Customer.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Customer.selected = false;
             this.btn_Customer.Size = new System.Drawing.Size(290, 58);
-            this.btn_Customer.TabIndex = 6;
+            this.btn_Customer.TabIndex = 13;
             this.btn_Customer.Text = "Customer";
             this.btn_Customer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Customer.Textcolor = System.Drawing.Color.White;
@@ -232,7 +237,7 @@
             this.btn_Order.IconVisible = false;
             this.btn_Order.IconZoom = 90D;
             this.btn_Order.IsTab = false;
-            this.btn_Order.Location = new System.Drawing.Point(0, 383);
+            this.btn_Order.Location = new System.Drawing.Point(0, 435);
             this.btn_Order.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btn_Order.Name = "btn_Order";
             this.btn_Order.Normalcolor = System.Drawing.Color.Transparent;
@@ -240,7 +245,7 @@
             this.btn_Order.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Order.selected = false;
             this.btn_Order.Size = new System.Drawing.Size(290, 58);
-            this.btn_Order.TabIndex = 5;
+            this.btn_Order.TabIndex = 12;
             this.btn_Order.Text = "Order";
             this.btn_Order.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Order.Textcolor = System.Drawing.Color.White;
@@ -269,7 +274,7 @@
             this.btn_Table.IconVisible = false;
             this.btn_Table.IconZoom = 90D;
             this.btn_Table.IsTab = false;
-            this.btn_Table.Location = new System.Drawing.Point(0, 325);
+            this.btn_Table.Location = new System.Drawing.Point(0, 377);
             this.btn_Table.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btn_Table.Name = "btn_Table";
             this.btn_Table.Normalcolor = System.Drawing.Color.Transparent;
@@ -277,11 +282,12 @@
             this.btn_Table.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Table.selected = false;
             this.btn_Table.Size = new System.Drawing.Size(290, 58);
-            this.btn_Table.TabIndex = 4;
+            this.btn_Table.TabIndex = 11;
             this.btn_Table.Text = "Table";
             this.btn_Table.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Table.Textcolor = System.Drawing.Color.White;
             this.btn_Table.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Table.Click += new System.EventHandler(this.btn_Table_Click);
             // 
             // btn_Menu
             // 
@@ -306,7 +312,7 @@
             this.btn_Menu.IconVisible = false;
             this.btn_Menu.IconZoom = 90D;
             this.btn_Menu.IsTab = false;
-            this.btn_Menu.Location = new System.Drawing.Point(0, 267);
+            this.btn_Menu.Location = new System.Drawing.Point(0, 319);
             this.btn_Menu.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btn_Menu.Name = "btn_Menu";
             this.btn_Menu.Normalcolor = System.Drawing.Color.Transparent;
@@ -314,7 +320,7 @@
             this.btn_Menu.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Menu.selected = false;
             this.btn_Menu.Size = new System.Drawing.Size(290, 58);
-            this.btn_Menu.TabIndex = 3;
+            this.btn_Menu.TabIndex = 10;
             this.btn_Menu.Text = "Menu";
             this.btn_Menu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Menu.Textcolor = System.Drawing.Color.White;
@@ -343,7 +349,7 @@
             this.btn_Home.IconVisible = false;
             this.btn_Home.IconZoom = 90D;
             this.btn_Home.IsTab = false;
-            this.btn_Home.Location = new System.Drawing.Point(0, 198);
+            this.btn_Home.Location = new System.Drawing.Point(0, 250);
             this.btn_Home.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_Home.Name = "btn_Home";
             this.btn_Home.Normalcolor = System.Drawing.Color.Transparent;
@@ -351,7 +357,7 @@
             this.btn_Home.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Home.selected = false;
             this.btn_Home.Size = new System.Drawing.Size(290, 69);
-            this.btn_Home.TabIndex = 2;
+            this.btn_Home.TabIndex = 9;
             this.btn_Home.Text = "Home";
             this.btn_Home.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Home.Textcolor = System.Drawing.Color.White;
@@ -362,14 +368,43 @@
             this.tableLayoutPanel4.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.bunifuImageButton1, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(290, 198);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(290, 250);
             this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Controls.Add(this.label1, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.bunifuImageButton1, 0, 1);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(284, 244);
+            this.tableLayoutPanel5.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("iCiel Nabila", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(237)))), ((int)(((byte)(230)))));
+            this.label1.Location = new System.Drawing.Point(3, 187);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(278, 57);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Faragal";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // bunifuImageButton1
             // 
@@ -377,20 +412,20 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = global::GUI.Properties.Resources.restaurant_500px;
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(51, 25);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(32, 48);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(188, 148);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(220, 131);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 4;
+            this.bunifuImageButton1.TabIndex = 5;
             this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Zoom = 0;
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.pnlContainer, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(302, 5);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -461,13 +496,20 @@
             this.img_Min.Zoom = 10;
             this.img_Min.Click += new System.EventHandler(this.img_Min_Click);
             // 
-            // panel1
+            // pnlContainer
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 52);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(882, 647);
-            this.panel1.TabIndex = 1;
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(3, 52);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(882, 647);
+            this.pnlContainer.TabIndex = 1;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.tableLayoutPanel2;
+            this.bunifuDragControl1.Vertical = true;
             // 
             // Form_Restaurant
             // 
@@ -476,6 +518,7 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1194, 712);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Restaurant";
             this.ShowIcon = false;
@@ -484,6 +527,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -503,16 +548,20 @@
         private Bunifu.Framework.UI.BunifuImageButton img_Max;
         private Bunifu.Framework.UI.BunifuImageButton img_Close;
         private Bunifu.Framework.UI.BunifuImageButton img_Min;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Home;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private System.Windows.Forms.Panel pnlContainer;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Report;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Employee;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Customer;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Order;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Table;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Menu;
-        private System.Windows.Forms.Panel panel1;
-      
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Home;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        //private UCMenu ucMenu1;
+        //private ucTable1 ucTable11;
     }
 }

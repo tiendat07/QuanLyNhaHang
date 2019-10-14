@@ -11,10 +11,10 @@ using BLL;
 using Model;
 namespace GUI
 {
-    public partial class ucTable1 : UserControl
+    public partial class UCTable : UserControl
     {
         TableBLL tableBLL;
-        public ucTable1()
+        public UCTable()
         {
             tableBLL = new TableBLL();
             InitializeComponent();
@@ -22,20 +22,51 @@ namespace GUI
         }
         void LoadData()
         {
-            //dataGridView1.AutoGenerateColumns = false;
-            //List<Table> lstTable = tableBLL.GetListTable();
-            //dataGridView1.DataSource = lstTable;
+            List<Table> lstTable = tableBLL.GetListTable();
+            foreach (Table item in lstTable)
+            {
+                var btn = new Bunifu.Framework.UI.BunifuThinButton2();
+                btn.Width = 70;
+                btn.Height = 40;
+                btn.ButtonText = item.TableName;
+                btn.Font = new Font("SVN-Avo", 8f);
+                btn.IdleForecolor = Color.White;
+                btn.TextAlign = ContentAlignment.MiddleCenter;
+                btn.ActiveForecolor = Color.White;
+                btn.IdleCornerRadius = 20;
+                switch (item.Status)
+                {
+                    case 0:
+                        {
+                            btn.BackColor = Color.Transparent;
+                            btn.IdleFillColor = Color.FromArgb(247, 204, 217);
+                            btn.IdleLineColor = Color.FromArgb(247, 204, 217);
+                            btn.ActiveFillColor = Color.FromArgb(247, 204, 217);
+                            btn.ActiveLineColor = Color.FromArgb(247, 204, 217);
+                            break;
+                        }
+                    case 1:
+                        {
+                            btn.BackColor = Color.Transparent;
+                            btn.IdleFillColor = Color.FromArgb(248, 168, 60);
+                            btn.IdleLineColor = Color.FromArgb(248, 168, 60);
+                            btn.ActiveFillColor = Color.FromArgb(248, 168, 60);
+                            btn.ActiveLineColor = Color.FromArgb(248, 168, 60);
+                            break;
+                        }
+                    case 2:
+                        {
+                            btn.BackColor = Color.Transparent;
+                            btn.IdleFillColor = Color.FromArgb(228, 76, 73);
+                            btn.IdleLineColor = Color.FromArgb(228, 76, 73);
+                            btn.ActiveFillColor = Color.FromArgb(228, 76, 73);
+                            btn.ActiveLineColor = Color.FromArgb(228, 76, 73);
+                            break;
+                        }
+                }
 
-            //DataGridViewColumn column = new DataGridViewTextBoxColumn();
-            //column.DataPropertyName = "TableName";
-            //column.Name = "Tên bàn";
-            //dataGridView1.Columns.Add(column);
-
-
-            //column = new DataGridViewTextBoxColumn();
-            //column.DataPropertyName = "Status";
-            //column.Name = "Trạng thái";
-            //dataGridView1.Columns.Add(column);
+                flpTable.Controls.Add(btn);
+            }
         }
     }
 }
