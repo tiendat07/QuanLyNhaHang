@@ -20,7 +20,7 @@ namespace GUI
             InitializeComponent();
             LoadData();
         }
-        void LoadData()
+        public void LoadData()
         {
             List<Table> lstTable = tableBLL.GetListTable();
             foreach (Table item in lstTable)
@@ -33,7 +33,7 @@ namespace GUI
                 btn.IdleForecolor = Color.White;
                 btn.TextAlign = ContentAlignment.MiddleCenter;
                 btn.ActiveForecolor = Color.White;
-                btn.IdleCornerRadius = 20;
+                btn.IdleCornerRadius = 10;
                 switch (item.Status)
                 {
                     case 0:
@@ -65,8 +65,18 @@ namespace GUI
                         }
                 }
 
-                flpTable.Controls.Add(btn);
+                flpTable1.Controls.Add(btn);
             }
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_Edit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
