@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
-using Model;
+using GUI.ServiceReferenceRestaurant;
+using DataAccessLayer;
 namespace GUI
 {
     public partial class UCTable : UserControl
@@ -22,7 +23,10 @@ namespace GUI
         }
         public void LoadData()
         {
-            List<Table> lstTable = tableBLL.GetListTable();
+            CustomerServiceClient cus = new CustomerServiceClient();
+            Table[] lstTable = cus.GetListTable();
+            //List<Table> lstTable = 
+            //List<Table> lstTable = tableBLL.GetListTable();
             foreach (Table item in lstTable)
             {
                 var btn = new Bunifu.Framework.UI.BunifuThinButton2();

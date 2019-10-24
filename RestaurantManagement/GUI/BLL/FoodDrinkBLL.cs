@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAL;
-using Model;
+using DataAccessLayer;
 
 namespace BLL
 {
@@ -15,7 +14,7 @@ namespace BLL
         {
             foodDrinkDAL = new FoodDrinkDAL();
         }
-        public List <FoodDrink> GetListFoodDrink()
+        public List<FoodDrink> GetListFoodDrink()
         {
             return foodDrinkDAL.GetListFoodDrink();
         }

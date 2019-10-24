@@ -2,11 +2,10 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
+    using System.IO;
     using System.Linq;
     using Model;
-
     internal sealed class Configuration : DbMigrationsConfiguration<DAL.RestaurantContext>
     {
         public Configuration()
@@ -47,19 +46,22 @@
                 new Table { TableName = "Bàn 7", Status = 2 },
                 new Table { TableName = "Bàn 8", Status = 1 },
                 new Table { TableName = "Bàn 9", Status = 0 });
+
+            string startupPath = Path.Combine(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName);
             context.FoodDrinks.AddOrUpdate(f => f.FoodDrinkID,
                 new FoodDrink
                 {
                     FoodDrinkName = "Gà sốt mật ong",
-                    ImageURL = "https://anh.eva.vn/upload/3-2017/images/2017-09-27/canh-ga-sot-mat-ong-canh-ga-sot-mat-ong-7-1506478035-width650height492.jpg",
-                    Description = "Món ăn thơm ngon",
+                    ImageURL = string.Format(@"{0}\GUI\GUI\Resources\canhgasotmatong.jpg", startupPath),
+
+            Description = "Món ăn thơm ngon",
                     IsAvailable = true,
                     IsFood = true
                 },
                 new FoodDrink
                 {
                     FoodDrinkName = "Soda chanh đường",
-                    ImageURL = "https://www.monngon.edu.vn/wp-content/uploads/2012/10/chanh-pha-soda.jpg",
+                    ImageURL = string.Format(@"{0}\GUI\GUI\Resources\chanh-pha-soda.jpg", startupPath),
                     Description = "Giải khát cho những ngày nóng bức",
                     IsAvailable = true,
                     IsFood = false
@@ -67,7 +69,7 @@
                 new FoodDrink
                 {
                     FoodDrinkName = "Cafe đá",
-                    ImageURL = "http://coffee72.com/wp-content/uploads/2018/05/cafe-den-1-1000x668-1.jpg",
+                    ImageURL = string.Format(@"{0}\GUI\GUI\Resources\cafe-den.jpg", startupPath),
                     Description = "Giải khát cho những ngày nóng bức",
                     IsAvailable = false,
                     IsFood = false
@@ -75,7 +77,7 @@
                 new FoodDrink
                 {
                     FoodDrinkName = "Cơm chiên hải sản",
-                    ImageURL = "https://shipdoandemff.com/wp-content/uploads/2017/06/com-chien-hai-san-nha-hang-shipdoandemFF.png",
+                    ImageURL = string.Format(@"{0}\GUI\GUI\Resources\com-chien-hai-san-nha-hang.jpg", startupPath),
                     Description = "Món ăn thơm ngon",
                     IsAvailable = true,
                     IsFood = true

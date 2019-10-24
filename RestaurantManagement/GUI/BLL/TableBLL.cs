@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DAL;
-using Model;
+using DataAccessLayer;
 namespace BLL
 {
     public class TableBLL
