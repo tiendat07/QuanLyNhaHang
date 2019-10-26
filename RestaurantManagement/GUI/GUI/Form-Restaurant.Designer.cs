@@ -1,4 +1,5 @@
-﻿namespace GUI
+﻿
+namespace GUI
 {
     partial class Form_Restaurant
     {
@@ -71,11 +72,10 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1194, 712);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(796, 463);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // bunifuGradientPanel1
@@ -96,11 +96,10 @@
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(202)))), ((int)(((byte)(216)))));
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(43)))), ((int)(((byte)(100)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(165)))), ((int)(((byte)(189)))));
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(4, 5);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(3, 3);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(290, 702);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(193, 457);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
             // btn_Report
@@ -113,7 +112,7 @@
             this.btn_Report.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Report.DisabledColor = System.Drawing.Color.White;
             this.btn_Report.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Report.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Report.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Report.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_Report.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Report.Iconimage")));
             this.btn_Report.Iconimage_right = null;
@@ -126,19 +125,19 @@
             this.btn_Report.IconVisible = false;
             this.btn_Report.IconZoom = 90D;
             this.btn_Report.IsTab = false;
-            this.btn_Report.Location = new System.Drawing.Point(0, 609);
-            this.btn_Report.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
+            this.btn_Report.Location = new System.Drawing.Point(0, 392);
+            this.btn_Report.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_Report.Name = "btn_Report";
             this.btn_Report.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Report.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(156)))), ((int)(((byte)(182)))));
             this.btn_Report.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Report.selected = false;
-            this.btn_Report.Size = new System.Drawing.Size(290, 58);
+            this.btn_Report.Size = new System.Drawing.Size(193, 37);
             this.btn_Report.TabIndex = 15;
             this.btn_Report.Text = "Report";
             this.btn_Report.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Report.Textcolor = System.Drawing.Color.White;
-            this.btn_Report.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Report.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btn_Employee
             // 
@@ -150,7 +149,7 @@
             this.btn_Employee.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Employee.DisabledColor = System.Drawing.Color.White;
             this.btn_Employee.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Employee.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Employee.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Employee.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_Employee.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Employee.Iconimage")));
             this.btn_Employee.Iconimage_right = null;
@@ -163,19 +162,20 @@
             this.btn_Employee.IconVisible = false;
             this.btn_Employee.IconZoom = 90D;
             this.btn_Employee.IsTab = false;
-            this.btn_Employee.Location = new System.Drawing.Point(0, 551);
-            this.btn_Employee.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
+            this.btn_Employee.Location = new System.Drawing.Point(0, 355);
+            this.btn_Employee.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_Employee.Name = "btn_Employee";
             this.btn_Employee.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Employee.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(156)))), ((int)(((byte)(182)))));
             this.btn_Employee.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Employee.selected = false;
-            this.btn_Employee.Size = new System.Drawing.Size(290, 58);
+            this.btn_Employee.Size = new System.Drawing.Size(193, 37);
             this.btn_Employee.TabIndex = 14;
             this.btn_Employee.Text = "Employee";
             this.btn_Employee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Employee.Textcolor = System.Drawing.Color.White;
-            this.btn_Employee.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Employee.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Employee.Click += new System.EventHandler(this.btn_Employee_Click);
             // 
             // btn_Customer
             // 
@@ -187,7 +187,7 @@
             this.btn_Customer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Customer.DisabledColor = System.Drawing.Color.White;
             this.btn_Customer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Customer.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Customer.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_Customer.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Customer.Iconimage")));
             this.btn_Customer.Iconimage_right = null;
@@ -200,19 +200,19 @@
             this.btn_Customer.IconVisible = false;
             this.btn_Customer.IconZoom = 90D;
             this.btn_Customer.IsTab = false;
-            this.btn_Customer.Location = new System.Drawing.Point(0, 493);
-            this.btn_Customer.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
+            this.btn_Customer.Location = new System.Drawing.Point(0, 318);
+            this.btn_Customer.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_Customer.Name = "btn_Customer";
             this.btn_Customer.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Customer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(156)))), ((int)(((byte)(182)))));
             this.btn_Customer.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Customer.selected = false;
-            this.btn_Customer.Size = new System.Drawing.Size(290, 58);
+            this.btn_Customer.Size = new System.Drawing.Size(193, 37);
             this.btn_Customer.TabIndex = 13;
             this.btn_Customer.Text = "Customer";
             this.btn_Customer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Customer.Textcolor = System.Drawing.Color.White;
-            this.btn_Customer.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Customer.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btn_Order
             // 
@@ -224,7 +224,7 @@
             this.btn_Order.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Order.DisabledColor = System.Drawing.Color.White;
             this.btn_Order.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Order.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Order.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Order.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_Order.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Order.Iconimage")));
             this.btn_Order.Iconimage_right = null;
@@ -237,19 +237,19 @@
             this.btn_Order.IconVisible = false;
             this.btn_Order.IconZoom = 90D;
             this.btn_Order.IsTab = false;
-            this.btn_Order.Location = new System.Drawing.Point(0, 435);
-            this.btn_Order.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
+            this.btn_Order.Location = new System.Drawing.Point(0, 281);
+            this.btn_Order.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_Order.Name = "btn_Order";
             this.btn_Order.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Order.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(156)))), ((int)(((byte)(182)))));
             this.btn_Order.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Order.selected = false;
-            this.btn_Order.Size = new System.Drawing.Size(290, 58);
+            this.btn_Order.Size = new System.Drawing.Size(193, 37);
             this.btn_Order.TabIndex = 12;
             this.btn_Order.Text = "Order";
             this.btn_Order.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Order.Textcolor = System.Drawing.Color.White;
-            this.btn_Order.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Order.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btn_Table
             // 
@@ -261,7 +261,7 @@
             this.btn_Table.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Table.DisabledColor = System.Drawing.Color.White;
             this.btn_Table.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Table.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Table.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Table.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_Table.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Table.Iconimage")));
             this.btn_Table.Iconimage_right = null;
@@ -274,19 +274,19 @@
             this.btn_Table.IconVisible = false;
             this.btn_Table.IconZoom = 90D;
             this.btn_Table.IsTab = false;
-            this.btn_Table.Location = new System.Drawing.Point(0, 377);
-            this.btn_Table.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
+            this.btn_Table.Location = new System.Drawing.Point(0, 244);
+            this.btn_Table.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_Table.Name = "btn_Table";
             this.btn_Table.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Table.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(156)))), ((int)(((byte)(182)))));
             this.btn_Table.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Table.selected = false;
-            this.btn_Table.Size = new System.Drawing.Size(290, 58);
+            this.btn_Table.Size = new System.Drawing.Size(193, 37);
             this.btn_Table.TabIndex = 11;
             this.btn_Table.Text = "Table";
             this.btn_Table.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Table.Textcolor = System.Drawing.Color.White;
-            this.btn_Table.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Table.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Table.Click += new System.EventHandler(this.btn_Table_Click);
             // 
             // btn_Menu
@@ -299,7 +299,7 @@
             this.btn_Menu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Menu.DisabledColor = System.Drawing.Color.White;
             this.btn_Menu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Menu.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Menu.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_Menu.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Menu.Iconimage")));
             this.btn_Menu.Iconimage_right = null;
@@ -312,19 +312,19 @@
             this.btn_Menu.IconVisible = false;
             this.btn_Menu.IconZoom = 90D;
             this.btn_Menu.IsTab = false;
-            this.btn_Menu.Location = new System.Drawing.Point(0, 319);
-            this.btn_Menu.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
+            this.btn_Menu.Location = new System.Drawing.Point(0, 207);
+            this.btn_Menu.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_Menu.Name = "btn_Menu";
             this.btn_Menu.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Menu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(156)))), ((int)(((byte)(182)))));
             this.btn_Menu.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Menu.selected = false;
-            this.btn_Menu.Size = new System.Drawing.Size(290, 58);
+            this.btn_Menu.Size = new System.Drawing.Size(193, 37);
             this.btn_Menu.TabIndex = 10;
             this.btn_Menu.Text = "Menu";
             this.btn_Menu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Menu.Textcolor = System.Drawing.Color.White;
-            this.btn_Menu.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Menu.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btn_Home
             // 
@@ -336,7 +336,7 @@
             this.btn_Home.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Home.DisabledColor = System.Drawing.Color.White;
             this.btn_Home.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Home.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Home.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_Home.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Home.Iconimage")));
             this.btn_Home.Iconimage_right = null;
@@ -349,19 +349,19 @@
             this.btn_Home.IconVisible = false;
             this.btn_Home.IconZoom = 90D;
             this.btn_Home.IsTab = false;
-            this.btn_Home.Location = new System.Drawing.Point(0, 250);
-            this.btn_Home.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_Home.Location = new System.Drawing.Point(0, 162);
+            this.btn_Home.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Home.Name = "btn_Home";
             this.btn_Home.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Home.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(156)))), ((int)(((byte)(182)))));
             this.btn_Home.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Home.selected = false;
-            this.btn_Home.Size = new System.Drawing.Size(290, 69);
+            this.btn_Home.Size = new System.Drawing.Size(193, 45);
             this.btn_Home.TabIndex = 9;
             this.btn_Home.Text = "Home";
             this.btn_Home.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Home.Textcolor = System.Drawing.Color.White;
-            this.btn_Home.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Home.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // tableLayoutPanel4
             // 
@@ -371,10 +371,11 @@
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(290, 250);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(193, 162);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // tableLayoutPanel5
@@ -384,24 +385,26 @@
             this.tableLayoutPanel5.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.bunifuImageButton1, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(284, 244);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(189, 158);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("iCiel Nabila", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(237)))), ((int)(((byte)(230)))));
-            this.label1.Location = new System.Drawing.Point(3, 187);
+            this.label1.Location = new System.Drawing.Point(2, 120);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(278, 57);
+            this.label1.Size = new System.Drawing.Size(185, 38);
             this.label1.TabIndex = 7;
             this.label1.Text = "Faragal";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -412,9 +415,10 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = global::GUI.Properties.Resources.restaurant_500px;
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(32, 48);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(21, 30);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(220, 131);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(147, 85);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 5;
             this.bunifuImageButton1.TabStop = false;
@@ -427,13 +431,12 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.pnlContainer, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(302, 5);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(202, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(888, 702);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(591, 457);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -447,11 +450,12 @@
             this.tableLayoutPanel3.Controls.Add(this.img_Max, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.img_Close, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.img_Min, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(681, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(453, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(204, 42);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(136, 27);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // img_Max
@@ -459,9 +463,10 @@
             this.img_Max.BackColor = System.Drawing.Color.Transparent;
             this.img_Max.Image = global::GUI.Properties.Resources.screensharing_64px;
             this.img_Max.ImageActive = null;
-            this.img_Max.Location = new System.Drawing.Point(105, 3);
+            this.img_Max.Location = new System.Drawing.Point(70, 2);
+            this.img_Max.Margin = new System.Windows.Forms.Padding(2);
             this.img_Max.Name = "img_Max";
-            this.img_Max.Size = new System.Drawing.Size(42, 31);
+            this.img_Max.Size = new System.Drawing.Size(28, 20);
             this.img_Max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_Max.TabIndex = 2;
             this.img_Max.TabStop = false;
@@ -473,9 +478,10 @@
             this.img_Close.BackColor = System.Drawing.Color.Transparent;
             this.img_Close.Image = global::GUI.Properties.Resources.delete_sign_100px;
             this.img_Close.ImageActive = null;
-            this.img_Close.Location = new System.Drawing.Point(156, 3);
+            this.img_Close.Location = new System.Drawing.Point(104, 2);
+            this.img_Close.Margin = new System.Windows.Forms.Padding(2);
             this.img_Close.Name = "img_Close";
-            this.img_Close.Size = new System.Drawing.Size(42, 31);
+            this.img_Close.Size = new System.Drawing.Size(28, 20);
             this.img_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_Close.TabIndex = 1;
             this.img_Close.TabStop = false;
@@ -487,9 +493,10 @@
             this.img_Min.BackColor = System.Drawing.Color.Transparent;
             this.img_Min.Image = global::GUI.Properties.Resources.minus_math_32px;
             this.img_Min.ImageActive = null;
-            this.img_Min.Location = new System.Drawing.Point(54, 3);
+            this.img_Min.Location = new System.Drawing.Point(36, 2);
+            this.img_Min.Margin = new System.Windows.Forms.Padding(2);
             this.img_Min.Name = "img_Min";
-            this.img_Min.Size = new System.Drawing.Size(42, 31);
+            this.img_Min.Size = new System.Drawing.Size(28, 20);
             this.img_Min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_Min.TabIndex = 3;
             this.img_Min.TabStop = false;
@@ -498,10 +505,12 @@
             // 
             // pnlContainer
             // 
+            this.pnlContainer.BackColor = System.Drawing.SystemColors.Control;
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(3, 52);
+            this.pnlContainer.Location = new System.Drawing.Point(2, 33);
+            this.pnlContainer.Margin = new System.Windows.Forms.Padding(2);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(882, 647);
+            this.pnlContainer.Size = new System.Drawing.Size(587, 422);
             this.pnlContainer.TabIndex = 1;
             // 
             // bunifuDragControl1
@@ -513,13 +522,14 @@
             // 
             // Form_Restaurant
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1194, 712);
+            this.ClientSize = new System.Drawing.Size(796, 463);
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_Restaurant";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

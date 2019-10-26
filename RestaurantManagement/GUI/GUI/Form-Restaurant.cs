@@ -97,6 +97,15 @@ namespace GUI
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
+
+        private void btn_Employee_Click(object sender, EventArgs e)
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCEmployee uc = new UCEmployee();
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
     }
 
 }
