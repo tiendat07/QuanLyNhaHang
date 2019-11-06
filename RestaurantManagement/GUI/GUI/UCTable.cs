@@ -15,18 +15,19 @@ namespace GUI
     public partial class UCTable : UserControl
     {
         TableBLL tableBLL;
-        public UCTable()
+        Form_Restaurant mainform;
+        public UCTable(Form_Restaurant form1)
         {
             tableBLL = new TableBLL();
+            mainform = form1;
             InitializeComponent();
             LoadData();
         }
         public void LoadData()
         {
-            CustomerServiceClient cus = new CustomerServiceClient();
-            Table[] lstTable = cus.GetListTable();
-            //List<Table> lstTable = 
-            //List<Table> lstTable = tableBLL.GetListTable();
+            //CustomerServiceClient cus = new CustomerServiceClient();
+            //Table[] lstTable = cus.GetListTable();
+            List<Table> lstTable = tableBLL.GetListTable();
             foreach (Table item in lstTable)
             {
                 var btn = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -80,7 +81,7 @@ namespace GUI
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-
+            mainform.loadUCTableEdit();
         }
     }
 }
