@@ -76,13 +76,13 @@ namespace GUI
             column.Name = "Is Admin";
             column.Visible = false;
             dgtEmployeeEdit.Columns.Add(column);
+
+            column = new DataGridViewButtonColumn();
+            column.HeaderText = "Delete";
+            column.Name = "btn";
+            //column.UseColumnTextForButtonValue = true;
+            dgtEmployeeEdit.Columns.Add(column);
         }
-        /*
-        DataGridViewImageColumn img = new DataGridViewImageColumn();
-        Image image = Image.FromFile("Image Path");
-        img.Image = image;
-        dataGridView1.Columns.Add(img);
-        img.HeaderText = "Image";
-        img.Name = "img"; */
+        
     }
 }
