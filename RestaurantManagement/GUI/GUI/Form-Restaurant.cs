@@ -102,7 +102,16 @@ namespace GUI
         {
             _obj = this;
             pnlContainer.Controls.Clear();
-            UCEmployee uc = new UCEmployee();
+            UCEmployee uc = new UCEmployee(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+
+        public void loadUCEmployeeEdit()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCEmployeeEdit uc = new UCEmployeeEdit(this);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }

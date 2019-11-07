@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmployeeDAL.cs" />
     <Compile Include="Migrations\201909291349043_update.cs" />
     <Compile Include="Migrations\201909291349043_update.designer.cs">
       <DependentUpon>201909291349043_update.cs</DependentUpon>
@@ -64,7 +65,9 @@
     <Compile Include="TableDAL.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
