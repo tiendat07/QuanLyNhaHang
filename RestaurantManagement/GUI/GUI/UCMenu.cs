@@ -88,9 +88,6 @@ namespace GUI
         }
         public void LoadData()
         {
-            int count = 0;
-            int x = 0, y = 10, z = 0;
-            int width = 70, height = 70;
             List<FoodDrink> lstFoodDrink = foodDrinkBLL.GetListFoodDrink();
             List<FoodDrink> lstFood = new List<FoodDrink>();
             List<FoodDrink> lstDrink = new List<FoodDrink>();
