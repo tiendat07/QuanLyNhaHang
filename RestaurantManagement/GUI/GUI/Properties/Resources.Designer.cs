@@ -73,6 +73,7 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap icons8_ball_point_pen_64px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_ball_point_pen_64px_1", resourceCulture);
@@ -96,6 +97,11 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap icons8_google_web_search_64px_11 {
             get {
                 object obj = ResourceManager.GetObject("icons8_google_web_search_64px_11", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap edit_96px {
+            get {
+                object obj = ResourceManager.GetObject("edit_96px", resourceCulture);
+>>>>>>> fee0226e5feaa62eb549a0eca4e96df10a027297
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

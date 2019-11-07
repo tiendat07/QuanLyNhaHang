@@ -54,7 +54,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="EmployeeDAL.cs" />
+=======
+    <Compile Include="FoodDrinkDAL.cs" />
+>>>>>>> fee0226e5feaa62eb549a0eca4e96df10a027297
     <Compile Include="Migrations\201909291349043_update.cs" />
     <Compile Include="Migrations\201909291349043_update.designer.cs">
       <DependentUpon>201909291349043_update.cs</DependentUpon>

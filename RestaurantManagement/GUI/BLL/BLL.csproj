@@ -55,7 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="EmployeeBLL.cs" />
+=======
+    <Compile Include="FoodDrinkBLL.cs" />
+>>>>>>> fee0226e5feaa62eb549a0eca4e96df10a027297
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TableBLL.cs" />
   </ItemGroup>
@@ -64,13 +68,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{4e1d6fb6-6092-40fe-a224-3e6bc1b3cefc}</Project>
-      <Name>DAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{269a8e94-46c7-44ef-93b4-c1874f10f5be}</Project>
-      <Name>Model</Name>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{bc0babcc-e076-4b6c-abd7-78878eb6a5ad}</Project>
+      <Name>DataAccessLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

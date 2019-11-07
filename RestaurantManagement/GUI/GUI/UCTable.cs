@@ -8,20 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
-using Model;
+using GUI.ServiceReferenceRestaurant;
+using DataAccessLayer;
 namespace GUI
 {
     public partial class UCTable : UserControl
     {
         TableBLL tableBLL;
-        public UCTable()
+        Form_Restaurant mainform;
+        public UCTable(Form_Restaurant form1)
         {
             tableBLL = new TableBLL();
+            mainform = form1;
             InitializeComponent();
             LoadData();
         }
-        void LoadData()
+        public void LoadData()
         {
+            //CustomerServiceClient cus = new CustomerServiceClient();
+            //Table[] lstTable = cus.GetListTable();
             List<Table> lstTable = tableBLL.GetListTable();
             foreach (Table item in lstTable)
             {
@@ -33,7 +38,7 @@ namespace GUI
                 btn.IdleForecolor = Color.White;
                 btn.TextAlign = ContentAlignment.MiddleCenter;
                 btn.ActiveForecolor = Color.White;
-                btn.IdleCornerRadius = 20;
+                btn.IdleCornerRadius = 10;
                 switch (item.Status)
                 {
                     case 0:
@@ -65,8 +70,18 @@ namespace GUI
                         }
                 }
 
-                flpTable.Controls.Add(btn);
+                flpTable1.Controls.Add(btn);
             }
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_Edit_Click(object sender, EventArgs e)
+        {
+            mainform.loadUCTableEdit();
         }
     }
 }

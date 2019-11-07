@@ -20,3 +20,5 @@ RestaurantManagement/GUI/Model/bin/
 RestaurantManagement/GUI/packages/
 RestaurantManagement/GUI/.vs/
 >>>>>>> master
+RestaurantManagement/GUI/DataAccessLayer/bin/
+RestaurantManagement/GUI/DataAccessLayer/obj/

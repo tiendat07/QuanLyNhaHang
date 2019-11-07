@@ -93,7 +93,34 @@ namespace GUI
         {
             _obj = this;
             pnlContainer.Controls.Clear();
-            UCTable uc = new UCTable();
+            UCTable uc = new UCTable(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+
+        private void btn_Menu_Click(object sender, EventArgs e)
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCMenu uc = new UCMenu(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+
+        public void loadUCMenuEdit()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCMenu_Edit uc = new UCMenu_Edit(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+        
+        public void loadUCTableEdit()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCTable_Edit uc = new UCTable_Edit(this);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
