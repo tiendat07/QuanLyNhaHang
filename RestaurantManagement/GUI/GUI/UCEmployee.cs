@@ -73,10 +73,9 @@ namespace GUI
             column.Name = "Email";
             dataGridViewListEmployee.Columns.Add(column);
 
-            column = new DataGridViewTextBoxColumn();
+            column = new DataGridViewCheckBoxColumn();
             column.DataPropertyName = "IsAdmin";
             column.Name = "Is Admin";
-            column.Visible = false;
             dataGridViewListEmployee.Columns.Add(column);
         }
         private void dataGridViewListEmployee_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
