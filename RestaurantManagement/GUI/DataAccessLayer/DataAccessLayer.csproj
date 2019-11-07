@@ -62,6 +62,7 @@
     <Compile Include="Employee.cs">
       <DependentUpon>RestaurantManagement.tt</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeDAL.cs" />
     <Compile Include="FoodDrink.cs">
       <DependentUpon>RestaurantManagement.tt</DependentUpon>
     </Compile>

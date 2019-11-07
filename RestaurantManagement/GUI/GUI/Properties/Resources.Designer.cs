@@ -19,7 +19,7 @@ namespace GUI.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -73,7 +73,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD
+        internal static System.Drawing.Bitmap edit_96px {
+            get {
+                object obj = ResourceManager.GetObject("edit_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_ball_point_pen_64px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_ball_point_pen_64px_1", resourceCulture);
@@ -97,11 +106,6 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap icons8_google_web_search_64px_11 {
             get {
                 object obj = ResourceManager.GetObject("icons8_google_web_search_64px_11", resourceCulture);
-=======
-        internal static System.Drawing.Bitmap edit_96px {
-            get {
-                object obj = ResourceManager.GetObject("edit_96px", resourceCulture);
->>>>>>> fee0226e5feaa62eb549a0eca4e96df10a027297
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

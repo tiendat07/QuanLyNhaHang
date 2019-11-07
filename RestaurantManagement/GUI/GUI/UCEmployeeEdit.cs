@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
-using Model;
+using DataAccessLayer;
 namespace GUI
 {
     public partial class UCEmployeeEdit : UserControl
@@ -83,6 +83,5 @@ namespace GUI
             //column.UseColumnTextForButtonValue = true;
             dgtEmployeeEdit.Columns.Add(column);
         }
-        
     }
 }
