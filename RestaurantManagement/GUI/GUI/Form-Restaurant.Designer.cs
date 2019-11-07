@@ -324,12 +324,12 @@ namespace GUI
             this.btn_Menu.Text = "Menu";
             this.btn_Menu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Menu.Textcolor = System.Drawing.Color.White;
-<<<<<<< HEAD
+
             this.btn_Menu.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-=======
+
             this.btn_Menu.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click);
->>>>>>> fee0226e5feaa62eb549a0eca4e96df10a027297
+
             // 
             // btn_Home
             // 
