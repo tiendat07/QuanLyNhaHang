@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class UCEmployeeEdit
+    partial class UCCustomer2
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCEmployeeEdit));
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCCustomer2));
             this.lbEmail = new System.Windows.Forms.Label();
             this.lbBOD = new System.Windows.Forms.Label();
             this.lbAddress = new System.Windows.Forms.Label();
@@ -40,59 +39,24 @@
             this.txtPhone = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txtCMND = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txtGender = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.dgtEmployeeEdit = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lbGender = new System.Windows.Forms.Label();
             this.lbShift = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.txtName = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtShift = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.dgtEmployeeEdit = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgtEmployeeEdit)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 7;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel2.Controls.Add(this.lbEmail, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.lbBOD, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.lbAddress, 4, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lbPhone, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtEmail, 3, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txtBOD, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txtAddress, 5, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtPhone, 3, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtCMND, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtGender, 5, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lbGender, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lbShift, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lbName, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtName, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtShift, 3, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 62);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(582, 90);
-            this.tableLayoutPanel2.TabIndex = 4;
             // 
             // lbEmail
             // 
@@ -250,126 +214,6 @@
             this.txtGender.TabIndex = 5;
             this.txtGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // lbGender
-            // 
-            this.lbGender.AutoSize = true;
-            this.lbGender.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbGender.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGender.Location = new System.Drawing.Point(347, 0);
-            this.lbGender.Name = "lbGender";
-            this.lbGender.Size = new System.Drawing.Size(80, 30);
-            this.lbGender.TabIndex = 4;
-            this.lbGender.Text = "Gender";
-            this.lbGender.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbShift
-            // 
-            this.lbShift.AutoSize = true;
-            this.lbShift.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbShift.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbShift.Location = new System.Drawing.Point(175, 0);
-            this.lbShift.Name = "lbShift";
-            this.lbShift.Size = new System.Drawing.Size(80, 30);
-            this.lbShift.TabIndex = 2;
-            this.lbShift.Text = "Shift";
-            this.lbShift.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbName
-            // 
-            this.lbName.AutoSize = true;
-            this.lbName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbName.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(3, 0);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(80, 30);
-            this.lbName.TabIndex = 0;
-            this.lbName.Text = "Name";
-            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtName
-            // 
-            this.txtName.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txtName.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtName.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txtName.BorderThickness = 1;
-            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtName.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtName.isPassword = false;
-            this.txtName.Location = new System.Drawing.Point(90, 4);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(78, 22);
-            this.txtName.TabIndex = 1;
-            this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            //this.txtName.OnValueChanged += new System.EventHandler(this.txtName_OnValueChanged);
-            //tam an dong phia tren 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 30);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "CMND";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtShift
-            // 
-            this.txtShift.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txtShift.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtShift.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txtShift.BorderThickness = 1;
-            this.txtShift.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtShift.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtShift.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtShift.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtShift.isPassword = false;
-            this.txtShift.Location = new System.Drawing.Point(262, 4);
-            this.txtShift.Margin = new System.Windows.Forms.Padding(4);
-            this.txtShift.Name = "txtShift";
-            this.txtShift.Size = new System.Drawing.Size(78, 22);
-            this.txtShift.TabIndex = 18;
-            this.txtShift.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(3, 0);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(582, 59);
-            this.bunifuCustomLabel1.TabIndex = 3;
-            this.bunifuCustomLabel1.Text = "Employee Management";
-            this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuCustomLabel1.Click += new System.EventHandler(this.bunifuCustomLabel1_Click);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.dgtEmployeeEdit, 0, 4);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.93103F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.06897F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 153F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(588, 421);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -468,25 +312,180 @@
             this.dgtEmployeeEdit.Size = new System.Drawing.Size(582, 147);
             this.dgtEmployeeEdit.TabIndex = 6;
             // 
-            // UCEmployeeEdit
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.dgtEmployeeEdit, 0, 4);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.93103F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.06897F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 153F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(588, 421);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(3, 0);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(582, 59);
+            this.bunifuCustomLabel1.TabIndex = 3;
+            this.bunifuCustomLabel1.Text = "Customer Management";
+            this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 7;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel2.Controls.Add(this.lbEmail, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.lbBOD, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.lbAddress, 4, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lbPhone, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtEmail, 3, 2);
+            this.tableLayoutPanel2.Controls.Add(this.txtBOD, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.txtAddress, 5, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtPhone, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtCMND, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtGender, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lbGender, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lbShift, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lbName, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txtName, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtShift, 3, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 62);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(582, 90);
+            this.tableLayoutPanel2.TabIndex = 4;
+            // 
+            // lbGender
+            // 
+            this.lbGender.AutoSize = true;
+            this.lbGender.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbGender.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGender.Location = new System.Drawing.Point(347, 0);
+            this.lbGender.Name = "lbGender";
+            this.lbGender.Size = new System.Drawing.Size(80, 30);
+            this.lbGender.TabIndex = 4;
+            this.lbGender.Text = "Gender";
+            this.lbGender.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbShift
+            // 
+            this.lbShift.AutoSize = true;
+            this.lbShift.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbShift.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbShift.Location = new System.Drawing.Point(175, 0);
+            this.lbShift.Name = "lbShift";
+            this.lbShift.Size = new System.Drawing.Size(80, 30);
+            this.lbShift.TabIndex = 2;
+            this.lbShift.Text = "Shift";
+            this.lbShift.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbName
+            // 
+            this.lbName.AutoSize = true;
+            this.lbName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbName.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Location = new System.Drawing.Point(3, 0);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(80, 30);
+            this.lbName.TabIndex = 0;
+            this.lbName.Text = "Name";
+            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtName
+            // 
+            this.txtName.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txtName.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtName.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txtName.BorderThickness = 1;
+            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtName.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtName.isPassword = false;
+            this.txtName.Location = new System.Drawing.Point(90, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(78, 22);
+            this.txtName.TabIndex = 1;
+            this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 30);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "CMND";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtShift
+            // 
+            this.txtShift.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txtShift.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtShift.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txtShift.BorderThickness = 1;
+            this.txtShift.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtShift.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtShift.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtShift.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtShift.isPassword = false;
+            this.txtShift.Location = new System.Drawing.Point(262, 4);
+            this.txtShift.Margin = new System.Windows.Forms.Padding(4);
+            this.txtShift.Name = "txtShift";
+            this.txtShift.Size = new System.Drawing.Size(78, 22);
+            this.txtShift.TabIndex = 18;
+            this.txtShift.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // UCCustomer2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "UCEmployeeEdit";
+            this.Name = "UCCustomer2";
             this.Size = new System.Drawing.Size(588, 421);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgtEmployeeEdit)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private System.Windows.Forms.Label lbEmail;
         private System.Windows.Forms.Label lbBOD;
         private System.Windows.Forms.Label lbAddress;
@@ -497,17 +496,17 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox txtPhone;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtCMND;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtGender;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
+        private System.Windows.Forms.DataGridView dgtEmployeeEdit;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label lbGender;
         private System.Windows.Forms.Label lbShift;
         private System.Windows.Forms.Label lbName;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txtName;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtShift;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
-        private System.Windows.Forms.DataGridView dgtEmployeeEdit;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtName;
     }
 }

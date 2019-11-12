@@ -18,5 +18,10 @@ namespace DataAccessLayer
         {
             return dbContext.Employees.ToList();
         }
+        public bool CheckLogin(string U, string P)
+        {
+            var x = dbContext.Employees.Where(n => n.Username == U && n.Password == P).Select(n => n.Username);
+            return (x.Any()) ? true : false;
+        }
     }
 }

@@ -142,6 +142,23 @@ namespace GUI
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
+
+        private void btn_Customer_Click(object sender, EventArgs e)
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCCustomer uc = new UCCustomer(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+        public void loadUCCustomer2()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCCustomer2 uc = new UCCustomer2(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
     }
 
 }

@@ -83,5 +83,11 @@ namespace GUI
             //column.UseColumnTextForButtonValue = true;
             dgtEmployeeEdit.Columns.Add(column);
         }
+
+        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

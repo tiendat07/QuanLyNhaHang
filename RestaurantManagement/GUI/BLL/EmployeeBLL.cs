@@ -19,5 +19,9 @@ namespace BLL
         {
             return employeeDAL.GetListEmployee();
         }
+        public bool CheckLogin(string U, string P)
+        {
+            return employeeDAL.CheckLogin(U, P);
+        }
     }
 }
