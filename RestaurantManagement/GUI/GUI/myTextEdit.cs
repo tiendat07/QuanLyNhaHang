@@ -10,10 +10,16 @@ namespace GUI
     class myTextEdit : TextBox
     {
         public int objectID;
+        public string objectText;
         public int ObjectID
         {
             get { return objectID; }
             set { objectID = value; }
+        }
+        public string ObjectText
+        {
+            get { return objectText; }
+            set { objectText = value; }
         }
     }
 }
