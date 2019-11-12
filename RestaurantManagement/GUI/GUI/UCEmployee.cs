@@ -23,6 +23,7 @@ namespace GUI
             mainform = form;
             InitializeComponent();
             loadData();
+            dataGridViewListEmployee.ReadOnly = true;
         }
 
         public void loadData()
