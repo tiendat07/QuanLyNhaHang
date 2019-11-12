@@ -76,7 +76,7 @@ namespace GUI
                     openFileDialog.Filter = "Image files|*.bmp;*.jpg;*.gif;*.png;*.tif";
                     picturePath = openFileDialog.FileName;
                     myButtonEdit btn = sender as myButtonEdit;
-                    MessageBox.Show(" " + btn.objectID);
+                    //MessageBox.Show(" " + btn.objectID);
                     foreach (var item in lsFoodDrink_Temp)
                         if (item.FoodDrinkID == btn.objectID)
                             item.ImageURL = picturePath;
@@ -89,7 +89,7 @@ namespace GUI
         {
             myTextEdit txt = sender as myTextEdit;
             txt.objectText = txt.Text;
-            MessageBox.Show(" " + txt.objectText);
+            //MessageBox.Show(" " + txt.objectText);
             foreach (var item in lsFoodDrink_Temp)
             {
                 if (item.FoodDrinkID == txt.objectID)
@@ -100,11 +100,15 @@ namespace GUI
         {
             myTextEdit txt = sender as myTextEdit;
             txt.objectText = txt.Text;
-            MessageBox.Show(" " + txt.objectText);
+            
             foreach (var item in lsFoodDrink_Temp)
             {
                 if (item.FoodDrinkID == txt.objectID)
-                    item.Description = txt.objectText;
+                {
+                    item.Description = txt.Text;
+                    //MessageBox.Show(" " + item.Description);
+                }
+                    
             }
         }
         public void Load(List<FoodDrink> lstFood, bool isFood)
@@ -291,8 +295,8 @@ namespace GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //Form_FoodDrink f = new Form_FoodDrink();
-            //f.Show();
+            Form_AddFood f = new Form_AddFood();
+            f.Show();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
