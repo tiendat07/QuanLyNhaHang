@@ -238,6 +238,7 @@ namespace GUI
             this.btn_Customer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Customer.Textcolor = System.Drawing.Color.White;
             this.btn_Customer.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Customer.Click += new System.EventHandler(this.btn_Customer_Click);
             // 
             // btn_Order
             // 
@@ -350,7 +351,11 @@ namespace GUI
             this.btn_Menu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Menu.Textcolor = System.Drawing.Color.White;
             this.btn_Menu.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+            this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click);
+
             this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click_1);
+
             // 
             // btn_Home
             // 

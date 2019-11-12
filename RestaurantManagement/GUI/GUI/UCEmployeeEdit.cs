@@ -292,6 +292,13 @@ namespace GUI
             dgtEmployeeEdit.ReadOnly = false;
             dgtEmployeeEdit.BeginEdit(true);
         }
-        
+
+
+        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

@@ -131,6 +131,11 @@ namespace GUI
         {
             mainform.loadUCEmployeeEdit();
         }
+
+        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
         /*
 int pageNumber = 1;
 int numberRecord = 10;
