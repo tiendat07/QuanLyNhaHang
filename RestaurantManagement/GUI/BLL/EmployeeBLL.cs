@@ -19,5 +19,10 @@ namespace BLL
         {
             return employeeDAL.GetListEmployee();
         }
+
+        public bool AddEmployee(Employee e)
+        {
+            return employeeDAL.AddEmployee(e);
+        }
     }
 }
