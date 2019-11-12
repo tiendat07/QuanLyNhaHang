@@ -123,16 +123,16 @@
 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.28502F));
-            this.tableLayoutPanel4.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(828, 48);
-            this.tableLayoutPanel4.TabIndex = 5;
+            //this.tableLayoutPanel4.ColumnCount = 1;
+            //this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.28502F));
+            //this.tableLayoutPanel4.Controls.Add(this.label2, 0, 0);
+            //this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            //this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            //this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            //this.tableLayoutPanel4.RowCount = 1;
+            //this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            //this.tableLayoutPanel4.Size = new System.Drawing.Size(828, 48);
+            //this.tableLayoutPanel4.TabIndex = 5;
             // 
             // btnEditFood
             // 
@@ -147,7 +147,7 @@
             this.btnEditFood.TabIndex = 0;
             this.btnEditFood.TabStop = false;
             this.btnEditFood.Zoom = 10;
-            this.btnEditFood.Click += new System.EventHandler(this.btnEditFood_Click);
+            //this.btnEditFood.Click += new System.EventHandler(this.btnEditFood_Click);
             // 
             // label2
             // 

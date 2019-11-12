@@ -39,7 +39,7 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnEdit = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnEdit = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnAdd = new Bunifu.Framework.UI.BunifuImageButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -193,18 +193,15 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.Transparent;
             this.btnEdit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEdit.Image = global::GUI.Properties.Resources.edit_96px;
-            this.btnEdit.ImageActive = null;
-            this.btnEdit.Location = new System.Drawing.Point(1127, 0);
+            this.btnEdit.Location = new System.Drawing.Point(1128, 0);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(77, 72);
-            this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEdit.Size = new System.Drawing.Size(76, 72);
+            this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnEdit.TabIndex = 9;
             this.btnEdit.TabStop = false;
-            this.btnEdit.Zoom = 10;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel4
             // 
@@ -271,9 +268,9 @@
             // 
             this.btnCancel.ActiveBorderThickness = 1;
             this.btnCancel.ActiveCornerRadius = 20;
-            this.btnCancel.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(237)))), ((int)(((byte)(230)))));
-            this.btnCancel.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(205)))));
-            this.btnCancel.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(237)))), ((int)(((byte)(230)))));
+            this.btnCancel.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnCancel.ActiveForecolor = System.Drawing.Color.White;
+            this.btnCancel.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
             this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
             this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
             this.btnCancel.ButtonText = "Cancel";
@@ -292,15 +289,15 @@
             this.btnCancel.Size = new System.Drawing.Size(185, 80);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
             this.btnSave.ActiveBorderThickness = 1;
             this.btnSave.ActiveCornerRadius = 20;
-            this.btnSave.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(237)))), ((int)(((byte)(230)))));
-            this.btnSave.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(205)))));
-            this.btnSave.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(237)))), ((int)(((byte)(230)))));
+            this.btnSave.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnSave.ActiveForecolor = System.Drawing.Color.White;
+            this.btnSave.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
             this.btnSave.BackColor = System.Drawing.SystemColors.Control;
             this.btnSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSave.BackgroundImage")));
             this.btnSave.ButtonText = "Save";
@@ -363,8 +360,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private Bunifu.Framework.UI.BunifuThinButton2 btnCancel;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSave;
-        private Bunifu.Framework.UI.BunifuImageButton btnEdit;
         private System.Windows.Forms.Panel panel4;
         private Bunifu.Framework.UI.BunifuImageButton btnAdd;
+        private System.Windows.Forms.PictureBox btnEdit;
     }
 }
