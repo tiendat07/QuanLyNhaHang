@@ -27,6 +27,11 @@ namespace GUI
         }
         public Form_Restaurant()
         {
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+            // int width = SystemInformation.VirtualScreen.Width;
+            //int height = SystemInformation.VirtualScreen.Height;
+            //this.Size = new Size(width, height);
             InitializeComponent();
             this.SetStyle(ControlStyles.ResizeRedraw, true);
         }
@@ -63,6 +68,7 @@ namespace GUI
 
         private void img_Max_Click_1(object sender, EventArgs e)
         {
+            // Nhưng Normal là như thế nào?
             if (WindowState == FormWindowState.Normal)
             {
                 WindowState = FormWindowState.Maximized;
@@ -89,24 +95,6 @@ namespace GUI
             get { return pnlContainer; }
             set { pnlContainer = value; }
         }
-        private void btn_Table_Click(object sender, EventArgs e)
-        {
-            _obj = this;
-            pnlContainer.Controls.Clear();
-            UCTable uc = new UCTable(this);
-            uc.Dock = DockStyle.Fill;
-            pnlContainer.Controls.Add(uc);
-        }
-
-        private void btn_Menu_Click(object sender, EventArgs e)
-        {
-            _obj = this;
-            pnlContainer.Controls.Clear();
-            UCMenu uc = new UCMenu(this);
-            uc.Dock = DockStyle.Fill;
-            pnlContainer.Controls.Add(uc);
-        }
-
         public void loadUCMenuEdit()
         {
             _obj = this;
@@ -124,21 +112,40 @@ namespace GUI
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
-
-        private void btn_Employee_Click(object sender, EventArgs e)
-        {
-            _obj = this;
-            pnlContainer.Controls.Clear();
-            UCEmployee uc = new UCEmployee(this);
-            uc.Dock = DockStyle.Fill;
-            pnlContainer.Controls.Add(uc);
-        }
+        
 
         public void loadUCEmployeeEdit()
         {
             _obj = this;
             pnlContainer.Controls.Clear();
             UCEmployeeEdit uc = new UCEmployeeEdit(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+
+        private void btn_Menu_Click_1(object sender, EventArgs e)
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCMenu uc = new UCMenu(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+
+        private void btn_Table_Click_1(object sender, EventArgs e)
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCTable uc = new UCTable(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+
+        private void btn_Employee_Click_1(object sender, EventArgs e)
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCEmployee uc = new UCEmployee(this);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
