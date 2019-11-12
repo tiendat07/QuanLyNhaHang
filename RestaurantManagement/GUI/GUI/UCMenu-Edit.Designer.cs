@@ -39,24 +39,24 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEdit = new Bunifu.Framework.UI.BunifuImageButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnAdd = new Bunifu.Framework.UI.BunifuImageButton();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnAdd = new Bunifu.Framework.UI.BunifuImageButton();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnEdit = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnCancel = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnSave = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -191,6 +191,44 @@
             this.panel1.Size = new System.Drawing.Size(1370, 72);
             this.panel1.TabIndex = 7;
             // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.Transparent;
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnEdit.Image = global::GUI.Properties.Resources.edit_96px;
+            this.btnEdit.ImageActive = null;
+            this.btnEdit.Location = new System.Drawing.Point(1127, 0);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(77, 72);
+            this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEdit.TabIndex = 9;
+            this.btnEdit.TabStop = false;
+            this.btnEdit.Zoom = 10;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(1204, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(33, 72);
+            this.panel4.TabIndex = 8;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAdd.Image = global::GUI.Properties.Resources.add_64px;
+            this.btnAdd.ImageActive = null;
+            this.btnAdd.Location = new System.Drawing.Point(1237, 0);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(133, 72);
+            this.btnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAdd.TabIndex = 7;
+            this.btnAdd.TabStop = false;
+            this.btnAdd.Zoom = 10;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -219,8 +257,8 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.16279F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.60465F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.15988F));
-            this.tableLayoutPanel6.Controls.Add(this.bunifuThinButton23, 2, 0);
-            this.tableLayoutPanel6.Controls.Add(this.bunifuThinButton22, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.btnCancel, 2, 0);
+            this.tableLayoutPanel6.Controls.Add(this.btnSave, 1, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -229,94 +267,59 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(1376, 98);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
-            // bunifuThinButton23
+            // btnCancel
             // 
-            this.bunifuThinButton23.ActiveBorderThickness = 1;
-            this.bunifuThinButton23.ActiveCornerRadius = 20;
-            this.bunifuThinButton23.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.bunifuThinButton23.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
-            this.bunifuThinButton23.ButtonText = "Cancel";
-            this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton23.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bunifuThinButton23.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton23.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.IdleBorderThickness = 1;
-            this.bunifuThinButton23.IdleCornerRadius = 20;
-            this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.bunifuThinButton23.Location = new System.Drawing.Point(968, 9);
-            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.bunifuThinButton23.Name = "bunifuThinButton23";
-            this.bunifuThinButton23.Size = new System.Drawing.Size(185, 80);
-            this.bunifuThinButton23.TabIndex = 5;
-            this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCancel.ActiveBorderThickness = 1;
+            this.btnCancel.ActiveCornerRadius = 20;
+            this.btnCancel.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(237)))), ((int)(((byte)(230)))));
+            this.btnCancel.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(205)))));
+            this.btnCancel.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(237)))), ((int)(((byte)(230)))));
+            this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
+            this.btnCancel.ButtonText = "Cancel";
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCancel.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnCancel.IdleBorderThickness = 1;
+            this.btnCancel.IdleCornerRadius = 20;
+            this.btnCancel.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnCancel.IdleForecolor = System.Drawing.Color.White;
+            this.btnCancel.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnCancel.Location = new System.Drawing.Point(968, 9);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(185, 80);
+            this.btnCancel.TabIndex = 5;
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
             // 
-            // bunifuThinButton22
+            // btnSave
             // 
-            this.bunifuThinButton22.ActiveBorderThickness = 1;
-            this.bunifuThinButton22.ActiveCornerRadius = 20;
-            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.bunifuThinButton22.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
-            this.bunifuThinButton22.ButtonText = "Save";
-            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton22.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bunifuThinButton22.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton22.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.IdleBorderThickness = 1;
-            this.bunifuThinButton22.IdleCornerRadius = 20;
-            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.bunifuThinButton22.Location = new System.Drawing.Point(712, 9);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(184, 80);
-            this.bunifuThinButton22.TabIndex = 4;
-            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAdd.Image = global::GUI.Properties.Resources.add_64px;
-            this.btnAdd.ImageActive = null;
-            this.btnAdd.Location = new System.Drawing.Point(1237, 0);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(133, 72);
-            this.btnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnAdd.TabIndex = 7;
-            this.btnAdd.TabStop = false;
-            this.btnAdd.Zoom = 10;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1204, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(33, 72);
-            this.panel4.TabIndex = 8;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.Transparent;
-            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnEdit.Image = global::GUI.Properties.Resources.edit_96px;
-            this.btnEdit.ImageActive = null;
-            this.btnEdit.Location = new System.Drawing.Point(1127, 0);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(77, 72);
-            this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnEdit.TabIndex = 9;
-            this.btnEdit.TabStop = false;
-            this.btnEdit.Zoom = 10;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
+            this.btnSave.ActiveBorderThickness = 1;
+            this.btnSave.ActiveCornerRadius = 20;
+            this.btnSave.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(237)))), ((int)(((byte)(230)))));
+            this.btnSave.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(205)))));
+            this.btnSave.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(237)))), ((int)(((byte)(230)))));
+            this.btnSave.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSave.BackgroundImage")));
+            this.btnSave.ButtonText = "Save";
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnSave.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnSave.IdleBorderThickness = 1;
+            this.btnSave.IdleCornerRadius = 20;
+            this.btnSave.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnSave.IdleForecolor = System.Drawing.Color.White;
+            this.btnSave.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnSave.Location = new System.Drawing.Point(712, 9);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(184, 80);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // UCMenu_Edit
             // 
@@ -335,10 +338,10 @@
             this.tableLayoutPanel5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
             this.panel3.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -358,8 +361,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnCancel;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnSave;
         private Bunifu.Framework.UI.BunifuImageButton btnEdit;
         private System.Windows.Forms.Panel panel4;
         private Bunifu.Framework.UI.BunifuImageButton btnAdd;

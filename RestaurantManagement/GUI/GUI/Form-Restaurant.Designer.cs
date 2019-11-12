@@ -79,7 +79,7 @@ namespace GUI
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1946, 1106);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1920, 1080);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // bunifuGradientPanel1
@@ -97,7 +97,7 @@ namespace GUI
             this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(478, 1096);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(472, 1070);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
             // panel1
@@ -108,7 +108,7 @@ namespace GUI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(478, 1096);
+            this.panel1.Size = new System.Drawing.Size(472, 1070);
             this.panel1.TabIndex = 3;
             // 
             // panel2
@@ -124,7 +124,7 @@ namespace GUI
             this.panel2.Location = new System.Drawing.Point(0, 498);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(478, 598);
+            this.panel2.Size = new System.Drawing.Size(478, 572);
             this.panel2.TabIndex = 1;
             // 
             // btn_Report
@@ -403,7 +403,7 @@ namespace GUI
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.66667F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.30864F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(478, 498);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(472, 498);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // bunifuImageButton1
@@ -412,7 +412,7 @@ namespace GUI
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = global::GUI.Properties.Resources.restaurant_500px;
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(101, 176);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(98, 176);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(276, 183);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -429,7 +429,7 @@ namespace GUI
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(237)))), ((int)(((byte)(230)))));
             this.label1.Location = new System.Drawing.Point(3, 371);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(472, 127);
+            this.label1.Size = new System.Drawing.Size(466, 127);
             this.label1.TabIndex = 10;
             this.label1.Text = "Faragal";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -442,13 +442,13 @@ namespace GUI
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.pnlContainer, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(490, 5);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(484, 5);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1452, 1096);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1432, 1070);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -462,7 +462,7 @@ namespace GUI
             this.tableLayoutPanel3.Controls.Add(this.img_Max, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.img_Close, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.img_Min, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(1245, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(1225, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -515,9 +515,9 @@ namespace GUI
             // 
             this.pnlContainer.BackColor = System.Drawing.SystemColors.Control;
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(3, 79);
+            this.pnlContainer.Location = new System.Drawing.Point(3, 77);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(1446, 1014);
+            this.pnlContainer.Size = new System.Drawing.Size(1426, 990);
             this.pnlContainer.TabIndex = 1;
             // 
             // bunifuDragControl1
@@ -532,7 +532,7 @@ namespace GUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1946, 1106);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

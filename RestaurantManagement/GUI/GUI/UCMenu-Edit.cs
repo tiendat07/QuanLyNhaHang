@@ -11,21 +11,28 @@ using BLL;
 using Bunifu;
 using DataAccessLayer;
 using System.Net;
+using GUI.Properties;
+using System.IO;
+using System.Diagnostics;
 
 namespace GUI
 {
     public partial class UCMenu_Edit : UserControl
     {
         FoodDrinkBLL foodDrinkBLL;
+        string picturePath;
         Form_Restaurant mainform;
         List<myLabelEdit> lslabelName;
         List<myLabelEdit> lsdescription;
         List<myButtonEdit> lspicBox;
         List<myButtonEdit> lspicDelete;
+        List<myButtonEdit> lspicEdit;
         List<myTextEdit> lstxtName;
         List<myTextEdit> lstxtDes;
+        List<FoodDrink> lsFoodDrink_Temp;
         public UCMenu_Edit(Form_Restaurant form1)
         {
+            
             foodDrinkBLL = new FoodDrinkBLL();
             lslabelName = new List<myLabelEdit>();
             lsdescription = new List<myLabelEdit>();
@@ -33,14 +40,77 @@ namespace GUI
             lspicDelete = new List<myButtonEdit>();
             lstxtName = new List<myTextEdit>();
             lstxtDes = new List<myTextEdit>();
+            lspicEdit = new List<myButtonEdit>();
             mainform = form1;
             InitializeComponent();
+            btnSave.Enabled = false;
+            btnSave.Visible = false;
+            btnCancel.Enabled = false;
+            btnCancel.Visible = false;
+            lsFoodDrink_Temp = foodDrinkBLL.GetListFoodDrink();
             LoadData();
         }
-        private void ButtonDeleteClick (object sender, EventArgs e)
+        private void ButtonDeleteClick(object sender, EventArgs e)
         {
-            myButtonEdit btn = sender as myButtonEdit;
-            MessageBox.Show(btn.objectID + "Button Clicked");
+            DialogResult result = MessageBox.Show("Are you sure you want to delete?", "Delete Notification", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                //yes...
+                myButtonEdit btn = sender as myButtonEdit;
+                if (foodDrinkBLL.DeleteFoodDrinkByID(btn.ObjectID) == true)
+                {
+                    MessageBox.Show("Deleted Successfully");
+                }
+                else
+                    MessageBox.Show("Cannot delete. Please try again!");
+            }
+            else if (result == DialogResult.No)
+            {
+                //no...
+                MessageBox.Show("Cannceled");
+            }
+
+        }
+        private void ButtonChangeClick(object sender, EventArgs e)
+        {
+            //ShowDialog
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    openFileDialog.Filter = "Image files|*.bmp;*.jpg;*.gif;*.png;*.tif";
+                    picturePath = openFileDialog.FileName;
+                    myButtonEdit btn = sender as myButtonEdit;
+                    MessageBox.Show(" " +btn.objectID);
+                    foreach (var item in lsFoodDrink_Temp)
+                        if (item.FoodDrinkID == btn.objectID)
+                            item.ImageURL = picturePath;
+                    // Truy vấn xuống database để chạy lại
+
+                }
+            }
+        }
+        private void Name_TextChanged(object sender, EventArgs e)
+        {
+            myTextEdit txt = sender as myTextEdit;
+            txt.objectText = txt.Text;
+            MessageBox.Show(" " + txt.objectText);
+            foreach (var item in lsFoodDrink_Temp)
+            {
+                if (item.FoodDrinkID == txt.objectID)
+                    item.FoodDrinkName = txt.objectText;
+            }
+        }
+        private void Description_TextChanged(object sender, EventArgs e)
+        {
+            myTextEdit txt = sender as myTextEdit;
+            txt.objectText = txt.Text;
+            MessageBox.Show(" " + txt.objectID);
+            foreach (var item in lsFoodDrink_Temp)
+            {
+                if (item.FoodDrinkID == txt.objectID)
+                    item.Description = txt.objectText;
+            }
         }
         public void Load(List<FoodDrink> lstFood, bool isFood)
         {
@@ -60,13 +130,17 @@ namespace GUI
                 //Invisible Item
                 myTextEdit txtName = new myTextEdit();
                 myTextEdit txtDescription = new myTextEdit();
+                myButtonEdit picEdit = new myButtonEdit();
                 // Location? Why not appear?
                 panel_Food.Controls.Add(txtName);
 
 
                 picDelete.objectID = foodID;
-
-
+                picBox.objectID = foodID;
+                txtName.objectID = foodID;
+                txtName.objectText = item.FoodDrinkName;
+                txtDescription.objectID = foodID;
+                txtDescription.objectText = item.FoodDrinkName;
 
                 x = (count % 2 == 0) ? 0 : x + 500;
                 // Location
@@ -103,13 +177,17 @@ namespace GUI
                 picBox.Name = "FoodPic" + foodID;
                 picBox.ClientSize = new Size(width, height);
                 picBox.SizeMode = PictureBoxSizeMode.StretchImage;
-                
+
                 // PicDelete
                 picDelete.ImageLocation = @"C:\Users\Thien Ngan\Documents\Project\RestaurantManagement\GUI\GUI\Resources\delete_64px.png";
                 picDelete.Name = "FoodDel" + foodID;
                 picDelete.ClientSize = new Size(40, 40);
                 picDelete.SizeMode = PictureBoxSizeMode.StretchImage;
 
+                // PicEdit
+                picEdit.ImageLocation = @"C:\Users\Thien Ngan\Documents\Project\RestaurantManagement\GUI\GUI\Resources\browser_window_128px.png";
+                picEdit.ClientSize = new Size(width, height);
+                picEdit.SizeMode = PictureBoxSizeMode.StretchImage;
                 //TextName
                 txtName.Text = item.FoodDrinkName;
                 txtName.Size = new Size(200, 30);
@@ -133,9 +211,11 @@ namespace GUI
                 txtDescription.Multiline = true;
                 txtDescription.BorderStyle = BorderStyle.None;
 
-                picBox.Click += new EventHandler(ButtonChangePic);
+                txtName.TextChanged += new EventHandler(Name_TextChanged);
+                txtDescription.TextChanged += new EventHandler(Description_TextChanged);
+                picBox.Click += new EventHandler(ButtonChangeClick);
                 picDelete.Click += new EventHandler(ButtonDeleteClick);
-                //btnEdit.Click += new EventHandler(btnEdit_Click);
+                //btnEdit.Click += btnEdit_Click;
 
                 // List
                 lslabelName.Add(labelName);
@@ -144,6 +224,7 @@ namespace GUI
                 lspicDelete.Add(picDelete);
                 lstxtName.Add(txtName);
                 lstxtDes.Add(txtDescription);
+                lspicEdit.Add(picEdit);
                 if (isFood == true)
                 {
                     panel_Food.Controls.Add(picBox);
@@ -152,6 +233,7 @@ namespace GUI
                     panel_Food.Controls.Add(picDelete);
                     panel_Food.Controls.Add(txtName);
                     panel_Food.Controls.Add(txtDescription);
+                   // panel_Food.Controls.Add(picEdit);
                 }
                 else
                 {
@@ -161,6 +243,7 @@ namespace GUI
                     panel_Drink.Controls.Add(picDelete);
                     panel_Drink.Controls.Add(txtName);
                     panel_Drink.Controls.Add(txtDescription);
+                   // panel_Drink.Controls.Add(picEdit);
                 }
 
                 count++;
@@ -182,23 +265,72 @@ namespace GUI
             Load(lstDrink, false);
         }
         
-        private void ButtonChangePic(object sender, EventArgs e)
-        {
-            //ShowDialog
-        }
+        
 
         private void btnEdit_Click_1(object sender, EventArgs e)
         {
+            btnEdit.Visible = false;
+            btnAdd.Visible = false;
+            btnSave.Enabled = true;
+            btnCancel.Enabled = true;
+            btnSave.Visible = true;
+            btnCancel.Visible = true;
+            
             //LabelName
+
             foreach (var item in lslabelName)
                 item.Visible = false;
             foreach (var item in lsdescription)
                 item.Visible = false;
+            //foreach (var item in lspicBox)
+            //    item.Visible = false;
             foreach (var item in lstxtDes)
                 item.Visible = true;
             foreach (var item in lstxtName)
                 item.Visible = true;
+            foreach (var item in lspicDelete)
+            {
+                item.Visible = false;
+                item.Enabled = false;
+            }
+                
             // Event click của mỗi item?
+        }
+        
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            bool result = true;
+            foreach(var item in lsFoodDrink_Temp)
+            {
+                if (foodDrinkBLL.EditFoodDrink(item) == false)
+                {
+                    result = false;
+                    MessageBox.Show("Cannot save. Please try again");
+                    break;
+                }
+            }
+            if (result == true)
+                MessageBox.Show("Saved Successfully");
+
+           
+        }
+
+        private void btnCancel_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to cancel?", "Cancel Notification", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                //yes...
+                this.Hide();
+                mainform.loadUCMenuEdit();
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Form_FoodDrink f = new Form_FoodDrink();
+            f.Show();
         }
     }
 }
