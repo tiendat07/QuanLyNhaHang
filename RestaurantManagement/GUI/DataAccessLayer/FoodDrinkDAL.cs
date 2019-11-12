@@ -29,7 +29,7 @@ namespace DataAccessLayer
                         return false;
                     fDrink.ImageURL = food.ImageURL;
                     fDrink.FoodDrinkName = food.FoodDrinkName;
-                    fDrink.Description = food.FoodDrinkName;
+                    fDrink.Description = food.Description;
                     dbContext.SaveChanges();
                     return true;
                 }

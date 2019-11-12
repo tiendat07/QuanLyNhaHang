@@ -78,6 +78,13 @@
     <Compile Include="Form-Restaurant.Designer.cs">
       <DependentUpon>Form-Restaurant.cs</DependentUpon>
     </Compile>
+
+    <Compile Include="Form_AddFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AddFood.Designer.cs">
+      <DependentUpon>Form_AddFood.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +96,7 @@
     </Compile>
     <Compile Include="Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
+
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -174,11 +182,16 @@
     <EmbeddedResource Include="Form-Restaurant.resx">
       <DependentUpon>Form-Restaurant.cs</DependentUpon>
     </EmbeddedResource>
+
+    <EmbeddedResource Include="Form_AddFood.resx">
+      <DependentUpon>Form_AddFood.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
