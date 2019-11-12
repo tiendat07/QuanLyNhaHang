@@ -352,7 +352,7 @@ namespace GUI
             this.btn_Menu.Textcolor = System.Drawing.Color.White;
             this.btn_Menu.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
-            this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click);
+           // this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click);
 
             this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click_1);
 

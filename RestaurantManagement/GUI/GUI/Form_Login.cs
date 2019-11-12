@@ -75,7 +75,7 @@ namespace GUI
                     f.Show();
                 }
                 else
-                    MessageBox.Show("Chua chinh xac !!")
+                    MessageBox.Show("Chua chinh xac !!");
                 
             }
         }

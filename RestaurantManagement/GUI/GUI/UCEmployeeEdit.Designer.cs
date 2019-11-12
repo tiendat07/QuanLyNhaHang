@@ -58,8 +58,6 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dgtEmployeeEdit = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -399,16 +397,7 @@
             // 
             // lbDOB
             // 
-            this.lbBOD.AutoSize = true;
-            this.lbBOD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbBOD.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBOD.Location = new System.Drawing.Point(3, 60);
-            this.lbBOD.Name = "lbBOD";
-            this.lbBOD.Size = new System.Drawing.Size(80, 30);
-            this.lbBOD.TabIndex = 21;
-            this.lbBOD.Text = "B.O.D";
-            this.lbBOD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-
+           
             this.lbDOB.AutoSize = true;
             this.lbDOB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbDOB.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -469,24 +458,8 @@
             this.txtEmail.TabIndex = 15;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // txtBOD
+            // txtEmail
             // 
-            this.txtBOD.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txtBOD.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBOD.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txtBOD.BorderThickness = 1;
-            this.txtBOD.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBOD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBOD.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtBOD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBOD.isPassword = false;
-            this.txtBOD.Location = new System.Drawing.Point(90, 64);
-            this.txtBOD.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBOD.Name = "txtBOD";
-            this.txtBOD.Size = new System.Drawing.Size(78, 22);
-            this.txtBOD.TabIndex = 13;
-            this.txtBOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-
             this.txtEmail.Location = new System.Drawing.Point(332, 98);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtEmail.Name = "txtEmail";
@@ -556,24 +529,8 @@
             this.txtCMND.TabIndex = 7;
             this.txtCMND.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // txtGender
+            // txtCMND
             // 
-            this.txtGender.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txtGender.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtGender.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txtGender.BorderThickness = 1;
-            this.txtGender.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtGender.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtGender.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtGender.isPassword = false;
-            this.txtGender.Location = new System.Drawing.Point(434, 4);
-            this.txtGender.Margin = new System.Windows.Forms.Padding(4);
-            this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(78, 22);
-            this.txtGender.TabIndex = 5;
-            this.txtGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-
             this.txtCMND.Location = new System.Drawing.Point(115, 52);
             this.txtCMND.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtCMND.Name = "txtCMND";
@@ -722,8 +679,6 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.4055F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.2268F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.53952F));
-            this.tableLayoutPanel3.Controls.Add(this.bunifuFlatButton3, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.bunifuFlatButton2, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 158);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -731,79 +686,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(582, 38);
             this.tableLayoutPanel3.TabIndex = 5;
-            // 
-            // bunifuFlatButton3
-            // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "SAVE";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton3.Iconimage")));
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 0;
-            this.bunifuFlatButton3.IconMarginRight = 0;
-            this.bunifuFlatButton3.IconRightVisible = true;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = false;
-            this.bunifuFlatButton3.IconZoom = 90D;
-            this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(308, 4);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(132, 30);
-            this.bunifuFlatButton3.TabIndex = 3;
-            this.bunifuFlatButton3.Text = "SAVE";
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton2
-            // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.Green;
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "CLEAR";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = false;
-            this.bunifuFlatButton2.IconZoom = 90D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(448, 4);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(130, 30);
-            this.bunifuFlatButton2.TabIndex = 1;
-            this.bunifuFlatButton2.Text = "CLEAR";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
+            
             // dgtEmployeeEdit
             // 
             this.dgtEmployeeEdit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
