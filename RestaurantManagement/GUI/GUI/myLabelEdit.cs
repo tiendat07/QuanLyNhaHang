@@ -10,16 +10,10 @@ namespace GUI
     class myLabelEdit : Label
     {
         public int objectID;
-        public string objectText;
         public int ObjectID
         {
             get { return objectID; }
             set { objectID = value; }
-        }
-        public string ObjectText
-        {
-            get { return objectText; }
-            set { objectText = value; }
         }
     }
 }

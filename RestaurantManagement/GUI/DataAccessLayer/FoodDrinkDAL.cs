@@ -13,7 +13,7 @@ namespace DataAccessLayer
         {
             dbContext = new RestaurantContextEntities();
         }
-        public List <FoodDrink> GetListFoodDrink()
+        public List<FoodDrink> GetListFoodDrink()
         {
             return dbContext.FoodDrinks.ToList();
         }
@@ -23,7 +23,7 @@ namespace DataAccessLayer
             {
                 if (food != null)
                 {
-                    
+
                     FoodDrink fDrink = dbContext.FoodDrinks.Where(f => f.FoodDrinkID == food.FoodDrinkID).FirstOrDefault();
                     if (fDrink == null)
                         return false;
@@ -51,7 +51,7 @@ namespace DataAccessLayer
             }
             return false;
         }
-        public bool AddFoodDrink (FoodDrink foodDrink)
+        public bool AddFoodDrink(FoodDrink foodDrink)
         {
             try
             {

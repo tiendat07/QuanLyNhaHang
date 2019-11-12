@@ -11,9 +11,6 @@ using BLL;
 using Bunifu;
 using DataAccessLayer;
 using System.Net;
-using GUI.Properties;
-using System.IO;
-using System.Diagnostics;
 
 namespace GUI
 {
@@ -32,7 +29,6 @@ namespace GUI
         List<FoodDrink> lsFoodDrink_Temp;
         public UCMenu_Edit(Form_Restaurant form1)
         {
-            
             foodDrinkBLL = new FoodDrinkBLL();
             lslabelName = new List<myLabelEdit>();
             lsdescription = new List<myLabelEdit>();
@@ -50,7 +46,7 @@ namespace GUI
             lsFoodDrink_Temp = foodDrinkBLL.GetListFoodDrink();
             LoadData();
         }
-        private void ButtonDeleteClick(object sender, EventArgs e)
+        private void ButtonDeleteClick (object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to delete?", "Delete Notification", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -69,7 +65,6 @@ namespace GUI
                 //no...
                 MessageBox.Show("Cannceled");
             }
-
         }
         private void ButtonChangeClick(object sender, EventArgs e)
         {
@@ -81,7 +76,7 @@ namespace GUI
                     openFileDialog.Filter = "Image files|*.bmp;*.jpg;*.gif;*.png;*.tif";
                     picturePath = openFileDialog.FileName;
                     myButtonEdit btn = sender as myButtonEdit;
-                    MessageBox.Show(" " +btn.objectID);
+                    MessageBox.Show(" " + btn.objectID);
                     foreach (var item in lsFoodDrink_Temp)
                         if (item.FoodDrinkID == btn.objectID)
                             item.ImageURL = picturePath;
@@ -105,7 +100,7 @@ namespace GUI
         {
             myTextEdit txt = sender as myTextEdit;
             txt.objectText = txt.Text;
-            MessageBox.Show(" " + txt.objectID);
+            MessageBox.Show(" " + txt.objectText);
             foreach (var item in lsFoodDrink_Temp)
             {
                 if (item.FoodDrinkID == txt.objectID)
@@ -140,14 +135,14 @@ namespace GUI
                 txtName.objectID = foodID;
                 txtName.objectText = item.FoodDrinkName;
                 txtDescription.objectID = foodID;
-                txtDescription.objectText = item.FoodDrinkName;
+                txtDescription.objectText = item.Description;
 
                 x = (count % 2 == 0) ? 0 : x + 500;
                 // Location
                 picBox.Location = new Point(x, y);
                 labelName.Location = new Point(x + width + 10, y);
                 description.Location = new Point(x + width + 10, y + 30);
-                picDelete.Location = new Point(x + width +220, y);
+                picDelete.Location = new Point(x + width + 220, y);
                 txtName.Location = new Point(x + width + 10, y);
                 txtDescription.Location = new Point(x + width + 10, y + 30);
                 // Sau 2 món thì Xuống dòng
@@ -170,7 +165,7 @@ namespace GUI
                 description.ForeColor = Color.Black;
                 description.Width = 200;
                 description.Height = 70;
-                
+
 
                 // PicBox
                 picBox.ImageLocation = item.ImageURL;
@@ -202,7 +197,7 @@ namespace GUI
                 //TextDes
                 txtDescription.Text = item.Description;
                 txtDescription.Name = "Text" + foodID;
-                txtDescription.Size = new Size(200,50);
+                txtDescription.Size = new Size(200, 50);
                 txtDescription.Width = 200;
                 txtDescription.Height = 70;
                 txtDescription.Font = new Font("SVN-Avo", 15);
@@ -233,7 +228,7 @@ namespace GUI
                     panel_Food.Controls.Add(picDelete);
                     panel_Food.Controls.Add(txtName);
                     panel_Food.Controls.Add(txtDescription);
-                   // panel_Food.Controls.Add(picEdit);
+                    // panel_Food.Controls.Add(picEdit);
                 }
                 else
                 {
@@ -243,7 +238,7 @@ namespace GUI
                     panel_Drink.Controls.Add(picDelete);
                     panel_Drink.Controls.Add(txtName);
                     panel_Drink.Controls.Add(txtDescription);
-                   // panel_Drink.Controls.Add(picEdit);
+                    // panel_Drink.Controls.Add(picEdit);
                 }
 
                 count++;
@@ -265,9 +260,8 @@ namespace GUI
             Load(lstDrink, false);
         }
         
-        
 
-        private void btnEdit_Click_1(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
             btnEdit.Visible = false;
             btnAdd.Visible = false;
@@ -275,7 +269,7 @@ namespace GUI
             btnCancel.Enabled = true;
             btnSave.Visible = true;
             btnCancel.Visible = true;
-            
+
             //LabelName
 
             foreach (var item in lslabelName)
@@ -293,15 +287,29 @@ namespace GUI
                 item.Visible = false;
                 item.Enabled = false;
             }
-                
-            // Event click của mỗi item?
         }
-        
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            //Form_FoodDrink f = new Form_FoodDrink();
+            //f.Show();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to cancel?", "Cancel Notification", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                //yes...
+                this.Hide();
+                mainform.loadUCMenuEdit();
+            }
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             bool result = true;
-            foreach(var item in lsFoodDrink_Temp)
+            foreach (var item in lsFoodDrink_Temp)
             {
                 if (foodDrinkBLL.EditFoodDrink(item) == false)
                 {
@@ -313,24 +321,6 @@ namespace GUI
             if (result == true)
                 MessageBox.Show("Saved Successfully");
 
-           
-        }
-
-        private void btnCancel_Click_1(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Are you sure you want to cancel?", "Cancel Notification", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                //yes...
-                this.Hide();
-                mainform.loadUCMenuEdit();
-            }
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            Form_FoodDrink f = new Form_FoodDrink();
-            f.Show();
         }
     }
 }
