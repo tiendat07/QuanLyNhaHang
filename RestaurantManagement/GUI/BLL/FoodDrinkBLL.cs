@@ -22,5 +22,17 @@ namespace BLL
         //{
         //    return foodDrinkDAL.GetImageFoodDrink();
         //}
+        public bool EditFoodDrink(FoodDrink food)
+        {
+            return foodDrinkDAL.EditFoodDrink(food);
+        }
+        public bool DeleteFoodDrinkByID(int foodID)
+        {
+            return foodDrinkDAL.DeleteFoodDrinkByID(foodID);
+        }
+        public bool AddFoodDrink(FoodDrink foodDrink)
+        {
+            return foodDrinkDAL.AddFoodDrink(foodDrink);
+        }
     }
 }

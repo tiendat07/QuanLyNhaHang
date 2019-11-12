@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="icons8_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_menu.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="minus_math_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minus_math_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,15 +133,17 @@
   <data name="screensharing_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\screensharing_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_menu.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="edit_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_menu_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_menu_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_ball_point_pen_64px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_ball_point_pen_64px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-
   </data>
   <data name="maximize_window_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maximize_window_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -149,17 +154,17 @@
   <data name="menu_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-
   <data name="icons8_google_web_search_64px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_google_web_search_64px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-
->>>>>>> fee0226e5feaa62eb549a0eca4e96df10a027297
   <data name="icons8_minus_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_minus_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="multiply_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\multiply_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_google_web_search_64px_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_google_web_search_64px_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="multiply_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\multiply_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -167,21 +172,13 @@
   <data name="restaurant_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\restaurant_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-
   <data name="icons8_search_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_search_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_menu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_menu1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_google_web_search_64px_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_google_web_search_64px_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_menu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_menu1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="edit_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-
+  <data name="edit_96px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
