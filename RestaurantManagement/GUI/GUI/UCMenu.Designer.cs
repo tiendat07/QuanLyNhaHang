@@ -148,7 +148,7 @@
             // 
             this.btnEditFood.BackColor = System.Drawing.Color.Transparent;
             this.btnEditFood.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnEditFood.Image = global::GUI.Properties.Resources.edit_96px;
+//            this.btnEditFood.Image = global::GUI.Properties.Resources.edit_96px;
             this.btnEditFood.ImageActive = null;
             this.btnEditFood.Location = new System.Drawing.Point(532, 3);
             this.btnEditFood.Name = "btnEditFood";

@@ -150,7 +150,7 @@
             // 
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bunifuImageButton1.Image = global::GUI.Properties.Resources.edit_96px;
+//            this.bunifuImageButton1.Image = global::GUI.Properties.Resources.edit_96px;
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.Location = new System.Drawing.Point(104, 3);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
@@ -192,7 +192,7 @@
             // 
             this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bunifuImageButton2.Image = global::GUI.Properties.Resources.edit_96px;
+          //  this.bunifuImageButton2.Image = global::GUI.Properties.Resources.edit_96px;
             this.bunifuImageButton2.ImageActive = null;
             this.bunifuImageButton2.Location = new System.Drawing.Point(100, 3);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
