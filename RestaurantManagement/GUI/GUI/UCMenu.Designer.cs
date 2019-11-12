@@ -120,6 +120,49 @@
             this.panel_Drink.Size = new System.Drawing.Size(828, 181);
             this.panel_Drink.TabIndex = 4;
             // 
+
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.28502F));
+            this.tableLayoutPanel4.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(828, 48);
+            this.tableLayoutPanel4.TabIndex = 5;
+            // 
+            // btnEditFood
+            // 
+            this.btnEditFood.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditFood.Dock = System.Windows.Forms.DockStyle.Left;
+//            this.btnEditFood.Image = global::GUI.Properties.Resources.edit_96px;
+            this.btnEditFood.ImageActive = null;
+            this.btnEditFood.Location = new System.Drawing.Point(532, 3);
+            this.btnEditFood.Name = "btnEditFood";
+            this.btnEditFood.Size = new System.Drawing.Size(59, 33);
+            this.btnEditFood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEditFood.TabIndex = 0;
+            this.btnEditFood.TabStop = false;
+            this.btnEditFood.Zoom = 10;
+            this.btnEditFood.Click += new System.EventHandler(this.btnEditFood_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label2.Font = new System.Drawing.Font("SVN-Avo", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(78)))), ((int)(((byte)(126)))));
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 48);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Food";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 1;

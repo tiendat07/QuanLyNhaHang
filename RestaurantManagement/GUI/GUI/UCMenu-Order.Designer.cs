@@ -129,6 +129,22 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(828, 48);
             this.tableLayoutPanel4.TabIndex = 5;
             // 
+
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.Dock = System.Windows.Forms.DockStyle.Left;
+//            this.bunifuImageButton1.Image = global::GUI.Properties.Resources.edit_96px;
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(104, 3);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(46, 42);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 0;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            // 
+
             // label2
             // 
             this.label2.AutoSize = true;
@@ -155,6 +171,22 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(828, 48);
             this.tableLayoutPanel5.TabIndex = 6;
             // 
+
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton2.Dock = System.Windows.Forms.DockStyle.Left;
+          //  this.bunifuImageButton2.Image = global::GUI.Properties.Resources.edit_96px;
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(100, 3);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(46, 42);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 4;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 10;
+            // 
+
             // label3
             // 
             this.label3.AutoSize = true;
