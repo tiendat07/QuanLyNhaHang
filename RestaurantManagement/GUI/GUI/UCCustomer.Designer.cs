@@ -103,7 +103,7 @@
             // 
             this.bunifuImageButton1.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuImageButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bunifuImageButton1.Image = global::GUI.Properties.Resources.icons8_google_web_search_64px_11;
+//            this.bunifuImageButton1.Image = global::GUI.Properties.Resources.icons8_google_web_search_64px_11;
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.InitialImage = null;
             this.bunifuImageButton1.Location = new System.Drawing.Point(3, 3);
@@ -167,7 +167,7 @@
             // 
             this.btnEditCustomer.BackColor = System.Drawing.SystemColors.Control;
             this.btnEditCustomer.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnEditCustomer.Image = global::GUI.Properties.Resources.icons8_ball_point_pen_64px_1;
+          //  this.btnEditCustomer.Image = global::GUI.Properties.Resources.icons8_ball_point_pen_64px_1;
             this.btnEditCustomer.ImageActive = null;
             this.btnEditCustomer.InitialImage = null;
             this.btnEditCustomer.Location = new System.Drawing.Point(3, 14);

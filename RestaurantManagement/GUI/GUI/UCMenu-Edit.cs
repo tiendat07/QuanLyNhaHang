@@ -11,6 +11,7 @@ using BLL;
 using Bunifu;
 using DataAccessLayer;
 using System.Net;
+using GUI.Properties;
 
 namespace GUI
 {
@@ -178,15 +179,11 @@ namespace GUI
                 picBox.SizeMode = PictureBoxSizeMode.StretchImage;
 
                 // PicDelete
-                picDelete.ImageLocation = @"C:\Users\Thien Ngan\Documents\Project\RestaurantManagement\GUI\GUI\Resources\delete_64px.png";
+                picDelete.Image = Resources.delete_64px;
                 picDelete.Name = "FoodDel" + foodID;
                 picDelete.ClientSize = new Size(40, 40);
                 picDelete.SizeMode = PictureBoxSizeMode.StretchImage;
-
-                // PicEdit
-                picEdit.ImageLocation = @"C:\Users\Thien Ngan\Documents\Project\RestaurantManagement\GUI\GUI\Resources\browser_window_128px.png";
-                picEdit.ClientSize = new Size(width, height);
-                picEdit.SizeMode = PictureBoxSizeMode.StretchImage;
+                
                 //TextName
                 txtName.Text = item.FoodDrinkName;
                 txtName.Size = new Size(200, 30);
@@ -306,13 +303,13 @@ namespace GUI
             {
                 //yes...
                 this.Hide();
-                mainform.loadUCMenuEdit();
+               // mainform.loadUCMenuEdit();
             }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            bool result = true;
+            bool result = false;
             foreach (var item in lsFoodDrink_Temp)
             {
                 if (foodDrinkBLL.EditFoodDrink(item) == false)
@@ -321,9 +318,16 @@ namespace GUI
                     MessageBox.Show("Cannot save. Please try again");
                     break;
                 }
+                else
+                    result = true;
             }
             if (result == true)
+            {
                 MessageBox.Show("Saved Successfully");
+                this.Hide();
+                mainform.loadUCMenuEdit();
+            }
+
 
         }
     }

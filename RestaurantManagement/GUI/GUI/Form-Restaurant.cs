@@ -114,14 +114,14 @@ namespace GUI
         }
         
 
-        public void loadUCEmployeeEdit()
-        {
-            _obj = this;
-            pnlContainer.Controls.Clear();
-            UCEmployeeEdit uc = new UCEmployeeEdit(this);
-            uc.Dock = DockStyle.Fill;
-            pnlContainer.Controls.Add(uc);
-        }
+        //public void loadUCEmployeeEdit()
+        //{
+        //    _obj = this;
+        //    pnlContainer.Controls.Clear();
+        //    UCEmployeeEdit uc = new UCEmployeeEdit(this);
+        //    uc.Dock = DockStyle.Fill;
+        //    pnlContainer.Controls.Add(uc);
+        //}
 
         private void btn_Menu_Click_1(object sender, EventArgs e)
         {
@@ -163,6 +163,31 @@ namespace GUI
             _obj = this;
             pnlContainer.Controls.Clear();
             UCCustomer2 uc = new UCCustomer2(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+
+        private void btn_Order_Click(object sender, EventArgs e)
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCOrder uc = new UCOrder(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+        public void loadUcMenu_Order()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCMenu_Order uc = new UCMenu_Order(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+        public void loadUCOrder()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCOrder uc = new UCOrder(this);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }

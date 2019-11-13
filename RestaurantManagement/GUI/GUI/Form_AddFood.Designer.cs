@@ -32,18 +32,18 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnCancel = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnSave = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.lbIsFood = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.lbDes = new System.Windows.Forms.Label();
             this.lbURL = new System.Windows.Forms.Label();
             this.lbIsAvailable = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtDes = new System.Windows.Forms.TextBox();
-            this.btnBrowse = new System.Windows.Forms.Button();
-            this.cbAvailable = new System.Windows.Forms.ComboBox();
             this.cbFoodDrink = new System.Windows.Forms.ComboBox();
+            this.cbAvailable = new System.Windows.Forms.ComboBox();
+            this.txtDes = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lbIsFood = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbURLText = new System.Windows.Forms.Label();
+            this.btnBrowse = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -133,18 +133,6 @@
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // lbIsFood
-            // 
-            this.lbIsFood.AutoSize = true;
-            this.lbIsFood.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbIsFood.Font = new System.Drawing.Font("SVN-Avo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbIsFood.Location = new System.Drawing.Point(306, 300);
-            this.lbIsFood.Name = "lbIsFood";
-            this.lbIsFood.Size = new System.Drawing.Size(117, 60);
-            this.lbIsFood.TabIndex = 8;
-            this.lbIsFood.Text = "Food / Drink";
-            this.lbIsFood.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // lbName
             // 
             this.lbName.AutoSize = true;
@@ -193,34 +181,17 @@
             this.lbIsAvailable.Text = "Available / Unavailable";
             this.lbIsAvailable.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtName
+            // cbFoodDrink
             // 
-            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtName.Location = new System.Drawing.Point(470, 77);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(284, 26);
-            this.txtName.TabIndex = 14;
-            // 
-            // txtDes
-            // 
-            this.txtDes.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtDes.Location = new System.Drawing.Point(470, 123);
-            this.txtDes.Multiline = true;
-            this.txtDes.Name = "txtDes";
-            this.txtDes.Size = new System.Drawing.Size(284, 54);
-            this.txtDes.TabIndex = 15;
-            // 
-            // btnBrowse
-            // 
-            this.btnBrowse.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnBrowse.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrowse.Location = new System.Drawing.Point(20, 11);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(107, 32);
-            this.btnBrowse.TabIndex = 16;
-            this.btnBrowse.Text = "Browse..";
-            this.btnBrowse.UseVisualStyleBackColor = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            this.cbFoodDrink.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbFoodDrink.FormattingEnabled = true;
+            this.cbFoodDrink.Items.AddRange(new object[] {
+            "Food",
+            "Drink"});
+            this.cbFoodDrink.Location = new System.Drawing.Point(470, 316);
+            this.cbFoodDrink.Name = "cbFoodDrink";
+            this.cbFoodDrink.Size = new System.Drawing.Size(284, 28);
+            this.cbFoodDrink.TabIndex = 18;
             // 
             // cbAvailable
             // 
@@ -234,17 +205,34 @@
             this.cbAvailable.Size = new System.Drawing.Size(284, 28);
             this.cbAvailable.TabIndex = 17;
             // 
-            // cbFoodDrink
+            // txtDes
             // 
-            this.cbFoodDrink.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cbFoodDrink.FormattingEnabled = true;
-            this.cbFoodDrink.Items.AddRange(new object[] {
-            "Food",
-            "Drink"});
-            this.cbFoodDrink.Location = new System.Drawing.Point(470, 316);
-            this.cbFoodDrink.Name = "cbFoodDrink";
-            this.cbFoodDrink.Size = new System.Drawing.Size(284, 28);
-            this.cbFoodDrink.TabIndex = 18;
+            this.txtDes.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtDes.Location = new System.Drawing.Point(470, 123);
+            this.txtDes.Multiline = true;
+            this.txtDes.Name = "txtDes";
+            this.txtDes.Size = new System.Drawing.Size(284, 54);
+            this.txtDes.TabIndex = 15;
+            // 
+            // txtName
+            // 
+            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtName.Location = new System.Drawing.Point(470, 77);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(284, 26);
+            this.txtName.TabIndex = 14;
+            // 
+            // lbIsFood
+            // 
+            this.lbIsFood.AutoSize = true;
+            this.lbIsFood.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbIsFood.Font = new System.Drawing.Font("SVN-Avo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIsFood.Location = new System.Drawing.Point(306, 300);
+            this.lbIsFood.Name = "lbIsFood";
+            this.lbIsFood.Size = new System.Drawing.Size(117, 60);
+            this.lbIsFood.TabIndex = 8;
+            this.lbIsFood.Text = "Food / Drink";
+            this.lbIsFood.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel1
             // 
@@ -265,6 +253,19 @@
             this.lbURLText.Name = "lbURLText";
             this.lbURLText.Size = new System.Drawing.Size(0, 27);
             this.lbURLText.TabIndex = 17;
+            this.lbURLText.Visible = false;
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnBrowse.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowse.Location = new System.Drawing.Point(20, 11);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(107, 32);
+            this.btnBrowse.TabIndex = 16;
+            this.btnBrowse.Text = "Browse..";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // Form_AddFood
             // 

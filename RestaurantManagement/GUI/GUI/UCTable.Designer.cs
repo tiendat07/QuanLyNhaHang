@@ -33,9 +33,9 @@
             this.flpTable = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnPay = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnOrder = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnBook = new Bunifu.Framework.UI.BunifuThinButton2();
             this.flpTable1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -76,8 +76,8 @@
             this.flpTable.Location = new System.Drawing.Point(64, 3);
             this.flpTable.Name = "flpTable";
             this.flpTable.RowCount = 2;
-            this.flpTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.36496F));
-            this.flpTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.63504F));
+            this.flpTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 67.39563F));
+            this.flpTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.60437F));
             this.flpTable.Size = new System.Drawing.Size(747, 503);
             this.flpTable.TabIndex = 0;
             // 
@@ -89,13 +89,13 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8F));
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 1, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 382);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 342);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.2963F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.7037F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.87248F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 69.12752F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(741, 118);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(741, 158);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // tableLayoutPanel5
@@ -104,102 +104,104 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.Controls.Add(this.bunifuThinButton23, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.bunifuThinButton22, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.bunifuThinButton21, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Controls.Add(this.btnPay, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnOrder, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnBook, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(62, 26);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(616, 80);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(616, 95);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
-            // bunifuThinButton23
+            // btnPay
             // 
-            this.bunifuThinButton23.ActiveBorderThickness = 1;
-            this.bunifuThinButton23.ActiveCornerRadius = 20;
-            this.bunifuThinButton23.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.bunifuThinButton23.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
-            this.bunifuThinButton23.ButtonText = "Pay";
-            this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuThinButton23.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton23.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.IdleBorderThickness = 1;
-            this.bunifuThinButton23.IdleCornerRadius = 20;
-            this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.bunifuThinButton23.Location = new System.Drawing.Point(418, 9);
-            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.bunifuThinButton23.Name = "bunifuThinButton23";
-            this.bunifuThinButton23.Size = new System.Drawing.Size(190, 62);
-            this.bunifuThinButton23.TabIndex = 5;
-            this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPay.ActiveBorderThickness = 1;
+            this.btnPay.ActiveCornerRadius = 20;
+            this.btnPay.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.btnPay.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnPay.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnPay.BackColor = System.Drawing.SystemColors.Control;
+            this.btnPay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPay.BackgroundImage")));
+            this.btnPay.ButtonText = "Pay";
+            this.btnPay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPay.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPay.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnPay.IdleBorderThickness = 1;
+            this.btnPay.IdleCornerRadius = 20;
+            this.btnPay.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnPay.IdleForecolor = System.Drawing.Color.White;
+            this.btnPay.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnPay.Location = new System.Drawing.Point(418, 9);
+            this.btnPay.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(190, 71);
+            this.btnPay.TabIndex = 5;
+            this.btnPay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
-            // bunifuThinButton22
+            // btnOrder
             // 
-            this.bunifuThinButton22.ActiveBorderThickness = 1;
-            this.bunifuThinButton22.ActiveCornerRadius = 20;
-            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.bunifuThinButton22.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
-            this.bunifuThinButton22.ButtonText = "Order";
-            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuThinButton22.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton22.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.IdleBorderThickness = 1;
-            this.bunifuThinButton22.IdleCornerRadius = 20;
-            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.bunifuThinButton22.Location = new System.Drawing.Point(213, 9);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(189, 62);
-            this.bunifuThinButton22.TabIndex = 4;
-            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnOrder.ActiveBorderThickness = 1;
+            this.btnOrder.ActiveCornerRadius = 20;
+            this.btnOrder.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.btnOrder.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnOrder.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnOrder.BackColor = System.Drawing.SystemColors.Control;
+            this.btnOrder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOrder.BackgroundImage")));
+            this.btnOrder.ButtonText = "Order";
+            this.btnOrder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOrder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOrder.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrder.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnOrder.IdleBorderThickness = 1;
+            this.btnOrder.IdleCornerRadius = 20;
+            this.btnOrder.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnOrder.IdleForecolor = System.Drawing.Color.White;
+            this.btnOrder.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnOrder.Location = new System.Drawing.Point(213, 9);
+            this.btnOrder.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(189, 71);
+            this.btnOrder.TabIndex = 4;
+            this.btnOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
-            // bunifuThinButton21
+            // btnBook
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Book";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(8, 9);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(189, 62);
-            this.bunifuThinButton21.TabIndex = 3;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnBook.ActiveBorderThickness = 1;
+            this.btnBook.ActiveCornerRadius = 20;
+            this.btnBook.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.btnBook.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnBook.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnBook.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBook.BackgroundImage")));
+            this.btnBook.ButtonText = "Book";
+            this.btnBook.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBook.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBook.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnBook.IdleBorderThickness = 1;
+            this.btnBook.IdleCornerRadius = 20;
+            this.btnBook.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnBook.IdleForecolor = System.Drawing.Color.White;
+            this.btnBook.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnBook.Location = new System.Drawing.Point(8, 9);
+            this.btnBook.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.btnBook.Name = "btnBook";
+            this.btnBook.Size = new System.Drawing.Size(189, 71);
+            this.btnBook.TabIndex = 3;
+            this.btnBook.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnBook.Click += new System.EventHandler(this.btnBook_Click);
             // 
             // flpTable1
             // 
-            this.flpTable1.AutoScroll = true;
             this.flpTable1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpTable1.Location = new System.Drawing.Point(3, 3);
             this.flpTable1.Name = "flpTable1";
-            this.flpTable1.Size = new System.Drawing.Size(741, 373);
+            this.flpTable1.Size = new System.Drawing.Size(741, 333);
             this.flpTable1.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -239,14 +241,14 @@
             // 
             // lbTable
             // 
+            this.lbTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTable.AutoSize = true;
-            this.lbTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbTable.Font = new System.Drawing.Font("SVN-Avo", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.lbTable.Location = new System.Drawing.Point(327, 3);
+            this.lbTable.Location = new System.Drawing.Point(327, 21);
             this.lbTable.Margin = new System.Windows.Forms.Padding(3);
             this.lbTable.Name = "lbTable";
-            this.lbTable.Size = new System.Drawing.Size(202, 82);
+            this.lbTable.Size = new System.Drawing.Size(202, 46);
             this.lbTable.TabIndex = 1;
             this.lbTable.Text = "Table";
             this.lbTable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -254,7 +256,8 @@
             // btn_Edit
             // 
             this.btn_Edit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Edit.Image = global::GUI.Properties.Resources.edit_96px;
+            this.btn_Edit.Enabled = false;
+//            this.btn_Edit.Image = global::GUI.Properties.Resources.edit_96px;
             this.btn_Edit.Location = new System.Drawing.Point(625, 15);
             this.btn_Edit.Margin = new System.Windows.Forms.Padding(15);
             this.btn_Edit.Name = "btn_Edit";
@@ -262,6 +265,7 @@
             this.btn_Edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_Edit.TabIndex = 0;
             this.btn_Edit.TabStop = false;
+            this.btn_Edit.Visible = false;
             this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // UCTable
@@ -294,8 +298,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.PictureBox btn_Edit;
         private System.Windows.Forms.Label lbTable;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnBook;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnPay;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnOrder;
     }
 }
