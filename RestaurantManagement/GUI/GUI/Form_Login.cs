@@ -73,7 +73,8 @@ namespace GUI
             {
                 if (employeeBLL.CheckLogin(tenDN, matkhau) == true)
                 {
-                    Form_Restaurant f = new Form_Restaurant();
+                    bool isAdmin = employeeBLL.CheckAdmin(tenDN);
+                    Form_Restaurant f = new Form_Restaurant(isAdmin);
                     this.Hide();
                     f.Show();
                 }
@@ -82,11 +83,7 @@ namespace GUI
                 
             }
         }
-
-        private void Form_Login_KeyUp(object sender, KeyEventArgs e)
-        {
-
-        }
+        
 
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
@@ -103,7 +100,8 @@ namespace GUI
                 {
                     if (employeeBLL.CheckLogin(tenDN, matkhau) == true)
                     {
-                        Form_Restaurant f = new Form_Restaurant();
+                        bool isAdmin = employeeBLL.CheckAdmin(tenDN);
+                        Form_Restaurant f = new Form_Restaurant(isAdmin);
                         this.Hide();
                         f.Show();
                     }

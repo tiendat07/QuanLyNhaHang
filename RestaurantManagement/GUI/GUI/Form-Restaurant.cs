@@ -13,20 +13,21 @@ namespace GUI
     public partial class Form_Restaurant : Form
     {
         static Form_Restaurant _obj;
-
+        static bool  AdminTrue;
         public static Form_Restaurant Instance
         {
             get
             {
                 if (_obj == null)
                 {
-                    _obj = new Form_Restaurant();
+                    _obj = new Form_Restaurant(AdminTrue);
                 }
                 return _obj;
             }
         }
-        public Form_Restaurant()
+        public Form_Restaurant(bool isAdmin)
         {
+            AdminTrue = isAdmin;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
             // int width = SystemInformation.VirtualScreen.Width;
@@ -34,6 +35,13 @@ namespace GUI
             //this.Size = new Size(width, height);
             InitializeComponent();
             this.SetStyle(ControlStyles.ResizeRedraw, true);
+            if (AdminTrue == false)
+            {
+                btn_Employee.Visible = false;
+                btn_Employee.Enabled = false;
+                btn_Order.Visible = false;
+                btn_Order.Enabled = false;
+            }
         }
         private const int cGrip = 16;
         private const int cCaption = 32;
@@ -57,9 +65,6 @@ namespace GUI
             base.WndProc(ref m);
         }
         
-        private void Form_Restaurant_Load(object sender, EventArgs e)
-        {
-        }
 
         private void img_Close_Click_1(object sender, EventArgs e)
         {
@@ -188,6 +193,24 @@ namespace GUI
             _obj = this;
             pnlContainer.Controls.Clear();
             UCOrder uc = new UCOrder(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+
+        private void btn_Home_Click(object sender, EventArgs e)
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCHome uc = new UCHome(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+
+        private void Form_Restaurant_Load_1(object sender, EventArgs e)
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCHome uc = new UCHome(this);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
