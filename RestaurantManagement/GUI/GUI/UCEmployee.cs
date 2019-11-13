@@ -129,7 +129,7 @@ namespace GUI
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            mainform.loadUCEmployeeEdit();
+            //mainform.loadUCEmployeeEdit();
         }
 
         private void bunifuCustomLabel1_Click(object sender, EventArgs e)

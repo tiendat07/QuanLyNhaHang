@@ -34,14 +34,18 @@ namespace GUI
                 f.FoodDrinkName = txtName.Text;
                 f.Description = txtDes.Text;
                 f.ImageURL = lbURLText.Text;
-                string isFood =  cbFoodDrink.SelectedValue.ToString();
-                f.IsFood = (isFood == "Food") ? true : false; 
-                string isAvailable = cbAvailable.SelectedValue.ToString();
+                string isFood = cbFoodDrink.Text;
+                f.IsFood = (isFood == "Food") ? true : false;
+                string isAvailable = cbAvailable.Text;
                 f.IsAvailable = (isAvailable == "Available") ? true : false;
                 if (f.FoodDrinkID == 0)
                 {
                     if (foodDrinkBLL.AddFoodDrink(f) == true)
+                    {
                         MessageBox.Show("Saved successfully");
+                        this.Hide();
+                    }
+                        
                     else
                         MessageBox.Show("Cannot save. Please try again!");
                 }

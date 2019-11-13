@@ -15,6 +15,9 @@ namespace GUI
         public EmployeeBLL employeeBLL;
         public Form_Login()
         {
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+            employeeBLL = new EmployeeBLL();
             InitializeComponent();
         }
 
@@ -59,8 +62,8 @@ namespace GUI
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            string tenDN = txtUsername.text;
-            string matkhau = txtPassword.text;
+            string tenDN = txtUsername.Text;
+            string matkhau = txtPassword.Text;
 
             if (string.IsNullOrEmpty(tenDN) || string.IsNullOrEmpty(matkhau))
             {
@@ -78,6 +81,38 @@ namespace GUI
                     MessageBox.Show("Chua chinh xac !!");
                 
             }
+        }
+
+        private void Form_Login_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                string tenDN = txtUsername.Text;
+                string matkhau = txtPassword.Text;
+
+                if (string.IsNullOrEmpty(tenDN) || string.IsNullOrEmpty(matkhau))
+                {
+                    MessageBox.Show("Vui long nhap day du thong tin");
+                }
+                else
+                {
+                    if (employeeBLL.CheckLogin(tenDN, matkhau) == true)
+                    {
+                        Form_Restaurant f = new Form_Restaurant();
+                        this.Hide();
+                        f.Show();
+                    }
+                    else
+                        MessageBox.Show("Chua chinh xac !!");
+
+                }
+            }
+                
         }
     }
 }

@@ -12,8 +12,10 @@ namespace GUI
 {
     public partial class UCOrder : UserControl
     {
-        public UCOrder()
+        Form_Restaurant mainform;
+        public UCOrder(Form_Restaurant form)
         {
+            mainform = form;
             InitializeComponent();
         }
     }
