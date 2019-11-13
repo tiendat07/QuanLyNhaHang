@@ -35,5 +35,10 @@ namespace BLL
         {
             return employeeDAL.CheckAdmin(username);
         }
+
+        public int GetEmployeeID(string username)
+        {
+            return employeeDAL.GetEmployeeID(username);
+        }
     }
 }

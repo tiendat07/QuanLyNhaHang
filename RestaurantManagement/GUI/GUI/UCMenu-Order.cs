@@ -20,8 +20,12 @@ namespace GUI
         List<FoodDrink> lsFood;
         List<myNumericUpDown> lsNumeric;
         List<OrderDetail> lsOrder;
-        public UCMenu_Order(Form_Restaurant form1)
+        int TableID;
+        int EmployeeID;
+        public UCMenu_Order(Form_Restaurant form1, int empID, int tabID)
         {
+            TableID = tabID;
+            EmployeeID = empID;
             orderDetailBLL = new OrderDetailBLL();
             foodDrinkBLL = new FoodDrinkBLL();
             lsFood_Order = new List<FoodDrink>();
@@ -35,37 +39,73 @@ namespace GUI
         private void NumericValueChanged(object sender, EventArgs e)
         {
             myNumericUpDown n = sender as myNumericUpDown;
-            OrderDetail orderDetail = new OrderDetail();
-            orderDetail.Quantity = Convert.ToInt32(n.Value);
-            MessageBox.Show("" + orderDetail.Quantity);
-            orderDetail.FoodDrinkID = n.objectID;
-            orderDetail.Note = "None";
-            orderDetail.Price = 100;
-            orderDetail.OrderID = 0;
-            // Xét trùng? - Chưa xét...
-            lsOrder.Add(orderDetail);
+            foreach (var item in lsOrder)
+            {
+                if (item.FoodDrinkID == n.objectID)
+                {
+                    item.Quantity = Convert.ToInt32(n.Value);
+                    double x = foodDrinkBLL.GetFoodPrice(n.objectID) * item.Quantity;
+                    item.Price = (float)x;
+                }
+            }
+            
+            if (n.Visible == false)
+            {
+                btnSave.Enabled = false;
+                btnCancel.Enabled = false;
+            }
             btnSave.Enabled = true;
             btnCancel.Enabled = true;
         }
         private void CheckBoxClick(object sender, EventArgs e)
         {
             // Làm sao xác định đc ngta check hay uncheck??? Vì thế nào cx là click mà?
-            
+
             myCheckBoxEdit cb = sender as myCheckBoxEdit;
-            
+
             if (cb.Checked == true)
             {
+                OrderDetail orderDetail = new OrderDetail();
+                orderDetail.Quantity = 1;
+                orderDetail.FoodDrinkID = cb.objectID;
+                orderDetail.Note = "...";
+                orderDetail.Price = (float)foodDrinkBLL.GetFoodPrice(cb.objectID);
+                lsOrder.Add(orderDetail);
                 foreach (var item in lsNumeric)
                 {
                     if (item.objectID == cb.objectID)
                     {
                         item.Visible = true;
                         item.Enabled = true;
-                        
+
                     }
                 }
             }
-            
+            else
+            {
+                //if (lsOrder.Any() == true)
+                //{
+                //    foreach (var item in lsOrder)
+                //    {
+                //        if (item.FoodDrinkID == cb.objectID)
+                //            lsOrder.Remove(item);
+                //    }
+                //}
+                
+                foreach (var item in lsNumeric)
+                {
+                    if (item.objectID == cb.objectID)
+                    {
+                        
+                        item.Visible = false;
+                        item.Enabled = false;
+                       // btnSave.Visible = false;
+                        //btnCancel.Visible = false;
+                        btnSave.Enabled = false;
+                        btnCancel.Enabled = false;
+                    }
+                }
+            }
         }
         public void Load(List<FoodDrink> lstFood, bool isFood)
         {
@@ -86,6 +126,7 @@ namespace GUI
                 checkBox.objectID = foodID;
                 picBox.objectID = foodID;
                 number.objectID = foodID;
+
                 x = (count % 2 == 0) ? 0 : x + 500;
                 // Location
                 picBox.Location = new Point(x, y);
@@ -98,9 +139,9 @@ namespace GUI
                     y += 100;
 
                 //Numeric
-                number.Value = 0;
+                number.Value = 1;
                 number.Maximum = 20;
-                number.Minimum = 0;
+                number.Minimum = 1;
                 number.Width = 30;
 
                 // Label Name
@@ -188,9 +229,8 @@ namespace GUI
         {
             if (lsOrder.Any() == true)
             {
-                MessageBox.Show("Saved successfully");
                 this.Hide();
-                //mainform.loadUCOrder(lsOrder);
+                mainform.loadUCOrder(lsOrder, EmployeeID, TableID);
             }
             else
             {

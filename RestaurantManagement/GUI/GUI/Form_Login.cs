@@ -74,7 +74,8 @@ namespace GUI
                 if (employeeBLL.CheckLogin(tenDN, matkhau) == true)
                 {
                     bool isAdmin = employeeBLL.CheckAdmin(tenDN);
-                    Form_Restaurant f = new Form_Restaurant(isAdmin);
+                    int employeeID = employeeBLL.GetEmployeeID(tenDN);
+                    Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
                     this.Hide();
                     f.Show();
                 }
@@ -101,7 +102,8 @@ namespace GUI
                     if (employeeBLL.CheckLogin(tenDN, matkhau) == true)
                     {
                         bool isAdmin = employeeBLL.CheckAdmin(tenDN);
-                        Form_Restaurant f = new Form_Restaurant(isAdmin);
+                        int employeeID = employeeBLL.GetEmployeeID(tenDN);
+                        Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
                         this.Hide();
                         f.Show();
                     }

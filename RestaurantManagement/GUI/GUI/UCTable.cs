@@ -17,8 +17,10 @@ namespace GUI
         TableBLL tableBLL;
         Form_Restaurant mainform;
         List<Table> lsTable_temp;
+        OrderBLL orderBLL;
         public UCTable(Form_Restaurant form1)
         {
+            orderBLL = new OrderBLL();
             tableBLL = new TableBLL();
             lsTable_temp = tableBLL.GetListTable();
             mainform = form1;
@@ -40,6 +42,7 @@ namespace GUI
                                 // Trống
                                 btnOrder.Visible = true;
                                 btnOrder.Enabled = true;
+                                btnOrder.objectID = btn.objectID;
                                 btnPay.Visible = false;
                                 btnPay.Enabled = false;
                                 //btnBook.Visible = true;
@@ -51,6 +54,7 @@ namespace GUI
                                 // Đã có ng đặt
                                 btnPay.Visible = true;
                                 btnPay.Enabled = true;
+                                btnPay.objectID = btn.objectID;
                                 btnOrder.Visible = false;
                                 btnOrder.Enabled = false;
                                 break;
@@ -60,6 +64,7 @@ namespace GUI
                                 // Đã có người vô ngồi
                                 btnPay.Visible = true;
                                 btnPay.Enabled = true;
+                                btnPay.objectID = btn.objectID;
                                 btnOrder.Visible = false;
                                 btnOrder.Enabled = false;
                                 break;
@@ -83,6 +88,9 @@ namespace GUI
             {
                 myButton btn = new myButton();
                 btn.objectID = item.TableID;
+                btnPay.objectID = item.TableID;
+                btnBook.objectID = item.TableID;
+                btnOrder.objectID = item.TableID;
                 btn.Width = flpTable1.Width/4;
                 btn.Height = 50;
                 btn.Text = item.TableName;
@@ -95,18 +103,21 @@ namespace GUI
                 {
                     case 0:
                         {
+                            // Trống
                             btn.BackColor = Color.FromArgb(247, 204, 217);
                             btn.FlatAppearance.BorderColor = Color.FromArgb(247, 204, 217);
                             break;
                         }
                     case 1:
                         {
+                            // Đã được đặt
                             btn.BackColor = Color.FromArgb(248, 168, 60);
                             btn.FlatAppearance.BorderColor = Color.FromArgb(248, 168, 60);
                             break;
                         }
                     case 2:
                         {
+                            // Có người ngồi
                             btn.BackColor = Color.FromArgb(228, 76, 73);
                             btn.FlatAppearance.BorderColor = Color.FromArgb(228, 76, 73);
                             break;
@@ -127,25 +138,35 @@ namespace GUI
         {
             //mainform.loadUCTableEdit();
         }
+        
+        
 
-        private void btnBook_Click(object sender, EventArgs e)
+        private void btnOrder_Click_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnOrder_Click(object sender, EventArgs e)
-        {
-            mainform.loadUcMenu_Order();
+            myButton btn = sender as myButton;
+            mainform.loadUcMenu_Order(btn.objectID);
             this.Hide();
         }
 
-        private void btnPay_Click(object sender, EventArgs e)
+        private void btnPay_Click_1(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to pay?", "Pay Notification", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
+                myButton btn = sender as myButton;
                 //yes...
-                MessageBox.Show("You have paid sucessfully !");
+                if (orderBLL.SetPaid(btn.objectID) == true)
+                {
+                    if (tableBLL.ChangeTableStatus(btn.objectID, false, true, false) == true)
+                    {
+                        MessageBox.Show("You have paid sucessfully !");
+                        mainform.loadUCTable();
+                    }
+                        
+                }
+                    
+                else
+                    MessageBox.Show("Cannot process. Please try again");
             }
         }
     }

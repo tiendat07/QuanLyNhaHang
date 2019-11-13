@@ -68,5 +68,15 @@ namespace DataAccessLayer
                 return false;
             }
         }
+        public string GetFoodDrinkName(int FoodID)
+        {
+            var x = dbContext.FoodDrinks.Where(f => f.FoodDrinkID == FoodID).FirstOrDefault();
+            return x.FoodDrinkName;
+        }
+        public double GetFoodPrice(int FoodID)
+        {
+            var x = dbContext.FoodDrinks.Where(f => f.FoodDrinkID == FoodID).FirstOrDefault();
+            return Convert.ToDouble(x.FoodPrice);
+        }
     }
 }

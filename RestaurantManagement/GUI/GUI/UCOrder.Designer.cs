@@ -33,27 +33,27 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbTableID = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbEmployeeID = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbDateOrder = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridViewOrder = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btnCancel = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnEdit = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnSave = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.dataGridViewOrder = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -63,9 +63,9 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -121,7 +121,7 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.label4);
+            this.panel7.Controls.Add(this.lbTableID);
             this.panel7.Controls.Add(this.pictureBox3);
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.panel9);
@@ -131,18 +131,18 @@
             this.panel7.Size = new System.Drawing.Size(473, 140);
             this.panel7.TabIndex = 2;
             // 
-            // label4
+            // lbTableID
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lbTableID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(265, 76);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 35);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "5";
+            this.lbTableID.AutoSize = true;
+            this.lbTableID.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTableID.Location = new System.Drawing.Point(265, 76);
+            this.lbTableID.Name = "lbTableID";
+            this.lbTableID.Size = new System.Drawing.Size(29, 35);
+            this.lbTableID.TabIndex = 4;
+            this.lbTableID.Text = "5";
             // 
             // pictureBox3
             // 
@@ -173,7 +173,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.lbEmployeeID);
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.panel6);
@@ -183,18 +183,18 @@
             this.panel4.Size = new System.Drawing.Size(473, 140);
             this.panel4.TabIndex = 1;
             // 
-            // label3
+            // lbEmployeeID
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lbEmployeeID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(265, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 35);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "1";
+            this.lbEmployeeID.AutoSize = true;
+            this.lbEmployeeID.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmployeeID.Location = new System.Drawing.Point(265, 76);
+            this.lbEmployeeID.Name = "lbEmployeeID";
+            this.lbEmployeeID.Size = new System.Drawing.Size(28, 35);
+            this.lbEmployeeID.TabIndex = 4;
+            this.lbEmployeeID.Text = "1";
             // 
             // pictureBox2
             // 
@@ -225,7 +225,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lbDateOrder);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -235,18 +235,18 @@
             this.panel1.Size = new System.Drawing.Size(473, 140);
             this.panel1.TabIndex = 0;
             // 
-            // label2
+            // lbDateOrder
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lbDateOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(265, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 35);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "14/11/2019";
+            this.lbDateOrder.AutoSize = true;
+            this.lbDateOrder.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDateOrder.Location = new System.Drawing.Point(265, 76);
+            this.lbDateOrder.Name = "lbDateOrder";
+            this.lbDateOrder.Size = new System.Drawing.Size(141, 35);
+            this.lbDateOrder.TabIndex = 4;
+            this.lbDateOrder.Text = "14/11/2019";
             // 
             // pictureBox1
             // 
@@ -291,16 +291,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1440, 501);
             this.tableLayoutPanel3.TabIndex = 2;
-            // 
-            // dataGridViewOrder
-            // 
-            this.dataGridViewOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOrder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewOrder.Location = new System.Drawing.Point(103, 53);
-            this.dataGridViewOrder.Name = "dataGridViewOrder";
-            this.dataGridViewOrder.RowTemplate.Height = 28;
-            this.dataGridViewOrder.Size = new System.Drawing.Size(1232, 445);
-            this.dataGridViewOrder.TabIndex = 0;
             // 
             // tableLayoutPanel4
             // 
@@ -361,6 +351,7 @@
             this.btnCancel.Size = new System.Drawing.Size(395, 80);
             this.btnCancel.TabIndex = 7;
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnEdit
             // 
@@ -387,6 +378,7 @@
             this.btnEdit.Size = new System.Drawing.Size(394, 80);
             this.btnEdit.TabIndex = 6;
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnSave
             // 
@@ -413,6 +405,22 @@
             this.btnSave.Size = new System.Drawing.Size(394, 80);
             this.btnSave.TabIndex = 5;
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // dataGridViewOrder
+            // 
+            this.dataGridViewOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewOrder.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewOrder.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridViewOrder.Location = new System.Drawing.Point(103, 53);
+            this.dataGridViewOrder.Name = "dataGridViewOrder";
+            this.dataGridViewOrder.RowTemplate.Height = 28;
+            this.dataGridViewOrder.Size = new System.Drawing.Size(1232, 445);
+            this.dataGridViewOrder.TabIndex = 0;
+            this.dataGridViewOrder.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewOrder_CellEndEdit);
+            this.dataGridViewOrder.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewOrder_CellFormatting);
             // 
             // UCOrder
             // 
@@ -435,9 +443,9 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -448,26 +456,26 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbDateOrder;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbTableID;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbEmployeeID;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.DataGridView dataGridViewOrder;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private Bunifu.Framework.UI.BunifuThinButton2 btnCancel;
         private Bunifu.Framework.UI.BunifuThinButton2 btnEdit;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSave;
+        private System.Windows.Forms.DataGridView dataGridViewOrder;
     }
 }

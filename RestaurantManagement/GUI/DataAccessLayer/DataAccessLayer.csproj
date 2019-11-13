@@ -71,6 +71,7 @@
     <Compile Include="Order.cs">
       <DependentUpon>RestaurantManagement.tt</DependentUpon>
     </Compile>
+    <Compile Include="OrderDAL.cs" />
     <Compile Include="OrderDetail.cs">
       <DependentUpon>RestaurantManagement.tt</DependentUpon>
     </Compile>

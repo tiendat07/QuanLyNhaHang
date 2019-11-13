@@ -18,5 +18,9 @@ namespace BLL
         {
             return tableDAL.GetListTable();
         }
+        public bool ChangeTableStatus(int TableID, bool isOrdered, bool isPaid, bool isBooked)
+        {
+            return tableDAL.ChangeTableStatus(TableID, isOrdered, isPaid, isBooked);
+        }
     }
 }
