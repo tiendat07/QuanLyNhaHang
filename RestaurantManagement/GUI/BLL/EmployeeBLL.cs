@@ -30,5 +30,10 @@ namespace BLL
             return employeeDAL.AddEmployee(e);
 
         }
+
+        public bool CheckAdmin(string username)
+        {
+            return employeeDAL.CheckAdmin(username);
+        }
     }
 }
