@@ -162,7 +162,7 @@ namespace GUI
             this.btn_Report.Text = "Report";
             this.btn_Report.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Report.Textcolor = System.Drawing.Color.White;
-            this.btn_Report.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Report.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btn_Employee
             // 
@@ -199,7 +199,7 @@ namespace GUI
             this.btn_Employee.Text = "Employee";
             this.btn_Employee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Employee.Textcolor = System.Drawing.Color.White;
-            this.btn_Employee.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Employee.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Employee.Click += new System.EventHandler(this.btn_Employee_Click_1);
             // 
             // btn_Customer
@@ -237,7 +237,7 @@ namespace GUI
             this.btn_Customer.Text = "Customer";
             this.btn_Customer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Customer.Textcolor = System.Drawing.Color.White;
-            this.btn_Customer.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Customer.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Customer.Click += new System.EventHandler(this.btn_Customer_Click);
             // 
             // btn_Order
@@ -275,7 +275,7 @@ namespace GUI
             this.btn_Order.Text = "Order";
             this.btn_Order.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Order.Textcolor = System.Drawing.Color.White;
-            this.btn_Order.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Order.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Order.Click += new System.EventHandler(this.btn_Order_Click);
             // 
             // btn_Table
@@ -313,7 +313,7 @@ namespace GUI
             this.btn_Table.Text = "Table";
             this.btn_Table.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Table.Textcolor = System.Drawing.Color.White;
-            this.btn_Table.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Table.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Table.Click += new System.EventHandler(this.btn_Table_Click_1);
             // 
             // btn_Menu
@@ -389,7 +389,7 @@ namespace GUI
             this.btn_Home.Text = "Home";
             this.btn_Home.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Home.Textcolor = System.Drawing.Color.White;
-            this.btn_Home.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Home.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Home.Click += new System.EventHandler(this.btn_Home_Click);
             // 
             // tableLayoutPanel4

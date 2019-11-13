@@ -26,6 +26,7 @@ namespace DataAccessLayer
         public string Description { get; set; }
         public bool IsAvailable { get; set; }
         public bool IsFood { get; set; }
+        public Nullable<double> FoodPrice { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }

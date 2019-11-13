@@ -102,5 +102,10 @@ namespace DataAccessLayer
             var x = dbContext.Employees.Where(n => n.Username == username && n.IsAdmin == true).ToList();
             return (x.Any()) ? true : false;
         }
+        public int GetEmployeeID (string username)
+        {
+            var x = dbContext.Employees.Where(n => n.Username == username).FirstOrDefault();
+            return x.EmployeeID;
+        }
     }
 }

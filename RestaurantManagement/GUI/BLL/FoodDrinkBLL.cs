@@ -34,5 +34,13 @@ namespace BLL
         {
             return foodDrinkDAL.AddFoodDrink(foodDrink);
         }
+        public string GetFoodDrinkName(int FoodID)
+        {
+            return foodDrinkDAL.GetFoodDrinkName(FoodID);
+        }
+        public double GetFoodPrice(int FoodID)
+        {
+            return foodDrinkDAL.GetFoodPrice(FoodID);
+        }
     }
 }
