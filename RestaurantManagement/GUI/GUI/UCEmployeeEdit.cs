@@ -283,8 +283,8 @@ namespace GUI
             txtName.Text = "";
             txtPhone.Text = "";
             txtShift.Text = "";
-            dtPkDOB.Text = "";   //vẫn chưa thay doi 
-            cbGender.SelectedText = "";//ko ổn
+            dtPkDOB.Text = "";   
+            cbGender.SelectedText = "";
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

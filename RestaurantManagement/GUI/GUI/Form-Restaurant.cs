@@ -13,7 +13,7 @@ namespace GUI
     public partial class Form_Restaurant : Form
     {
         static Form_Restaurant _obj;
-
+        UCEmployee ucEmployee;
         public static Form_Restaurant Instance
         {
             get
@@ -112,16 +112,52 @@ namespace GUI
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
-        
+
+        public void loadUCEmployee()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCEmployee uc = new UCEmployee(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
 
         public void loadUCEmployeeEdit()
         {
             _obj = this;
             pnlContainer.Controls.Clear();
-            UCEmployeeEdit uc = new UCEmployeeEdit(this);
+            UCEmployee_Edit uc = new UCEmployee_Edit(this);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
+
+        public void loadUCEmployeeEvenEdit()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCEmployeeEvenEdit uc = new UCEmployeeEvenEdit(this, ucEmployee);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+
+        public void loadUCEmployeeDelate()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCEmployee_Delete uc = new UCEmployee_Delete(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+
+        public void loadUCEmployeeAdd()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCEmployee_Add uc = new UCEmployee_Add(this, ucEmployee.GetDataGridView());
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+    
 
         private void btn_Menu_Click_1(object sender, EventArgs e)
         {
@@ -140,7 +176,7 @@ namespace GUI
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
-
+        
         private void btn_Employee_Click_1(object sender, EventArgs e)
         {
             _obj = this;
@@ -148,6 +184,7 @@ namespace GUI
             UCEmployee uc = new UCEmployee(this);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
+            ucEmployee = uc;
         }
     }
 

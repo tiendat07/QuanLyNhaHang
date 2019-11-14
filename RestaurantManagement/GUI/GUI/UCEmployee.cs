@@ -15,8 +15,9 @@ namespace GUI
     public partial class UCEmployee : UserControl
     {
         Form_Restaurant mainform;
-
+        DataGridView data;
         public EmployeeBLL employeeBLL;
+
         public UCEmployee(Form_Restaurant form)
         {
             employeeBLL = new EmployeeBLL();
@@ -25,7 +26,10 @@ namespace GUI
             loadData();
             dataGridViewListEmployee.ReadOnly = true;
         }
-
+        public DataGridView GetDataGridView()
+        {
+            return data;
+        }
         public void loadData()
         {
             dataGridViewListEmployee.AutoGenerateColumns = false;
@@ -78,19 +82,27 @@ namespace GUI
             column.DataPropertyName = "IsAdmin";
             column.Name = "Is Admin";
             dataGridViewListEmployee.Columns.Add(column);
+            data = dataGridViewListEmployee;
         }
         private void dataGridViewListEmployee_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
         {
             e.Column.FillWeight = 20;    // <<this line will help you
         }
-        private void dataGridViewListEmployee_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+
+        private void btnEdit_Click_1(object sender, EventArgs e)
         {
-            if(this.dataGridViewListEmployee.Columns[e.ColumnIndex].Name=="Gender")
+            Form_EmployeeEditEvent f_event = new Form_EmployeeEditEvent(mainform, this);
+            f_event.Show();
+        }
+
+        private void dataGridViewListEmployee_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dataGridViewListEmployee.Columns[e.ColumnIndex].Name == "Gender")
             {
                 if (e.Value != null)
                 {
                     int gender = Convert.ToInt32(e.Value);
-                    if (gender == 1)
+                    if (gender == 0)
                     {
                         e.Value = "Male";
                     }
@@ -101,48 +113,6 @@ namespace GUI
                     e.FormattingApplied = true;
                 }
             }
-            /*
-            DataGridViewCheckBoxColumn CheckboxColumn = new DataGridViewCheckBoxColumn();
-            CheckBox chk = new CheckBox();
-            CheckboxColumn.Width = 20;
-            CheckboxColumn.Name = "Admin";
-            CheckboxColumn.HeaderText = "Admin";
-            CheckboxColumn.ValueType = typeof(bool);
-            if (this.dataGridViewListEmployee.Columns[e.ColumnIndex].Name == "Is Admin")
-            {
-                if (e.Value != null)
-                {
-                    int isAd = Convert.ToInt32(e.Value);
-                    if (isAd == 1)
-                    {
-                        CheckboxColumn.TrueValue = true;
-                    }
-                    else
-                    {
-                        CheckboxColumn.TrueValue = false;
-                    }
-                    e.FormattingApplied = true;
-                }
-            }
-            dataGridViewListEmployee.Columns.Add(CheckboxColumn);*/
         }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            mainform.loadUCEmployeeEdit();
-        }
-        /*
-int pageNumber = 1;
-int numberRecord = 10;
-
-List<Employee> result = new List<Employee>();
-using (RestaurantContext bd= new EmployeeDataContext())
-{
-result = bd.
-private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-{
-
-}
-*/
     }
 }
