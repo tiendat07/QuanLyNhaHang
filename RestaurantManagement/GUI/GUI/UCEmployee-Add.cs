@@ -35,7 +35,7 @@ namespace GUI
                 || String.IsNullOrEmpty(cbGender.Text) || String.IsNullOrEmpty(dtpkDOB.Text))
                 
             {
-                MessageBox.Show("Ban hay nhap day du", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please insert information fully !", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

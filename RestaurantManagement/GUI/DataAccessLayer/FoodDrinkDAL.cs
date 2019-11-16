@@ -29,7 +29,7 @@ namespace DataAccessLayer
                         return false;
                     fDrink.ImageURL = food.ImageURL;
                     fDrink.FoodDrinkName = food.FoodDrinkName;
-                    fDrink.Description = food.FoodDrinkName;
+                    fDrink.Description = food.Description;
                     dbContext.SaveChanges();
                     return true;
                 }
@@ -67,6 +67,16 @@ namespace DataAccessLayer
             {
                 return false;
             }
+        }
+        public string GetFoodDrinkName(int FoodID)
+        {
+            var x = dbContext.FoodDrinks.Where(f => f.FoodDrinkID == FoodID).FirstOrDefault();
+            return x.FoodDrinkName;
+        }
+        public double GetFoodPrice(int FoodID)
+        {
+            var x = dbContext.FoodDrinks.Where(f => f.FoodDrinkID == FoodID).FirstOrDefault();
+            return Convert.ToDouble(x.FoodPrice);
         }
     }
 }

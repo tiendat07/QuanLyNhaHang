@@ -18,10 +18,6 @@ namespace BLL
         {
             return foodDrinkDAL.GetListFoodDrink();
         }
-        //public string GetImageFoodDrink()
-        //{
-        //    return foodDrinkDAL.GetImageFoodDrink();
-        //}
         public bool EditFoodDrink(FoodDrink food)
         {
             return foodDrinkDAL.EditFoodDrink(food);
@@ -33,6 +29,14 @@ namespace BLL
         public bool AddFoodDrink(FoodDrink foodDrink)
         {
             return foodDrinkDAL.AddFoodDrink(foodDrink);
+        }
+        public string GetFoodDrinkName(int FoodID)
+        {
+            return foodDrinkDAL.GetFoodDrinkName(FoodID);
+        }
+        public double GetFoodPrice(int FoodID)
+        {
+            return foodDrinkDAL.GetFoodPrice(FoodID);
         }
     }
 }

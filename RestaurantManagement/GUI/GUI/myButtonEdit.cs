@@ -16,4 +16,13 @@ namespace GUI
              set { objectID = value; }
         }
     }
+    class myButton : Button
+    {
+        public int objectID;
+        public int ObjectID
+        {
+            get { return objectID; }
+            set { objectID = value; }
+        }
+    }
 }

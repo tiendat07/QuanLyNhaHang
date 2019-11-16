@@ -63,9 +63,19 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap add_64px {
+        internal static System.Drawing.Bitmap add_96px {
             get {
-                object obj = ResourceManager.GetObject("add_64px", resourceCulture);
+                object obj = ResourceManager.GetObject("add_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_64px {
+            get {
+                object obj = ResourceManager.GetObject("delete_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,109 +113,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_ball_point_pen_64px_1 {
+        internal static System.Drawing.Bitmap icons8_maximize_window_64 {
             get {
-                object obj = ResourceManager.GetObject("icons8_ball_point_pen_64px_1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_ball_point_pen_64px_11 {
-            get {
-                object obj = ResourceManager.GetObject("icons8_ball_point_pen_64px_11", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_ball_point_pen_64px_12 {
-            get {
-                object obj = ResourceManager.GetObject("icons8_ball_point_pen_64px_12", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_ball_point_pen_64px_13 {
-            get {
-                object obj = ResourceManager.GetObject("icons8_ball_point_pen_64px_13", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_ball_point_pen_64px_14 {
-            get {
-                object obj = ResourceManager.GetObject("icons8_ball_point_pen_64px_14", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_google_web_search_64px_1 {
-            get {
-                object obj = ResourceManager.GetObject("icons8_google_web_search_64px_1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_google_web_search_64px_11 {
-            get {
-                object obj = ResourceManager.GetObject("icons8_google_web_search_64px_11", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_menu {
-            get {
-                object obj = ResourceManager.GetObject("icons8_menu", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_menu_16 {
-            get {
-                object obj = ResourceManager.GetObject("icons8_menu_16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_menu1 {
-            get {
-                object obj = ResourceManager.GetObject("icons8_menu1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_menu2 {
-            get {
-                object obj = ResourceManager.GetObject("icons8_menu2", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_maximize_window_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +133,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_save_as_64px {
+        internal static System.Drawing.Bitmap icons8_search_96px {
             get {
-                object obj = ResourceManager.GetObject("icons8_save_as_64px", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_search_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +143,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_save_as_64px1 {
+        internal static System.Drawing.Bitmap id_card_96px {
             get {
-                object obj = ResourceManager.GetObject("icons8_save_as_64px1", resourceCulture);
+                object obj = ResourceManager.GetObject("id_card_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +153,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_search_64px {
+        internal static System.Drawing.Bitmap meeting_500px {
             get {
-                object obj = ResourceManager.GetObject("icons8_search_64px", resourceCulture);
+                object obj = ResourceManager.GetObject("meeting_500px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,109 +163,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_search_64px1 {
+        internal static System.Drawing.Bitmap overtime_96px {
             get {
-                object obj = ResourceManager.GetObject("icons8_search_64px1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_search_64px2 {
-            get {
-                object obj = ResourceManager.GetObject("icons8_search_64px2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_search_64px3 {
-            get {
-                object obj = ResourceManager.GetObject("icons8_search_64px3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_search_64px4 {
-            get {
-                object obj = ResourceManager.GetObject("icons8_search_64px4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_search_64px5 {
-            get {
-                object obj = ResourceManager.GetObject("icons8_search_64px5", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap maximize_window_100px {
-            get {
-                object obj = ResourceManager.GetObject("maximize_window_100px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap menu_100px {
-            get {
-                object obj = ResourceManager.GetObject("menu_100px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap minus_math_32px {
-            get {
-                object obj = ResourceManager.GetObject("minus_math_32px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap multiply_24px {
-            get {
-                object obj = ResourceManager.GetObject("multiply_24px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap multiply_48px {
-            get {
-                object obj = ResourceManager.GetObject("multiply_48px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap multiply_64px {
-            get {
-                object obj = ResourceManager.GetObject("multiply_64px", resourceCulture);
+                object obj = ResourceManager.GetObject("overtime_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -373,9 +183,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap screensharing_64px {
+        internal static System.Drawing.Bitmap table_96px {
             get {
-                object obj = ResourceManager.GetObject("screensharing_64px", resourceCulture);
+                object obj = ResourceManager.GetObject("table_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

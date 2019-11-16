@@ -215,7 +215,7 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Transparent;
             this.btnAdd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAdd.Image = global::GUI.Properties.Resources.add_64px;
+            this.btnAdd.Image = global::GUI.Properties.Resources.add_96px;
             this.btnAdd.ImageActive = null;
             this.btnAdd.Location = new System.Drawing.Point(1237, 0);
             this.btnAdd.Name = "btnAdd";

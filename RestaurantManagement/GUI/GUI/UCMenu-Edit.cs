@@ -11,6 +11,7 @@ using BLL;
 using Bunifu;
 using DataAccessLayer;
 using System.Net;
+using GUI.Properties;
 
 namespace GUI
 {
@@ -76,7 +77,7 @@ namespace GUI
                     openFileDialog.Filter = "Image files|*.bmp;*.jpg;*.gif;*.png;*.tif";
                     picturePath = openFileDialog.FileName;
                     myButtonEdit btn = sender as myButtonEdit;
-                    MessageBox.Show(" " + btn.objectID);
+                    //MessageBox.Show(" " + btn.objectID);
                     foreach (var item in lsFoodDrink_Temp)
                         if (item.FoodDrinkID == btn.objectID)
                             item.ImageURL = picturePath;
@@ -89,7 +90,7 @@ namespace GUI
         {
             myTextEdit txt = sender as myTextEdit;
             txt.objectText = txt.Text;
-            MessageBox.Show(" " + txt.objectText);
+            //MessageBox.Show(" " + txt.objectText);
             foreach (var item in lsFoodDrink_Temp)
             {
                 if (item.FoodDrinkID == txt.objectID)
@@ -100,11 +101,15 @@ namespace GUI
         {
             myTextEdit txt = sender as myTextEdit;
             txt.objectText = txt.Text;
-            MessageBox.Show(" " + txt.objectText);
+            
             foreach (var item in lsFoodDrink_Temp)
             {
                 if (item.FoodDrinkID == txt.objectID)
-                    item.Description = txt.objectText;
+                {
+                    item.Description = txt.Text;
+                    //MessageBox.Show(" " + item.Description);
+                }
+                    
             }
         }
         public void Load(List<FoodDrink> lstFood, bool isFood)
@@ -174,15 +179,11 @@ namespace GUI
                 picBox.SizeMode = PictureBoxSizeMode.StretchImage;
 
                 // PicDelete
-                picDelete.ImageLocation = @"C:\Users\Thien Ngan\Documents\Project\RestaurantManagement\GUI\GUI\Resources\delete_64px.png";
+                picDelete.Image = Resources.delete_64px;
                 picDelete.Name = "FoodDel" + foodID;
                 picDelete.ClientSize = new Size(40, 40);
                 picDelete.SizeMode = PictureBoxSizeMode.StretchImage;
-
-                // PicEdit
-                picEdit.ImageLocation = @"C:\Users\Thien Ngan\Documents\Project\RestaurantManagement\GUI\GUI\Resources\browser_window_128px.png";
-                picEdit.ClientSize = new Size(width, height);
-                picEdit.SizeMode = PictureBoxSizeMode.StretchImage;
+                
                 //TextName
                 txtName.Text = item.FoodDrinkName;
                 txtName.Size = new Size(200, 30);
@@ -291,8 +292,8 @@ namespace GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //Form_FoodDrink f = new Form_FoodDrink();
-            //f.Show();
+            Form_AddFood f = new Form_AddFood();
+            f.Show();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -302,13 +303,13 @@ namespace GUI
             {
                 //yes...
                 this.Hide();
-                mainform.loadUCMenuEdit();
+               // mainform.loadUCMenuEdit();
             }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            bool result = true;
+            bool result = false;
             foreach (var item in lsFoodDrink_Temp)
             {
                 if (foodDrinkBLL.EditFoodDrink(item) == false)
@@ -317,9 +318,16 @@ namespace GUI
                     MessageBox.Show("Cannot save. Please try again");
                     break;
                 }
+                else
+                    result = true;
             }
             if (result == true)
+            {
                 MessageBox.Show("Saved Successfully");
+                this.Hide();
+                mainform.loadUCMenuEdit();
+            }
+
 
         }
     }

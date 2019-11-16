@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,26 +15,42 @@ namespace GUI
     {
         static Form_Restaurant _obj;
         UCEmployee ucEmployee;
+        static bool AdminTrue;
+        static int EmployeeID;
         public static Form_Restaurant Instance
         {
             get
             {
                 if (_obj == null)
                 {
-                    _obj = new Form_Restaurant();
+                    _obj = new Form_Restaurant(AdminTrue, EmployeeID);
                 }
                 return _obj;
             }
         }
-        public Form_Restaurant()
+        public Form_Restaurant(bool isAdmin, int ID)
         {
+            AdminTrue = isAdmin;
+            EmployeeID = ID;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
+
             // int width = SystemInformation.VirtualScreen.Width;
             //int height = SystemInformation.VirtualScreen.Height;
             //this.Size = new Size(width, height);
             InitializeComponent();
+            //this.TopMost = true;
+            //Screen currentScreen = Screen.FromHandle(this.Handle);
+            //this.Size = new System.Drawing.Size(currentScreen.Bounds.Width, currentScreen.Bounds.Height);
             this.SetStyle(ControlStyles.ResizeRedraw, true);
+            if (AdminTrue == false)
+            {
+                btn_Employee.Visible = false;
+                btn_Employee.Enabled = false;
+                btn_Order.Visible = false;
+                btn_Order.Enabled = false;
+            }
+            this.loadUCHome();
         }
         private const int cGrip = 16;
         private const int cCaption = 32;
@@ -185,6 +202,82 @@ namespace GUI
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
             ucEmployee = uc;
+        }
+
+        private void btn_Customer_Click(object sender, EventArgs e)
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCCustomer uc = new UCCustomer(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+        public void loadUCCustomer2()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+          //  UCCustomer2 uc = new UCCustomer2(this);
+           // uc.Dock = DockStyle.Fill;
+            //pnlContainer.Controls.Add(uc);
+        }
+
+        //private void btn_Order_Click(object sender, EventArgs e)
+        //{
+        //    _obj = this;
+        //    pnlContainer.Controls.Clear();
+        //    UCOrder uc = new UCOrder(this);
+        //    uc.Dock = DockStyle.Fill;
+        //    pnlContainer.Controls.Add(uc);
+        //}
+        public void loadUcMenu_Order(int TableID)
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCMenu_Order uc = new UCMenu_Order(this, EmployeeID, TableID);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+        public void loadUCOrder(List<OrderDetail> orderDetails, int TableID)
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCOrder uc = new UCOrder(this, orderDetails, EmployeeID, TableID);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+
+        private void btn_Home_Click(object sender, EventArgs e)
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCHome uc = new UCHome(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+        public void loadUCHome()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCHome uc = new UCHome(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+        public void LoadUCHome()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCHome uc = new UCHome(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+        public void loadUCTable()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCTable uc = new UCTable(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+
         }
     }
 

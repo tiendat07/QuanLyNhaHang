@@ -146,11 +146,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::GUI.Properties.Resources.icons8_search_64px5;
+    //        this.pictureBox1.BackgroundImage = global::GUI.Properties.Resources.icons8_search_64px5;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.ErrorImage = global::GUI.Properties.Resources.icons8_search_64px4;
-            this.pictureBox1.InitialImage = global::GUI.Properties.Resources.icons8_search_64px3;
+    //        this.pictureBox1.ErrorImage = global::GUI.Properties.Resources.icons8_search_64px4;
+    //        this.pictureBox1.InitialImage = global::GUI.Properties.Resources.icons8_search_64px3;
             this.pictureBox1.Location = new System.Drawing.Point(131, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 38);

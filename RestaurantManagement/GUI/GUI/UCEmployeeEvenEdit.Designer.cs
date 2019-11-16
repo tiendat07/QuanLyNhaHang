@@ -71,7 +71,7 @@
             // 
             this.img_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.img_Close.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.img_Close.Image = global::GUI.Properties.Resources.delete_sign_100px;
+    //        this.img_Close.Image = global::GUI.Properties.Resources.delete_sign_100px;
             this.img_Close.ImageActive = null;
             this.img_Close.Location = new System.Drawing.Point(0, 0);
             this.img_Close.Margin = new System.Windows.Forms.Padding(2);

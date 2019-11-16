@@ -16,60 +16,112 @@ namespace GUI
     {
         TableBLL tableBLL;
         Form_Restaurant mainform;
+        List<Table> lsTable_temp;
+        OrderBLL orderBLL;
         public UCTable(Form_Restaurant form1)
         {
             tableBLL = new TableBLL();
+            lsTable_temp = tableBLL.GetListTable();
+            orderBLL = new OrderBLL();
             mainform = form1;
             InitializeComponent();
             LoadData();
+        }
+        private void Table_Click(object sender, EventArgs e)
+        {
+            myButton btn = sender as myButton;
+            
+            foreach (var item in lsTable_temp)
+            {
+                
+                if (item.TableID == btn.objectID)
+                {
+                    switch (item.Status)
+                    {
+                        case 0:
+                            {
+                                // Trống
+                                btnOrder.objectID = item.TableID;
+                                btnOrder.Visible = true;
+                                btnOrder.Enabled = true;
+                                btnPay.Visible = false;
+                                btnPay.Enabled = false;
+                                
+                                //btnBook.Visible = true;
+                                //btnBook.Visible = true;
+                                break;
+                            }
+                        case 1:
+                            {
+                                // Đã có ng đặt
+                                btnPay.objectID = item.TableID;
+                                btnPay.Visible = true;
+                                btnPay.Enabled = true;
+                                btnOrder.Visible = false;
+                                btnOrder.Enabled = false;
+                                
+                                break;
+                            }
+                        case 2:
+                            {
+                                btnPay.objectID = item.TableID;
+                                // Đã có người vô ngồi
+                                btnPay.Visible = true;
+                                btnPay.Enabled = true;
+                                btnOrder.Visible = false;
+                                btnOrder.Enabled = false;
+                                btnPay.objectID = item.TableID;
+                                break;
+                            }
+                    }
+                }
+            }
         }
         public void LoadData()
         {
             //CustomerServiceClient cus = new CustomerServiceClient();
             //Table[] lstTable = cus.GetListTable();
+            btnBook.Visible = false;
+            btnBook.Enabled = false;
+            btnOrder.Visible = false;
+            btnOrder.Enabled = false;
+            btnPay.Visible = false;
+            btnPay.Enabled = false;
             List<Table> lstTable = tableBLL.GetListTable();
             foreach (Table item in lstTable)
             {
-                var btn = new Bunifu.Framework.UI.BunifuThinButton2();
-                btn.Width = 70;
-                btn.Height = 40;
-                btn.ButtonText = item.TableName;
+                myButton btn = new myButton();
+                btn.objectID = item.TableID;
+                btn.Width = flpTable1.Width/4;
+                btn.Height = 50;
+                btn.Text = item.TableName;
                 btn.Font = new Font("SVN-Avo", 8f);
-                btn.IdleForecolor = Color.White;
+                btn.ForeColor = Color.White;
                 btn.TextAlign = ContentAlignment.MiddleCenter;
-                btn.ActiveForecolor = Color.White;
-                btn.IdleCornerRadius = 10;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 1;
                 switch (item.Status)
                 {
                     case 0:
                         {
-                            btn.BackColor = Color.Transparent;
-                            btn.IdleFillColor = Color.FromArgb(247, 204, 217);
-                            btn.IdleLineColor = Color.FromArgb(247, 204, 217);
-                            btn.ActiveFillColor = Color.FromArgb(247, 204, 217);
-                            btn.ActiveLineColor = Color.FromArgb(247, 204, 217);
+                            btn.BackColor = Color.FromArgb(247, 204, 217);
+                            btn.FlatAppearance.BorderColor = Color.FromArgb(247, 204, 217);
                             break;
                         }
                     case 1:
                         {
-                            btn.BackColor = Color.Transparent;
-                            btn.IdleFillColor = Color.FromArgb(248, 168, 60);
-                            btn.IdleLineColor = Color.FromArgb(248, 168, 60);
-                            btn.ActiveFillColor = Color.FromArgb(248, 168, 60);
-                            btn.ActiveLineColor = Color.FromArgb(248, 168, 60);
+                            btn.BackColor = Color.FromArgb(248, 168, 60);
+                            btn.FlatAppearance.BorderColor = Color.FromArgb(248, 168, 60);
                             break;
                         }
                     case 2:
                         {
-                            btn.BackColor = Color.Transparent;
-                            btn.IdleFillColor = Color.FromArgb(228, 76, 73);
-                            btn.IdleLineColor = Color.FromArgb(228, 76, 73);
-                            btn.ActiveFillColor = Color.FromArgb(228, 76, 73);
-                            btn.ActiveLineColor = Color.FromArgb(228, 76, 73);
+                            btn.BackColor = Color.FromArgb(228, 76, 73);
+                            btn.FlatAppearance.BorderColor = Color.FromArgb(228, 76, 73);
                             break;
                         }
                 }
-
+                btn.Click += new EventHandler(Table_Click);
                 flpTable1.Controls.Add(btn);
             }
         }
@@ -81,7 +133,43 @@ namespace GUI
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            mainform.loadUCTableEdit();
+            //mainform.loadUCTableEdit();
+        }
+        
+
+        private void btnBook_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOrder_Click_1(object sender, EventArgs e)
+        {
+            myButton btn = sender as myButton;
+            mainform.loadUcMenu_Order(btn.objectID);
+            this.Hide();
+        }
+
+        private void btnPay_Click_1(object sender, EventArgs e)
+        {
+
+            DialogResult result = MessageBox.Show("Are you sure you want to pay?", "Pay Notification", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                myButton btn = sender as myButton;
+                //yes...
+                if (orderBLL.SetPaid(btn.objectID) == true)
+                {
+                    if (tableBLL.ChangeTableStatus(btn.objectID, false, true, false) == true)
+                    {
+                        MessageBox.Show("You have paid sucessfully !");
+                        mainform.loadUCTable();
+                    }
+
+                }
+
+                else
+                    MessageBox.Show("Cannot process. Please try again");
+            }
         }
     }
 }

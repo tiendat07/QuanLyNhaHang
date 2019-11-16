@@ -86,8 +86,10 @@ namespace GUI
             dGvEmployee.Columns.Add(column);
 
         }
-
-        private void btnSave_Click(object sender, EventArgs e)
+        
+        
+        
+        private void btnSave_Click_1(object sender, EventArgs e)
         {
             bool result = false;
             foreach (var item in ListEmpEdit)
@@ -108,34 +110,15 @@ namespace GUI
                     mainform.loadUCEmployee();
                 }
             }
-            
+
         }
 
-
-        private void dGvEmployee_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        private void btnComeback_Click_1(object sender, EventArgs e)
         {
-            var temp = dGvEmployee.Rows[e.RowIndex];
-            Employee emp = new Employee();
-            emp.EmployeeID = (int)temp.Cells["ID"].Value;
-            emp.Name = (string)temp.Cells["Name"].Value;
-            emp.Address = (string)temp.Cells["Address"].Value;
-            emp.CMND = (string)temp.Cells["CMND"].Value;
-            emp.DateOfBirth = (DateTime)temp.Cells["D.O.B"].Value;
-            emp.PhoneNumber = (string)temp.Cells["Phone"].Value;
-            emp.Email = (string)temp.Cells["Email"].Value;
-
-            emp.IsAdmin = (bool)temp.Cells["Is Admin"].Value;
-            emp.Username = "a";
-            emp.Password = "1";
-            bool genDer = (bool)temp.Cells["Gender"].Value;
-            emp.IsFemale = genDer;
-            //emp.IsFemale = (genDer == "Female") ? true : false;
-            // Mỗi lần sửa, người đc sửa sẽ đc đưa vào danh sách đc sửa
-            ListEmpEdit.Add(emp);
+            mainform.loadUCEmployee();
         }
-        
 
-        private void dGvEmployee_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void dGvEmployee_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (this.dGvEmployee.Columns[e.ColumnIndex].Name == "Gender")
             {
@@ -155,9 +138,26 @@ namespace GUI
             }
         }
 
-        private void btnComeback_Click(object sender, EventArgs e)
+        private void dGvEmployee_CellEndEdit_1(object sender, DataGridViewCellEventArgs e)
         {
-            mainform.loadUCEmployee();
+            var temp = dGvEmployee.Rows[e.RowIndex];
+            Employee emp = new Employee();
+            emp.EmployeeID = (int)temp.Cells["ID"].Value;
+            emp.Name = (string)temp.Cells["Name"].Value;
+            emp.Address = (string)temp.Cells["Address"].Value;
+            emp.CMND = (string)temp.Cells["CMND"].Value;
+            emp.DateOfBirth = (DateTime)temp.Cells["D.O.B"].Value;
+            emp.PhoneNumber = (string)temp.Cells["Phone"].Value;
+            emp.Email = (string)temp.Cells["Email"].Value;
+
+            emp.IsAdmin = (bool)temp.Cells["Is Admin"].Value;
+            emp.Username = "a";
+            emp.Password = "1";
+            bool genDer = (bool)temp.Cells["Gender"].Value;
+            emp.IsFemale = genDer;
+            //emp.IsFemale = (genDer == "Female") ? true : false;
+            // Mỗi lần sửa, người đc sửa sẽ đc đưa vào danh sách đc sửa
+            ListEmpEdit.Add(emp);
         }
     }
 }

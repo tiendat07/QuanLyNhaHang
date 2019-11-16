@@ -23,13 +23,33 @@ namespace BLL
         {
             return employeeDAL.EditEmployee(e);
         }
+
+
+        public bool CheckLogin(string U, string P)
+        {
+            return employeeDAL.CheckLogin(U, P);
+
+        }
+
         public bool AddEmployee(Employee e)
         {
             return employeeDAL.AddEmployee(e);
+
         }
         public bool DeleteEmployee(int ID)
         {
             return employeeDAL.DeleteEmployee(ID);
+        }
+
+
+        public bool CheckAdmin(string username)
+        {
+            return employeeDAL.CheckAdmin(username);
+        }
+
+        public int GetEmployeeID(string username)
+        {
+            return employeeDAL.GetEmployeeID(username);
         }
     }
 }

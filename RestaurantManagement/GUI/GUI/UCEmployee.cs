@@ -114,5 +114,16 @@ namespace GUI
                 }
             }
         }
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Form_EmployeeEditEvent f = new Form_EmployeeEditEvent(mainform, this);
+            f.Show();
+            //mainform.loadUCEmployeeEdit();
+        }
+
+        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
