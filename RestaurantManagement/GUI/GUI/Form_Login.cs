@@ -81,7 +81,7 @@ namespace GUI
                 }
                 else
                     MessageBox.Show("Chua chinh xac !!");
-                
+
             }
         }
         
@@ -112,7 +112,7 @@ namespace GUI
 
                 }
             }
-                
+
         }
     }
 }

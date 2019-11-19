@@ -162,6 +162,7 @@ namespace GUI
             this.btn_Report.Text = "Report";
             this.btn_Report.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Report.Textcolor = System.Drawing.Color.White;
+            this.btn_Report.Visible = false;
             this.btn_Report.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btn_Employee
@@ -275,6 +276,7 @@ namespace GUI
             this.btn_Order.Text = "Order";
             this.btn_Order.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Order.Textcolor = System.Drawing.Color.White;
+            this.btn_Order.Visible = false;
             this.btn_Order.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Order.Click += new System.EventHandler(this.btn_Order_Click);
             // 

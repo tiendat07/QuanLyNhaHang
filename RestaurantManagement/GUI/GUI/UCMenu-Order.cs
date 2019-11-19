@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -20,12 +20,11 @@ namespace GUI
         List<FoodDrink> lsFood;
         List<myNumericUpDown> lsNumeric;
         List<OrderDetail> lsOrder;
-        int TableID;
-        int EmployeeID;
-        public UCMenu_Order(Form_Restaurant form1, int empID, int tabID)
+        int EmpID, TabID;
+        public UCMenu_Order(Form_Restaurant form1, int EmployeeID, int TableID)
         {
-            TableID = tabID;
-            EmployeeID = empID;
+            EmpID = EmployeeID;
+            TabID = TableID;
             orderDetailBLL = new OrderDetailBLL();
             foodDrinkBLL = new FoodDrinkBLL();
             lsFood_Order = new List<FoodDrink>();
@@ -44,68 +43,59 @@ namespace GUI
                 if (item.FoodDrinkID == n.objectID)
                 {
                     item.Quantity = Convert.ToInt32(n.Value);
-                    double x = foodDrinkBLL.GetFoodPrice(n.objectID) * item.Quantity;
-                    item.Price = (float)x;
+                    item.Price *= item.Quantity;
                 }
+                    
             }
             
-            if (n.Visible == false)
-            {
-                btnSave.Enabled = false;
-                btnCancel.Enabled = false;
-            }
-            btnSave.Enabled = true;
-            btnCancel.Enabled = true;
+            
         }
         private void CheckBoxClick(object sender, EventArgs e)
         {
             // Làm sao xác định đc ngta check hay uncheck??? Vì thế nào cx là click mà?
-
+            
             myCheckBoxEdit cb = sender as myCheckBoxEdit;
-
+            
             if (cb.Checked == true)
             {
-                OrderDetail orderDetail = new OrderDetail();
-                orderDetail.Quantity = 1;
-                orderDetail.FoodDrinkID = cb.objectID;
-                orderDetail.Note = "...";
-                orderDetail.Price = (float)foodDrinkBLL.GetFoodPrice(cb.objectID);
-                lsOrder.Add(orderDetail);
                 foreach (var item in lsNumeric)
                 {
                     if (item.objectID == cb.objectID)
                     {
                         item.Visible = true;
                         item.Enabled = true;
-
+                        btnSave.Visible = true;
+                        btnSave.Enabled = true;
+                        btnCancel.Visible = true;
+                        btnCancel.Enabled = true;
+                        OrderDetail orderDetail = new OrderDetail();
+                        orderDetail.FoodDrinkID = cb.objectID;
+                        orderDetail.Quantity = 1;
+                        orderDetail.Note = "None";
+                        orderDetail.Price = (float)foodDrinkBLL.GetFoodPrice(cb.objectID);
+                        orderDetail.OrderID = 10;
+                        lsOrder.Add(orderDetail);
                     }
                 }
             }
             else
             {
-                //if (lsOrder.Any() == true)
-                //{
-                //    foreach (var item in lsOrder)
-                //    {
-                //        if (item.FoodDrinkID == cb.objectID)
-                //            lsOrder.Remove(item);
-                //    }
-                //}
-                
-                foreach (var item in lsNumeric)
+                btnSave.Visible = false;
+                btnSave.Enabled = false;
+                btnCancel.Visible = false;
+                btnCancel.Enabled = false;
+                if (lsOrder.Any() == true)
                 {
-                    if (item.objectID == cb.objectID)
+                    
+                    foreach (var item in lsOrder.ToList())
                     {
-                        
-                        item.Visible = false;
-                        item.Enabled = false;
-                       // btnSave.Visible = false;
-                        //btnCancel.Visible = false;
-                        btnSave.Enabled = false;
-                        btnCancel.Enabled = false;
+                        if (item.FoodDrinkID == cb.objectID)
+                         lsOrder.Remove(item);
                     }
+                        
                 }
             }
+            
         }
         public void Load(List<FoodDrink> lstFood, bool isFood)
         {
@@ -126,7 +116,6 @@ namespace GUI
                 checkBox.objectID = foodID;
                 picBox.objectID = foodID;
                 number.objectID = foodID;
-
                 x = (count % 2 == 0) ? 0 : x + 500;
                 // Location
                 picBox.Location = new Point(x, y);
@@ -229,8 +218,9 @@ namespace GUI
         {
             if (lsOrder.Any() == true)
             {
+                MessageBox.Show("Saved successfully");
                 this.Hide();
-                mainform.loadUCOrder(lsOrder, EmployeeID, TableID);
+                mainform.loadUCOrder(lsOrder, TabID);
             }
             else
             {

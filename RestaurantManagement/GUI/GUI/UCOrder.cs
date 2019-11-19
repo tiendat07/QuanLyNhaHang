@@ -54,7 +54,7 @@ namespace GUI
             foreach (var item in lsOrderDetail)
                 total += (item.Price * item.Quantity);
             orDer.Total = total;
-           
+
 
             dataGridViewOrder.AutoGenerateColumns = false;
             dataGridViewOrder.DataSource = lsOrderDetail;
@@ -69,7 +69,7 @@ namespace GUI
             column.DataPropertyName = "FoodDrinkID";
             column.Name = "Food Drink Name";
             dataGridViewOrder.Columns.Add(column);
-            
+
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "Quantity";
             column.Name = "Quantity";
@@ -91,21 +91,13 @@ namespace GUI
             dataGridViewOrder.Columns[4].ReadOnly = true;
         }
 
-        private void dataGridViewOrder_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void dataGridViewOrder_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if (this.dataGridViewOrder.Columns[e.ColumnIndex].Name == "Food Drink Name")
-            {
-                if (e.Value != null)
-                {
-
-                    int ID = Convert.ToInt32(e.Value);
-                    e.Value = foodDrinkBLL.GetFoodDrinkName(ID);
-                    e.FormattingApplied = true;
-                }
-            }
+            // Edit Data (NOTE)
         }
+        
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnSave_Click_1(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to save?", "Save Notification", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -113,7 +105,7 @@ namespace GUI
                 //yes...
                 // Lưu mọi thứ xuống database
                 //MessageBox.Show("" + orDer.OrderID);
-                if ( orderBLL.AddOrder(orDer, lsOrderDetail) == true)
+                if (orderBLL.AddOrder(orDer, lsOrderDetail) == true)
                 {
                     //MessageBox.Show("" + orDer.OrderID);
                     if (tableBLL.ChangeTableStatus(TabID, true, false, false) == true)
@@ -124,21 +116,16 @@ namespace GUI
                 }
                 else
                     MessageBox.Show("Cannot save. Please try again!");
-               
+
             }
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void btnEdit_Click_1(object sender, EventArgs e)
         {
             mainform.loadUcMenu_Order(TabID);
         }
 
-        private void dataGridViewOrder_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            // Edit Data (NOTE)
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnCancel_Click_1(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to save?", "Save Notification", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -146,6 +133,20 @@ namespace GUI
                 //yes...
                 // Lưu mọi thứ xuống database
                 mainform.loadUCTable();
+            }
+        }
+
+        private void dataGridViewOrder_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dataGridViewOrder.Columns[e.ColumnIndex].Name == "Food Drink Name")
+            {
+                if (e.Value != null)
+                {
+
+                    int ID = Convert.ToInt32(e.Value);
+                    e.Value = foodDrinkBLL.GetFoodDrinkName(ID);
+                    e.FormattingApplied = true;
+                }
             }
         }
     }

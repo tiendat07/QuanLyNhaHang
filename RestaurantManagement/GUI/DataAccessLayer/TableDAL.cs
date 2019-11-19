@@ -14,13 +14,13 @@ namespace DataAccessLayer
         {
             dbContext = new RestaurantContextEntities();
         }
-        public List <Table> GetListTable()
+        public List<Table> GetListTable()
         {
             return dbContext.Tables.ToList();
         }
         public bool ChangeTableStatus(int TableID, bool isOrdered, bool isPaid, bool isBooked)
         {
-            if (TableID >=0)
+            if (TableID >= 0)
             {
                 var x = dbContext.Tables.Where(t => t.TableID == TableID).FirstOrDefault();
                 if (isOrdered == true)

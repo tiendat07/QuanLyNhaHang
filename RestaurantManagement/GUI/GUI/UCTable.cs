@@ -23,6 +23,7 @@ namespace GUI
             orderBLL = new OrderBLL();
             tableBLL = new TableBLL();
             lsTable_temp = tableBLL.GetListTable();
+            orderBLL = new OrderBLL();
             mainform = form1;
             InitializeComponent();
             LoadData();
@@ -30,9 +31,10 @@ namespace GUI
         private void Table_Click(object sender, EventArgs e)
         {
             myButton btn = sender as myButton;
+            
             foreach (var item in lsTable_temp)
             {
-               
+                
                 if (item.TableID == btn.objectID)
                 {
                     switch (item.Status)
@@ -40,11 +42,13 @@ namespace GUI
                         case 0:
                             {
                                 // Trống
+                                btnOrder.objectID = item.TableID;
                                 btnOrder.Visible = true;
                                 btnOrder.Enabled = true;
                                 btnOrder.objectID = btn.objectID;
                                 btnPay.Visible = false;
                                 btnPay.Enabled = false;
+                                
                                 //btnBook.Visible = true;
                                 //btnBook.Visible = true;
                                 break;
@@ -52,21 +56,25 @@ namespace GUI
                         case 1:
                             {
                                 // Đã có ng đặt
+                                btnPay.objectID = item.TableID;
                                 btnPay.Visible = true;
                                 btnPay.Enabled = true;
                                 btnPay.objectID = btn.objectID;
                                 btnOrder.Visible = false;
                                 btnOrder.Enabled = false;
+                                
                                 break;
                             }
                         case 2:
                             {
+                                btnPay.objectID = item.TableID;
                                 // Đã có người vô ngồi
                                 btnPay.Visible = true;
                                 btnPay.Enabled = true;
                                 btnPay.objectID = btn.objectID;
                                 btnOrder.Visible = false;
                                 btnOrder.Enabled = false;
+                                btnPay.objectID = item.TableID;
                                 break;
                             }
                     }
@@ -124,7 +132,6 @@ namespace GUI
                         }
                 }
                 btn.Click += new EventHandler(Table_Click);
-                
                 flpTable1.Controls.Add(btn);
             }
         }
@@ -139,7 +146,10 @@ namespace GUI
             //mainform.loadUCTableEdit();
         }
         
-        
+        private void btnBook_Click_1(object sender, EventArgs e)
+        {
+
+        }
 
         private void btnOrder_Click_1(object sender, EventArgs e)
         {
@@ -150,6 +160,7 @@ namespace GUI
 
         private void btnPay_Click_1(object sender, EventArgs e)
         {
+
             DialogResult result = MessageBox.Show("Are you sure you want to pay?", "Pay Notification", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
@@ -162,9 +173,7 @@ namespace GUI
                         MessageBox.Show("You have paid sucessfully !");
                         mainform.loadUCTable();
                     }
-                        
                 }
-                    
                 else
                     MessageBox.Show("Cannot process. Please try again");
             }

@@ -13,12 +13,15 @@ namespace DataAccessLayer
     {
         RestaurantContextEntities dbContext;
         
+        
         public EmployeeDAL()
         {
             dbContext = new RestaurantContextEntities();
         }
 
-        public List<Employee> GetListEmployee()
+        
+
+        public List<Employee> GetListEmployeeEdit()
         {
             return dbContext.Employees.ToList();
         }
@@ -59,6 +62,7 @@ namespace DataAccessLayer
                     if (eTmp == null)
                         return false;
                     eTmp.EmployeeID = e.EmployeeID;
+                    eTmp.Name = e.Name;
                     eTmp.CMND = e.CMND;
                     eTmp.DateOfBirth = e.DateOfBirth;
                     eTmp.Email = e.Email;
@@ -79,8 +83,9 @@ namespace DataAccessLayer
             }
         }
 
-        public bool DeleteEmployee(Employee e)
+        public bool DeleteEmployee(int ID)
         {
+            Employee e = dbContext.Employees.Where(d => d.EmployeeID == ID).FirstOrDefault();
             try
             {
                 if (e != null)
@@ -102,7 +107,9 @@ namespace DataAccessLayer
             var x = dbContext.Employees.Where(n => n.Username == username && n.IsAdmin == true).ToList();
             return (x.Any()) ? true : false;
         }
+
         public int GetEmployeeID (string username)
+
         {
             var x = dbContext.Employees.Where(n => n.Username == username).FirstOrDefault();
             return x.EmployeeID;

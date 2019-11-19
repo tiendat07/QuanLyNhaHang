@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,8 @@ namespace GUI
     public partial class Form_Restaurant : Form
     {
         static Form_Restaurant _obj;
-        static bool  AdminTrue;
+        UCEmployee ucEmployee;
+        static bool AdminTrue;
         static int EmployeeID;
         public static Form_Restaurant Instance
         {
@@ -32,14 +34,7 @@ namespace GUI
             EmployeeID = ID;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
-            
-            // int width = SystemInformation.VirtualScreen.Width;
-            //int height = SystemInformation.VirtualScreen.Height;
-            //this.Size = new Size(width, height);
             InitializeComponent();
-            //this.TopMost = true;
-            //Screen currentScreen = Screen.FromHandle(this.Handle);
-            //this.Size = new System.Drawing.Size(currentScreen.Bounds.Width, currentScreen.Bounds.Height);
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             if (AdminTrue == false)
             {
@@ -48,6 +43,7 @@ namespace GUI
                 btn_Order.Visible = false;
                 btn_Order.Enabled = false;
             }
+            this.loadUCHome();
         }
         private const int cGrip = 16;
         private const int cCaption = 32;
@@ -123,16 +119,52 @@ namespace GUI
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
-        
 
-        //public void loadUCEmployeeEdit()
-        //{
-        //    _obj = this;
-        //    pnlContainer.Controls.Clear();
-        //    UCEmployeeEdit uc = new UCEmployeeEdit(this);
-        //    uc.Dock = DockStyle.Fill;
-        //    pnlContainer.Controls.Add(uc);
-        //}
+        public void loadUCEmployee()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCEmployee uc = new UCEmployee(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+
+        public void loadUCEmployeeEdit()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCEmployee_Edit uc = new UCEmployee_Edit(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+
+        public void loadUCEmployeeEvenEdit()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCEmployeeEvenEdit uc = new UCEmployeeEvenEdit(this, ucEmployee);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+
+        public void loadUCEmployeeDelate()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCEmployee_Delete uc = new UCEmployee_Delete(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+
+        public void loadUCEmployeeAdd()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCEmployee_Add uc = new UCEmployee_Add(this, ucEmployee.GetDataGridView());
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+    
 
         private void btn_Menu_Click_1(object sender, EventArgs e)
         {
@@ -151,7 +183,7 @@ namespace GUI
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
-
+        
         private void btn_Employee_Click_1(object sender, EventArgs e)
         {
             _obj = this;
@@ -159,6 +191,7 @@ namespace GUI
             UCEmployee uc = new UCEmployee(this);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
+            ucEmployee = uc;
         }
 
         private void btn_Customer_Click(object sender, EventArgs e)
@@ -173,32 +206,25 @@ namespace GUI
         {
             _obj = this;
             pnlContainer.Controls.Clear();
-            UCCustomer2 uc = new UCCustomer2(this);
+          //  UCCustomer2 uc = new UCCustomer2(this);
+           // uc.Dock = DockStyle.Fill;
+            //pnlContainer.Controls.Add(uc);
+        }
+
+        public void loadUCOrder(List<OrderDetail> orderDetails, int TableID)
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCOrder uc = new UCOrder(this, orderDetails, EmployeeID, TableID);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
 
-        private void btn_Order_Click(object sender, EventArgs e)
-        {
-            _obj = this;
-            pnlContainer.Controls.Clear();
-            //UCOrder uc = new UCOrder(this);
-            //uc.Dock = DockStyle.Fill;
-            //pnlContainer.Controls.Add(uc);
-        }
         public void loadUcMenu_Order(int TableID)
         {
             _obj = this;
             pnlContainer.Controls.Clear();
             UCMenu_Order uc = new UCMenu_Order(this, EmployeeID, TableID);
-            uc.Dock = DockStyle.Fill;
-            pnlContainer.Controls.Add(uc);
-        }
-        public void loadUCOrder(List<OrderDetail> lsOrder, int EmployeeID, int TableID)
-        {
-            _obj = this;
-            pnlContainer.Controls.Clear();
-            UCOrder uc = new UCOrder(this, lsOrder, EmployeeID, TableID);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
@@ -220,7 +246,12 @@ namespace GUI
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
-
+        public void LoadUCHome()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCHome uc = new UCHome(this);
+        }
         private void Form_Restaurant_Activated(object sender, EventArgs e)
         {
             FormBorderStyle = FormBorderStyle.None;

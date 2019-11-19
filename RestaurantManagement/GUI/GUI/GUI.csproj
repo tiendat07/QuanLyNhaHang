@@ -72,6 +72,41 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Form_EmployeeEditEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_EmployeeEditEvent.Designer.cs">
+      <DependentUpon>Form_EmployeeEditEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UCEmployee-Add.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCEmployee-Add.Designer.cs">
+      <DependentUpon>UCEmployee-Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCEmployee-Delete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCEmployee-Delete.Designer.cs">
+      <DependentUpon>UCEmployee-Delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCEmployee-Edit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCEmployee-Edit.Designer.cs">
+      <DependentUpon>UCEmployee-Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCEmployeeEvenEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCEmployeeEvenEdit.Designer.cs">
+      <DependentUpon>UCEmployeeEvenEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form-Restaurant.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,11 +153,6 @@
     <Compile Include="myTextEdit.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Properties\Resources3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <!--<Compile Include="Properties\Resources2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -133,12 +163,6 @@
     </Compile>
     <Compile Include="UCCustomer.Designer.cs">
       <DependentUpon>UCCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UCCustomer2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UCCustomer2.Designer.cs">
-      <DependentUpon>UCCustomer2.cs</DependentUpon>
     </Compile>
     <Compile Include="UCEmployee.cs">
       <SubType>UserControl</SubType>
@@ -188,6 +212,21 @@
     <Compile Include="UCTable.Designer.cs">
       <DependentUpon>UCTable.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form_EmployeeEditEvent.resx">
+      <DependentUpon>Form_EmployeeEditEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCEmployee-Add.resx">
+      <DependentUpon>UCEmployee-Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCEmployee-Delete.resx">
+      <DependentUpon>UCEmployee-Delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCEmployee-Edit.resx">
+      <DependentUpon>UCEmployee-Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCEmployeeEvenEdit.resx">
+      <DependentUpon>UCEmployeeEvenEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form-Restaurant.resx">
       <DependentUpon>Form-Restaurant.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,7 +241,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <!--<EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -211,9 +251,6 @@
     </EmbeddedResource>-->
     <EmbeddedResource Include="UCCustomer.resx">
       <DependentUpon>UCCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UCCustomer2.resx">
-      <DependentUpon>UCCustomer2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCEmployee.resx">
       <DependentUpon>UCEmployee.cs</DependentUpon>
@@ -323,6 +360,34 @@
     <None Include="Resources\add_96px.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\meeting_500px.png" />
+    <None Include="Resources\table_96px1.png" />
+    <None Include="Resources\id_card_96px1.png" />
+    <None Include="Resources\overtime_96px1.png" />
+    <None Include="Resources\delete_64px1.png" />
+    <None Include="Resources\edit_96px3.png" />
+    <None Include="Resources\delete_sign_100px1.png" />
+    <None Include="Resources\icons8_maximize_window_641.png" />
+    <None Include="Resources\icons8_minus_641.png" />
+    <None Include="Resources\restaurant_500px1.png" />
+    <None Include="Resources\icons8_search_96px.png" />
+    <None Include="Resources\edit_96px2.png" />
+    <None Include="Resources\icons8_search_64px5.png" />
+    <None Include="Resources\icons8_ball_point_pen_64px_14.png" />
+    <None Include="Resources\icons8_search_64px4.png" />
+    <None Include="Resources\icons8_ball_point_pen_64px_13.png" />
+    <None Include="Resources\icons8_search_64px3.png" />
+    <None Include="Resources\icons8_ball_point_pen_64px_12.png" />
+    <None Include="Resources\icons8_save_as_64px1.png" />
+    <None Include="Resources\icons8_ball_point_pen_64px_11.png" />
+    <None Include="Resources\icons8_save_as_64px.png" />
+    <None Include="Resources\icons8_search_64px2.png" />
+    <None Include="Resources\icons8_search_64px1.png" />
+    <None Include="Resources\edit_96px1.png" />
+    <None Include="Resources\icons8_delete_40px2.png" />
+    <None Include="Resources\add_64px.png" />
+    <None Include="Resources\add_96px1.png" />
+    <Content Include="Resources\delete_64px.png" />
     <None Include="Resources\delete_64px.png" />
   </ItemGroup>
   <ItemGroup>

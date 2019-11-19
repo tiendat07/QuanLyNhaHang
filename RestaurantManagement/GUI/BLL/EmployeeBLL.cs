@@ -17,20 +17,29 @@ namespace BLL
         }
         public List<Employee> GetListEmployee()
         {
-            return employeeDAL.GetListEmployee();
+            return employeeDAL.GetListEmployeeEdit();
         }
+        public bool EditEmployee(Employee e)
+        {
+            return employeeDAL.EditEmployee(e);
+        }
+
 
         public bool CheckLogin(string U, string P)
         {
             return employeeDAL.CheckLogin(U, P);
 
         }
+
         public bool AddEmployee(Employee e)
         {
             return employeeDAL.AddEmployee(e);
 
         }
-
+        public bool DeleteEmployee(int ID)
+        {
+            return employeeDAL.DeleteEmployee(ID);
+        }
         public bool CheckAdmin(string username)
         {
             return employeeDAL.CheckAdmin(username);
