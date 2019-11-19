@@ -84,11 +84,7 @@ namespace GUI
 
             }
         }
-
-        private void Form_Login_KeyUp(object sender, KeyEventArgs e)
-        {
-
-        }
+        
 
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DataAccessLayer;
 namespace GUI
 {
     public partial class Form_Restaurant : Form
@@ -34,14 +34,7 @@ namespace GUI
             EmployeeID = ID;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
-
-            // int width = SystemInformation.VirtualScreen.Width;
-            //int height = SystemInformation.VirtualScreen.Height;
-            //this.Size = new Size(width, height);
             InitializeComponent();
-            //this.TopMost = true;
-            //Screen currentScreen = Screen.FromHandle(this.Handle);
-            //this.Size = new System.Drawing.Size(currentScreen.Bounds.Width, currentScreen.Bounds.Height);
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             if (AdminTrue == false)
             {
@@ -74,9 +67,6 @@ namespace GUI
             base.WndProc(ref m);
         }
         
-        private void Form_Restaurant_Load(object sender, EventArgs e)
-        {
-        }
 
         private void img_Close_Click_1(object sender, EventArgs e)
         {
@@ -221,27 +211,20 @@ namespace GUI
             //pnlContainer.Controls.Add(uc);
         }
 
-        //private void btn_Order_Click(object sender, EventArgs e)
-        //{
-        //    _obj = this;
-        //    pnlContainer.Controls.Clear();
-        //    UCOrder uc = new UCOrder(this);
-        //    uc.Dock = DockStyle.Fill;
-        //    pnlContainer.Controls.Add(uc);
-        //}
-        public void loadUcMenu_Order(int TableID)
-        {
-            _obj = this;
-            pnlContainer.Controls.Clear();
-            UCMenu_Order uc = new UCMenu_Order(this, EmployeeID, TableID);
-            uc.Dock = DockStyle.Fill;
-            pnlContainer.Controls.Add(uc);
-        }
         public void loadUCOrder(List<OrderDetail> orderDetails, int TableID)
         {
             _obj = this;
             pnlContainer.Controls.Clear();
             UCOrder uc = new UCOrder(this, orderDetails, EmployeeID, TableID);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+
+        public void loadUcMenu_Order(int TableID)
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCMenu_Order uc = new UCMenu_Order(this, EmployeeID, TableID);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
@@ -254,7 +237,8 @@ namespace GUI
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
-        public void loadUCHome()
+
+        private void Form_Restaurant_Load_1(object sender, EventArgs e)
         {
             _obj = this;
             pnlContainer.Controls.Clear();
@@ -267,9 +251,13 @@ namespace GUI
             _obj = this;
             pnlContainer.Controls.Clear();
             UCHome uc = new UCHome(this);
-            uc.Dock = DockStyle.Fill;
-            pnlContainer.Controls.Add(uc);
         }
+        private void Form_Restaurant_Activated(object sender, EventArgs e)
+        {
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+        }
+
         public void loadUCTable()
         {
             _obj = this;

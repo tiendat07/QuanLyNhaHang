@@ -14,7 +14,8 @@ namespace DataAccessLayer
         {
             dbContext = new RestaurantContextEntities();
         }
-        public bool AddOrder(Order o, List<OrderDetail> orderDetails)
+
+        public bool AddOrder (Order o, List<OrderDetail> orderDetails)
         {
             using (DbContextTransaction transaction = dbContext.Database.BeginTransaction())
             {
@@ -35,7 +36,6 @@ namespace DataAccessLayer
                     {
                         chiTiet.OrderID = hoaDonTam.OrderID;
                         dbContext.OrderDetails.Add(chiTiet);
-
                     }
                     dbContext.SaveChanges();
                     transaction.Commit();
@@ -63,8 +63,7 @@ namespace DataAccessLayer
                 }
                 return false;
             }
-            else
-                return false;
         }
+        
     }
 }

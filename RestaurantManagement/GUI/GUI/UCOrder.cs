@@ -22,7 +22,7 @@ namespace GUI
         int TabID;
         List<OrderDetail> lsOrderDetail;
         Order orDer;
-        public UCOrder(Form_Restaurant form, List<OrderDetail> orderDetails, int EmployeeID, int TableID)
+        public UCOrder(Form_Restaurant form,List<OrderDetail> orderDetails, int EmployeeID, int TableID)
         {
             tableBLL = new TableBLL();
             orDer = new Order();
@@ -90,7 +90,6 @@ namespace GUI
             dataGridViewOrder.Columns[2].ReadOnly = true;
             dataGridViewOrder.Columns[4].ReadOnly = true;
         }
-        
 
         private void dataGridViewOrder_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {

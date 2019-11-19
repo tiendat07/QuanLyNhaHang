@@ -20,6 +20,7 @@ namespace GUI
         OrderBLL orderBLL;
         public UCTable(Form_Restaurant form1)
         {
+            orderBLL = new OrderBLL();
             tableBLL = new TableBLL();
             lsTable_temp = tableBLL.GetListTable();
             orderBLL = new OrderBLL();
@@ -44,6 +45,7 @@ namespace GUI
                                 btnOrder.objectID = item.TableID;
                                 btnOrder.Visible = true;
                                 btnOrder.Enabled = true;
+                                btnOrder.objectID = btn.objectID;
                                 btnPay.Visible = false;
                                 btnPay.Enabled = false;
                                 
@@ -57,6 +59,7 @@ namespace GUI
                                 btnPay.objectID = item.TableID;
                                 btnPay.Visible = true;
                                 btnPay.Enabled = true;
+                                btnPay.objectID = btn.objectID;
                                 btnOrder.Visible = false;
                                 btnOrder.Enabled = false;
                                 
@@ -68,6 +71,7 @@ namespace GUI
                                 // Đã có người vô ngồi
                                 btnPay.Visible = true;
                                 btnPay.Enabled = true;
+                                btnPay.objectID = btn.objectID;
                                 btnOrder.Visible = false;
                                 btnOrder.Enabled = false;
                                 btnPay.objectID = item.TableID;
@@ -92,6 +96,9 @@ namespace GUI
             {
                 myButton btn = new myButton();
                 btn.objectID = item.TableID;
+                btnPay.objectID = item.TableID;
+                btnBook.objectID = item.TableID;
+                btnOrder.objectID = item.TableID;
                 btn.Width = flpTable1.Width/4;
                 btn.Height = 50;
                 btn.Text = item.TableName;
@@ -104,18 +111,21 @@ namespace GUI
                 {
                     case 0:
                         {
+                            // Trống
                             btn.BackColor = Color.FromArgb(247, 204, 217);
                             btn.FlatAppearance.BorderColor = Color.FromArgb(247, 204, 217);
                             break;
                         }
                     case 1:
                         {
+                            // Đã được đặt
                             btn.BackColor = Color.FromArgb(248, 168, 60);
                             btn.FlatAppearance.BorderColor = Color.FromArgb(248, 168, 60);
                             break;
                         }
                     case 2:
                         {
+                            // Có người ngồi
                             btn.BackColor = Color.FromArgb(228, 76, 73);
                             btn.FlatAppearance.BorderColor = Color.FromArgb(228, 76, 73);
                             break;
@@ -136,7 +146,6 @@ namespace GUI
             //mainform.loadUCTableEdit();
         }
         
-
         private void btnBook_Click_1(object sender, EventArgs e)
         {
 
@@ -164,9 +173,7 @@ namespace GUI
                         MessageBox.Show("You have paid sucessfully !");
                         mainform.loadUCTable();
                     }
-
                 }
-
                 else
                     MessageBox.Show("Cannot process. Please try again");
             }

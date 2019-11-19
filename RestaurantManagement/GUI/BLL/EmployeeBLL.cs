@@ -40,8 +40,6 @@ namespace BLL
         {
             return employeeDAL.DeleteEmployee(ID);
         }
-
-
         public bool CheckAdmin(string username)
         {
             return employeeDAL.CheckAdmin(username);

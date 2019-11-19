@@ -18,7 +18,6 @@ namespace GUI
             mainform = form;
             InitializeComponent();
         }
-        
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
