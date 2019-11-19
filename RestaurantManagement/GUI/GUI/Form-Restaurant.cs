@@ -43,7 +43,7 @@ namespace GUI
                 btn_Order.Visible = false;
                 btn_Order.Enabled = false;
             }
-            this.loadUCHome();
+            this.LoadUCHome();
         }
         private const int cGrip = 16;
         private const int cCaption = 32;

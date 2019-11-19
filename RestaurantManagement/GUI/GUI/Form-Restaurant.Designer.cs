@@ -278,7 +278,7 @@ namespace GUI
             this.btn_Order.Textcolor = System.Drawing.Color.White;
             this.btn_Order.Visible = false;
             this.btn_Order.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Order.Click += new System.EventHandler(this.btn_Order_Click);
+          //  this.btn_Order.Click += new System.EventHandler(this.btn_Order_Click);
             // 
             // btn_Table
             // 
