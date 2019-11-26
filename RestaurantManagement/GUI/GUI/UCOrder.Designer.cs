@@ -302,6 +302,7 @@ namespace GUI
             this.dataGridViewOrder.RowTemplate.Height = 28;
             this.dataGridViewOrder.Size = new System.Drawing.Size(1232, 445);
             this.dataGridViewOrder.TabIndex = 0;
+            this.dataGridViewOrder.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewOrder_CellEndEdit_1);
             this.dataGridViewOrder.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewOrder_CellFormatting_1);
             // 
             // tableLayoutPanel4

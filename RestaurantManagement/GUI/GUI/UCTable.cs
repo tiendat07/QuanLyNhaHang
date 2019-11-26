@@ -42,27 +42,28 @@ namespace GUI
                         case 0:
                             {
                                 // Trống
+                                btnBook.objectID = item.TableID;
                                 btnOrder.objectID = item.TableID;
+
                                 btnOrder.Visible = true;
                                 btnOrder.Enabled = true;
-                                btnOrder.objectID = btn.objectID;
                                 btnPay.Visible = false;
                                 btnPay.Enabled = false;
-                                
-                                //btnBook.Visible = true;
-                                //btnBook.Visible = true;
+                                btnBook.Visible = true;
+                                btnBook.Visible = true;
                                 break;
                             }
                         case 1:
                             {
                                 // Đã có ng đặt
-                                btnPay.objectID = item.TableID;
-                                btnPay.Visible = true;
-                                btnPay.Enabled = true;
-                                btnPay.objectID = btn.objectID;
-                                btnOrder.Visible = false;
-                                btnOrder.Enabled = false;
-                                
+                                btnOrder.objectID = item.TableID;
+
+                                btnPay.Visible = false;
+                                btnPay.Enabled = false;
+                                btnOrder.Visible = true;
+                                btnOrder.Enabled = true;
+                                btnBook.Visible = false;
+                                btnBook.Enabled = false;
                                 break;
                             }
                         case 2:
@@ -71,10 +72,10 @@ namespace GUI
                                 // Đã có người vô ngồi
                                 btnPay.Visible = true;
                                 btnPay.Enabled = true;
-                                btnPay.objectID = btn.objectID;
                                 btnOrder.Visible = false;
                                 btnOrder.Enabled = false;
-                                btnPay.objectID = item.TableID;
+                                btnBook.Visible = false;
+                                btnBook.Enabled = false;
                                 break;
                             }
                     }
@@ -135,20 +136,17 @@ namespace GUI
                 flpTable1.Controls.Add(btn);
             }
         }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            //mainform.loadUCTableEdit();
+            mainform.loadUCTableEdit();
         }
         
         private void btnBook_Click_1(object sender, EventArgs e)
         {
-
+            myButton btn = sender as myButton;
+            Form_BookingTable f = new Form_BookingTable(btn.objectID);
+            f.Show();
         }
 
         private void btnOrder_Click_1(object sender, EventArgs e)

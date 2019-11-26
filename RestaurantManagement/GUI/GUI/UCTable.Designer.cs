@@ -37,9 +37,9 @@ namespace GUI
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lbTable = new System.Windows.Forms.Label();
             this.btn_Edit = new System.Windows.Forms.PictureBox();
-            this.btnBook = new GUI.myButton();
-            this.btnOrder = new GUI.myButton();
             this.btnPay = new GUI.myButton();
+            this.btnOrder = new GUI.myButton();
+            this.btnBook = new GUI.myButton();
             this.tableLayoutPanel2.SuspendLayout();
             this.flpTable.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -137,7 +137,6 @@ namespace GUI
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(882, 648);
             this.tableLayoutPanel1.TabIndex = 2;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // tableLayoutPanel3
             // 
@@ -174,7 +173,6 @@ namespace GUI
             // btn_Edit
             // 
             this.btn_Edit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Edit.Enabled = false;
             this.btn_Edit.Image = global::GUI.Properties.Resources.edit_96px;
             this.btn_Edit.Location = new System.Drawing.Point(625, 15);
             this.btn_Edit.Margin = new System.Windows.Forms.Padding(15);
@@ -183,25 +181,23 @@ namespace GUI
             this.btn_Edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_Edit.TabIndex = 0;
             this.btn_Edit.TabStop = false;
-            this.btn_Edit.Visible = false;
             this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
-            // btnBook
+            // btnPay
             // 
-            this.btnBook.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnPay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.btnBook.Enabled = false;
-            this.btnBook.Font = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBook.ForeColor = System.Drawing.Color.White;
-            this.btnBook.Location = new System.Drawing.Point(3, 3);
-            this.btnBook.Name = "btnBook";
-            this.btnBook.ObjectID = 0;
-            this.btnBook.Size = new System.Drawing.Size(199, 62);
-            this.btnBook.TabIndex = 7;
-            this.btnBook.Text = "Book";
-            this.btnBook.UseVisualStyleBackColor = false;
-            this.btnBook.Click += new System.EventHandler(this.btnBook_Click_1);
+            this.btnPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnPay.Font = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.ForeColor = System.Drawing.Color.White;
+            this.btnPay.Location = new System.Drawing.Point(413, 3);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.ObjectID = 0;
+            this.btnPay.Size = new System.Drawing.Size(200, 62);
+            this.btnPay.TabIndex = 9;
+            this.btnPay.Text = "Pay";
+            this.btnPay.UseVisualStyleBackColor = false;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click_1);
             // 
             // btnOrder
             // 
@@ -219,21 +215,22 @@ namespace GUI
             this.btnOrder.UseVisualStyleBackColor = false;
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click_1);
             // 
-            // btnPay
+            // btnBook
             // 
-            this.btnPay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnBook.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.btnPay.Font = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPay.ForeColor = System.Drawing.Color.White;
-            this.btnPay.Location = new System.Drawing.Point(413, 3);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.ObjectID = 0;
-            this.btnPay.Size = new System.Drawing.Size(200, 62);
-            this.btnPay.TabIndex = 9;
-            this.btnPay.Text = "Pay";
-            this.btnPay.UseVisualStyleBackColor = false;
-            this.btnPay.Click += new System.EventHandler(this.btnPay_Click_1);
+            this.btnBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnBook.Enabled = false;
+            this.btnBook.Font = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBook.ForeColor = System.Drawing.Color.White;
+            this.btnBook.Location = new System.Drawing.Point(3, 3);
+            this.btnBook.Name = "btnBook";
+            this.btnBook.ObjectID = 0;
+            this.btnBook.Size = new System.Drawing.Size(199, 62);
+            this.btnBook.TabIndex = 7;
+            this.btnBook.Text = "Book";
+            this.btnBook.UseVisualStyleBackColor = false;
+            this.btnBook.Click += new System.EventHandler(this.btnBook_Click_1);
             // 
             // UCTable
             // 

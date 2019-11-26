@@ -40,8 +40,6 @@ namespace GUI
             {
                 btn_Employee.Visible = false;
                 btn_Employee.Enabled = false;
-                btn_Order.Visible = false;
-                btn_Order.Enabled = false;
             }
             this.LoadUCHome();
         }
