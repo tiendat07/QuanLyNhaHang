@@ -98,7 +98,8 @@ namespace GUI
                         int employeeID = employeeBLL.GetEmployeeID(tenDN);
                         Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
                         this.Hide();
-                        f.Show();
+                        f.ShowDialog();
+                        this.Close();
                     }
                     else
                         MessageBox.Show("Chua chinh xac !!");

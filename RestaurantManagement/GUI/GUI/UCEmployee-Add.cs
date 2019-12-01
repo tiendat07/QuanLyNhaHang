@@ -40,12 +40,11 @@ namespace GUI
             else
             {
                 Employee emp = new Employee();
-                emp.EmployeeID = datagrid.RowCount + 1;
                 emp.Name = txtName.Text;
                 emp.CMND = txtCMND.Text;
                 emp.PhoneNumber = txtPhone.Text;
                 emp.Address = txtAddress.Text;
-                if (cbGender.SelectedValue == "Female")
+                if (Convert.ToString(cbGender.SelectedValue) == "Female")
                 {
                     emp.IsFemale = true;
                 }

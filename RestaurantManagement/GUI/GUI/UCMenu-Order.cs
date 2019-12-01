@@ -220,7 +220,7 @@ namespace GUI
             {
                 MessageBox.Show("Saved successfully");
                 this.Hide();
-                mainform.loadUCOrder(lsOrder, TabID);
+                mainform.loadUCOrder(lsOrder, TabID, false);
             }
             else
             {

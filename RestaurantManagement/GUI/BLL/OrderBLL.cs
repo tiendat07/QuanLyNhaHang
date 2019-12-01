@@ -13,6 +13,10 @@ namespace BLL
         {
             orderDAL = new OrderDAL();
         }
+        public List<Order> GetListOrders()
+        {
+            return orderDAL.GetListOrders();
+        }
         public bool AddOrder(Order o, List<OrderDetail> orderDetails)
         {
             return orderDAL.AddOrder(o, orderDetails);

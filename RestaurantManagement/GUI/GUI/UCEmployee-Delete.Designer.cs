@@ -53,8 +53,9 @@
             this.panel1.Controls.Add(this.bunifuCustomLabel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1285, 100);
+            this.panel1.Size = new System.Drawing.Size(1928, 154);
             this.panel1.TabIndex = 0;
             // 
             // bunifuCustomLabel1
@@ -64,9 +65,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(480, 31);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(720, 48);
+            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(324, 38);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(487, 59);
             this.bunifuCustomLabel1.TabIndex = 5;
             this.bunifuCustomLabel1.Text = "Employee Management";
             this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -75,9 +77,10 @@
             // 
             this.panel2.Controls.Add(this.tableLayoutPanel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 711);
+            this.panel2.Location = new System.Drawing.Point(0, 1094);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1285, 100);
+            this.panel2.Size = new System.Drawing.Size(1928, 154);
             this.panel2.TabIndex = 2;
             // 
             // tableLayoutPanel3
@@ -92,12 +95,13 @@
             this.tableLayoutPanel3.Controls.Add(this.brnComeback, 2, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.25317F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1285, 100);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1928, 154);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // btnDelete
@@ -106,9 +110,10 @@
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(991, 23);
+            this.btnDelete.Location = new System.Drawing.Point(1487, 36);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(124, 40);
+            this.btnDelete.Size = new System.Drawing.Size(187, 62);
             this.btnDelete.TabIndex = 0;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -118,9 +123,10 @@
             // 
             this.brnComeback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(139)))), ((int)(((byte)(249)))));
             this.brnComeback.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.brnComeback.Location = new System.Drawing.Point(1121, 23);
+            this.brnComeback.Location = new System.Drawing.Point(1682, 36);
+            this.brnComeback.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.brnComeback.Name = "brnComeback";
-            this.brnComeback.Size = new System.Drawing.Size(99, 40);
+            this.brnComeback.Size = new System.Drawing.Size(149, 62);
             this.brnComeback.TabIndex = 1;
             this.brnComeback.Text = "COME BACK";
             this.brnComeback.UseVisualStyleBackColor = false;
@@ -131,38 +137,37 @@
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.74302F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.25698F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1048F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 63F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1572F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtSearch, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 100);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 154);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.48148F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.51852F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1285, 54);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1928, 83);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // pictureBox1
             // 
-    //        this.pictureBox1.BackgroundImage = global::GUI.Properties.Resources.icons8_search_64px5;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-    //        this.pictureBox1.ErrorImage = global::GUI.Properties.Resources.icons8_search_64px4;
-    //        this.pictureBox1.InitialImage = global::GUI.Properties.Resources.icons8_search_64px3;
-            this.pictureBox1.Location = new System.Drawing.Point(131, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(195, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 38);
+            this.pictureBox1.Size = new System.Drawing.Size(60, 57);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // txtSearch
             // 
-            this.txtSearch.BackColor = System.Drawing.SystemColors.Control;
+            this.txtSearch.BackColor = System.Drawing.Color.White;
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSearch.HintForeColor = System.Drawing.Color.Empty;
             this.txtSearch.HintText = "";
@@ -171,10 +176,10 @@
             this.txtSearch.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(139)))), ((int)(((byte)(249)))));
             this.txtSearch.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtSearch.LineThickness = 3;
-            this.txtSearch.Location = new System.Drawing.Point(177, 4);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Location = new System.Drawing.Point(265, 6);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(1040, 36);
+            this.txtSearch.Size = new System.Drawing.Size(1560, 55);
             this.txtSearch.TabIndex = 1;
             this.txtSearch.Text = "Search...";
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -187,35 +192,39 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.669261F));
             this.tableLayoutPanel2.Controls.Add(this.dGvEmployeeDelate, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 154);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 237);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1285, 557);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1928, 857);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
             // dGvEmployeeDelate
             // 
-            this.dGvEmployeeDelate.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dGvEmployeeDelate.BackgroundColor = System.Drawing.Color.White;
             this.dGvEmployeeDelate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGvEmployeeDelate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dGvEmployeeDelate.Location = new System.Drawing.Point(45, 3);
+            this.dGvEmployeeDelate.Location = new System.Drawing.Point(67, 5);
+            this.dGvEmployeeDelate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dGvEmployeeDelate.Name = "dGvEmployeeDelate";
-            this.dGvEmployeeDelate.Size = new System.Drawing.Size(1176, 551);
+            this.dGvEmployeeDelate.Size = new System.Drawing.Size(1766, 847);
             this.dGvEmployeeDelate.TabIndex = 0;
             this.dGvEmployeeDelate.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGvEmployeeDelate_CellEndEdit);
             this.dGvEmployeeDelate.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dGvEmployeeDelate_CellFormatting);
             // 
             // UCEmployee_Delete
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UCEmployee_Delete";
-            this.Size = new System.Drawing.Size(1285, 811);
+            this.Size = new System.Drawing.Size(1928, 1248);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

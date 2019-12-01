@@ -38,10 +38,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnEditFood = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnEditFood = new Bunifu.Framework.UI.BunifuImageButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -180,6 +180,21 @@
             this.panel2.Size = new System.Drawing.Size(876, 71);
             this.panel2.TabIndex = 2;
             // 
+            // btnEditFood
+            // 
+            this.btnEditFood.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditFood.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnEditFood.Image = global::GUI.Properties.Resources.edit_96px;
+            this.btnEditFood.ImageActive = null;
+            this.btnEditFood.Location = new System.Drawing.Point(603, 0);
+            this.btnEditFood.Name = "btnEditFood";
+            this.btnEditFood.Size = new System.Drawing.Size(59, 71);
+            this.btnEditFood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEditFood.TabIndex = 7;
+            this.btnEditFood.TabStop = false;
+            this.btnEditFood.Zoom = 10;
+            this.btnEditFood.Click += new System.EventHandler(this.btnEditFood_Click_1);
+            // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
@@ -209,25 +224,11 @@
             this.panel3.Size = new System.Drawing.Size(392, 71);
             this.panel3.TabIndex = 0;
             // 
-            // btnEditFood
-            // 
-            this.btnEditFood.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditFood.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnEditFood.Image = global::GUI.Properties.Resources.edit_96px;
-            this.btnEditFood.ImageActive = null;
-            this.btnEditFood.Location = new System.Drawing.Point(603, 0);
-            this.btnEditFood.Name = "btnEditFood";
-            this.btnEditFood.Size = new System.Drawing.Size(59, 71);
-            this.btnEditFood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnEditFood.TabIndex = 7;
-            this.btnEditFood.TabStop = false;
-            this.btnEditFood.Zoom = 10;
-            this.btnEditFood.Click += new System.EventHandler(this.btnEditFood_Click_1);
-            // 
             // UCMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "UCMenu";
             this.Size = new System.Drawing.Size(882, 648);
