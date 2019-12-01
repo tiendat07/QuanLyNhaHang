@@ -22,8 +22,10 @@ namespace GUI
         int TabID;
         List<OrderDetail> lsOrderDetail;
         Order orDer;
-        public UCOrder(Form_Restaurant form,List<OrderDetail> orderDetails, int EmployeeID, int TableID)
+        bool readOnly;
+        public UCOrder(Form_Restaurant form,List<OrderDetail> orderDetails, int EmployeeID, int TableID, bool ReadOnly)
         {
+            readOnly = ReadOnly;
             tableBLL = new TableBLL();
             orDer = new Order();
             orderBLL = new OrderBLL();
@@ -38,6 +40,13 @@ namespace GUI
         }
         public void LoadData()
         {
+            if (readOnly == true)
+            {
+                btnSave.Visible = false;
+                btnSave.Enabled = false;
+                btnCancel.Visible = false;
+                btnCancel.Enabled = false;
+            }
             var dateNow = DateTime.Now;
             var date = dateNow.ToString("dd/MM/yyyy");
             lbDateOrder.Text = Convert.ToString(date);

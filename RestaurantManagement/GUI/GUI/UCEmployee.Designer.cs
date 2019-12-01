@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtSearch = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.dataGridViewListEmployee = new System.Windows.Forms.DataGridView();
             this.pBSearch = new System.Windows.Forms.PictureBox();
             this.btnEdit = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.dataGridViewListEmployee = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.txtSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,6 +56,36 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(882, 149);
             this.panel1.TabIndex = 0;
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(206, 53);
+            this.bunifuCustomLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(487, 59);
+            this.bunifuCustomLabel2.TabIndex = 4;
+            this.bunifuCustomLabel2.Text = "Employee Management";
+            this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(198, 45);
+            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(487, 59);
+            this.bunifuCustomLabel1.TabIndex = 3;
+            this.bunifuCustomLabel1.Text = "Employee Management";
+            this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -98,7 +128,7 @@
             // 
             // bunifuMaterialTextbox2
             // 
-            this.bunifuMaterialTextbox2.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuMaterialTextbox2.BackColor = System.Drawing.Color.White;
             this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuMaterialTextbox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -111,27 +141,13 @@
             this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.bunifuMaterialTextbox2.LineThickness = 3;
             this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(99, 6);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
             this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(620, 62);
             this.bunifuMaterialTextbox2.TabIndex = 3;
             this.bunifuMaterialTextbox2.Text = "Search...";
             this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuMaterialTextbox2.Visible = false;
-            // 
-            // dataGridViewListEmployee
-            // 
-            this.dataGridViewListEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewListEmployee.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridViewListEmployee.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewListEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewListEmployee.Location = new System.Drawing.Point(0, 223);
-            this.dataGridViewListEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridViewListEmployee.Name = "dataGridViewListEmployee";
-            this.dataGridViewListEmployee.Size = new System.Drawing.Size(882, 271);
-            this.dataGridViewListEmployee.TabIndex = 3;
-            this.dataGridViewListEmployee.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewListEmployee_CellFormatting_1);
             // 
             // pBSearch
             // 
@@ -148,7 +164,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEdit.BackColor = System.Drawing.Color.White;
             this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEdit.Image = global::GUI.Properties.Resources.edit_96px;
             this.btnEdit.ImageActive = null;
@@ -162,40 +178,25 @@
             this.btnEdit.Zoom = 15;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // bunifuCustomLabel1
+            // dataGridViewListEmployee
             // 
-            this.bunifuCustomLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(198, 45);
-            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(487, 59);
-            this.bunifuCustomLabel1.TabIndex = 3;
-            this.bunifuCustomLabel1.Text = "Employee Management";
-            this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuCustomLabel2
-            // 
-            this.bunifuCustomLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(206, 53);
-            this.bunifuCustomLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(487, 59);
-            this.bunifuCustomLabel2.TabIndex = 4;
-            this.bunifuCustomLabel2.Text = "Employee Management";
-            this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dataGridViewListEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewListEmployee.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewListEmployee.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewListEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewListEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewListEmployee.Location = new System.Drawing.Point(0, 223);
+            this.dataGridViewListEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridViewListEmployee.Name = "dataGridViewListEmployee";
+            this.dataGridViewListEmployee.Size = new System.Drawing.Size(882, 271);
+            this.dataGridViewListEmployee.TabIndex = 3;
+            this.dataGridViewListEmployee.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewListEmployee_CellFormatting_1);
             // 
             // UCEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.dataGridViewListEmployee);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -206,9 +207,9 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.txtSearch.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListEmployee)).EndInit();
             this.ResumeLayout(false);
 
         }
