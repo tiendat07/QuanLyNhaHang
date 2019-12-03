@@ -13,15 +13,10 @@ namespace DataAccessLayer
     public class EmployeeDAL
     {
         RestaurantContextEntities dbContext;
-        
-        
         public EmployeeDAL()
         {
             dbContext = new RestaurantContextEntities();
         }
-
-        
-
         public List<Employee> GetListEmployeeEdit()
         {
             return dbContext.Employees.ToList();
