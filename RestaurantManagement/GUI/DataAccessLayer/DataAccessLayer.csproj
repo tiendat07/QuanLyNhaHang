@@ -57,9 +57,6 @@
       <DependentUpon>RestaurantManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="CustomerDAL.cs" />
-    <Compile Include="C__MigrationHistory.cs">
-      <DependentUpon>RestaurantManagement.tt</DependentUpon>
-    </Compile>
     <Compile Include="Employee.cs">
       <DependentUpon>RestaurantManagement.tt</DependentUpon>
     </Compile>
@@ -98,7 +95,9 @@
     <Compile Include="TableDAL.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <EntityDeploy Include="RestaurantManagement.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

@@ -15,13 +15,21 @@ namespace GUI
     public partial class UCCustomer : UserControl
     {
         Form_Restaurant mainform;
+        DataGridView data;
         public CustomerBLL customerBLL;
+
         public UCCustomer(Form_Restaurant form)
         {
             customerBLL = new CustomerBLL();
             mainform = form;
             InitializeComponent();
             loadData();
+            dataGridViewListCustomer.ReadOnly = true;
+        }
+
+        public DataGridView GetDataGridView()
+        {
+            return data;
         }
 
         public void loadData()
@@ -64,22 +72,33 @@ namespace GUI
             e.Column.FillWeight = 20;
         }
 
-        private void dataGridViewListCustomer_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            
-        }
-
-        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEditCustomer_Click(object sender, EventArgs e)
-        {
-            mainform.loadUCCustomer2();
-        }
-
         private void dataGridViewListCustomer_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dataGridViewListCustomer.Columns[e.ColumnIndex].Name == "Gender")
+            {
+                if (e.Value != null)
+                {
+                    int gender = Convert.ToInt32(e.Value);
+                    if (gender == 1)
+                    {
+                        e.Value = "Male";
+                    }
+                    else
+                    {
+                        e.Value = "Female";
+                    }
+                    e.FormattingApplied = true;
+                }
+            }
+        }
+        
+        private void btnEdit_Click_1(object sender, EventArgs e)
+        {
+            Form_CustomerEditEvent f = new Form_CustomerEditEvent(mainform, this);
+            f.Show();
+        }
+
+        private void dataGridViewListCustomer_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (this.dataGridViewListCustomer.Columns[e.ColumnIndex].Name == "Gender")
             {

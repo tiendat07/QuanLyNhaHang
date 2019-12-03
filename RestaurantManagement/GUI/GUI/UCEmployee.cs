@@ -88,13 +88,13 @@ namespace GUI
         {
             e.Column.FillWeight = 20;    // <<this line will help you
         }
-
+/*
         private void btnEdit_Click_1(object sender, EventArgs e)
         {
             Form_EmployeeEditEvent f_event = new Form_EmployeeEditEvent(mainform, this);
             f_event.Show();
         }
-
+*/
         private void dataGridViewListEmployee_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (this.dataGridViewListEmployee.Columns[e.ColumnIndex].Name == "Gender")
@@ -121,9 +121,6 @@ namespace GUI
             //mainform.loadUCEmployeeEdit();
         }
 
-        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
+ 
     }
 }

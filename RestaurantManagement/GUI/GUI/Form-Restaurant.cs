@@ -15,6 +15,7 @@ namespace GUI
     {
         static Form_Restaurant _obj;
         UCEmployee ucEmployee;
+        UCCustomer ucCustomer;
         static bool AdminTrue;
         static int EmployeeID;
         public static Form_Restaurant Instance
@@ -201,16 +202,32 @@ namespace GUI
             UCCustomer uc = new UCCustomer(this);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
+            ucCustomer = uc;
         }
-        public void loadUCCustomer2()
+        public void loadUCCustomer()
         {
             _obj = this;
             pnlContainer.Controls.Clear();
-          //  UCCustomer2 uc = new UCCustomer2(this);
-           // uc.Dock = DockStyle.Fill;
-            //pnlContainer.Controls.Add(uc);
+            UCCustomer uc = new UCCustomer(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
         }
-
+        public void loadUCCustomer_Add()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCCustomer_Add uc = new UCCustomer_Add(this, ucCustomer.GetDataGridView());
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
+        public void loadUCCustomer_Edit()
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCCustomer_Edit uc = new UCCustomer_Edit(this, ucCustomer.GetDataGridView());
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+        }
         public void loadUCOrder(List<OrderDetail> orderDetails, int TableID)
         {
             _obj = this;

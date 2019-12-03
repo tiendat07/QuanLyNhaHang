@@ -67,7 +67,7 @@
             this.panel1.Controls.Add(this.bunifuCustomLabel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(964, 81);
             this.panel1.TabIndex = 0;
@@ -91,7 +91,7 @@
             this.panel2.Controls.Add(this.tableLayoutPanel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 498);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(964, 186);
             this.panel2.TabIndex = 1;
@@ -103,13 +103,13 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.53287F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.37947F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.24503F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 99F));
             this.tableLayoutPanel2.Controls.Add(this.btnSave, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnClear, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnComeback, 3, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.07424F));
@@ -123,10 +123,10 @@
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSave.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(512, 2);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Location = new System.Drawing.Point(510, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(122, 46);
+            this.btnSave.Size = new System.Drawing.Size(121, 46);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "SAVE";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -137,10 +137,10 @@
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(132)))), ((int)(((byte)(165)))));
             this.btnClear.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnClear.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(638, 2);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Location = new System.Drawing.Point(635, 2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(112, 46);
+            this.btnClear.Size = new System.Drawing.Size(111, 46);
             this.btnClear.TabIndex = 1;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -152,9 +152,9 @@
             this.btnComeback.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnComeback.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComeback.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnComeback.Location = new System.Drawing.Point(755, 3);
+            this.btnComeback.Location = new System.Drawing.Point(751, 3);
             this.btnComeback.Name = "btnComeback";
-            this.btnComeback.Size = new System.Drawing.Size(109, 44);
+            this.btnComeback.Size = new System.Drawing.Size(108, 44);
             this.btnComeback.TabIndex = 2;
             this.btnComeback.Text = "COME BACK";
             this.btnComeback.UseVisualStyleBackColor = false;
@@ -165,7 +165,7 @@
             this.panel3.Controls.Add(this.tableLayoutPanel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 81);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(964, 417);
             this.panel3.TabIndex = 2;
@@ -203,7 +203,7 @@
             this.tableLayoutPanel1.Controls.Add(this.cbIsAdmin, 8, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.83422F));
@@ -298,7 +298,7 @@
             // 
             this.txtName.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtName.Location = new System.Drawing.Point(113, 55);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(208, 34);
@@ -308,7 +308,7 @@
             // 
             this.txtShift.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtShift.Location = new System.Drawing.Point(403, 55);
-            this.txtShift.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtShift.Margin = new System.Windows.Forms.Padding(2);
             this.txtShift.Multiline = true;
             this.txtShift.Name = "txtShift";
             this.txtShift.Size = new System.Drawing.Size(185, 34);
@@ -319,7 +319,7 @@
             // 
             this.txtCMND.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtCMND.Location = new System.Drawing.Point(113, 172);
-            this.txtCMND.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCMND.Margin = new System.Windows.Forms.Padding(2);
             this.txtCMND.Multiline = true;
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(208, 33);
@@ -330,7 +330,7 @@
             // 
             this.txtPhone.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtPhone.Location = new System.Drawing.Point(403, 172);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.Multiline = true;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(185, 33);
@@ -343,7 +343,7 @@
             this.dtpkDOB.Dock = System.Windows.Forms.DockStyle.Top;
             this.dtpkDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpkDOB.Location = new System.Drawing.Point(113, 278);
-            this.dtpkDOB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpkDOB.Margin = new System.Windows.Forms.Padding(2);
             this.dtpkDOB.Name = "dtpkDOB";
             this.dtpkDOB.Size = new System.Drawing.Size(208, 20);
             this.dtpkDOB.TabIndex = 14;
@@ -353,7 +353,7 @@
             // 
             this.txtEmail.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtEmail.Location = new System.Drawing.Point(403, 278);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(185, 36);
@@ -394,17 +394,18 @@
             "Female",
             "Male"});
             this.cbGender.Location = new System.Drawing.Point(693, 55);
-            this.cbGender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbGender.Margin = new System.Windows.Forms.Padding(2);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(171, 21);
             this.cbGender.TabIndex = 18;
             this.cbGender.Text = "-select-";
+            //this.cbGender.SelectedIndexChanged += new System.EventHandler(this.cbGender_SelectedIndexChanged);
             // 
             // txtAddress
             // 
             this.txtAddress.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtAddress.Location = new System.Drawing.Point(693, 172);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(171, 33);
@@ -428,7 +429,7 @@
             this.cbIsAdmin.AutoSize = true;
             this.cbIsAdmin.Dock = System.Windows.Forms.DockStyle.Top;
             this.cbIsAdmin.Location = new System.Drawing.Point(693, 278);
-            this.cbIsAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbIsAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.cbIsAdmin.Name = "cbIsAdmin";
             this.cbIsAdmin.Size = new System.Drawing.Size(171, 14);
             this.cbIsAdmin.TabIndex = 21;
@@ -441,7 +442,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCEmployee_Add";
             this.Size = new System.Drawing.Size(964, 684);
             this.panel1.ResumeLayout(false);

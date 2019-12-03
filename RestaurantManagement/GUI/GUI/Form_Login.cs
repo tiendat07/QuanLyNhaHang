@@ -64,25 +64,24 @@ namespace GUI
         {
             string tenDN = txtUsername.Text;
             string matkhau = txtPassword.Text;
+                       if (string.IsNullOrEmpty(tenDN) || string.IsNullOrEmpty(matkhau))
+                       {
+                           MessageBox.Show("Vui long nhap day du thong tin");
+                       }
+                       else
+                       {
+                           if (employeeBLL.CheckLogin(tenDN, matkhau) == true)
+                           {
+                               bool isAdmin = employeeBLL.CheckAdmin(tenDN);
+                               int employeeID = employeeBLL.GetEmployeeID(tenDN);
+                               Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
+                               this.Hide();
+                               f.Show();
+                           }
+                           else
+                               MessageBox.Show("Chua chinh xac !!");
 
-            if (string.IsNullOrEmpty(tenDN) || string.IsNullOrEmpty(matkhau))
-            {
-                MessageBox.Show("Vui long nhap day du thong tin");
-            }
-            else
-            {
-                if (employeeBLL.CheckLogin(tenDN, matkhau) == true)
-                {
-                    bool isAdmin = employeeBLL.CheckAdmin(tenDN);
-                    int employeeID = employeeBLL.GetEmployeeID(tenDN);
-                    Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
-                    this.Hide();
-                    f.Show();
-                }
-                else
-                    MessageBox.Show("Chua chinh xac !!");
-
-            }
+                       }
         }
         
 
