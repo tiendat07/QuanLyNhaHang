@@ -378,6 +378,9 @@
     <None Include="Resources\add_96px.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\next.png" />
+    <None Include="Resources\icons8_delete_sign_64px.png" />
+    <None Include="Resources\icons8_search_64px.png" />
     <None Include="Resources\hello_96px.png" />
     <None Include="Resources\Restaurant2.jpg" />
     <None Include="Resources\Restaurant1.jpg" />
@@ -409,6 +412,8 @@
     <None Include="Resources\icons8_delete_40px2.png" />
     <None Include="Resources\add_64px.png" />
     <None Include="Resources\add_96px1.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\comback.png" />
     <None Include="Resources\customer_64px.png" />
     <None Include="Resources\account.jpg" />
     <None Include="Resources\account.png" />
