@@ -53,6 +53,7 @@
     <Compile Include="BookingTable.cs">
       <DependentUpon>RestaurantManagement.tt</DependentUpon>
     </Compile>
+    <Compile Include="BookingTableDAL.cs" />
     <Compile Include="Customer.cs">
       <DependentUpon>RestaurantManagement.tt</DependentUpon>
     </Compile>

@@ -18,68 +18,17 @@ namespace GUI
         Form_Restaurant mainform;
         List<Table> lsTable_temp;
         OrderBLL orderBLL;
+        OrderDetailBLL orderDetailBLL;
         public UCTable(Form_Restaurant form1)
         {
             orderBLL = new OrderBLL();
+            orderDetailBLL = new OrderDetailBLL();
             tableBLL = new TableBLL();
             lsTable_temp = tableBLL.GetListTable();
             orderBLL = new OrderBLL();
             mainform = form1;
             InitializeComponent();
             LoadData();
-        }
-        private void Table_Click(object sender, EventArgs e)
-        {
-            myButton btn = sender as myButton;
-            
-            foreach (var item in lsTable_temp)
-            {
-                
-                if (item.TableID == btn.objectID)
-                {
-                    switch (item.Status)
-                    {
-                        case 0:
-                            {
-                                // Trống
-                                btnOrder.objectID = item.TableID;
-                                btnOrder.Visible = true;
-                                btnOrder.Enabled = true;
-                                btnOrder.objectID = btn.objectID;
-                                btnPay.Visible = false;
-                                btnPay.Enabled = false;
-                                
-                                //btnBook.Visible = true;
-                                //btnBook.Visible = true;
-                                break;
-                            }
-                        case 1:
-                            {
-                                // Đã có ng đặt
-                                btnPay.objectID = item.TableID;
-                                btnPay.Visible = true;
-                                btnPay.Enabled = true;
-                                btnPay.objectID = btn.objectID;
-                                btnOrder.Visible = false;
-                                btnOrder.Enabled = false;
-                                
-                                break;
-                            }
-                        case 2:
-                            {
-                                btnPay.objectID = item.TableID;
-                                // Đã có người vô ngồi
-                                btnPay.Visible = true;
-                                btnPay.Enabled = true;
-                                btnPay.objectID = btn.objectID;
-                                btnOrder.Visible = false;
-                                btnOrder.Enabled = false;
-                                btnPay.objectID = item.TableID;
-                                break;
-                            }
-                    }
-                }
-            }
         }
         public void LoadData()
         {
@@ -131,24 +80,100 @@ namespace GUI
                             break;
                         }
                 }
-                btn.Click += new EventHandler(Table_Click);
+                btn.MouseClick += Btn_MouseClick;
+                //btn.MouseDoubleClick += Btn_MouseDoubleClick;
+                btn.DoubleClick += Btn_DoubleClick;
                 flpTable1.Controls.Add(btn);
             }
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void Btn_MouseClick(object sender, MouseEventArgs e)
         {
+            myButton btn = sender as myButton;
 
+            foreach (var item in lsTable_temp)
+            {
+
+                if (item.TableID == btn.objectID)
+                {
+                    switch (item.Status)
+                    {
+                        case 0:
+                            {
+                                // Trống
+                                btnBook.objectID = item.TableID;
+                                btnOrder.objectID = item.TableID;
+
+                                btnOrder.Visible = true;
+                                btnOrder.Enabled = true;
+                                btnPay.Visible = false;
+                                btnPay.Enabled = false;
+                                btnBook.Visible = true;
+                                btnBook.Enabled = true;
+                                break;
+                            }
+                        case 1:
+                            {
+                                // Đã có ng đặt
+                                btnOrder.objectID = item.TableID;
+
+                                btnPay.Visible = false;
+                                btnPay.Enabled = false;
+                                btnOrder.Visible = true;
+                                btnOrder.Enabled = true;
+                                btnBook.Visible = false;
+                                btnBook.Enabled = false;
+                                break;
+                            }
+                        case 2:
+                            {
+                                btnPay.objectID = item.TableID;
+                                // Đã có người vô ngồi
+                                btnPay.Visible = true;
+                                btnPay.Enabled = true;
+                                btnOrder.Visible = false;
+                                btnOrder.Enabled = false;
+                                btnBook.Visible = false;
+                                btnBook.Enabled = false;
+                                break;
+                            }
+                    }
+                }
+            }
         }
 
+        private void Btn_DoubleClick(object sender, EventArgs e)
+        {
+            myButton btn = sender as myButton;
+            Table item = lsTable_temp.Find(x => x.TableID == btn.objectID);
+            if (item.Status == 2)
+            {
+                List<Order> orders = orderBLL.GetListOrders();
+                List<OrderDetail> orderDetails_ThisTable = new List<OrderDetail>();
+                List<OrderDetail> allorderDetails = orderDetailBLL.GetListOrderDetails();
+                Order order = orders.Find(x => x.TableID == item.TableID && x.IsPaid == false);
+                foreach (var o in allorderDetails)
+                {
+                    if (o.OrderID == order.OrderID)
+                    {
+                        orderDetails_ThisTable.Add(o);
+                    }
+                }
+                mainform.loadUCOrder(orderDetails_ThisTable, btn.objectID, true);
+                this.Hide();
+            }
+        }
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            //mainform.loadUCTableEdit();
+            mainform.loadUCTableEdit();
         }
         
         private void btnBook_Click_1(object sender, EventArgs e)
         {
-
+            myButton btn = sender as myButton;
+            Form_BookingTable f = new Form_BookingTable(mainform , btn.objectID);
+            f.ShowDialog();
+            f.Close();
         }
 
         private void btnOrder_Click_1(object sender, EventArgs e)
@@ -165,7 +190,6 @@ namespace GUI
             if (result == DialogResult.Yes)
             {
                 myButton btn = sender as myButton;
-                //yes...
                 if (orderBLL.SetPaid(btn.objectID) == true)
                 {
                     if (tableBLL.ChangeTableStatus(btn.objectID, false, true, false) == true)

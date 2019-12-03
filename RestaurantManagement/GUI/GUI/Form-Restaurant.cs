@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataAccessLayer;
 namespace GUI
 {
     public partial class Form_Restaurant : Form
@@ -31,18 +30,16 @@ namespace GUI
         }
         public Form_Restaurant(bool isAdmin, int ID)
         {
+            InitializeComponent();
             AdminTrue = isAdmin;
             EmployeeID = ID;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
-            InitializeComponent();
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             if (AdminTrue == false)
             {
                 btn_Employee.Visible = false;
                 btn_Employee.Enabled = false;
-                btn_Order.Visible = false;
-                btn_Order.Enabled = false;
             }
             this.LoadUCHome();
         }
@@ -228,11 +225,12 @@ namespace GUI
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
-        public void loadUCOrder(List<OrderDetail> orderDetails, int TableID)
+
+        public void loadUCOrder(List<OrderDetail> orderDetails, int TableID, bool ReadOnly)
         {
             _obj = this;
             pnlContainer.Controls.Clear();
-            UCOrder uc = new UCOrder(this, orderDetails, EmployeeID, TableID);
+            UCOrder uc = new UCOrder(this, orderDetails, EmployeeID, TableID, ReadOnly);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
@@ -250,7 +248,7 @@ namespace GUI
         {
             _obj = this;
             pnlContainer.Controls.Clear();
-            UCHome uc = new UCHome(this);
+            UCHome uc = new UCHome(this, EmployeeID);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
@@ -259,7 +257,7 @@ namespace GUI
         {
             _obj = this;
             pnlContainer.Controls.Clear();
-            UCHome uc = new UCHome(this);
+            UCHome uc = new UCHome(this, EmployeeID);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
@@ -267,7 +265,7 @@ namespace GUI
         {
             _obj = this;
             pnlContainer.Controls.Clear();
-            UCHome uc = new UCHome(this);
+            UCHome uc = new UCHome(this, EmployeeID);
         }
         private void Form_Restaurant_Activated(object sender, EventArgs e)
         {

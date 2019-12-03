@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,6 @@ namespace DataAccessLayer
         {
             return dbContext.Customers.ToList();
         }
-
         public bool AddCustomer(Customer e)
         {
             try
@@ -38,7 +38,7 @@ namespace DataAccessLayer
             }
         }
 
-        public bool EditCustomer(Customer e)
+         public bool EditCustomer(Customer e)
         {
             try
             {
@@ -63,6 +63,18 @@ namespace DataAccessLayer
             }
         }
 
+        public Customer SearchCustomerByName(string name)
+        {
+            // Trả về ds nếu có người có tên giống nhau
+            return dbContext.Customers.Where(c => c.Name == name).FirstOrDefault();
+        }
+        public List<string> Name_SearchCustomerByName(string name)
+        {
+            // Trả về ds nếu có người có tên giống nhau
+            return dbContext.Customers.Where(x => x.Name.StartsWith(name))
+            .Select(c => c.Name).ToList();
+            
+        }
         public bool DeleteCustomer(int ID)
         {
             Customer e = dbContext.Customers.Where(d => d.CustomerID == ID).FirstOrDefault();
@@ -80,6 +92,11 @@ namespace DataAccessLayer
             {
                 return false;
             }
+            
+        }
+        public int GetCustomerID (Customer c)
+        {
+            return dbContext.Customers.Where(x => x.CustomerID == c.CustomerID).Select(y => y.CustomerID).FirstOrDefault();
         }
     }
 }

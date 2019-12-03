@@ -19,7 +19,6 @@ namespace BLL
         {
             return customerDAL.GetListCustomer();
         }
-
         public bool EditCustomer(Customer e)
         {
             return customerDAL.EditCustomer(e);
@@ -34,11 +33,17 @@ namespace BLL
         {
             return customerDAL.DeleteCustomer(ID);
         }
-        /*
-        public int GetCustomerID(string username)
+        public Customer SearchCustomerByName(string name)
         {
-            return customerDAL.GetCustomerID(username); 
+            return customerDAL.SearchCustomerByName(name);
         }
-        */
+        public List<string> Name_SearchCustomerByName(string name)
+        {
+            return customerDAL.Name_SearchCustomerByName(name);
+        }
+        public int GetCustomerID(Customer c)
+        {
+            return customerDAL.GetCustomerID(c);
+        }
     }
 }

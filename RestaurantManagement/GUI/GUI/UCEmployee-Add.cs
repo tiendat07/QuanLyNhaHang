@@ -40,12 +40,11 @@ namespace GUI
             else
             {
                 Employee emp = new Employee();
-                emp.EmployeeID = datagrid.RowCount + 1;
                 emp.Name = txtName.Text;
                 emp.CMND = txtCMND.Text;
                 emp.PhoneNumber = txtPhone.Text;
                 emp.Address = txtAddress.Text;
-                if (cbGender.SelectedValue == "Female")
+                if (Convert.ToString(cbGender.SelectedValue) == "Female")
                 {
                     emp.IsFemale = true;
                 }
@@ -58,12 +57,19 @@ namespace GUI
                 emp.IsAdmin = (cbIsAdmin.Checked == true) ? true : false;
                 emp.DateOfBirth = dtpkDOB.Value;
 
-                employeeBLL.AddEmployee(emp);
-                DialogResult dialog = MessageBox.Show("Saved successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (dialog == DialogResult.OK)  //click ok thì chuyển lại form đầu.
+                if (employeeBLL.AddEmployee(emp) == true)
                 {
-                    mainform.loadUCEmployee();
+                    DialogResult dialog = MessageBox.Show("Saved successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (dialog == DialogResult.OK)  //click ok thì chuyển lại form đầu.
+                    {
+                        mainform.loadUCEmployee();
+                    }
                 }
+                else
+                {
+                    MessageBox.Show("Saved unsuccessfully. Please try again!");
+                }
+                
             }
         }
 

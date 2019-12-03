@@ -39,7 +39,6 @@ namespace GUI
             this.btn_Report = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Employee = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Customer = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_Order = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Table = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Menu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Home = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -116,7 +115,6 @@ namespace GUI
             this.panel2.Controls.Add(this.btn_Report);
             this.panel2.Controls.Add(this.btn_Employee);
             this.panel2.Controls.Add(this.btn_Customer);
-            this.panel2.Controls.Add(this.btn_Order);
             this.panel2.Controls.Add(this.btn_Table);
             this.panel2.Controls.Add(this.btn_Menu);
             this.panel2.Controls.Add(this.btn_Home);
@@ -150,7 +148,7 @@ namespace GUI
             this.btn_Report.IconVisible = false;
             this.btn_Report.IconZoom = 90D;
             this.btn_Report.IsTab = false;
-            this.btn_Report.Location = new System.Drawing.Point(0, 354);
+            this.btn_Report.Location = new System.Drawing.Point(0, 297);
             this.btn_Report.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btn_Report.Name = "btn_Report";
             this.btn_Report.Normalcolor = System.Drawing.Color.Transparent;
@@ -162,8 +160,8 @@ namespace GUI
             this.btn_Report.Text = "Report";
             this.btn_Report.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Report.Textcolor = System.Drawing.Color.White;
-            this.btn_Report.Visible = false;
             this.btn_Report.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Report.Visible = false;
             // 
             // btn_Employee
             // 
@@ -188,7 +186,7 @@ namespace GUI
             this.btn_Employee.IconVisible = false;
             this.btn_Employee.IconZoom = 90D;
             this.btn_Employee.IsTab = false;
-            this.btn_Employee.Location = new System.Drawing.Point(0, 297);
+            this.btn_Employee.Location = new System.Drawing.Point(0, 240);
             this.btn_Employee.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btn_Employee.Name = "btn_Employee";
             this.btn_Employee.Normalcolor = System.Drawing.Color.Transparent;
@@ -226,7 +224,7 @@ namespace GUI
             this.btn_Customer.IconVisible = false;
             this.btn_Customer.IconZoom = 90D;
             this.btn_Customer.IsTab = false;
-            this.btn_Customer.Location = new System.Drawing.Point(0, 240);
+            this.btn_Customer.Location = new System.Drawing.Point(0, 183);
             this.btn_Customer.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btn_Customer.Name = "btn_Customer";
             this.btn_Customer.Normalcolor = System.Drawing.Color.Transparent;
@@ -240,45 +238,6 @@ namespace GUI
             this.btn_Customer.Textcolor = System.Drawing.Color.White;
             this.btn_Customer.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Customer.Click += new System.EventHandler(this.btn_Customer_Click);
-            // 
-            // btn_Order
-            // 
-            this.btn_Order.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(113)))), ((int)(((byte)(151)))));
-            this.btn_Order.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Order.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Order.BorderRadius = 0;
-            this.btn_Order.ButtonText = "Order";
-            this.btn_Order.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Order.DisabledColor = System.Drawing.Color.White;
-            this.btn_Order.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Order.Font = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Order.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Order.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Order.Iconimage")));
-            this.btn_Order.Iconimage_right = null;
-            this.btn_Order.Iconimage_right_Selected = null;
-            this.btn_Order.Iconimage_Selected = null;
-            this.btn_Order.IconMarginLeft = 0;
-            this.btn_Order.IconMarginRight = 0;
-            this.btn_Order.IconRightVisible = false;
-            this.btn_Order.IconRightZoom = 0D;
-            this.btn_Order.IconVisible = false;
-            this.btn_Order.IconZoom = 90D;
-            this.btn_Order.IsTab = false;
-            this.btn_Order.Location = new System.Drawing.Point(0, 183);
-            this.btn_Order.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
-            this.btn_Order.Name = "btn_Order";
-            this.btn_Order.Normalcolor = System.Drawing.Color.Transparent;
-            this.btn_Order.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(156)))), ((int)(((byte)(182)))));
-            this.btn_Order.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Order.selected = false;
-            this.btn_Order.Size = new System.Drawing.Size(478, 57);
-            this.btn_Order.TabIndex = 34;
-            this.btn_Order.Text = "Order";
-            this.btn_Order.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Order.Textcolor = System.Drawing.Color.White;
-            this.btn_Order.Visible = false;
-            this.btn_Order.TextFont = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-          //  this.btn_Order.Click += new System.EventHandler(this.btn_Order_Click);
             // 
             // btn_Table
             // 
@@ -518,7 +477,7 @@ namespace GUI
             // 
             // pnlContainer
             // 
-            this.pnlContainer.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlContainer.BackColor = System.Drawing.Color.White;
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContainer.Location = new System.Drawing.Point(3, 79);
             this.pnlContainer.Name = "pnlContainer";
@@ -537,6 +496,7 @@ namespace GUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1946, 1106);
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
@@ -580,7 +540,6 @@ namespace GUI
         private Bunifu.Framework.UI.BunifuFlatButton btn_Report;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Employee;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Customer;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Order;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Table;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Menu;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Home;

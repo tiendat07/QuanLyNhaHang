@@ -22,8 +22,10 @@ namespace GUI
         int TabID;
         List<OrderDetail> lsOrderDetail;
         Order orDer;
-        public UCOrder(Form_Restaurant form,List<OrderDetail> orderDetails, int EmployeeID, int TableID)
+        bool readOnly;
+        public UCOrder(Form_Restaurant form,List<OrderDetail> orderDetails, int EmployeeID, int TableID, bool ReadOnly)
         {
+            readOnly = ReadOnly;
             tableBLL = new TableBLL();
             orDer = new Order();
             orderBLL = new OrderBLL();
@@ -38,6 +40,13 @@ namespace GUI
         }
         public void LoadData()
         {
+            if (readOnly == true)
+            {
+                btnSave.Visible = false;
+                btnSave.Enabled = false;
+                btnCancel.Visible = false;
+                btnCancel.Enabled = false;
+            }
             var dateNow = DateTime.Now;
             var date = dateNow.ToString("dd/MM/yyyy");
             lbDateOrder.Text = Convert.ToString(date);
@@ -89,11 +98,7 @@ namespace GUI
             dataGridViewOrder.Columns[1].ReadOnly = true;
             dataGridViewOrder.Columns[2].ReadOnly = true;
             dataGridViewOrder.Columns[4].ReadOnly = true;
-        }
-
-        private void dataGridViewOrder_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            // Edit Data (NOTE)
+            dataGridViewOrder.Columns[3].ReadOnly = false;
         }
         
 
@@ -148,6 +153,17 @@ namespace GUI
                     e.FormattingApplied = true;
                 }
             }
+        }
+
+        private void dataGridViewOrder_CellEndEdit_1(object sender, DataGridViewCellEventArgs e)
+        {
+            var temp = dataGridViewOrder.Rows[e.RowIndex];
+            int id = (int)temp.Cells["Order ID"].Value;
+            string note = (string)temp.Cells["Note"].Value;
+            foreach (var item in lsOrderDetail)
+                if (item.FoodDrinkID == id)
+                    item.Note = note;
+            // Edit Data (NOTE)
         }
     }
 }

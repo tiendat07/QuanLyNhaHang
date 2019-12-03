@@ -74,11 +74,23 @@
     <Compile Include="Form_CustomerEditEvent.Designer.cs">
       <DependentUpon>Form_CustomerEditEvent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_BookingTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_BookingTable.Designer.cs">
+      <DependentUpon>Form_BookingTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_EmployeeEditEvent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_EmployeeEditEvent.Designer.cs">
       <DependentUpon>Form_EmployeeEditEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Profile.Designer.cs">
+      <DependentUpon>Form_Profile.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -228,6 +240,9 @@
     </Compile>
     <EmbeddedResource Include="Form_CustomerEditEvent.resx">
       <DependentUpon>Form_CustomerEditEvent.cs</DependentUpon>
+      </EmbeddedResource>
+    <EmbeddedResource Include="Form_BookingTable.resx">
+      <DependentUpon>Form_BookingTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_EmployeeEditEvent.resx">
       <DependentUpon>Form_EmployeeEditEvent.cs</DependentUpon>
@@ -237,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCCustomer-Edit.resx">
       <DependentUpon>UCCustomer-Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Profile.resx">
+      <DependentUpon>Form_Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCEmployee-Add.resx">
       <DependentUpon>UCEmployee-Add.cs</DependentUpon>
@@ -383,6 +401,13 @@
     <None Include="Resources\add_96px.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\next.png" />
+    <None Include="Resources\icons8_delete_sign_64px.png" />
+    <None Include="Resources\icons8_search_64px.png" />
+    <None Include="Resources\hello_96px.png" />
+    <None Include="Resources\Restaurant2.jpg" />
+    <None Include="Resources\Restaurant1.jpg" />
+    <None Include="Resources\Restaurant.jpg" />
     <None Include="Resources\meeting_500px.png" />
     <None Include="Resources\table_96px1.png" />
     <None Include="Resources\id_card_96px1.png" />
@@ -410,6 +435,16 @@
     <None Include="Resources\icons8_delete_40px2.png" />
     <None Include="Resources\add_64px.png" />
     <None Include="Resources\add_96px1.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\comback.png" />
+    <None Include="Resources\customer_64px.png" />
+    <None Include="Resources\account.jpg" />
+    <None Include="Resources\account.png" />
+    <None Include="Resources\account1.png" />
+    <None Include="Resources\53241778_761327724247394_6548895296045187072_n.jpg" />
+    <None Include="Resources\Background.png" />
+    <None Include="Resources\Background-Restaurant.png" />
+    <None Include="Resources\Background-Restaurant1.png" />
     <Content Include="Resources\delete_64px.png" />
     <None Include="Resources\delete_64px.png" />
   </ItemGroup>

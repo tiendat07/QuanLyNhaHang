@@ -1,6 +1,8 @@
 ﻿using DataAccessLayer;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core.Objects;
+using System.Data.Entity.SqlServer;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -11,15 +13,10 @@ namespace DataAccessLayer
     public class EmployeeDAL
     {
         RestaurantContextEntities dbContext;
-        
-        
         public EmployeeDAL()
         {
             dbContext = new RestaurantContextEntities();
         }
-
-        
-
         public List<Employee> GetListEmployeeEdit()
         {
             return dbContext.Employees.ToList();
@@ -112,6 +109,74 @@ namespace DataAccessLayer
         {
             var x = dbContext.Employees.Where(n => n.Username == username).FirstOrDefault();
             return x.EmployeeID;
+        }
+
+        public Employee FindEmployee (int id)
+        {
+            return dbContext.Employees.Where(x => x.EmployeeID == id).FirstOrDefault();
+        }
+        public List<Employee> LoadRecord(int page, int recordNum)
+        {
+            List<Employee> result = new List<Employee>();
+            result = dbContext.Employees.OrderBy(s=> s.EmployeeID).Skip((page - 1) * recordNum).Take(recordNum).ToList(); //bỏ qua những cái đã load chỉ lấy phần cần lấy
+            
+            return result;
+        }
+
+        public List<Employee> Sreach(string x,int k)
+        {
+            if(k==0) // cac loai ko can phan loai
+            {
+                return dbContext.Employees.Where(y => y.Name.StartsWith(x)|| y.Address.StartsWith(x)|| y.CMND.StartsWith(x) 
+                || EntityFunctions.TruncateTime(y.DateOfBirth).ToString().Contains(x)|| y.Email.StartsWith(x) 
+                || SqlFunctions.StringConvert((double)y.EmployeeID).TrimStart().StartsWith(x) || y.PhoneNumber.Contains(x)).ToList();
+            }
+            if(k==1) //nam
+            {
+                return dbContext.Employees.Where(y => y.IsFemale == false).ToList();
+            }
+            if (k == 2)//nu
+            {
+                return dbContext.Employees.Where(y => y.IsFemale == true).ToList();
+            }
+            if (k == 3) //admin
+            {
+                return dbContext.Employees.Where(y => y.IsAdmin == true).ToList();
+            }
+            if(k==4) //nhan vien
+            {
+                return dbContext.Employees.Where(y => y.IsAdmin == false).ToList();
+            }
+            if(k==5)//nam + string x
+            {
+                return dbContext.Employees.Where(y => y.IsFemale==false && y.Name.StartsWith(x) || y.Address.StartsWith(x) 
+                || y.CMND.StartsWith(x) || y.Email.StartsWith(x) || y.PhoneNumber.Contains(x)
+                || EntityFunctions.TruncateTime(y.DateOfBirth).ToString().Contains(x) 
+                || SqlFunctions.StringConvert((double)y.EmployeeID).TrimStart().StartsWith(x)).ToList();
+            }
+            if (k == 6)//nu + string x
+            {
+                return dbContext.Employees.Where(y => y.IsFemale == true && y.Name.StartsWith(x) || y.Address.StartsWith(x)
+                || y.CMND.StartsWith(x) || y.Email.StartsWith(x) || y.PhoneNumber.Contains(x)
+                || EntityFunctions.TruncateTime(y.DateOfBirth).ToString().Contains(x)
+                || SqlFunctions.StringConvert((double)y.EmployeeID).TrimStart().StartsWith(x)).ToList();
+            }
+            if (k == 7)//admin + string x
+            {
+                return dbContext.Employees.Where(y => y.IsAdmin == true && y.Name.StartsWith(x) || y.Address.StartsWith(x)
+                || y.CMND.StartsWith(x) || y.Email.StartsWith(x) || y.PhoneNumber.Contains(x)
+                || EntityFunctions.TruncateTime(y.DateOfBirth).ToString().Contains(x)
+                || SqlFunctions.StringConvert((double)y.EmployeeID).TrimStart().StartsWith(x)).ToList();
+            }
+            if (k == 8)//employee + string x
+            {
+                return dbContext.Employees.Where(y => y.IsAdmin == false && y.Name.StartsWith(x) || y.Address.StartsWith(x)
+                || y.CMND.StartsWith(x) || y.Email.StartsWith(x) || y.PhoneNumber.Contains(x)
+                || EntityFunctions.TruncateTime(y.DateOfBirth).ToString().Contains(x)
+                || SqlFunctions.StringConvert((double)y.EmployeeID).TrimStart().StartsWith(x)).ToList();
+            }
+            return dbContext.Employees.ToList();
+
         }
     }
 }
