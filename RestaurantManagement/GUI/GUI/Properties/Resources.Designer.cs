@@ -113,12 +113,6 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap comback {
-            get {
-                object obj = ResourceManager.GetObject("comback", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
         internal static System.Drawing.Bitmap Background {
             get {
                 object obj = ResourceManager.GetObject("Background", resourceCulture);
@@ -129,13 +123,6 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-
-        internal static System.Drawing.Bitmap delete {
-            get {
-                object obj = ResourceManager.GetObject("delete", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-                }
-        }
         internal static System.Drawing.Bitmap Background_Restaurant {
             get {
                 object obj = ResourceManager.GetObject("Background-Restaurant", resourceCulture);
@@ -156,9 +143,29 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap comback {
+            get {
+                object obj = ResourceManager.GetObject("comback", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap customer_64px {
             get {
                 object obj = ResourceManager.GetObject("customer_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete {
+            get {
+                object obj = ResourceManager.GetObject("delete", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,15 +213,19 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_delete_sign_64px {
-            get {
-                object obj = ResourceManager.GetObject("icons8_delete_sign_64px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-                }
-        }
         internal static System.Drawing.Bitmap hello_96px {
             get {
                 object obj = ResourceManager.GetObject("hello_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_delete_sign_64px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_delete_sign_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
