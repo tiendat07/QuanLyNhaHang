@@ -49,5 +49,15 @@ namespace BLL
         {
             return employeeDAL.GetEmployeeID(username);
         }
+
+        public List<Employee> LoadRecord(int page, int recordNum)
+        {
+            return employeeDAL.LoadRecord(page, recordNum);
+        }
+
+        public List<Employee> Sreach(string x,int k)
+        {
+            return employeeDAL.Sreach(x, k);
+        }
     }
 }

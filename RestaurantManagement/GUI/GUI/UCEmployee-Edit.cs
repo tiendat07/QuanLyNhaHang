@@ -159,5 +159,29 @@ namespace GUI
             // Mỗi lần sửa, người đc sửa sẽ đc đưa vào danh sách đc sửa
             ListEmpEdit.Add(emp);
         }
+
+        private void txtSearch_OnValueChanged(object sender, EventArgs e)
+        {
+            string searchValue = txtSearch.Text;
+            int rowIndex = -1;
+
+            dGvEmployee.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+                foreach (DataGridViewRow row in dGvEmployee.Rows)
+                {
+                    if (row.Cells[row.Index].Value.ToString().Equals(searchValue))
+                    {
+                        rowIndex = row.Index;
+                        dGvEmployee.Rows[row.Index].Selected = true;
+                        break;
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+        }
     }
 }

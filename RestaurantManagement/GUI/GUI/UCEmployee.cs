@@ -24,80 +24,123 @@ namespace GUI
             mainform = form;
             InitializeComponent();
             loadData();
-            dataGridViewListEmployee.ReadOnly = true;
+            dgvEmployee.ReadOnly = true;
+            txtSearch.GotFocus += TxtSearch_GotFocus;
+            dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
         }
+
+        private void TxtSearch_GotFocus(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "Search...")
+                txtSearch.Text = "";
+        }
+
+        int pageNumber = 1;
+        int numberRecord = 10;
+
         public DataGridView GetDataGridView()
         {
             return data;
         }
         public void loadData()
         {
-            dataGridViewListEmployee.AutoGenerateColumns = false;
+            dgvEmployee.AutoGenerateColumns = false;
             List<Employee> lstEmployee = employeeBLL.GetListEmployee();
-            dataGridViewListEmployee.DataSource = lstEmployee;
+            dgvEmployee.DataSource = lstEmployee;
 
             DataGridViewColumn column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "EmployeeID";
             column.Name = "ID";
-            dataGridViewListEmployee.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "Name";
             column.Name = "Name";
             column.Visible = true;
-            dataGridViewListEmployee.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "IsFemale";
             column.Name = "Gender";
-            
-            dataGridViewListEmployee.Columns.Add(column);
+
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "DateOfBirth";
             column.Name = "D.O.B";
-            dataGridViewListEmployee.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "CMND";
             column.Name = "CMND";
-            dataGridViewListEmployee.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "PhoneNumber";
             column.Name = "Phone";
-            dataGridViewListEmployee.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "Address";
             column.Name = "Address";
-            dataGridViewListEmployee.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "Email";
             column.Name = "Email";
-            dataGridViewListEmployee.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewCheckBoxColumn();
             column.DataPropertyName = "IsAdmin";
             column.Name = "Is Admin";
-            dataGridViewListEmployee.Columns.Add(column);
-            data = dataGridViewListEmployee;
-        }
-        private void dataGridViewListEmployee_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
-        {
-            e.Column.FillWeight = 20;    // <<this line will help you
+            dgvEmployee.Columns.Add(column);
+            data = dgvEmployee;
         }
 
-        private void btnEdit_Click_1(object sender, EventArgs e)
+
+        private void pbEdit_Click(object sender, EventArgs e)
         {
-            Form_EmployeeEditEvent f_event = new Form_EmployeeEditEvent(mainform, this);
-            f_event.Show();
+            
         }
 
-        private void dataGridViewListEmployee_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        private void btnPrevious_Click(object sender, EventArgs e)
         {
-            if (this.dataGridViewListEmployee.Columns[e.ColumnIndex].Name == "Gender")
+            if (pageNumber - 1 > 0)
+            {
+                pageNumber--;
+                dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
+            }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            int totalRecord = 0;
+            using (RestaurantContextEntities db = new RestaurantContextEntities())
+            {
+                totalRecord = db.Employees.Count();
+            }
+            if (pageNumber - 1 < totalRecord / numberRecord)
+            {
+                pageNumber++;
+                dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
+
+            }
+        }
+        
+        
+        private void txtSearch_OnValueChanged(object sender, EventArgs e)
+        {
+            //0: cac loai ko can phan loai,1-5:nam,2-6:nu,3-7:admin,4-8:nhanvien
+            if (cbBSearch.Text == "(...)")
+            {
+                dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text,0);
+            }
+            
+        }
+
+        private void dgvEmployee_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dgvEmployee.Columns[e.ColumnIndex].Name == "Gender")
             {
                 if (e.Value != null)
                 {
@@ -114,16 +157,111 @@ namespace GUI
                 }
             }
         }
-        private void btnEdit_Click(object sender, EventArgs e)
+
+        private void cbBSearch_TextChanged(object sender, EventArgs e)
         {
-            Form_EmployeeEditEvent f = new Form_EmployeeEditEvent(mainform, this);
-            f.Show();
-            //mainform.loadUCEmployeeEdit();
+            if(cbBSearch.Text=="Gender")
+            {
+                rB1.Visible = true;
+                rB2.Visible = true;
+                rB1.Text = "Male";
+                rB2.Text = "Female";
+            }
+            if(cbBSearch.Text=="Type")
+            {
+                rB1.Visible = true;
+                rB2.Visible = true;
+                rB1.Text = "Admin";
+                rB2.Text = "Employee";
+            }
+            if(cbBSearch.Text =="(...)")
+            {
+                rB1.Visible = false;
+                rB2.Visible = false;
+                dgvEmployee.DataSource = employeeBLL.GetListEmployee();
+            }
         }
 
-        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
+        private void rB1_Click(object sender, EventArgs e)
         {
+            if(rB1.Text=="Admin"&&rB1.Checked==true)
+            {
+                if(txtSearch.Text=="Search..." || txtSearch.Text == "")
+                {
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 3);
+                }
+                else
+                {
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 7);
+                }
+            }
+            if (rB1.Text == "Male" && rB1.Checked == true)
+            {
+                if (txtSearch.Text == "Search..." || txtSearch.Text == "")
+                {
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 4);
+                }
+                else
+                {
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 8);
+                }
+            }
+        }
 
+        private void rB2_Click(object sender, EventArgs e)
+        {
+            if (rB2.Text == "Employee" && rB2.Checked == true)
+            {
+                if (txtSearch.Text == "Search..." || txtSearch.Text == "")
+                {
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 1);
+                }
+                else
+                {
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 5);
+                }
+            }
+            if (rB2.Text == "Female" && rB2.Checked == true)
+            {
+                if (txtSearch.Text == "Search..." || txtSearch.Text == "")
+                {
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 2);
+                }
+                else
+                {
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 6);
+                }
+            }
+        }
+
+        private void txtSearch_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "Search...")
+                txtSearch.Text = "";
+        }
+
+        private void txtSearch_Leave(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "")
+                txtSearch.Text = "Search...";
+        }
+
+        private void pbSearch_Click(object sender, EventArgs e)
+        {
+            Form_EmployeeEditEvent f_event = new Form_EmployeeEditEvent(mainform, this);
+            f_event.Show();
         }
     }
 }
+
+        /*private void dataGridViewListEmployee_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
+{
+e.Column.FillWeight = 20;    // <<this line will help you
+}
+
+
+
+
+       
+    }
+}*/
