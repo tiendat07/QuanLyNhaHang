@@ -116,6 +116,10 @@ namespace DataAccessLayer
             return x.EmployeeID;
         }
 
+        public Employee FindEmployee (int id)
+        {
+            return dbContext.Employees.Where(x => x.EmployeeID == id).FirstOrDefault();
+        }
         public List<Employee> LoadRecord(int page, int recordNum)
         {
             List<Employee> result = new List<Employee>();
@@ -177,6 +181,7 @@ namespace DataAccessLayer
                 || SqlFunctions.StringConvert((double)y.EmployeeID).TrimStart().StartsWith(x)).ToList();
             }
             return dbContext.Employees.ToList();
+
         }
     }
 }

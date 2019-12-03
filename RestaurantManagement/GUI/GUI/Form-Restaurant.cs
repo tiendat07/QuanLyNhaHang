@@ -29,11 +29,11 @@ namespace GUI
         }
         public Form_Restaurant(bool isAdmin, int ID)
         {
+            InitializeComponent();
             AdminTrue = isAdmin;
             EmployeeID = ID;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
-            InitializeComponent();
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             if (AdminTrue == false)
             {
@@ -230,7 +230,7 @@ namespace GUI
         {
             _obj = this;
             pnlContainer.Controls.Clear();
-            UCHome uc = new UCHome(this);
+            UCHome uc = new UCHome(this, EmployeeID);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
@@ -239,7 +239,7 @@ namespace GUI
         {
             _obj = this;
             pnlContainer.Controls.Clear();
-            UCHome uc = new UCHome(this);
+            UCHome uc = new UCHome(this, EmployeeID);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
@@ -247,7 +247,7 @@ namespace GUI
         {
             _obj = this;
             pnlContainer.Controls.Clear();
-            UCHome uc = new UCHome(this);
+            UCHome uc = new UCHome(this, EmployeeID);
         }
         private void Form_Restaurant_Activated(object sender, EventArgs e)
         {

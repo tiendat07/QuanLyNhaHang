@@ -33,41 +33,41 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.img_Max = new Bunifu.Framework.UI.BunifuImageButton();
+            this.img_Close = new Bunifu.Framework.UI.BunifuImageButton();
+            this.img_Min = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnSignIn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.img_Max = new Bunifu.Framework.UI.BunifuImageButton();
-            this.img_Close = new Bunifu.Framework.UI.BunifuImageButton();
-            this.img_Min = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnSignIn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_Close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_Min)).BeginInit();
             this.panel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_Close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_Min)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel4
@@ -120,6 +120,48 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(201, 63);
             this.tableLayoutPanel6.TabIndex = 16;
+            // 
+            // img_Max
+            // 
+            this.img_Max.BackColor = System.Drawing.Color.Transparent;
+            this.img_Max.Image = global::GUI.Properties.Resources.icons8_maximize_window_64;
+            this.img_Max.ImageActive = null;
+            this.img_Max.Location = new System.Drawing.Point(103, 3);
+            this.img_Max.Name = "img_Max";
+            this.img_Max.Size = new System.Drawing.Size(42, 31);
+            this.img_Max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_Max.TabIndex = 2;
+            this.img_Max.TabStop = false;
+            this.img_Max.Zoom = 10;
+            this.img_Max.Click += new System.EventHandler(this.img_Max_Click_1);
+            // 
+            // img_Close
+            // 
+            this.img_Close.BackColor = System.Drawing.Color.Transparent;
+            this.img_Close.Image = global::GUI.Properties.Resources.delete_sign_100px;
+            this.img_Close.ImageActive = null;
+            this.img_Close.Location = new System.Drawing.Point(153, 3);
+            this.img_Close.Name = "img_Close";
+            this.img_Close.Size = new System.Drawing.Size(42, 31);
+            this.img_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_Close.TabIndex = 1;
+            this.img_Close.TabStop = false;
+            this.img_Close.Zoom = 10;
+            this.img_Close.Click += new System.EventHandler(this.img_Close_Click_1);
+            // 
+            // img_Min
+            // 
+            this.img_Min.BackColor = System.Drawing.Color.Transparent;
+            this.img_Min.Image = global::GUI.Properties.Resources.icons8_minus_64;
+            this.img_Min.ImageActive = null;
+            this.img_Min.Location = new System.Drawing.Point(53, 3);
+            this.img_Min.Name = "img_Min";
+            this.img_Min.Size = new System.Drawing.Size(42, 31);
+            this.img_Min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_Min.TabIndex = 3;
+            this.img_Min.TabStop = false;
+            this.img_Min.Zoom = 10;
+            this.img_Min.Click += new System.EventHandler(this.img_Min_Click_1);
             // 
             // panel6
             // 
@@ -187,6 +229,28 @@
             this.bunifuCustomLabel3.Text = "Password";
             this.bunifuCustomLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtPassword
+            // 
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPassword.Font = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.txtPassword.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtPassword.HintText = "Password";
+            this.txtPassword.isPassword = true;
+            this.txtPassword.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
+            this.txtPassword.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.txtPassword.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(156)))), ((int)(((byte)(167)))));
+            this.txtPassword.LineThickness = 4;
+            this.txtPassword.Location = new System.Drawing.Point(416, 158);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(321, 97);
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.Text = "bunifuMaterialTextbox2";
+            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
+            // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
@@ -201,6 +265,26 @@
             this.bunifuCustomLabel2.TabIndex = 10;
             this.bunifuCustomLabel2.Text = "Username";
             this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsername.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtUsername.Font = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.txtUsername.HintForeColor = System.Drawing.Color.Silver;
+            this.txtUsername.HintText = "User";
+            this.txtUsername.isPassword = false;
+            this.txtUsername.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
+            this.txtUsername.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.txtUsername.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(156)))), ((int)(((byte)(167)))));
+            this.txtUsername.LineThickness = 4;
+            this.txtUsername.Location = new System.Drawing.Point(414, 4);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(325, 120);
+            this.txtUsername.TabIndex = 0;
+            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // tableLayoutPanel10
             // 
@@ -220,6 +304,44 @@
             this.tableLayoutPanel10.Size = new System.Drawing.Size(930, 420);
             this.tableLayoutPanel10.TabIndex = 2;
             // 
+            // btnSignIn
+            // 
+            this.btnSignIn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(237)))), ((int)(((byte)(230)))));
+            this.btnSignIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.btnSignIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSignIn.BorderRadius = 0;
+            this.btnSignIn.ButtonText = "Sign in";
+            this.btnSignIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSignIn.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSignIn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSignIn.Font = new System.Drawing.Font("SVN-Avo", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignIn.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSignIn.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSignIn.Iconimage")));
+            this.btnSignIn.Iconimage_right = null;
+            this.btnSignIn.Iconimage_right_Selected = null;
+            this.btnSignIn.Iconimage_Selected = null;
+            this.btnSignIn.IconMarginLeft = 0;
+            this.btnSignIn.IconMarginRight = 0;
+            this.btnSignIn.IconRightVisible = false;
+            this.btnSignIn.IconRightZoom = 0D;
+            this.btnSignIn.IconVisible = false;
+            this.btnSignIn.IconZoom = 90D;
+            this.btnSignIn.IsTab = false;
+            this.btnSignIn.Location = new System.Drawing.Point(378, 117);
+            this.btnSignIn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSignIn.Name = "btnSignIn";
+            this.btnSignIn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.btnSignIn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(156)))), ((int)(((byte)(167)))));
+            this.btnSignIn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.btnSignIn.selected = false;
+            this.btnSignIn.Size = new System.Drawing.Size(184, 47);
+            this.btnSignIn.TabIndex = 2;
+            this.btnSignIn.Text = "Sign in";
+            this.btnSignIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSignIn.Textcolor = System.Drawing.Color.White;
+            this.btnSignIn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
+            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.pictureBox2);
@@ -228,6 +350,20 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(932, 217);
             this.panel8.TabIndex = 3;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::GUI.Properties.Resources.account1;
+            this.pictureBox2.Location = new System.Drawing.Point(416, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(201, 196);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
             // 
             // panel7
             // 
@@ -297,142 +433,6 @@
             this.panel3.Size = new System.Drawing.Size(52, 1106);
             this.panel3.TabIndex = 2;
             // 
-            // img_Max
-            // 
-            this.img_Max.BackColor = System.Drawing.Color.Transparent;
-            this.img_Max.Image = global::GUI.Properties.Resources.icons8_maximize_window_64;
-            this.img_Max.ImageActive = null;
-            this.img_Max.Location = new System.Drawing.Point(103, 3);
-            this.img_Max.Name = "img_Max";
-            this.img_Max.Size = new System.Drawing.Size(42, 31);
-            this.img_Max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_Max.TabIndex = 2;
-            this.img_Max.TabStop = false;
-            this.img_Max.Zoom = 10;
-            this.img_Max.Click += new System.EventHandler(this.img_Max_Click_1);
-            // 
-            // img_Close
-            // 
-            this.img_Close.BackColor = System.Drawing.Color.Transparent;
-            this.img_Close.Image = global::GUI.Properties.Resources.delete_sign_100px;
-            this.img_Close.ImageActive = null;
-            this.img_Close.Location = new System.Drawing.Point(153, 3);
-            this.img_Close.Name = "img_Close";
-            this.img_Close.Size = new System.Drawing.Size(42, 31);
-            this.img_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_Close.TabIndex = 1;
-            this.img_Close.TabStop = false;
-            this.img_Close.Zoom = 10;
-            this.img_Close.Click += new System.EventHandler(this.img_Close_Click_1);
-            // 
-            // img_Min
-            // 
-            this.img_Min.BackColor = System.Drawing.Color.Transparent;
-            this.img_Min.Image = global::GUI.Properties.Resources.icons8_minus_64;
-            this.img_Min.ImageActive = null;
-            this.img_Min.Location = new System.Drawing.Point(53, 3);
-            this.img_Min.Name = "img_Min";
-            this.img_Min.Size = new System.Drawing.Size(42, 31);
-            this.img_Min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_Min.TabIndex = 3;
-            this.img_Min.TabStop = false;
-            this.img_Min.Zoom = 10;
-            this.img_Min.Click += new System.EventHandler(this.img_Min_Click_1);
-            // 
-            // btnSignIn
-            // 
-            this.btnSignIn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(237)))), ((int)(((byte)(230)))));
-            this.btnSignIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
-            this.btnSignIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSignIn.BorderRadius = 0;
-            this.btnSignIn.ButtonText = "Sign in";
-            this.btnSignIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSignIn.DisabledColor = System.Drawing.Color.Gray;
-            this.btnSignIn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSignIn.Font = new System.Drawing.Font("SVN-Avo", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignIn.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnSignIn.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSignIn.Iconimage")));
-            this.btnSignIn.Iconimage_right = null;
-            this.btnSignIn.Iconimage_right_Selected = null;
-            this.btnSignIn.Iconimage_Selected = null;
-            this.btnSignIn.IconMarginLeft = 0;
-            this.btnSignIn.IconMarginRight = 0;
-            this.btnSignIn.IconRightVisible = false;
-            this.btnSignIn.IconRightZoom = 0D;
-            this.btnSignIn.IconVisible = false;
-            this.btnSignIn.IconZoom = 90D;
-            this.btnSignIn.IsTab = false;
-            this.btnSignIn.Location = new System.Drawing.Point(378, 117);
-            this.btnSignIn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnSignIn.Name = "btnSignIn";
-            this.btnSignIn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
-            this.btnSignIn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(156)))), ((int)(((byte)(167)))));
-            this.btnSignIn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
-            this.btnSignIn.selected = false;
-            this.btnSignIn.Size = new System.Drawing.Size(184, 47);
-            this.btnSignIn.TabIndex = 2;
-            this.btnSignIn.Text = "Sign in";
-            this.btnSignIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSignIn.Textcolor = System.Drawing.Color.White;
-            this.btnSignIn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::GUI.Properties.Resources.account2;
-            this.pictureBox2.Location = new System.Drawing.Point(416, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(201, 196);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPassword.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPassword.Font = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
-            this.txtPassword.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtPassword.HintText = "Password";
-            this.txtPassword.isPassword = true;
-            this.txtPassword.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
-            this.txtPassword.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
-            this.txtPassword.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(156)))), ((int)(((byte)(167)))));
-            this.txtPassword.LineThickness = 4;
-            this.txtPassword.Location = new System.Drawing.Point(416, 158);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(321, 97);
-            this.txtPassword.TabIndex = 1;
-            this.txtPassword.Text = "bunifuMaterialTextbox2";
-            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsername.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUsername.Font = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
-            this.txtUsername.HintForeColor = System.Drawing.Color.Silver;
-            this.txtUsername.HintText = "User";
-            this.txtUsername.isPassword = false;
-            this.txtUsername.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
-            this.txtUsername.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
-            this.txtUsername.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(156)))), ((int)(((byte)(167)))));
-            this.txtUsername.LineThickness = 4;
-            this.txtUsername.Location = new System.Drawing.Point(414, 4);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(325, 120);
-            this.txtUsername.TabIndex = 0;
-            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -449,19 +449,19 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.img_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_Close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_Min)).EndInit();
             this.panel6.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
             this.tableLayoutPanel10.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_Close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_Min)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

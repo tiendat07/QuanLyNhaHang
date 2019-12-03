@@ -4,17 +4,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{AA7B2D0C-B787-4112-B3E5-B5E70A0FCD16}"
-	ProjectSection(ProjectDependencies) = postProject
-		{2D6C4A19-F9F3-44B1-B966-23F5DE722727} = {2D6C4A19-F9F3-44B1-B966-23F5DE722727}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{269A8E94-46C7-44EF-93B4-C1874F10F5BE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{616B1731-39DF-4865-9D2A-A76DF7822153}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{BC0BABCC-E076-4B6C-ABD7-78878EB6A5AD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantManagementService", "RestaurantManagementService\RestaurantManagementService.csproj", "{2D6C4A19-F9F3-44B1-B966-23F5DE722727}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,10 +33,6 @@ Global
 		{BC0BABCC-E076-4B6C-ABD7-78878EB6A5AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC0BABCC-E076-4B6C-ABD7-78878EB6A5AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC0BABCC-E076-4B6C-ABD7-78878EB6A5AD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D6C4A19-F9F3-44B1-B966-23F5DE722727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D6C4A19-F9F3-44B1-B966-23F5DE722727}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D6C4A19-F9F3-44B1-B966-23F5DE722727}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D6C4A19-F9F3-44B1-B966-23F5DE722727}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
