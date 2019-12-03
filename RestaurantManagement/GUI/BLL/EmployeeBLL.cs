@@ -49,5 +49,10 @@ namespace BLL
         {
             return employeeDAL.GetEmployeeID(username);
         }
+
+        public Employee FindEmployee(int id)
+        {
+            return employeeDAL.FindEmployee(id);
+        }
     }
 }

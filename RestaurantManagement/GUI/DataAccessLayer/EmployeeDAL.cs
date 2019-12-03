@@ -114,5 +114,10 @@ namespace DataAccessLayer
             var x = dbContext.Employees.Where(n => n.Username == username).FirstOrDefault();
             return x.EmployeeID;
         }
+
+        public Employee FindEmployee (int id)
+        {
+            return dbContext.Employees.Where(x => x.EmployeeID == id).FirstOrDefault();
+        }
     }
 }

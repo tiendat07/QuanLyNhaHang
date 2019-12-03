@@ -84,6 +84,12 @@
     <Compile Include="Form_EmployeeEditEvent.Designer.cs">
       <DependentUpon>Form_EmployeeEditEvent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Profile.Designer.cs">
+      <DependentUpon>Form_Profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_EmployeeEditEvent.resx">
       <DependentUpon>Form_EmployeeEditEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Profile.resx">
+      <DependentUpon>Form_Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCEmployee-Add.resx">
       <DependentUpon>UCEmployee-Add.cs</DependentUpon>

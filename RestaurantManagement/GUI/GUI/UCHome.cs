@@ -13,17 +13,27 @@ namespace GUI
     public partial class UCHome : UserControl
     {
         Form_Restaurant mainform;
-        public UCHome(Form_Restaurant form)
+        int EmpID;
+        public UCHome(Form_Restaurant form, int EmployeeID)
         {
+            EmpID = EmployeeID;
             mainform = form;
             InitializeComponent();
         }
-
-        private void btnLogOut_Click(object sender, EventArgs e)
+        
+        private void btnSignOut_Click(object sender, EventArgs e)
         {
             mainform.Hide();
             Form_Login f = new Form_Login();
-            f.Show();
+            f.ShowDialog();
+            f.Close();
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            Form_Profile f = new Form_Profile(EmpID);
+            f.ShowDialog();
+            f.Close();
         }
     }
 }

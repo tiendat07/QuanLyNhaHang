@@ -15,10 +15,11 @@ namespace GUI
         public EmployeeBLL employeeBLL;
         public Form_Login()
         {
+            InitializeComponent();
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
             employeeBLL = new EmployeeBLL();
-            InitializeComponent();
+            
         }
         
 
@@ -69,9 +70,8 @@ namespace GUI
                     int employeeID = employeeBLL.GetEmployeeID(tenDN);
                     Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
                     this.Hide();
+                    f.Closed += (s, args) => this.Close();
                     f.Show();
-                    //f.ShowDialog();
-                    //this.Close();
                 }
                 else
                     MessageBox.Show("Chua chinh xac !!");

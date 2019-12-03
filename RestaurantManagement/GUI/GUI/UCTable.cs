@@ -172,7 +172,8 @@ namespace GUI
         {
             myButton btn = sender as myButton;
             Form_BookingTable f = new Form_BookingTable(mainform , btn.objectID);
-            f.Show();
+            f.ShowDialog();
+            f.Close();
         }
 
         private void btnOrder_Click_1(object sender, EventArgs e)
@@ -189,9 +190,6 @@ namespace GUI
             if (result == DialogResult.Yes)
             {
                 myButton btn = sender as myButton;
-                MessageBox.Show(btn.objectID + "");
-                // KHÔNG SET PAID ĐƯỢC ????
-                //yes...
                 if (orderBLL.SetPaid(btn.objectID) == true)
                 {
                     if (tableBLL.ChangeTableStatus(btn.objectID, false, true, false) == true)
