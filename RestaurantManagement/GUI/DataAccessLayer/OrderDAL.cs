@@ -14,7 +14,10 @@ namespace DataAccessLayer
         {
             dbContext = new RestaurantContextEntities();
         }
-
+        public List <Order> GetListOrders ()
+        {
+            return dbContext.Orders.ToList();
+        }
         public bool AddOrder (Order o, List<OrderDetail> orderDetails)
         {
             using (DbContextTransaction transaction = dbContext.Database.BeginTransaction())

@@ -18,6 +18,10 @@ namespace GUI
     }
     class myButton : Button
     {
+        public myButton()
+        {
+            SetStyle(ControlStyles.StandardClick | ControlStyles.StandardDoubleClick, true);
+        }
         public int objectID;
         public int ObjectID
         {

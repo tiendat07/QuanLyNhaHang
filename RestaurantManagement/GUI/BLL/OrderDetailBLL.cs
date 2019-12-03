@@ -13,6 +13,10 @@ namespace BLL
         {
             orderDetailDAL = new OrderDetailDAL();
         }
+        public List<OrderDetail> GetListOrderDetails()
+        {
+            return orderDetailDAL.GetListOrderDetails();
+        }
         public bool AddOrderDetail(OrderDetail orderDetail)
         {
             return orderDetailDAL.AddOrderDetail(orderDetail);

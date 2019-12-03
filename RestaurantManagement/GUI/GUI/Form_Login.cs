@@ -20,8 +20,9 @@ namespace GUI
             employeeBLL = new EmployeeBLL();
             InitializeComponent();
         }
+        
 
-        private void img_Min_Click(object sender, EventArgs e)
+        private void img_Min_Click_1(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal)
             {
@@ -33,7 +34,7 @@ namespace GUI
             }
         }
 
-        private void img_Max_Click(object sender, EventArgs e)
+        private void img_Max_Click_1(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal)
             {
@@ -45,20 +46,11 @@ namespace GUI
             }
         }
 
-        private void img_Close_Click(object sender, EventArgs e)
+        private void img_Close_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnSignUp_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
@@ -78,13 +70,14 @@ namespace GUI
                     Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
                     this.Hide();
                     f.Show();
+                    //f.ShowDialog();
+                    //this.Close();
                 }
                 else
                     MessageBox.Show("Chua chinh xac !!");
 
             }
         }
-        
 
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
@@ -105,14 +98,14 @@ namespace GUI
                         int employeeID = employeeBLL.GetEmployeeID(tenDN);
                         Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
                         this.Hide();
-                        f.Show();
+                        f.ShowDialog();
+                        this.Close();
                     }
                     else
                         MessageBox.Show("Chua chinh xac !!");
 
                 }
             }
-
         }
     }
 }
