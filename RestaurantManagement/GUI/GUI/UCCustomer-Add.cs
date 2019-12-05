@@ -32,7 +32,7 @@ namespace GUI
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtCMND.Text) || String.IsNullOrEmpty(cbGender.Text)
+            if (String.IsNullOrEmpty(txtCMND.Text) || cbGender.Text == "-select-"
              || String.IsNullOrEmpty(txtPhone.Text) || String.IsNullOrEmpty(txtName.Text))
 
             {
@@ -44,12 +44,11 @@ namespace GUI
                 ctm.Name = txtName.Text;
                 ctm.CMND = txtCMND.Text;
                 ctm.PhoneNumber = txtPhone.Text;
-                if (Convert.ToString(cbGender.SelectedValue) == "Female")
-                {
-                    ctm.IsFemale = true;
-                }
+                ctm.IsFemale = (cbGender.SelectedItem.ToString() == "Female") ? true : false;
+                if (ctm.IsFemale == true)
+                    MessageBox.Show("Female");
                 else
-                    ctm.IsFemale = false;
+                    MessageBox.Show("Male");
                 if (customerBLL.AddCustomer(ctm) == true)
                 {
                     DialogResult dialog = MessageBox.Show("Saved successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -79,6 +78,11 @@ namespace GUI
             {
                 e.Handled = true;
             }
+        }
+
+        private void cbGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -89,8 +89,8 @@
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 339);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.64557F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.12658F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.24051F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.36709F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(582, 79);
             this.tableLayoutPanel3.TabIndex = 4;
@@ -109,10 +109,10 @@
             this.btnSave.ImageZoom = 50;
             this.btnSave.LabelPosition = 35;
             this.btnSave.LabelText = "SAVE";
-            this.btnSave.Location = new System.Drawing.Point(298, 21);
+            this.btnSave.Location = new System.Drawing.Point(298, 14);
             this.btnSave.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(67, 12);
+            this.btnSave.Size = new System.Drawing.Size(67, 19);
             this.btnSave.TabIndex = 0;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -130,10 +130,10 @@
             this.btnBack.ImageZoom = 50;
             this.btnBack.LabelPosition = 35;
             this.btnBack.LabelText = "CANCEL";
-            this.btnBack.Location = new System.Drawing.Point(396, 21);
+            this.btnBack.Location = new System.Drawing.Point(396, 14);
             this.btnBack.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(67, 12);
+            this.btnBack.Size = new System.Drawing.Size(67, 19);
             this.btnBack.TabIndex = 1;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -160,6 +160,7 @@
             this.dGvCustomer.Name = "dGvCustomer";
             this.dGvCustomer.Size = new System.Drawing.Size(582, 141);
             this.dGvCustomer.TabIndex = 2;
+            this.dGvCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGvCustomer_CellContentClick);
             this.dGvCustomer.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGvCustomer_CellEndEdit);
             this.dGvCustomer.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dGvCustomer_CellFormatting);
             // 
