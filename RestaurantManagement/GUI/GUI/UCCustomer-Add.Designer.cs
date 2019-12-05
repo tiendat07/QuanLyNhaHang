@@ -248,6 +248,7 @@
             this.cbGender.Size = new System.Drawing.Size(132, 33);
             this.cbGender.TabIndex = 9;
             this.cbGender.Text = "-select-";
+            this.cbGender.SelectedIndexChanged += new System.EventHandler(this.cbGender_SelectedIndexChanged);
             // 
             // tableLayoutPanel3
             // 

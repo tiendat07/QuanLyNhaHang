@@ -35,7 +35,8 @@ namespace GUI
         private void btnEdit_Click(object sender, EventArgs e)
         {
             this.Hide();
-            
+            UCCustomer_Edit uc = new UCCustomer_Edit(mainform, datagrid);
+            mainform.loadUCCustomer_Edit();
 
         }
     }

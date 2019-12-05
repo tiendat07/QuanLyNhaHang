@@ -81,11 +81,11 @@ namespace GUI
                     int gender = Convert.ToInt32(e.Value);
                     if (gender == 1)
                     {
-                        e.Value = "Male";
+                        e.Value = "Female";
                     }
                     else
                     {
-                        e.Value = "Female";
+                        e.Value = "Male";
                     }
                     e.FormattingApplied = true;
                 }

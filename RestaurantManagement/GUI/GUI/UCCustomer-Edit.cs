@@ -18,6 +18,11 @@ namespace GUI
         Form_Restaurant mainform;
         public CustomerBLL customerBLL;
         List<Customer> ListCtmEdit;
+        DataGridView data;
+        public DataGridView GetDataGridView()
+        {
+            return data;
+        }
         public UCCustomer_Edit(Form_Restaurant form, DataGridView dgv)
         {
             customerBLL = new CustomerBLL();
@@ -26,6 +31,7 @@ namespace GUI
             InitializeComponent();
             //loadData();
             dGvCustomer.ReadOnly = false;
+            loadData();
         }
         public void loadData()
         {
@@ -114,12 +120,18 @@ namespace GUI
         {
             var tctm = dGvCustomer.Rows[e.RowIndex];
             Customer ctm = new Customer();
+            ctm.CustomerID = (int)tctm.Cells["ID"].Value;
             ctm.Name = (string)tctm.Cells["Name"].Value;
             bool genDer = (bool)tctm.Cells["Gender"].Value;
             ctm.IsFemale = genDer;
             ctm.PhoneNumber = (string)tctm.Cells["Phone"].Value;
             ctm.CMND = (string)tctm.Cells["CMND"].Value;
             ListCtmEdit.Add(ctm);
+        }
+
+        private void dGvCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
