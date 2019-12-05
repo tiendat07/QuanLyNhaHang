@@ -104,14 +104,14 @@ namespace GUI
             {
                 if (e.Value != null)
                 {
-                    int gender = Convert.ToInt32(e.Value);
-                    if (gender == 1)
+                    bool gender = Convert.ToBoolean(e.Value);
+                    if (gender == true)
                     {
-                        e.Value = "Male";
+                        e.Value = "Female";
                     }
                     else
                     {
-                        e.Value = "Female";
+                        e.Value = "Male";
                     }
                     e.FormattingApplied = true;
                 }
