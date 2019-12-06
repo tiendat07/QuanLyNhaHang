@@ -26,5 +26,13 @@ namespace BLL
         {
             return tableDAL.EditTable(table);
         }
+        public bool AddTable(Table t)
+        {
+            return tableDAL.AddTable(t);
+        }
+        public bool DeleteTable(int ID)
+        {
+            return tableDAL.DeleteTable(ID);
+        }
     }
 }

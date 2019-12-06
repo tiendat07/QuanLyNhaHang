@@ -65,5 +65,42 @@ namespace DataAccessLayer
                 return false;
             }
         }
+
+        public bool AddTable(Table t)
+        {
+            try
+            {
+                if (t != null)
+                {
+                    dbContext.Tables.Add(t);
+                    dbContext.SaveChanges();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+        }
+        public bool DeleteTable(int ID)
+        {
+            Table tab = dbContext.Tables.Where(t => t.TableID == ID).FirstOrDefault();
+            try
+            {
+                if (tab != null)
+                {
+                    dbContext.Tables.Remove(tab);
+                    dbContext.SaveChanges();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }

@@ -83,5 +83,46 @@ namespace GUI
                 mainform.loadUCTable();
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            bool result = true;
+            DialogResult dialog = MessageBox.Show("Are you sure you want to delete?", "Cancel Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (dialog == DialogResult.OK) 
+            {
+                foreach (DataGridViewRow item in this.dgvTable.SelectedRows)
+                {
+                    // Delete Datagridview
+                    //dgvTable.Rows.RemoveAt(item.Index);
+                    var itemToDelete = (Table)item.DataBoundItem;
+                    if (tableBLL.DeleteTable(itemToDelete.TableID) == false)
+                    {
+                        result = false;
+                        break;
+                    }
+                }
+                if (result == false)
+                    MessageBox.Show("Cannot save. Please try again!");
+                else
+                {
+                    MessageBox.Show("Saved successfully!");
+                    mainform.loadUCTableEdit();
+                }
+                    
+            }
+            
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            List<Table> tables = tableBLL.GetListTable();
+            int index = tables.Count() +1;
+            Table new_table = new Table();
+            new_table.TableName = "Bàn " + index;
+            if (tableBLL.AddTable(new_table) == true)
+            {
+                mainform.loadUCTableEdit();
+            }
+        }
     }
 }
