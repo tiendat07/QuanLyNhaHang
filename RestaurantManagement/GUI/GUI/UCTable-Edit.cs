@@ -15,76 +15,73 @@ namespace GUI
     {
         TableBLL tableBLL;
         Form_Restaurant mainform;
+        List<Table> tables;
         public UCTable_Edit(Form_Restaurant form1)
         {
             mainform = form1;
+            tables = new List<Table>();
             tableBLL = new TableBLL();
             InitializeComponent();
             LoadData();
         }
-
         public void LoadData()
         {
-            List<Table> lstTable = tableBLL.GetListTable();
-            foreach (Table item in lstTable)
+            dgvTable.AutoGenerateColumns = false;
+            List<Table> lstEmployee = tableBLL.GetListTable();
+            dgvTable.DataSource = lstEmployee;
+
+            DataGridViewColumn column = new DataGridViewTextBoxColumn();
+            column.DataPropertyName = "TableID";
+            column.Name = "ID";
+            dgvTable.Columns.Add(column);
+
+            column = new DataGridViewTextBoxColumn();
+            column.DataPropertyName = "TableName";
+            column.Name = "Name";
+            dgvTable.Columns.Add(column);
+            dgvTable.Columns["ID"].ReadOnly = true;
+        }
+
+        private void dgvTable_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            // Chưa xét trường hợp nhiều dòng
+            var temp = dgvTable.Rows[e.RowIndex];
+            Table table = new Table();
+            table.TableID = (int)temp.Cells["ID"].Value;
+            table.TableName = (string)temp.Cells["Name"].Value;
+            tables.Add(table);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            bool result = false;
+            foreach (var item in tables)
             {
-                myButton btn = new myButton();
-                myTextEdit txt = new myTextEdit();
-
-                btn.objectID = item.TableID;
-                txt.objectID = item.TableID;
-
-                btn.Width = flpTable1.Width / 4;
-                btn.Height = 50;
-                btn.Text = item.TableName;
-                btn.Font = new Font("SVN-Avo", 8f);
-                btn.ForeColor = Color.White;
-                btn.TextAlign = ContentAlignment.MiddleCenter;
-                btn.FlatStyle = FlatStyle.Flat;
-                btn.FlatAppearance.BorderSize = 1;
-                switch (item.Status)
+                if (tableBLL.EditTable(item) == false)
                 {
-                    case 0:
-                        {
-                            // Trống
-                            btn.BackColor = Color.FromArgb(247, 204, 217);
-                            btn.FlatAppearance.BorderColor = Color.FromArgb(247, 204, 217);
-                            break;
-                        }
-                    case 1:
-                        {
-                            // Đã được đặt
-                            btn.BackColor = Color.FromArgb(248, 168, 60);
-                            btn.FlatAppearance.BorderColor = Color.FromArgb(248, 168, 60);
-                            break;
-                        }
-                    case 2:
-                        {
-                            // Có người ngồi
-                            btn.BackColor = Color.FromArgb(228, 76, 73);
-                            btn.FlatAppearance.BorderColor = Color.FromArgb(228, 76, 73);
-                            break;
-                        }
+                    MessageBox.Show("Cannot save. Please try again");
+                    break;
                 }
-                
-                btn.Enabled = false;
-                txt.Width = btn.Width;
-                txt.Height = btn.Height;
-                txt.Text = item.TableName;
-                txt.Font = new Font("SVN-Avo", 8f);
-                Point p = btn.Location;
-                txt.Location = new Point(p.X -10, p.Y-10);
-                txt.Visible = true;
-                txt.Enabled = true;
-                //btn.Click += new EventHandler(Table_Click);
-                flpTable1.Controls.Add(btn);
-                flpTable1.Controls.Add(txt);
+                else
+                    result = true;
+            }
+            if (result == true)
+            {
+                DialogResult dialog = MessageBox.Show("Saved successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (dialog == DialogResult.OK)  //click ok thì chuyển lại form đầu.
+                {
+                    mainform.loadUCEmployee();
+                }
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            DialogResult dialog = MessageBox.Show("Are you sure you want to cancel?", "Cancel Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (dialog == DialogResult.OK)  //click ok thì chuyển lại form đầu.
+            {
+                mainform.loadUCTable();
+            }
         }
     }
 }

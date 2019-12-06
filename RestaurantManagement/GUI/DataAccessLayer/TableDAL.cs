@@ -44,5 +44,26 @@ namespace DataAccessLayer
             }
             return false;
         }
+        public bool EditTable(Table table)
+        {
+            try
+            {
+                if (table != null)
+                {
+                    Table table_temp = dbContext.Tables.Where(d => d.TableID == table.TableID).FirstOrDefault();
+                    if (table_temp == null)
+                        return false;
+                    table_temp.TableID = table.TableID;
+                    table_temp.TableName = table.TableName;
+                    dbContext.SaveChanges();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }
