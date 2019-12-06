@@ -22,5 +22,9 @@ namespace BLL
         {
             return tableDAL.ChangeTableStatus(TableID, isOrdered, isPaid, isBooked);
         }
+        public bool EditTable(Table table)
+        {
+            return tableDAL.EditTable(table);
+        }
     }
 }
