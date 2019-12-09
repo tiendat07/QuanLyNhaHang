@@ -25,66 +25,77 @@ namespace GUI
             mainform = form;
             InitializeComponent();
             loadData();
-            
-            dGvEmployee.ReadOnly = false;
+
+            dgvEmployee.ReadOnly = false;
             //dGvEmployee.BeginEdit(true);
             //dGvEmployee.CellEndEdit += new DataGridViewCellEventHandler(OnDataChanged);
         }
         public void loadData()
         {
-            dGvEmployee.AutoGenerateColumns = false;
+            dgvEmployee.AutoGenerateColumns = false;
             List<Employee> lstEmployee = employeeBLL.GetListEmployee();
-            dGvEmployee.DataSource = lstEmployee;
+            dgvEmployee.DataSource = lstEmployee;
 
             DataGridViewColumn column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "EmployeeID";
             column.Name = "ID";
             column.Visible = false;
-            dGvEmployee.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "Name";
             column.Name = "Name";
             column.Visible = true;
-            dGvEmployee.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "IsFemale";
             column.Name = "Gender";
 
-            dGvEmployee.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "DateOfBirth";
             column.Name = "D.O.B";
-            dGvEmployee.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "CMND";
             column.Name = "CMND";
-            dGvEmployee.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "PhoneNumber";
             column.Name = "Phone";
-            dGvEmployee.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "Address";
             column.Name = "Address";
-            dGvEmployee.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "Email";
             column.Name = "Email";
-            dGvEmployee.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             
             column = new DataGridViewCheckBoxColumn();
             column.DataPropertyName = "IsAdmin";
             column.Name = "Is Admin";
-            dGvEmployee.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
+            column = new DataGridViewCheckBoxColumn();
+            column.DataPropertyName = "Username";
+            column.Name = "Username";
+            column.Visible = false;
+            dgvEmployee.Columns.Add(column);
+
+            column = new DataGridViewCheckBoxColumn();
+            column.DataPropertyName = "Password";
+            column.Name = "Password";
+            column.Visible = false;
+            dgvEmployee.Columns.Add(column);
         }
         
         
@@ -117,10 +128,36 @@ namespace GUI
         {
             mainform.loadUCEmployee();
         }
+        
 
-        private void dGvEmployee_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        private void txtSearch_OnValueChanged(object sender, EventArgs e)
         {
-            if (this.dGvEmployee.Columns[e.ColumnIndex].Name == "Gender")
+            
+        }
+
+        private void dgvEmployee_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            var temp = dgvEmployee.Rows[e.RowIndex];
+            Employee emp = new Employee();
+            emp.EmployeeID = (int)temp.Cells["ID"].Value;
+            emp.Name = (string)temp.Cells["Name"].Value;
+            emp.Address = (string)temp.Cells["Address"].Value;
+            emp.CMND = (string)temp.Cells["CMND"].Value;
+            emp.DateOfBirth = (DateTime)temp.Cells["D.O.B"].Value;
+            emp.PhoneNumber = (string)temp.Cells["Phone"].Value;
+            emp.Email = (string)temp.Cells["Email"].Value;
+
+            emp.IsAdmin = (bool)temp.Cells["Is Admin"].Value;
+            emp.Username = (string)temp.Cells["Username"].Value;
+            emp.Password = (string)temp.Cells["Password"].Value;
+            emp.IsFemale = (bool)temp.Cells["Gender"].Value;
+            // Mỗi lần sửa, người đc sửa sẽ đc đưa vào danh sách đc sửa
+            ListEmpEdit.Add(emp);
+        }
+
+        private void dgvEmployee_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dgvEmployee.Columns[e.ColumnIndex].Name == "Gender")
             {
                 if (e.Value != null)
                 {
@@ -135,52 +172,6 @@ namespace GUI
                     }
                     e.FormattingApplied = true;
                 }
-            }
-        }
-
-        private void dGvEmployee_CellEndEdit_1(object sender, DataGridViewCellEventArgs e)
-        {
-            var temp = dGvEmployee.Rows[e.RowIndex];
-            Employee emp = new Employee();
-            emp.EmployeeID = (int)temp.Cells["ID"].Value;
-            emp.Name = (string)temp.Cells["Name"].Value;
-            emp.Address = (string)temp.Cells["Address"].Value;
-            emp.CMND = (string)temp.Cells["CMND"].Value;
-            emp.DateOfBirth = (DateTime)temp.Cells["D.O.B"].Value;
-            emp.PhoneNumber = (string)temp.Cells["Phone"].Value;
-            emp.Email = (string)temp.Cells["Email"].Value;
-
-            emp.IsAdmin = (bool)temp.Cells["Is Admin"].Value;
-            emp.Username = "a";
-            emp.Password = "1";
-            bool genDer = (bool)temp.Cells["Gender"].Value;
-            emp.IsFemale = genDer;
-            //emp.IsFemale = (genDer == "Female") ? true : false;
-            // Mỗi lần sửa, người đc sửa sẽ đc đưa vào danh sách đc sửa
-            ListEmpEdit.Add(emp);
-        }
-
-        private void txtSearch_OnValueChanged(object sender, EventArgs e)
-        {
-            string searchValue = txtSearch.Text;
-            int rowIndex = -1;
-
-            dGvEmployee.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            try
-            {
-                foreach (DataGridViewRow row in dGvEmployee.Rows)
-                {
-                    if (row.Cells[row.Index].Value.ToString().Equals(searchValue))
-                    {
-                        rowIndex = row.Index;
-                        dGvEmployee.Rows[row.Index].Selected = true;
-                        break;
-                    }
-                }
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
             }
         }
     }

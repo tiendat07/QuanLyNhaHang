@@ -24,97 +24,82 @@ namespace GUI
             mainform = form;
             InitializeComponent();
             loadData();
-            dGvEmployeeDelate.ReadOnly = true;
+            dgvEmployee.ReadOnly = true;
         }
 
         public void loadData()
         {
-            dGvEmployeeDelate.AutoGenerateColumns = false;
+            dgvEmployee.AutoGenerateColumns = false;
             List<Employee> lstEmployee = employeeBLL.GetListEmployee();
-            dGvEmployeeDelate.DataSource = lstEmployee;
+            dgvEmployee.DataSource = lstEmployee;
 
             DataGridViewColumn column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "EmployeeID";
             column.Name = "ID";
             column.Visible = false;
-            dGvEmployeeDelate.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "Name";
             column.Name = "Name";
             column.Visible = true;
-            dGvEmployeeDelate.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "IsFemale";
             column.Name = "Gender";
 
-            dGvEmployeeDelate.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "DateOfBirth";
             column.Name = "D.O.B";
-            dGvEmployeeDelate.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "CMND";
             column.Name = "CMND";
-            dGvEmployeeDelate.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "PhoneNumber";
             column.Name = "Phone";
-            dGvEmployeeDelate.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "Address";
             column.Name = "Address";
-            dGvEmployeeDelate.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "Email";
             column.Name = "Email";
-            dGvEmployeeDelate.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
 
             column = new DataGridViewCheckBoxColumn();
             column.DataPropertyName = "IsAdmin";
             column.Name = "Is Admin";
-            dGvEmployeeDelate.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "Username";
             column.Name = "Username";
             column.Visible = false;
-            dGvEmployeeDelate.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "Password";
             column.Name = "Password";
             //column.Visible = false;
-            dGvEmployeeDelate.Columns.Add(column);
+            dgvEmployee.Columns.Add(column);
         }
 
         private void dGvEmployeeDelate_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            var temp = dGvEmployeeDelate.Rows[e.RowIndex];
-            Employee emp = new Employee();
-            emp.EmployeeID = (int)temp.Cells["ID"].Value;
-            emp.Name = (string)temp.Cells["Name"].Value;
-            emp.Address = (string)temp.Cells["Address"].Value;
-            emp.CMND = (string)temp.Cells["CMND"].Value;
-            emp.DateOfBirth = (DateTime)temp.Cells["D.O.B"].Value;
-            emp.PhoneNumber = (string)temp.Cells["Phone"].Value;
-            emp.Email = (string)temp.Cells["Email"].Value;
-
-            emp.IsAdmin = (bool)temp.Cells["Is Admin"].Value;
-            emp.Username = (string)temp.Cells["Username"].Value;
-            emp.Password = (string)temp.Cells["Pasword"].Value;
-            bool genDer = (bool)temp.Cells["Gender"].Value;
-            emp.IsFemale = genDer;
+            
             //emp.IsFemale = (genDer == "Female") ? true : false;
-            // Mỗi lần sửa, người đc sửa sẽ đc đưa vào danh sách đc sửa
-            ListEmpEdit.Add(emp);
+            
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -149,7 +134,32 @@ namespace GUI
 
         private void dGvEmployeeDelate_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (this.dGvEmployeeDelate.Columns[e.ColumnIndex].Name == "Gender")
+            
+        }
+
+        private void dgvEmployee_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            var temp = dgvEmployee.Rows[e.RowIndex];
+            Employee emp = new Employee();
+            emp.EmployeeID = (int)temp.Cells["ID"].Value;
+            emp.Name = (string)temp.Cells["Name"].Value;
+            emp.Address = (string)temp.Cells["Address"].Value;
+            emp.CMND = (string)temp.Cells["CMND"].Value;
+            emp.DateOfBirth = (DateTime)temp.Cells["D.O.B"].Value;
+            emp.PhoneNumber = (string)temp.Cells["Phone"].Value;
+            emp.Email = (string)temp.Cells["Email"].Value;
+
+            emp.IsAdmin = (bool)temp.Cells["Is Admin"].Value;
+            emp.Username = (string)temp.Cells["Username"].Value;
+            emp.Password = (string)temp.Cells["Pasword"].Value;
+            emp.IsFemale = (bool)temp.Cells["Gender"].Value;
+            // Mỗi lần sửa, người đc sửa sẽ đc đưa vào danh sách đc sửa
+            ListEmpEdit.Add(emp);
+        }
+
+        private void dgvEmployee_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dgvEmployee.Columns[e.ColumnIndex].Name == "Gender")
             {
                 if (e.Value != null)
                 {
