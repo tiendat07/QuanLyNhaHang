@@ -91,40 +91,13 @@ namespace GUI
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "Password";
             column.Name = "Password";
-            //column.Visible = false;
+            column.Visible = false;
             dgvEmployee.Columns.Add(column);
-        }
-
-        private void dGvEmployeeDelate_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            
-            //emp.IsFemale = (genDer == "Female") ? true : false;
-            
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            bool result = false;
-            foreach (var item in ListEmpEdit)
-            {
-                if (employeeBLL.DeleteEmployee(item.EmployeeID) == false)
-                {
-                    MessageBox.Show("Cannot save. Please try again");
-                    break;
-                }
-                else
-                    result = true;
-            }
-            if (result == true)
-            {
-                //save thanh cong! ban co muon o lai trang
-                DialogResult dialog = MessageBox.Show("Saved successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (dialog == DialogResult.OK)  //click ok thì chuyển lại form đầu.
-                {
-                    mainform.loadUCEmployee();
-                }
-            }
-
+            
         }
 
         private void brnComeback_Click(object sender, EventArgs e)
@@ -148,7 +121,6 @@ namespace GUI
             emp.DateOfBirth = (DateTime)temp.Cells["D.O.B"].Value;
             emp.PhoneNumber = (string)temp.Cells["Phone"].Value;
             emp.Email = (string)temp.Cells["Email"].Value;
-
             emp.IsAdmin = (bool)temp.Cells["Is Admin"].Value;
             emp.Username = (string)temp.Cells["Username"].Value;
             emp.Password = (string)temp.Cells["Pasword"].Value;
@@ -174,6 +146,35 @@ namespace GUI
                     }
                     e.FormattingApplied = true;
                 }
+            }
+        }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            bool result = true;
+            DialogResult dialog = MessageBox.Show("Are you sure you want to delete?", "Cancel Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (dialog == DialogResult.OK)
+            {
+                foreach (DataGridViewRow item in this.dgvEmployee.SelectedRows)
+                {
+                    // Delete Datagridview
+                    //dgvTable.Rows.RemoveAt(item.Index);
+                    var itemToDelete = (Employee)item.DataBoundItem;
+                    if (employeeBLL.DeleteEmployee(itemToDelete.EmployeeID) == false)
+                    {
+                        result = false;
+                        break;
+                    }
+                }
+
+                if (result == false)
+                    MessageBox.Show("Cannot save. Please try again!");
+                else
+                {
+                    MessageBox.Show("Saved successfully!");
+                    mainform.loadUCEmployee();
+                }
+
             }
         }
     }
