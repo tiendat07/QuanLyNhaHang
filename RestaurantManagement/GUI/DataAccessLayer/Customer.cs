@@ -26,6 +26,7 @@ namespace DataAccessLayer
         public bool IsFemale { get; set; }
         public string PhoneNumber { get; set; }
         public string CMND { get; set; }
+        public Nullable<int> Status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BookingTable> BookingTables { get; set; }

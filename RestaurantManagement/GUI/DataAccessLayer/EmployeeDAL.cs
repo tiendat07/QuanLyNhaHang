@@ -19,7 +19,13 @@ namespace DataAccessLayer
         }
         public List<Employee> GetListEmployeeEdit()
         {
-            return dbContext.Employees.ToList();
+            List<Employee> result = new List<Employee>();
+            foreach (Employee e in dbContext.Employees.ToList())
+            {
+                if (e.Status == 1)
+                    result.Add(e);
+            }
+            return result;
         }
 
         public bool CheckLogin(string U, string P)
@@ -84,9 +90,9 @@ namespace DataAccessLayer
             Employee e = dbContext.Employees.Where(d => d.EmployeeID == ID).FirstOrDefault();
             try
             {
-                if (e != null)
+                if (ID >= 0 && e != null)
                 {
-                    dbContext.Employees.Remove(e);
+                    e.Status = 0; //0: nghi - 1:dang lam 
                     dbContext.SaveChanges();
                     return true;
                 }
@@ -118,11 +124,11 @@ namespace DataAccessLayer
         public List<Employee> LoadRecord(int page, int recordNum)
         {
             List<Employee> result = new List<Employee>();
-            result = dbContext.Employees.OrderBy(s=> s.EmployeeID).Skip((page - 1) * recordNum).Take(recordNum).ToList(); //bỏ qua những cái đã load chỉ lấy phần cần lấy
+            result = dbContext.Employees.Where(e => e.Status == 1).OrderBy(s=> s.EmployeeID).Skip((page - 1) * recordNum).Take(recordNum).ToList(); //bỏ qua những cái đã load chỉ lấy phần cần lấy
             
             return result;
         }
-
+       
         public List<Employee> Sreach(string x,int k)
         {
             if(k==0) // cac loai ko can phan loai

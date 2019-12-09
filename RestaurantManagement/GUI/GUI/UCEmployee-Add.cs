@@ -104,6 +104,7 @@ namespace GUI
                 emp.Email = txtEmail.Text;
                 emp.Username = Create_Username(Name);
                 emp.Password = Create_Password(Name, dtpkDOB.Value);
+                MessageBox.Show(emp.Password);
                 emp.IsAdmin = (cbIsAdmin.Checked == true) ? true : false;
                 emp.DateOfBirth = dtpkDOB.Value;
 
