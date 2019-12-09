@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net, Version=0.1.5073.29922, Culture=neutral, PublicKeyToken=6bcd409ee6bc9292, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt-Official.0.1.109\lib\BCrypt.Net.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
@@ -449,6 +452,7 @@
     <None Include="Resources\Background.png" />
     <None Include="Resources\Background-Restaurant.png" />
     <None Include="Resources\Background-Restaurant1.png" />
+    <Content Include="LICENSE.txt" />
     <Content Include="Resources\delete_64px.png" />
     <None Include="Resources\delete_64px.png" />
   </ItemGroup>
