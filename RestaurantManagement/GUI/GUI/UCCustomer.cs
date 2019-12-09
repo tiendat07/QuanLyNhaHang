@@ -117,5 +117,10 @@ namespace GUI
                 }
             }
         }
+
+        private void bunifuTextbox1_OnTextChange(object sender, EventArgs e)
+        {
+
+        }
     }
 }
