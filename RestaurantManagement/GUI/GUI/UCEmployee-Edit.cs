@@ -25,11 +25,13 @@ namespace GUI
             mainform = form;
             InitializeComponent();
             loadData();
-
             dgvEmployee.ReadOnly = false;
-            //dGvEmployee.BeginEdit(true);
-            //dGvEmployee.CellEndEdit += new DataGridViewCellEventHandler(OnDataChanged);
+            dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
         }
+
+        int pageNumber = 1;
+        int numberRecord = 15;
+
         public void loadData()
         {
             dgvEmployee.AutoGenerateColumns = false;
@@ -97,43 +99,6 @@ namespace GUI
             column.Visible = false;
             dgvEmployee.Columns.Add(column);
         }
-        
-        
-        
-        private void btnSave_Click_1(object sender, EventArgs e)
-        {
-            bool result = false;
-            foreach (var item in ListEmpEdit)
-            {
-                if (employeeBLL.EditEmployee(item) == false)
-                {
-                    MessageBox.Show("Cannot save. Please try again");
-                    break;
-                }
-                else
-                    result = true;
-            }
-            if (result == true)
-            {
-                DialogResult dialog = MessageBox.Show("Saved successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (dialog == DialogResult.OK)  //click ok thì chuyển lại form đầu.
-                {
-                    mainform.loadUCEmployee();
-                }
-            }
-
-        }
-
-        private void btnComeback_Click_1(object sender, EventArgs e)
-        {
-            mainform.loadUCEmployee();
-        }
-        
-
-        private void txtSearch_OnValueChanged(object sender, EventArgs e)
-        {
-            
-        }
 
         private void dgvEmployee_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
@@ -173,6 +138,196 @@ namespace GUI
                     e.FormattingApplied = true;
                 }
             }
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            if (pageNumber - 1 > 0)
+            {
+                pageNumber--;
+                dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
+            }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            int totalRecord = 0;
+            using (RestaurantContextEntities db = new RestaurantContextEntities())
+            {
+                totalRecord = db.Employees.Count();
+            }
+            if (pageNumber - 1 < totalRecord / numberRecord)
+            {
+                pageNumber++;
+                dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
+
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            bool result = false;
+            foreach (var item in ListEmpEdit)
+            {
+                if (employeeBLL.EditEmployee(item) == false)
+                {
+                    MessageBox.Show("Cannot save. Please try again");
+                    break;
+                }
+                else
+                    result = true;
+            }
+            if (result == true)
+            {
+                DialogResult dialog = MessageBox.Show("Saved successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (dialog == DialogResult.OK)  //click ok thì chuyển lại form đầu.
+                {
+                    mainform.loadUCEmployee();
+                }
+            }
+            dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
+        }
+
+        private void btnComeback_Click(object sender, EventArgs e)
+        {
+            mainform.loadUCEmployee();
+        }
+
+        private void btnDeletetxt_Click(object sender, EventArgs e)
+        {
+            txtSearch.Text = "";
+            dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
+        }
+
+        private void cbSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (cbSearch.Text == "Gender")
+            {
+                rB1.Checked = false;
+                rB2.Checked = false;
+                rB1.Visible = true;
+                rB2.Visible = true;
+                rB1.Text = "Male";
+                rB2.Text = "Female";
+            }
+            if (cbSearch.Text == "Type")
+            {
+                rB1.Checked = false;
+                rB2.Checked = false;
+                rB1.Visible = true;
+                rB2.Visible = true;
+                rB1.Text = "Admin";
+                rB2.Text = "Employee";
+            }
+            if (cbSearch.Text == "(...)")
+            {
+                rB1.Checked = false;
+                rB2.Checked = false;
+                rB1.Visible = false;
+                rB2.Visible = false;
+                dgvEmployee.DataSource = employeeBLL.GetListEmployee();
+                dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
+            }
+        }
+
+        private void rB1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "Search..." || txtSearch.Text == "")
+            {
+                if (rB1.Text == "Admin" && rB1.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 3);
+                if (rB1.Text == "Male" && rB1.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 1);
+            }
+            else
+            {
+                if (rB1.Text == "Admin" && rB1.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 7);
+                if (rB1.Text == "Male" && rB1.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 5);
+            }
+            if (dgvEmployee.RowCount <= numberRecord)
+            {
+                btnPrevious.Visible = false;
+                btnNext.Visible = false;
+            }
+        }
+
+        private void rB2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "Search..." || txtSearch.Text == "")
+            {
+                if (rB2.Text == "Employee" && rB2.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 4);
+                if (rB2.Text == "Female" && rB2.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 2);
+            }
+            else
+            {
+                if (rB2.Text == "Employee" && rB2.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 8);
+                if (rB2.Text == "Female" && rB2.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 6);
+            }
+            if (dgvEmployee.RowCount <= numberRecord)
+            {
+                btnPrevious.Visible = false;
+                btnNext.Visible = false;
+            }
+        }
+
+        private void txtSearch_OnValueChanged_1(object sender, EventArgs e)
+        {
+            //0: cac loai ko can phan loai,1-5:nam,2-6:nu,3-7:admin,4-8:nhanvien
+            if (cbSearch.Text == "(...)" && txtSearch.Text != "")
+            {
+                dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
+            }
+            if (cbSearch.Text == "(...)")
+            {
+                dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 0);
+            }
+            if (txtSearch.Text != "")
+            {
+                if (rB1.Text == "Admin" && rB1.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 7);
+                if (rB1.Text == "Male" && rB1.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 5);
+                if (rB2.Text == "Employee" && rB2.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 8);
+                if (rB2.Text == "Female" && rB2.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 6);
+            }
+            else
+            {
+                if (rB1.Text == "Admin" && rB1.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 3);
+                if (rB1.Text == "Male" && rB1.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 1);
+                if (rB2.Text == "Employee" && rB2.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 4);
+                if (rB2.Text == "Female" && rB2.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 2);
+            }
+            if (dgvEmployee.RowCount <= numberRecord)
+            {
+                btnPrevious.Visible = false;
+                btnNext.Visible = false;
+            }
+        }
+
+        private void txtSearch_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "Search...")
+                txtSearch.Text = "";
+            dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
+        }
+
+        private void txtSearch_Leave(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "")
+                txtSearch.Text = "Search...";
+            dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
         }
     }
 }

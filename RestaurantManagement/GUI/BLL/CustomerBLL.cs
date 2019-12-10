@@ -45,5 +45,15 @@ namespace BLL
         {
             return customerDAL.GetCustomerID(c);
         }
+
+        public List<Customer> LoadRecord(int page, int recordNum)
+        {
+            return customerDAL.LoadRecord(page, recordNum);
+        }
+
+        public List<Customer> Sreach(string x, int k)
+        {
+            return customerDAL.Sreach(x, k);
+        }
     }
 }

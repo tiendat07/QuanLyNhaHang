@@ -275,7 +275,7 @@ namespace GUI
         {
             if (txtSearch.Text == "")
                 txtSearch.Text = "Search...";
-
+            dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
         }
 
         private void txtSearch_Enter(object sender, EventArgs e)
