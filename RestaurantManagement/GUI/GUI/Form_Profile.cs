@@ -112,8 +112,8 @@ namespace GUI
                     employee.Address = txtAddress.Text;
                     employee.IsFemale = (cbGender.SelectedIndex == 0) ? true : false;
                     employee.PhoneNumber = txtPhoneNumber.Text;
-                    employee.Password = txtPassword.Text;
-                    // Chưa mã hóa !!
+                    string mySalt = BCrypt.Net.BCrypt.GenerateSalt();
+                    employee.Password = BCrypt.Net.BCrypt.HashPassword(txtPassword.Text, mySalt);
                     if (employeeBLL.EditEmployee(employee) == true)
                     {
                         MessageBox.Show("Success!");

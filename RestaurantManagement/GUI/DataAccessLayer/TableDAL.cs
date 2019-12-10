@@ -86,21 +86,26 @@ namespace DataAccessLayer
         }
         public bool DeleteTable(int ID)
         {
-            Table tab = dbContext.Tables.Where(t => t.TableID == ID).FirstOrDefault();
-            try
+            if (ID >= 0)
             {
-                if (tab != null)
+                Table tab = dbContext.Tables.Where(t => t.TableID == ID).FirstOrDefault();
+                try
                 {
-                    dbContext.Tables.Remove(tab);
-                    dbContext.SaveChanges();
-                    return true;
+                    if (tab != null)
+                    {
+                        tab.Status = 3;
+                        // 3 Nghĩa là ẩn bàn hiện tại
+                        dbContext.SaveChanges();
+                        return true;
+                    }
+                    return false;
                 }
-                return false;
+                catch (Exception ex)
+                {
+                    return false;
+                }
             }
-            catch (Exception ex)
-            {
-                return false;
-            }
+            return false;
         }
     }
 }
