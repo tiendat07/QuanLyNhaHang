@@ -33,6 +33,8 @@ namespace GUI
             int width = 80, height = 80;
             foreach (FoodDrink item in lstFood)
             {
+                if (item.IsAvailable == false)
+                    continue;
                 PictureBox picBox = new PictureBox();
                 Label labelName = new Label();
                 Label description = new Label();

@@ -118,9 +118,9 @@ namespace DataAccessLayer
             Customer e = dbContext.Customers.Where(d => d.CustomerID == ID).FirstOrDefault();
             try
             {
-                if(e!=null)
+                if (ID >= 0 && e != null)
                 {
-                    dbContext.Customers.Remove(e);
+                    e.Status = 0; //0: xóa - 1: còn book lịch
                     dbContext.SaveChanges();
                     return true;
                 }
@@ -130,7 +130,7 @@ namespace DataAccessLayer
             {
                 return false;
             }
-            
+
         }
         public int GetCustomerID (Customer c)
         {

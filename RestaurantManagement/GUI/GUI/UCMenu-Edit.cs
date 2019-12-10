@@ -120,6 +120,8 @@ namespace GUI
             int width = 80, height = 80;
             foreach (FoodDrink item in lstFood)
             {
+                if (item.IsAvailable == false)
+                    continue;
                 int foodID = item.FoodDrinkID;
                 //Visible Item
                 myButtonEdit picBox = new myButtonEdit();

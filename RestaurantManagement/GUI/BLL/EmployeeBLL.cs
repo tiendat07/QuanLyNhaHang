@@ -64,5 +64,9 @@ namespace BLL
         {
             return employeeDAL.Sreach(x, k);
         }
+        public bool CheckPassword(int EmployeeID, string Password)
+        {
+            return employeeDAL.CheckPassword(EmployeeID, Password);
+        }
     }
 }

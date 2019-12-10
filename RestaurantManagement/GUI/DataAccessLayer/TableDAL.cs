@@ -107,5 +107,9 @@ namespace DataAccessLayer
             }
             return false;
         }
+        public Table FindTableById(int ID)
+        {
+            return dbContext.Tables.Where(t => t.TableID == ID).FirstOrDefault();
+        }
     }
 }

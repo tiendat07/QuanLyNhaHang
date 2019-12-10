@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCMenu));
             this.panel_Food = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -38,6 +39,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.btnEditFood = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -170,6 +174,10 @@
             // 
             // panel2
             // 
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel2.Controls.Add(this.bunifuTextbox1);
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.btnEditFood);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.label1);
@@ -180,13 +188,43 @@
             this.panel2.Size = new System.Drawing.Size(876, 71);
             this.panel2.TabIndex = 2;
             // 
+            // bunifuTextbox1
+            // 
+            this.bunifuTextbox1.BackColor = System.Drawing.Color.Silver;
+            this.bunifuTextbox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.BackgroundImage")));
+            this.bunifuTextbox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTextbox1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuTextbox1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.Icon")));
+            this.bunifuTextbox1.Location = new System.Drawing.Point(684, 19);
+            this.bunifuTextbox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuTextbox1.Name = "bunifuTextbox1";
+            this.bunifuTextbox1.Size = new System.Drawing.Size(125, 43);
+            this.bunifuTextbox1.TabIndex = 11;
+            this.bunifuTextbox1.text = "Bunifu TextBox";
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(838, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(38, 71);
+            this.panel6.TabIndex = 10;
+            // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(636, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(38, 71);
+            this.panel5.TabIndex = 8;
+            // 
             // btnEditFood
             // 
             this.btnEditFood.BackColor = System.Drawing.Color.Transparent;
             this.btnEditFood.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnEditFood.Image = global::GUI.Properties.Resources.edit_96px;
             this.btnEditFood.ImageActive = null;
-            this.btnEditFood.Location = new System.Drawing.Point(603, 0);
+            this.btnEditFood.Location = new System.Drawing.Point(577, 0);
             this.btnEditFood.Name = "btnEditFood";
             this.btnEditFood.Size = new System.Drawing.Size(59, 71);
             this.btnEditFood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -200,7 +238,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(539, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(64, 71);
+            this.panel4.Size = new System.Drawing.Size(38, 71);
             this.panel4.TabIndex = 6;
             // 
             // label1
@@ -262,5 +300,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel5;
+        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
     }
 }

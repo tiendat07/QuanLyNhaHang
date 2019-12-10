@@ -32,13 +32,15 @@ namespace GUI
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnProfile = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnProfile = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnChangePassword = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnSignOut = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -78,6 +80,8 @@ namespace GUI
             // 
             this.panel4.Controls.Add(this.btnSignOut);
             this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.btnChangePassword);
+            this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.btnProfile);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -86,12 +90,39 @@ namespace GUI
             this.panel4.Size = new System.Drawing.Size(369, 434);
             this.panel4.TabIndex = 3;
             // 
+            // btnProfile
+            // 
+            this.btnProfile.ActiveBorderThickness = 1;
+            this.btnProfile.ActiveCornerRadius = 20;
+            this.btnProfile.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(252)))), ((int)(((byte)(235)))));
+            this.btnProfile.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnProfile.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(252)))), ((int)(((byte)(235)))));
+            this.btnProfile.BackColor = System.Drawing.Color.White;
+            this.btnProfile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnProfile.BackgroundImage")));
+            this.btnProfile.ButtonText = "Profile";
+            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProfile.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnProfile.IdleBorderThickness = 1;
+            this.btnProfile.IdleCornerRadius = 20;
+            this.btnProfile.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnProfile.IdleForecolor = System.Drawing.Color.White;
+            this.btnProfile.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnProfile.Location = new System.Drawing.Point(0, 34);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(369, 107);
+            this.btnProfile.TabIndex = 7;
+            this.btnProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            // 
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(369, 86);
+            this.panel5.Size = new System.Drawing.Size(369, 34);
             this.panel5.TabIndex = 1;
             // 
             // panel3
@@ -121,40 +152,40 @@ namespace GUI
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnProfile
+            // panel7
             // 
-            this.btnProfile.ActiveBorderThickness = 1;
-            this.btnProfile.ActiveCornerRadius = 20;
-            this.btnProfile.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(252)))), ((int)(((byte)(235)))));
-            this.btnProfile.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnProfile.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(252)))), ((int)(((byte)(235)))));
-            this.btnProfile.BackColor = System.Drawing.Color.White;
-            this.btnProfile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnProfile.BackgroundImage")));
-            this.btnProfile.ButtonText = "Profile";
-            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProfile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProfile.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnProfile.IdleBorderThickness = 1;
-            this.btnProfile.IdleCornerRadius = 20;
-            this.btnProfile.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnProfile.IdleForecolor = System.Drawing.Color.White;
-            this.btnProfile.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnProfile.Location = new System.Drawing.Point(0, 86);
-            this.btnProfile.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(369, 107);
-            this.btnProfile.TabIndex = 7;
-            this.btnProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 141);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(369, 33);
+            this.panel7.TabIndex = 10;
             // 
-            // panel6
+            // btnChangePassword
             // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 193);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(369, 33);
-            this.panel6.TabIndex = 8;
+            this.btnChangePassword.ActiveBorderThickness = 1;
+            this.btnChangePassword.ActiveCornerRadius = 20;
+            this.btnChangePassword.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(77)))));
+            this.btnChangePassword.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnChangePassword.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(77)))));
+            this.btnChangePassword.BackColor = System.Drawing.Color.White;
+            this.btnChangePassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.BackgroundImage")));
+            this.btnChangePassword.ButtonText = "Change Password";
+            this.btnChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangePassword.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnChangePassword.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePassword.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnChangePassword.IdleBorderThickness = 1;
+            this.btnChangePassword.IdleCornerRadius = 20;
+            this.btnChangePassword.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnChangePassword.IdleForecolor = System.Drawing.Color.White;
+            this.btnChangePassword.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnChangePassword.Location = new System.Drawing.Point(0, 174);
+            this.btnChangePassword.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(369, 109);
+            this.btnChangePassword.TabIndex = 11;
+            this.btnChangePassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // btnSignOut
             // 
@@ -175,13 +206,21 @@ namespace GUI
             this.btnSignOut.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnSignOut.IdleForecolor = System.Drawing.Color.White;
             this.btnSignOut.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnSignOut.Location = new System.Drawing.Point(0, 226);
+            this.btnSignOut.Location = new System.Drawing.Point(0, 316);
             this.btnSignOut.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(369, 109);
-            this.btnSignOut.TabIndex = 9;
+            this.btnSignOut.TabIndex = 13;
             this.btnSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click_1);
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 283);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(369, 33);
+            this.panel6.TabIndex = 12;
             // 
             // UCHome
             // 
@@ -208,8 +247,10 @@ namespace GUI
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
         private Bunifu.Framework.UI.BunifuThinButton2 btnProfile;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnChangePassword;
+        private System.Windows.Forms.Panel panel7;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSignOut;
+        private System.Windows.Forms.Panel panel6;
     }
 }

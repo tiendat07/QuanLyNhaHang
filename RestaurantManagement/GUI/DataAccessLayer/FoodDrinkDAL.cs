@@ -43,9 +43,9 @@ namespace DataAccessLayer
         public bool DeleteFoodDrinkByID(int foodID)
         {
             FoodDrink fDrink = dbContext.FoodDrinks.Where(f => f.FoodDrinkID == foodID).FirstOrDefault();
-            if (fDrink != null)
+            if (fDrink != null && foodID >=0)
             {
-                dbContext.FoodDrinks.Remove(fDrink);
+                fDrink.IsAvailable = false;
                 dbContext.SaveChanges();
                 return true;
             }

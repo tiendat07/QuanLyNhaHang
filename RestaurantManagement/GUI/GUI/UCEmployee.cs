@@ -224,13 +224,7 @@ namespace GUI
             txtSearch.Text = "";
             dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
         }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            Form_EmployeeEditEvent f_event = new Form_EmployeeEditEvent(mainform, this);
-            f_event.Show();
-        }
-
+        
         private void txtSearch_OnValueChanged(object sender, EventArgs e)
         {
             //0: cac loai ko can phan loai,1-5:nam,2-6:nu,3-7:admin,4-8:nhanvien
@@ -283,6 +277,12 @@ namespace GUI
             if (txtSearch.Text == "Search...")
                 txtSearch.Text = "";
             dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
+        }
+
+        private void btnEdit_Click_1(object sender, EventArgs e)
+        {
+            Form_EmployeeEditEvent f_event = new Form_EmployeeEditEvent(mainform, this);
+            f_event.ShowDialog();
         }
     }
 }
