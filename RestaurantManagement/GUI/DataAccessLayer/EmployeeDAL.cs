@@ -184,5 +184,10 @@ namespace DataAccessLayer
             return dbContext.Employees.ToList();
 
         }
+        public bool CheckPassword(int EmployeeID, string Password)
+        {
+            string storedHash = Convert.ToString(dbContext.Employees.Where(e => e.EmployeeID == EmployeeID).Select(e => e.Password));
+            return BCrypt.Net.BCrypt.Verify(Password, storedHash);
+        }
     }
 }

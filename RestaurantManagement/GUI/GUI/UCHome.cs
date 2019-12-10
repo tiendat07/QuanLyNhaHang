@@ -21,19 +21,25 @@ namespace GUI
             InitializeComponent();
         }
         
-        private void btnSignOut_Click(object sender, EventArgs e)
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            Form_Profile f = new Form_Profile(EmpID);
+            f.ShowDialog();
+            f.Close();
+        }
+
+        private void btnSignOut_Click_1(object sender, EventArgs e)
         {
             mainform.Hide();
             Form_Login f = new Form_Login();
             f.ShowDialog();
             f.Close();
         }
-
-        private void btnProfile_Click(object sender, EventArgs e)
+        
+        private void btnChangePassword_Click(object sender, EventArgs e)
         {
-            Form_Profile f = new Form_Profile(EmpID);
+            Form_ChangePassword f = new Form_ChangePassword(EmpID);
             f.ShowDialog();
-            f.Close();
         }
     }
 }

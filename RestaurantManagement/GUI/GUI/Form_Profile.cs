@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BLL;
+﻿using BLL;
 using DataAccessLayer;
+using System;
+using System.ComponentModel;
+using System.Globalization;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
 namespace GUI
 {
     public partial class Form_Profile : Form
@@ -37,7 +31,6 @@ namespace GUI
             txtCMND.Visible = true;
             txtEmail.Visible = true;
             txtUsername.Visible = true;
-            txtPassword.Visible = true;
             btnSave.Visible = true;
             btnSave.Enabled = true;
             btnCancel.Visible = true;
@@ -51,7 +44,6 @@ namespace GUI
             lbCMND.Visible = false;
             lbEmail.Visible = false;
             lbUsername.Visible = false;
-            lbPassword.Visible = false;
 
         }
 
@@ -67,7 +59,6 @@ namespace GUI
             txtCMND.Text = employee.CMND;
             txtEmail.Text = employee.Email;
             txtUsername.Text = employee.Username;
-            txtPassword.Text = employee.Password;
             // Thay đổi password? : Phải mã hóa xuống liền luôn trc khi lưu xuống db?
 
             lbName.Text = employee.Name;
@@ -79,54 +70,8 @@ namespace GUI
             lbCMND.Text = employee.CMND;
             lbEmail.Text = employee.Email;
             lbUsername.Text = employee.Username;
-            lbPassword.Text = employee.Password;
         }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(txtName.Text) || (String.IsNullOrEmpty(txtPhoneNumber.Text))
-                || String.IsNullOrEmpty(txtAddress.Text) || (String.IsNullOrEmpty(txtCMND.Text))
-                || String.IsNullOrEmpty(txtEmail.Text) || (String.IsNullOrEmpty(txtUsername.Text))
-                || (String.IsNullOrEmpty(txtPassword.Text)))
-            {
-                MessageBox.Show("Please insert fully information");
-            }
-            else
-            {
-                errorProvider1.Clear();
-
-                //Revalidate the controls
-                bool success = ValidateName();
-                if (success) success = ValidatePhone();
-                if (success) success = ValidateAddress();
-                if (success) success = ValidateCMND();
-                if (success) success = ValidateEmail();
-                if (success) success = ValidatePassword();
-
-                if (success)
-                {
-                    employee.Name = txtName.Text;
-                    employee.CMND = txtCMND.Text;
-                    employee.DateOfBirth = dtpDOB.Value;
-                    employee.Email = txtEmail.Text;
-                    employee.Address = txtAddress.Text;
-                    employee.IsFemale = (cbGender.SelectedIndex == 0) ? true : false;
-                    employee.PhoneNumber = txtPhoneNumber.Text;
-                    string mySalt = BCrypt.Net.BCrypt.GenerateSalt();
-                    employee.Password = BCrypt.Net.BCrypt.HashPassword(txtPassword.Text, mySalt);
-                    if (employeeBLL.EditEmployee(employee) == true)
-                    {
-                        MessageBox.Show("Success!");
-                    }
-                    else
-                        MessageBox.Show(":( Unsuccess. Please try again baby!");
-                }
-                else
-                    MessageBox.Show(":( Unsuccess. Please try again baby!");
-            }
-
-        }
-
+        
         private void txtName_Leave(object sender, EventArgs e)
         {
             txtName.Text = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtName.Text);
@@ -156,11 +101,7 @@ namespace GUI
         {
             ValidateEmail();
         }
-
-        private void txtPassword_Validating(object sender, CancelEventArgs e)
-        {
-            ValidatePassword();
-        }
+        
         private bool ValidateName()
         {
 
@@ -306,25 +247,54 @@ namespace GUI
                 return false;
             return true;
         }
-        private bool ValidatePassword()
+        private void btnSave_Click_1(object sender, EventArgs e)
         {
-            bool bStatus = true;
-            if (txtPassword.Text == "")
+            if (String.IsNullOrEmpty(txtName.Text) || (String.IsNullOrEmpty(txtPhoneNumber.Text))
+               || String.IsNullOrEmpty(txtAddress.Text) || (String.IsNullOrEmpty(txtCMND.Text))
+               || String.IsNullOrEmpty(txtEmail.Text) || (String.IsNullOrEmpty(txtUsername.Text))
+               )
             {
-                errorProvider1.SetError(txtPassword, "Please enter your  Password");
-                bStatus = false;
-            }
-            else if (CheckPassword(txtPassword.Text) == false)
-            {
-                errorProvider1.SetError(txtPassword, "Invalid Password. Your password must contains more than 8 characters");
-                bStatus = false;
+                MessageBox.Show("Please insert fully information");
             }
             else
             {
-                errorProvider1.SetError(txtPassword, "");
-                bStatus = true;
+                errorProvider1.Clear();
+
+                //Revalidate the controls
+                bool success = ValidateName();
+                if (success) success = ValidatePhone();
+                if (success) success = ValidateAddress();
+                if (success) success = ValidateCMND();
+                if (success) success = ValidateEmail();
+                if (success)
+                {
+                    employee.Name = txtName.Text;
+                    employee.CMND = txtCMND.Text;
+                    employee.DateOfBirth = dtpDOB.Value;
+                    employee.Email = txtEmail.Text;
+                    employee.Address = txtAddress.Text;
+                    employee.IsFemale = (cbGender.SelectedIndex == 0) ? true : false;
+                    employee.PhoneNumber = txtPhoneNumber.Text;
+                    if (employeeBLL.EditEmployee(employee) == true)
+                    {
+                        MessageBox.Show("Success!");
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show(":( Unsuccess. Please try again baby!");
+                }
+                else
+                    MessageBox.Show(":( Unsuccess. Please try again baby!");
             }
-            return bStatus;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Are you sure you want to cancel?", "Cancel Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (dialog == DialogResult.OK)  //click ok thì chuyển lại form đầu.
+            {
+                this.Close();
+            }
         }
     }
 }

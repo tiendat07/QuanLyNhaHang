@@ -43,6 +43,8 @@ namespace GUI
             List<Table> lstTable = tableBLL.GetListTable();
             foreach (Table item in lstTable)
             {
+                if (item.Status == 3)
+                    continue;
                 myButton btn = new myButton();
                 btn.objectID = item.TableID;
                 btnPay.objectID = item.TableID;

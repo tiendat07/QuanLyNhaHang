@@ -34,5 +34,9 @@ namespace BLL
         {
             return tableDAL.DeleteTable(ID);
         }
+        public Table FindTableById(int ID)
+        {
+            return tableDAL.FindTableById(ID);
+        }
     }
 }

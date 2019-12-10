@@ -20,6 +20,7 @@ namespace GUI
         Form_Restaurant mainform;
         int EmpID;
         int TabID;
+        int CusID;
         List<OrderDetail> lsOrderDetail;
         Order orDer;
         bool readOnly;
@@ -108,20 +109,30 @@ namespace GUI
             if (result == DialogResult.Yes)
             {
                 //yes...
-                // Lưu mọi thứ xuống database
-                //MessageBox.Show("" + orDer.OrderID);
+                bool Check = false;
                 if (orderBLL.AddOrder(orDer, lsOrderDetail) == true)
                 {
-                    //MessageBox.Show("" + orDer.OrderID);
                     if (tableBLL.ChangeTableStatus(TabID, true, false, false) == true)
                     {
-                        MessageBox.Show("Saved sucessfully");
-                        mainform.loadUCTable();
+                        Table table = tableBLL.FindTableById(TabID);
+                        if (table.Status == 1)
+                        {
+                            // Bàn này đang được order và khách đến và order
+                            CustomerBLL customerBLL = new CustomerBLL();
+                            if (customerBLL.DeleteCustomer(CusID) == true)
+                                Check = true;
+                        }
+                        else
+                            Check = true;
                     }
+                }
+                if (Check == true)
+                {
+                    MessageBox.Show("Saved sucessfully");
+                    mainform.loadUCTable();
                 }
                 else
                     MessageBox.Show("Cannot save. Please try again!");
-
             }
         }
 
