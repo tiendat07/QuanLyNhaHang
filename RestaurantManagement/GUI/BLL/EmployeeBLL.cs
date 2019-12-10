@@ -54,6 +54,7 @@ namespace BLL
         {
             return employeeDAL.FindEmployee(id);
         }
+
         public List<Employee> LoadRecord(int page, int recordNum)
         {
             return employeeDAL.LoadRecord(page, recordNum);

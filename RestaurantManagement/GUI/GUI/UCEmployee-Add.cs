@@ -73,16 +73,20 @@ namespace GUI
             string mySalt = BCrypt.Net.BCrypt.GenerateSalt();
             return BCrypt.Net.BCrypt.HashPassword(result, mySalt);
         }
+        
 
-        private void btnSave_Click_1(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(txtAddress.Text) || String.IsNullOrEmpty(txtCMND.Text)
                 || String.IsNullOrEmpty(txtPhone.Text) || String.IsNullOrEmpty(txtName.Text)
-                || String.IsNullOrEmpty(txtEmail.Text) || String.IsNullOrEmpty(txtShift.Text)
-                || cbGender.Text=="-select-" || String.IsNullOrEmpty(dtpkDOB.Text))
-                
+                || String.IsNullOrEmpty(txtEmail.Text)|| cbGender.Text == "-select-" 
+                || String.IsNullOrEmpty(dtpDOB.Text))
             {
                 MessageBox.Show("Please insert information fully !", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                errorGender.Text = "error";
+                errorCMND.Text = "error";
+                errorEmail.Text = "error";
+                errorPhone.Text = "error";
             }
             else
             {
@@ -103,10 +107,11 @@ namespace GUI
                     emp.IsFemale = false;
                 emp.Email = txtEmail.Text;
                 emp.Username = Create_Username(Name);
-                emp.Password = Create_Password(Name, dtpkDOB.Value);
+                emp.Password = Create_Password(Name, dtpDOB.Value);
+                emp.Status = 1;
                 MessageBox.Show(emp.Password);
                 emp.IsAdmin = (cbIsAdmin.Checked == true) ? true : false;
-                emp.DateOfBirth = dtpkDOB.Value;
+                emp.DateOfBirth = dtpDOB.Value;
 
                 if (employeeBLL.AddEmployee(emp) == true)
                 {
@@ -120,47 +125,43 @@ namespace GUI
                 {
                     MessageBox.Show("Saved unsuccessfully. Please try again!");
                 }
-                
+
             }
         }
 
-        private void btnClear_Click_1(object sender, EventArgs e)
+        private void txtClear_Click(object sender, EventArgs e)
         {
             txtAddress.Text = "";
             txtCMND.Text = "";
             txtEmail.Text = "";
             txtName.Text = "";
             txtPhone.Text = "";
-            txtShift.Text = "";
-            dtpkDOB.Text = "";
+            dtpDOB.Text = "";
             cbGender.SelectedText = "";
+            cbIsAdmin.Checked=false;
+            errorCMND.Text = "";
+            errorEmail.Text = "";
+            errorGender.Text = "";
+            errorPhone.Text = "";
         }
 
-        private void txtShift_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnComeback_Click_1(object sender, EventArgs e)
+        {
+            mainform.loadUCEmployee();
+        }
+
+        private void txtPhone_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
+                errorPhone.Text = "";
                 e.Handled = true;
             }
+            else
+                errorPhone.Text = "error";
         }
 
-        private void txtCMND_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txtEmail_Leave(object sender, EventArgs e)
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
             Regex mRegxExpression;
 
@@ -170,19 +171,21 @@ namespace GUI
                 if (!mRegxExpression.IsMatch(txtEmail.Text.Trim()))
 
                 {
-
-                    MessageBox.Show("E-mail address format is not correct.", "MojoCRM", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                    errorEmail.Text = "E-mail address format is not correct !";
                     txtEmail.Focus();
-
                 }
             }
         }
 
-        private void btnComeback_Click(object sender, EventArgs e)
+        private void txtCMND_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            mainform.loadUCEmployee();
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                errorCMND.Text = "";
+                e.Handled = true;
+            }
+            else
+                errorCMND.Text = "error";
         }
-
     }
 }
