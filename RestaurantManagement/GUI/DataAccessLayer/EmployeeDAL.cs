@@ -5,6 +5,7 @@ using System.Data.Entity.Core.Objects;
 using System.Data.Entity.SqlServer;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,8 +31,13 @@ namespace DataAccessLayer
 
         public bool CheckLogin(string U, string P)
         {
-            var x = dbContext.Employees.Where(n => n.Username == U && n.Password == P).Select(n => n.Username);
-            return (x.Any()) ? true : false;
+            if (U != null && P != null)
+            {
+                string storedHash = dbContext.Employees.Where(u => u.Username == U).Select(y => y.Password).First();
+                if (storedHash != null)
+                    return BCrypt.Net.BCrypt.Verify(P, storedHash);
+            }
+            return false;
         }
 
 
@@ -186,8 +192,13 @@ namespace DataAccessLayer
         }
         public bool CheckPassword(int EmployeeID, string Password)
         {
-            string storedHash = Convert.ToString(dbContext.Employees.Where(e => e.EmployeeID == EmployeeID).Select(e => e.Password));
-            return BCrypt.Net.BCrypt.Verify(Password, storedHash);
+            if (Password != null && EmployeeID > 0)
+            {
+                string storedHash = dbContext.Employees.Where(e => e.EmployeeID == EmployeeID).Select(e => e.Password).First();
+                if (storedHash != null)
+                    return BCrypt.Net.BCrypt.Verify(Password, storedHash);
+            }
+            return false;
         }
     }
 }

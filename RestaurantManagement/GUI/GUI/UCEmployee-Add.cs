@@ -11,6 +11,8 @@ using BLL;
 using DataAccessLayer;
 using System.Text.RegularExpressions;
 using BCrypt;
+using System.Security.Cryptography;
+
 namespace GUI
 {
     public partial class UCEmployee_Add : UserControl
@@ -72,8 +74,8 @@ namespace GUI
             result += Convert.ToString(DOB.Month);
             string mySalt = BCrypt.Net.BCrypt.GenerateSalt();
             return BCrypt.Net.BCrypt.HashPassword(result, mySalt);
+                
         }
-        
 
         private void btnSave_Click(object sender, EventArgs e)
         {

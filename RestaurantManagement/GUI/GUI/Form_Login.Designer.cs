@@ -285,6 +285,7 @@ namespace GUI
             this.txtUsername.Size = new System.Drawing.Size(325, 120);
             this.txtUsername.TabIndex = 0;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUsername.OnValueChanged += new System.EventHandler(this.txtUsername_OnValueChanged);
             // 
             // tableLayoutPanel10
             // 
@@ -441,11 +442,13 @@ namespace GUI
             this.ClientSize = new System.Drawing.Size(1946, 1106);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Login";
+            this.Load += new System.EventHandler(this.Form_Login_Load);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
