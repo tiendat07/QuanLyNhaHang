@@ -16,8 +16,9 @@ namespace GUI
         EmployeeBLL employeeBLL;
         int EmployeeID;
         Employee employee;
-        public Form_ChangePassword(int EmployeeID)
+        public Form_ChangePassword(int EmpID)
         {
+            EmployeeID = EmpID;
             employeeBLL = new EmployeeBLL();
             employee = employeeBLL.FindEmployee(EmployeeID);
             InitializeComponent();

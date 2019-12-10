@@ -74,52 +74,14 @@ namespace GUI
         {
             e.Column.FillWeight = 20;
         }
-
-        private void dataGridViewListCustomer_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (this.dataGridViewListCustomer.Columns[e.ColumnIndex].Name == "Gender")
-            {
-                if (e.Value != null)
-                {
-                    int gender = Convert.ToInt32(e.Value);
-                    if (gender == 1)
-                    {
-                        e.Value = "Female";
-                    }
-                    else
-                    {
-                        e.Value = "Male";
-                    }
-                    e.FormattingApplied = true;
-                }
-            }
-        }
+        
         
         private void btnEdit_Click_1(object sender, EventArgs e)
         {
             Form_CustomerEditEvent f = new Form_CustomerEditEvent(mainform, this);
             f.Show();
         }
-
-        private void dataGridViewListCustomer_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (this.dataGridViewListCustomer.Columns[e.ColumnIndex].Name == "Gender")
-            {
-                if (e.Value != null)
-                {
-                    bool gender = Convert.ToBoolean(e.Value);
-                    if (gender == true)
-                    {
-                        e.Value = "Female";
-                    }
-                    else
-                    {
-                        e.Value = "Male";
-                    }
-                    e.FormattingApplied = true;
-                }
-            }
-        }
+        
         private void cbSearch_TextChanged(object sender, EventArgs e)
         {
             if (cbSearch.Text == "Gender")
@@ -249,6 +211,26 @@ namespace GUI
                 pageNumber++;
                 dataGridViewListCustomer.DataSource = customerBLL.LoadRecord(pageNumber, numberRecord);
 
+            }
+        }
+
+        private void dataGridViewListCustomer_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dataGridViewListCustomer.Columns[e.ColumnIndex].Name == "Gender")
+            {
+                if (e.Value != null)
+                {
+                    int gender = Convert.ToInt32(e.Value);
+                    if (gender == 1)
+                    {
+                        e.Value = "Female";
+                    }
+                    else
+                    {
+                        e.Value = "Male";
+                    }
+                    e.FormattingApplied = true;
+                }
             }
         }
     }

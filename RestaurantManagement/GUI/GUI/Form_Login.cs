@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,13 +16,11 @@ namespace GUI
         public EmployeeBLL employeeBLL;
         public Form_Login()
         {
+            employeeBLL = new EmployeeBLL();
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
-            employeeBLL = new EmployeeBLL();
-            
         }
-        
 
         private void img_Min_Click_1(object sender, EventArgs e)
         {
@@ -60,7 +59,7 @@ namespace GUI
 
             if (string.IsNullOrEmpty(tenDN) || string.IsNullOrEmpty(matkhau))
             {
-                MessageBox.Show("Vui long nhap day du thong tin");
+                MessageBox.Show("Please insert your username and password correctly");
             }
             else
             {
@@ -74,11 +73,11 @@ namespace GUI
                     f.Show();
                 }
                 else
-                    MessageBox.Show("Chua chinh xac !!");
+                    MessageBox.Show("Incorrect. Please try again !!");
 
             }
         }
-
+        
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)
@@ -88,7 +87,7 @@ namespace GUI
 
                 if (string.IsNullOrEmpty(tenDN) || string.IsNullOrEmpty(matkhau))
                 {
-                    MessageBox.Show("Vui long nhap day du thong tin");
+                    MessageBox.Show("Please insert your username and password correctly");
                 }
                 else
                 {
@@ -102,10 +101,48 @@ namespace GUI
                         this.Close();
                     }
                     else
-                        MessageBox.Show("Chua chinh xac !!");
+                    {
+                        MessageBox.Show("Incorrect. Please try again !!");
+                    }
+
 
                 }
             }
+        }
+
+        private void txtUsername_OnValueChanged(object sender, EventArgs e)
+        {
+            if (btnSignIn.BackColor == Color.FromArgb(200, 237, 230))
+            {
+                btnSignIn.BackColor = Color.FromArgb(18, 37, 44);
+                btnSignIn.ForeColor = Color.White;
+            }
+        }
+
+        private Form_Loading splashScreen = new Form_Loading();
+
+
+        private void Form_Login_Load(object sender, EventArgs e)
+        {
+            splashScreen.Show();
+            BackgroundWorker worker = new BackgroundWorker();
+            worker.DoWork += new DoWorkEventHandler(worker_DoWork);
+            worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler
+                 (worker_RunWorkerCompleted);
+            worker.RunWorkerAsync();
+            this.Visible = false;
+
+        }
+
+        void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            splashScreen.Close();
+            this.Visible = true;
+        }
+
+        void worker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            System.Threading.Thread.Sleep(5000);
         }
     }
 }

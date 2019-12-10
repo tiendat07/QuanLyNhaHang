@@ -17,17 +17,36 @@ namespace GUI
         Form_Restaurant mainform;
         DataGridView data;
         public EmployeeBLL employeeBLL;
-
+        private Form_Loading splashScreen = new Form_Loading();
+        List<Employee> lstEmployee;
         public UCEmployee(Form_Restaurant form)
         {
             employeeBLL = new EmployeeBLL();
             mainform = form;
             InitializeComponent();
+            //splashScreen.Show();
+            //BackgroundWorker worker = new BackgroundWorker();
+            //worker.DoWork += new DoWorkEventHandler(worker_DoWork);
+            //worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler
+            //     (worker_RunWorkerCompleted);
+            //worker.RunWorkerAsync();
+            //this.Visible = false;
+            lstEmployee = employeeBLL.LoadRecord(pageNumber, numberRecord);
             loadData();
             dgvEmployee.ReadOnly = true;
             txtSearch.GotFocus += TxtSearch_GotFocus;
             dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
         }
+        //void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        //{
+        //    splashScreen.Close();
+        //    this.Visible = true;
+        //}
+
+        //void worker_DoWork(object sender, DoWorkEventArgs e)
+        //{
+        //    lstEmployee =  employeeBLL.LoadRecord(pageNumber, numberRecord);
+        //}
 
         private void TxtSearch_GotFocus(object sender, EventArgs e)
         {
@@ -42,7 +61,7 @@ namespace GUI
         public void loadData()
         {
             dgvEmployee.AutoGenerateColumns = false;
-            List<Employee> lstEmployee = employeeBLL.GetListEmployee();
+           
             dgvEmployee.DataSource = lstEmployee;
 
             DataGridViewColumn column = new DataGridViewTextBoxColumn();
