@@ -25,7 +25,7 @@ namespace GUI
         }
         private bool CheckPassword(string password)
         {
-            if (password.Length <= 8)
+            if (password.Length < 8)
                 return false;
             return true;
         }
@@ -107,7 +107,7 @@ namespace GUI
         {
             ValidateNewPassword();
         }
-
+        
         private void btnSave_Click(object sender, EventArgs e)
         {
             errorProvider1.Clear();
@@ -133,6 +133,7 @@ namespace GUI
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+
             DialogResult dialog = MessageBox.Show("Are you sure you want to cancel?", "Cancel Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (dialog == DialogResult.OK)  //click ok thì chuyển lại form đầu.
             {

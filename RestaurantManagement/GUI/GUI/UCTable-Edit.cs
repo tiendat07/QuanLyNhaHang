@@ -41,17 +41,7 @@ namespace GUI
             dgvTable.Columns.Add(column);
             dgvTable.Columns["ID"].ReadOnly = true;
         }
-
-        private void dgvTable_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            // Chưa xét trường hợp nhiều dòng
-            var temp = dgvTable.Rows[e.RowIndex];
-            Table table = new Table();
-            table.TableID = (int)temp.Cells["ID"].Value;
-            table.TableName = (string)temp.Cells["Name"].Value;
-            tables.Add(table);
-        }
-
+        
         private void btnSave_Click(object sender, EventArgs e)
         {
             bool result = false;
@@ -123,6 +113,16 @@ namespace GUI
             {
                 mainform.loadUCTableEdit();
             }
+        }
+
+        private void dgvTable_CellEndEdit_1(object sender, DataGridViewCellEventArgs e)
+        {
+            // Chưa xét trường hợp nhiều dòng
+            var temp = dgvTable.Rows[e.RowIndex];
+            Table table = new Table();
+            table.TableID = (int)temp.Cells["ID"].Value;
+            table.TableName = (string)temp.Cells["Name"].Value;
+            tables.Add(table);
         }
     }
 }

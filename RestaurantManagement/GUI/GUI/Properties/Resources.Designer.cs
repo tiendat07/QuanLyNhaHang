@@ -223,6 +223,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_delete_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_delete_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_delete_sign_64px {
             get {
                 object obj = ResourceManager.GetObject("icons8_delete_sign_64px", resourceCulture);
@@ -246,6 +256,26 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap icons8_minus_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8_minus_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_search_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_search_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_search_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_search_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
