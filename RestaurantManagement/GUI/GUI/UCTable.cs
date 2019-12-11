@@ -50,8 +50,10 @@ namespace GUI
                 btnPay.objectID = item.TableID;
                 btnBook.objectID = item.TableID;
                 btnOrder.objectID = item.TableID;
-                btn.Width = flpTable1.Width/4;
-                btn.Height = 50;
+                btn.Width = flpTable1.Width/6;
+                btn.Margin = new Padding(0,0,10,10);
+                // btn.Height = 50;
+                btn.Height = flpTable1.Width / 6 - 100;
                 btn.Text = item.TableName;
                 btn.Font = new Font("SVN-Avo", 8f);
                 btn.ForeColor = Color.White;

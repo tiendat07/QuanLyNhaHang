@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel_Food = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel_Food = new System.Windows.Forms.Panel();
             this.panel_Drink = new System.Windows.Forms.Panel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -58,6 +58,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.ProgressBar1 = new Bunifu.Framework.UI.BunifuProgressBar();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnEditFood = new Bunifu.Framework.UI.BunifuImageButton();
@@ -84,15 +85,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnEditFood)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel_Food
-            // 
-            this.panel_Food.AutoScroll = true;
-            this.panel_Food.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Food.Location = new System.Drawing.Point(3, 136);
-            this.panel_Food.Name = "panel_Food";
-            this.panel_Food.Size = new System.Drawing.Size(1833, 374);
-            this.panel_Food.TabIndex = 3;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
@@ -116,6 +108,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.ProgressBar1, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 151);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -144,6 +137,15 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1839, 1011);
             this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // panel_Food
+            // 
+            this.panel_Food.AutoScroll = true;
+            this.panel_Food.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Food.Location = new System.Drawing.Point(3, 136);
+            this.panel_Food.Name = "panel_Food";
+            this.panel_Food.Size = new System.Drawing.Size(1833, 374);
+            this.panel_Food.TabIndex = 3;
             // 
             // panel_Drink
             // 
@@ -429,6 +431,21 @@
             this.label2.Text = "Food";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // ProgressBar1
+            // 
+            this.ProgressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.ProgressBar1.BorderRadius = 5;
+            this.ProgressBar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProgressBar1.Location = new System.Drawing.Point(42, 1022);
+            this.ProgressBar1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ProgressBar1.MaximumValue = 100;
+            this.ProgressBar1.Name = "ProgressBar1";
+            this.ProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(159)))), ((int)(((byte)(170)))));
+            this.ProgressBar1.Size = new System.Drawing.Size(1837, 67);
+            this.ProgressBar1.TabIndex = 1;
+            this.ProgressBar1.Value = 0;
+            this.ProgressBar1.Visible = false;
+            // 
             // panel2
             // 
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -531,30 +548,18 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel_Food;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Panel panel_Drink;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuImageButton btnEditFood;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TableLayoutPanel tbSearch;
-        private System.Windows.Forms.Panel pnlSearch;
-        private System.Windows.Forms.PictureBox btnSearchFood;
-        private System.Windows.Forms.PictureBox btnDelete;
-        private System.Windows.Forms.TextBox txtSearch1;
-        private System.Windows.Forms.Panel panel10;
+        private Bunifu.Framework.UI.BunifuProgressBar ProgressBar1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Panel panel_Food;
+        private System.Windows.Forms.Panel panel_Drink;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
@@ -568,5 +573,17 @@
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TableLayoutPanel tbSearch;
+        private System.Windows.Forms.Panel pnlSearch;
+        private System.Windows.Forms.PictureBox btnDelete;
+        private System.Windows.Forms.TextBox txtSearch1;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.PictureBox btnSearchFood;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label2;
     }
 }

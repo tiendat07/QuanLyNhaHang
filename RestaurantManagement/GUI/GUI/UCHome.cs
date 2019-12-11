@@ -30,10 +30,12 @@ namespace GUI
 
         private void btnSignOut_Click_1(object sender, EventArgs e)
         {
-            mainform.Hide();
+           mainform.Hide();
+           // mainform.Close();
             Form_Login f = new Form_Login();
             f.ShowDialog();
-            f.Close();
+           // f.Show();
+            //mainform.Close();
         }
         
         private void btnChangePassword_Click(object sender, EventArgs e)

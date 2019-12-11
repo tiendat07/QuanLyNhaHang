@@ -249,6 +249,7 @@ namespace GUI
             this.txtPassword.TabIndex = 1;
             this.txtPassword.Text = "bunifuMaterialTextbox2";
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPassword.OnValueChanged += new System.EventHandler(this.txtPassword_OnValueChanged);
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // bunifuCustomLabel2
@@ -286,6 +287,7 @@ namespace GUI
             this.txtUsername.TabIndex = 0;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUsername.OnValueChanged += new System.EventHandler(this.txtUsername_OnValueChanged);
+            this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsername_KeyDown);
             // 
             // tableLayoutPanel10
             // 
@@ -362,7 +364,7 @@ namespace GUI
             this.pictureBox2.Location = new System.Drawing.Point(416, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(201, 196);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 

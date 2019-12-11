@@ -21,6 +21,7 @@ namespace GUI
         List<FoodDrink> lstFoodDrink;
         List<FoodDrink> lstFood;
         List<FoodDrink> lstDrink;
+        BackgroundWorker backgroundWorker1;
         public UCMenu(Form_Restaurant form1)
         {
             foodDrinkBLL = new FoodDrinkBLL();
@@ -28,9 +29,44 @@ namespace GUI
             lstDrink = new List<FoodDrink>();
             mainform = form1;
             InitializeComponent();
+            //InitializeWorker();
             LoadData();
-           // txtSearch1.GotFocus += TxtSearch1_GotFocus;
-            //txtSearch2.GotFocus += TxtSearch2_GotFocus;
+        }
+        private void InitializeWorker()
+        {
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            backgroundWorker1.WorkerReportsProgress = true;
+            backgroundWorker1.WorkerSupportsCancellation = true;
+            backgroundWorker1.DoWork += BackgroundWorker1_DoWork;
+            backgroundWorker1.RunWorkerCompleted += BackgroundWorker1_RunWorkerCompleted;
+            backgroundWorker1.ProgressChanged += BackgroundWorker1_ProgressChanged;
+        }
+
+        private void BackgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            ProgressBar1.Value = e.ProgressPercentage;
+        }
+
+        private void BackgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            
+        }
+
+        private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker worker = sender as BackgroundWorker;
+
+            if (worker.CancellationPending == true)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                LoadData();
+               // worker.ReportProgress(count / numberofFiles * 100);
+
+            }
+            
         }
 
         private void TxtSearch2_GotFocus(object sender, EventArgs e)
