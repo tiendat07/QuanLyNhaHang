@@ -33,9 +33,17 @@ namespace DataAccessLayer
         {
             if (U != null && P != null)
             {
-                string storedHash = dbContext.Employees.Where(u => u.Username == U).Select(y => y.Password).First();
-                if (storedHash != null)
-                    return BCrypt.Net.BCrypt.Verify(P, storedHash);
+                try
+                {
+                    string storedHash = dbContext.Employees.Where(u => u.Username == U).Select(y => y.Password).First();
+                    if (storedHash != null)
+                        return BCrypt.Net.BCrypt.Verify(P, storedHash);
+                }
+                catch(Exception e)
+                {
+                    return false;
+                }
+                
             }
             return false;
         }
@@ -194,9 +202,16 @@ namespace DataAccessLayer
         {
             if (Password != null && EmployeeID > 0)
             {
-                string storedHash = dbContext.Employees.Where(e => e.EmployeeID == EmployeeID).Select(e => e.Password).First();
-                if (storedHash != null)
-                    return BCrypt.Net.BCrypt.Verify(Password, storedHash);
+                try
+                {
+                    string storedHash = dbContext.Employees.Where(e => e.EmployeeID == EmployeeID).Select(e => e.Password).First();
+                    if (storedHash != null)
+                        return BCrypt.Net.BCrypt.Verify(Password, storedHash);
+                }
+                catch(Exception e)
+                {
+                    return false;
+                }
             }
             return false;
         }
