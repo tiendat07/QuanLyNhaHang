@@ -77,7 +77,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(933, 544);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1085, 544);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // btnCancel
@@ -98,7 +98,7 @@
             this.btnCancel.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
             this.btnCancel.IdleForecolor = System.Drawing.Color.White;
             this.btnCancel.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.btnCancel.Location = new System.Drawing.Point(475, 369);
+            this.btnCancel.Location = new System.Drawing.Point(550, 369);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(146, 70);
@@ -125,7 +125,7 @@
             this.btnSave.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
             this.btnSave.IdleForecolor = System.Drawing.Color.White;
             this.btnSave.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.btnSave.Location = new System.Drawing.Point(268, 369);
+            this.btnSave.Location = new System.Drawing.Point(337, 369);
             this.btnSave.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(150, 70);
@@ -138,7 +138,7 @@
             this.lbName.AutoSize = true;
             this.lbName.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbName.Font = new System.Drawing.Font("SVN-Avo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(347, 60);
+            this.lbName.Location = new System.Drawing.Point(416, 60);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(76, 60);
             this.lbName.TabIndex = 9;
@@ -150,7 +150,7 @@
             this.lbDes.AutoSize = true;
             this.lbDes.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbDes.Font = new System.Drawing.Font("SVN-Avo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDes.Location = new System.Drawing.Point(303, 120);
+            this.lbDes.Location = new System.Drawing.Point(372, 120);
             this.lbDes.Name = "lbDes";
             this.lbDes.Size = new System.Drawing.Size(120, 60);
             this.lbDes.TabIndex = 10;
@@ -162,7 +162,7 @@
             this.lbURL.AutoSize = true;
             this.lbURL.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbURL.Font = new System.Drawing.Font("SVN-Avo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbURL.Location = new System.Drawing.Point(314, 180);
+            this.lbURL.Location = new System.Drawing.Point(383, 180);
             this.lbURL.Name = "lbURL";
             this.lbURL.Size = new System.Drawing.Size(109, 60);
             this.lbURL.TabIndex = 11;
@@ -174,7 +174,7 @@
             this.lbIsAvailable.AutoSize = true;
             this.lbIsAvailable.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbIsAvailable.Font = new System.Drawing.Font("SVN-Avo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbIsAvailable.Location = new System.Drawing.Point(206, 240);
+            this.lbIsAvailable.Location = new System.Drawing.Point(275, 240);
             this.lbIsAvailable.Name = "lbIsAvailable";
             this.lbIsAvailable.Size = new System.Drawing.Size(217, 60);
             this.lbIsAvailable.TabIndex = 12;
@@ -188,7 +188,7 @@
             this.cbFoodDrink.Items.AddRange(new object[] {
             "Food",
             "Drink"});
-            this.cbFoodDrink.Location = new System.Drawing.Point(470, 316);
+            this.cbFoodDrink.Location = new System.Drawing.Point(545, 316);
             this.cbFoodDrink.Name = "cbFoodDrink";
             this.cbFoodDrink.Size = new System.Drawing.Size(284, 28);
             this.cbFoodDrink.TabIndex = 18;
@@ -200,7 +200,7 @@
             this.cbAvailable.Items.AddRange(new object[] {
             "Available",
             "Unavailable"});
-            this.cbAvailable.Location = new System.Drawing.Point(470, 256);
+            this.cbAvailable.Location = new System.Drawing.Point(545, 256);
             this.cbAvailable.Name = "cbAvailable";
             this.cbAvailable.Size = new System.Drawing.Size(284, 28);
             this.cbAvailable.TabIndex = 17;
@@ -208,7 +208,7 @@
             // txtDes
             // 
             this.txtDes.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtDes.Location = new System.Drawing.Point(470, 123);
+            this.txtDes.Location = new System.Drawing.Point(545, 123);
             this.txtDes.Multiline = true;
             this.txtDes.Name = "txtDes";
             this.txtDes.Size = new System.Drawing.Size(284, 54);
@@ -217,7 +217,7 @@
             // txtName
             // 
             this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtName.Location = new System.Drawing.Point(470, 77);
+            this.txtName.Location = new System.Drawing.Point(545, 77);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(284, 26);
             this.txtName.TabIndex = 14;
@@ -227,7 +227,7 @@
             this.lbIsFood.AutoSize = true;
             this.lbIsFood.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbIsFood.Font = new System.Drawing.Font("SVN-Avo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbIsFood.Location = new System.Drawing.Point(306, 300);
+            this.lbIsFood.Location = new System.Drawing.Point(375, 300);
             this.lbIsFood.Name = "lbIsFood";
             this.lbIsFood.Size = new System.Drawing.Size(117, 60);
             this.lbIsFood.TabIndex = 8;
@@ -239,7 +239,7 @@
             this.panel1.Controls.Add(this.lbURLText);
             this.panel1.Controls.Add(this.btnBrowse);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(470, 183);
+            this.panel1.Location = new System.Drawing.Point(545, 183);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(460, 54);
             this.panel1.TabIndex = 19;
@@ -251,8 +251,9 @@
             this.lbURLText.Font = new System.Drawing.Font("SVN-Avo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbURLText.Location = new System.Drawing.Point(172, 13);
             this.lbURLText.Name = "lbURLText";
-            this.lbURLText.Size = new System.Drawing.Size(0, 27);
+            this.lbURLText.Size = new System.Drawing.Size(43, 27);
             this.lbURLText.TabIndex = 17;
+            this.lbURLText.Text = "C:\\";
             this.lbURLText.Visible = false;
             // 
             // btnBrowse
@@ -271,7 +272,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 544);
+            this.ClientSize = new System.Drawing.Size(1085, 544);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form_AddFood";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

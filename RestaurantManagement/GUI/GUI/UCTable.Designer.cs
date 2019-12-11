@@ -57,12 +57,12 @@ namespace GUI
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7F));
             this.tableLayoutPanel2.Controls.Add(this.flpTable, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 97);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 184);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(876, 548);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1922, 1061);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // flpTable
@@ -72,12 +72,12 @@ namespace GUI
             this.flpTable.Controls.Add(this.tableLayoutPanel4, 0, 1);
             this.flpTable.Controls.Add(this.flpTable1, 0, 0);
             this.flpTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpTable.Location = new System.Drawing.Point(64, 3);
+            this.flpTable.Location = new System.Drawing.Point(137, 3);
             this.flpTable.Name = "flpTable";
             this.flpTable.RowCount = 2;
             this.flpTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 67.39563F));
             this.flpTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.60437F));
-            this.flpTable.Size = new System.Drawing.Size(747, 503);
+            this.flpTable.Size = new System.Drawing.Size(1646, 980);
             this.flpTable.TabIndex = 0;
             // 
             // tableLayoutPanel4
@@ -88,13 +88,13 @@ namespace GUI
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8F));
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 1, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 342);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 663);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.87248F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 69.12752F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(741, 158);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1640, 314);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // tableLayoutPanel5
@@ -107,11 +107,11 @@ namespace GUI
             this.tableLayoutPanel5.Controls.Add(this.btnOrder, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnBook, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(62, 49);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(134, 64);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(616, 95);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1371, 95);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // btnPay
@@ -121,10 +121,10 @@ namespace GUI
             this.btnPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
             this.btnPay.Font = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPay.ForeColor = System.Drawing.Color.White;
-            this.btnPay.Location = new System.Drawing.Point(413, 3);
+            this.btnPay.Location = new System.Drawing.Point(917, 3);
             this.btnPay.Name = "btnPay";
             this.btnPay.ObjectID = 0;
-            this.btnPay.Size = new System.Drawing.Size(200, 62);
+            this.btnPay.Size = new System.Drawing.Size(451, 62);
             this.btnPay.TabIndex = 9;
             this.btnPay.Text = "Pay";
             this.btnPay.UseVisualStyleBackColor = false;
@@ -137,10 +137,10 @@ namespace GUI
             this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
             this.btnOrder.Font = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrder.ForeColor = System.Drawing.Color.White;
-            this.btnOrder.Location = new System.Drawing.Point(208, 3);
+            this.btnOrder.Location = new System.Drawing.Point(460, 3);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.ObjectID = 0;
-            this.btnOrder.Size = new System.Drawing.Size(199, 62);
+            this.btnOrder.Size = new System.Drawing.Size(451, 62);
             this.btnOrder.TabIndex = 8;
             this.btnOrder.Text = "Order";
             this.btnOrder.UseVisualStyleBackColor = false;
@@ -157,7 +157,7 @@ namespace GUI
             this.btnBook.Location = new System.Drawing.Point(3, 3);
             this.btnBook.Name = "btnBook";
             this.btnBook.ObjectID = 0;
-            this.btnBook.Size = new System.Drawing.Size(199, 62);
+            this.btnBook.Size = new System.Drawing.Size(451, 62);
             this.btnBook.TabIndex = 7;
             this.btnBook.Text = "Book";
             this.btnBook.UseVisualStyleBackColor = false;
@@ -165,10 +165,11 @@ namespace GUI
             // 
             // flpTable1
             // 
+            this.flpTable1.AutoScroll = true;
             this.flpTable1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpTable1.Location = new System.Drawing.Point(3, 3);
             this.flpTable1.Name = "flpTable1";
-            this.flpTable1.Size = new System.Drawing.Size(741, 333);
+            this.flpTable1.Size = new System.Drawing.Size(1640, 654);
             this.flpTable1.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -184,7 +185,7 @@ namespace GUI
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.52859F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.47141F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(882, 648);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1928, 1248);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // tableLayoutPanel3
@@ -202,7 +203,7 @@ namespace GUI
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(876, 88);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1922, 175);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // lbTable
@@ -211,10 +212,10 @@ namespace GUI
             this.lbTable.AutoSize = true;
             this.lbTable.Font = new System.Drawing.Font("SVN-Avo", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.lbTable.Location = new System.Drawing.Point(327, 21);
+            this.lbTable.Location = new System.Drawing.Point(715, 64);
             this.lbTable.Margin = new System.Windows.Forms.Padding(3);
             this.lbTable.Name = "lbTable";
-            this.lbTable.Size = new System.Drawing.Size(202, 46);
+            this.lbTable.Size = new System.Drawing.Size(451, 46);
             this.lbTable.TabIndex = 1;
             this.lbTable.Text = "Table";
             this.lbTable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -223,10 +224,10 @@ namespace GUI
             // 
             this.btn_Edit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Edit.Image = global::GUI.Properties.Resources.edit_96px;
-            this.btn_Edit.Location = new System.Drawing.Point(625, 15);
+            this.btn_Edit.Location = new System.Drawing.Point(1356, 15);
             this.btn_Edit.Margin = new System.Windows.Forms.Padding(15);
             this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.Size = new System.Drawing.Size(48, 58);
+            this.btn_Edit.Size = new System.Drawing.Size(142, 145);
             this.btn_Edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_Edit.TabIndex = 0;
             this.btn_Edit.TabStop = false;
@@ -239,7 +240,7 @@ namespace GUI
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "UCTable";
-            this.Size = new System.Drawing.Size(882, 648);
+            this.Size = new System.Drawing.Size(1928, 1248);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.flpTable.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
