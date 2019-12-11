@@ -78,5 +78,36 @@ namespace DataAccessLayer
             var x = dbContext.FoodDrinks.Where(f => f.FoodDrinkID == FoodID).FirstOrDefault();
             return Convert.ToDouble(x.FoodPrice);
         }
+        public List<FoodDrink> Search(string x, int k)
+        {
+            try
+            {
+                if (k == 0)
+                {
+                    // Food
+                    if (x != null)
+                    {
+                        var result = dbContext.FoodDrinks.Where(f => f.IsFood == true && f.FoodDrinkName.StartsWith(x)).ToList();
+                        return result;
+                    }
+                    return dbContext.FoodDrinks.Where(f => f.IsFood == true).ToList();
+                }
+                if (k == 1)
+                {
+                    // Drink
+                    if (x != null)
+                    {
+                        var result = dbContext.FoodDrinks.Where(f => f.IsFood == false && f.FoodDrinkName.StartsWith(x)).ToList();
+                        return result;
+                    }
+                    return dbContext.FoodDrinks.Where(f => f.IsFood == false).ToList();
+                }
+                return null;
+            }
+            catch
+            {
+                return null;
+            }
+        }
     }
 }
