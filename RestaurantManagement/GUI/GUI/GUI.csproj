@@ -426,6 +426,7 @@
     <None Include="Resources\add_96px.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\search.png" />
     <None Include="Resources\splash-screen.gif" />
     <None Include="Resources\next.png" />
     <None Include="Resources\icons8_delete_sign_64px.png" />
@@ -472,6 +473,7 @@
     <None Include="Resources\Background-Restaurant.png" />
     <None Include="Resources\Background-Restaurant1.png" />
     <Content Include="LICENSE.txt" />
+    <None Include="Resources\delete1.png" />
     <Content Include="Resources\delete_64px.png" />
     <None Include="Resources\delete_64px.png" />
   </ItemGroup>

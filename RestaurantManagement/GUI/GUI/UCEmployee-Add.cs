@@ -29,8 +29,16 @@ namespace GUI
             InitializeComponent();
         }
 
+        public string convertToUnSign(string s)
+        {
+            Regex regex = new Regex("\\p{IsCombiningDiacriticalMarks}+");
+            string temp = s.Normalize(NormalizationForm.FormD);
+            return regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
+        }
+
         private string Create_Username(string s)
         {
+            s = convertToUnSign(s);
             string result = "";
             s = s.ToLower();
             char[] charArr = s.ToCharArray();
@@ -58,6 +66,7 @@ namespace GUI
 
         private string Create_Password(string name, DateTime DOB)
         {
+            name = convertToUnSign(name);
             string result = "";
             name = name.ToLower();
             char[] charArr = name.ToCharArray();
@@ -85,10 +94,18 @@ namespace GUI
                 || String.IsNullOrEmpty(dtpDOB.Text))
             {
                 MessageBox.Show("Please insert information fully !", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                errorGender.Text = "error";
-                errorCMND.Text = "error";
-                errorEmail.Text = "error";
-                errorPhone.Text = "error";
+                if (cbGender.Text == "-select-") 
+                    errorGender.Text = " This need to be chosen";
+                if (String.IsNullOrEmpty(txtCMND.Text))
+                    errorCMND.Text = " This cannot be empty";  
+                if (String.IsNullOrEmpty(txtEmail.Text))
+                    errorEmail.Text = " This cannot be empty";
+                if (String.IsNullOrEmpty(txtPhone.Text))
+                    errorPhone.Text = " This cannot be empty";
+                if (String.IsNullOrEmpty(txtAddress.Text))
+                    errorAddress.Text = " This cannot be empty";
+                if (String.IsNullOrEmpty(txtName.Text))
+                    errorName.Text = " This cannot be empty";
             }
             else
             {
@@ -152,18 +169,45 @@ namespace GUI
             mainform.loadUCEmployee();
         }
 
-        private void txtPhone_KeyPress_1(object sender, KeyPressEventArgs e)
+        private void txtCMND_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
-                errorPhone.Text = "";
+                errorCMND.Text = "This input requires numbers only";  
                 e.Handled = true;
             }
             else
-                errorPhone.Text = "error";
+                errorCMND.Text = "";
         }
 
-        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtCMND_Leave(object sender, EventArgs e)
+        {
+            if (txtCMND.TextLength < 9)
+                errorCMND.Text = "Incorrect input";
+            else
+                errorCMND.Text = "";
+        }
+
+        private void txtPhone_Leave(object sender, EventArgs e)
+        {
+            if (txtPhone.TextLength < 10)
+                errorPhone.Text = "Incorrect input";
+            else
+                errorPhone.Text = "";
+        }
+
+        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                errorPhone.Text = "This input requires numbers only";  
+                e.Handled = true;
+            }
+            else
+                errorPhone.Text = "";
+        }
+
+        private void txtEmail_Leave(object sender, EventArgs e)
         {
             Regex mRegxExpression;
 
@@ -171,23 +215,14 @@ namespace GUI
             {
                 mRegxExpression = new Regex(@"^([a-zA-Z0-9_\-])([a-zA-Z0-9_\-\.]*)@(\[((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}|((([a-zA-Z0-9\-]+)\.)+))([a-zA-Z]{2,}|(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\])$");
                 if (!mRegxExpression.IsMatch(txtEmail.Text.Trim()))
-
                 {
                     errorEmail.Text = "E-mail address format is not correct !";
                     txtEmail.Focus();
                 }
+                else
+                    errorEmail.Text = "";
             }
         }
-
-        private void txtCMND_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                errorCMND.Text = "";
-                e.Handled = true;
-            }
-            else
-                errorCMND.Text = "error";
-        }
+        
     }
 }

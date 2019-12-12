@@ -60,10 +60,11 @@ namespace BLL
             return employeeDAL.LoadRecord(page, recordNum);
         }
 
-        public List<Employee> Sreach(string x,int k)
+        public List<Employee> Sreach(string x, int k, int page, int recordNum)
         {
-            return employeeDAL.Sreach(x, k);
+            return employeeDAL.Sreach(x, k,page,recordNum);
         }
+
         public bool CheckPassword(int EmployeeID, string Password)
         {
             return employeeDAL.CheckPassword(EmployeeID, Password);
