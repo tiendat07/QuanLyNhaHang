@@ -245,6 +245,12 @@
     <Compile Include="UCOrder.Designer.cs">
       <DependentUpon>UCOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCStatistic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCStatistic.Designer.cs">
+      <DependentUpon>UCStatistic.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCTable-Edit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -335,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCOrder.resx">
       <DependentUpon>UCOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCStatistic.resx">
+      <DependentUpon>UCStatistic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCTable-Edit.resx">
       <DependentUpon>UCTable-Edit.cs</DependentUpon>

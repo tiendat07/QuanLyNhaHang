@@ -32,6 +32,8 @@ namespace GUI
         List<FoodDrink> lstFoodDrink;
         List<FoodDrink> lstFood;
         List<FoodDrink> lstDrink;
+        List<myLabelEdit> lslabelPrice;
+        List<myTextEdit> lstxtPrice;
         public UCMenu_Edit(Form_Restaurant form1)
         {
             lstFood = new List<FoodDrink>();
@@ -39,10 +41,12 @@ namespace GUI
             foodDrinkBLL = new FoodDrinkBLL();
             lstFoodDrink = foodDrinkBLL.GetListFoodDrink();
             lslabelName = new List<myLabelEdit>();
+            lslabelPrice = new List<myLabelEdit>();
             lsdescription = new List<myLabelEdit>();
             lspicBox = new List<myButtonEdit>();
             lspicDelete = new List<myButtonEdit>();
             lstxtName = new List<myTextEdit>();
+            lstxtPrice = new List<myTextEdit>();
             lstxtDes = new List<myTextEdit>();
             lspicEdit = new List<myButtonEdit>();
             mainform = form1;
@@ -136,14 +140,13 @@ namespace GUI
                 myButtonEdit picDelete = new myButtonEdit();
                 myLabelEdit labelName = new myLabelEdit();
                 myLabelEdit description = new myLabelEdit();
+                myLabelEdit labelPrice = new myLabelEdit();
 
                 //Invisible Item
                 myTextEdit txtName = new myTextEdit();
                 myTextEdit txtDescription = new myTextEdit();
                 myButtonEdit picEdit = new myButtonEdit();
-                // Location? Why not appear?
-                panel_Food.Controls.Add(txtName);
-
+                myTextEdit txtPrice = new myTextEdit();
 
                 picDelete.objectID = foodID;
                 picBox.objectID = foodID;
@@ -151,15 +154,20 @@ namespace GUI
                 txtName.objectText = item.FoodDrinkName;
                 txtDescription.objectID = foodID;
                 txtDescription.objectText = item.Description;
+                txtPrice.objectID = foodID;
 
                 x = (count % 2 == 0) ? 0 : x + 500;
                 // Location
                 picBox.Location = new Point(x, y);
                 labelName.Location = new Point(x + width + 10, y);
                 description.Location = new Point(x + width + 10, y + 30);
-                picDelete.Location = new Point(x + width + 220, y);
+                labelPrice.Location = new Point(x + width + 210, y);
                 txtName.Location = new Point(x + width + 10, y);
                 txtDescription.Location = new Point(x + width + 10, y + 30);
+                txtPrice.Location = new Point(x + width + 210, y);
+
+                picDelete.Location = new Point(x + width + 300, y);
+                
                 // Sau 2 món thì Xuống dòng
                 if (count % 2 != 0)
                     y += 100;
@@ -181,6 +189,13 @@ namespace GUI
                 description.Width = 200;
                 description.Height = 70;
 
+                // Label Price
+                labelPrice.Text = Convert.ToString(item.FoodPrice);
+                labelPrice.AutoSize = false;
+                labelPrice.Width = 70;
+                labelPrice.Height = 30;
+                labelPrice.Font = new Font("SVN-Avo", 15);
+                labelPrice.ForeColor = Color.Black;
 
                 // PicBox
                 picBox.ImageLocation = item.ImageURL;
@@ -217,10 +232,22 @@ namespace GUI
                 txtDescription.Multiline = true;
                 txtDescription.BorderStyle = BorderStyle.None;
 
+                // TextPrice
+                txtPrice.Text = Convert.ToString(item.FoodPrice);
+                txtPrice.Name = "Text" + foodID;
+                txtPrice.Width = 70;
+                txtPrice.Height = 15;
+                txtPrice.Font = new Font("SVN-Avo", 15);
+                txtPrice.ForeColor = Color.Black;
+                txtPrice.Visible = false;
+                txtPrice.BorderStyle = BorderStyle.None;
+                
+
                 txtName.TextChanged += new EventHandler(Name_TextChanged);
                 txtDescription.TextChanged += new EventHandler(Description_TextChanged);
                 picBox.Click += new EventHandler(ButtonChangeClick);
                 picDelete.Click += new EventHandler(ButtonDeleteClick);
+                txtPrice.TextChanged += TxtPrice_TextChanged;
                 //btnEdit.Click += btnEdit_Click;
 
                 // List
@@ -231,6 +258,8 @@ namespace GUI
                 lstxtName.Add(txtName);
                 lstxtDes.Add(txtDescription);
                 lspicEdit.Add(picEdit);
+                lstxtPrice.Add(txtPrice);
+                lslabelPrice.Add(labelPrice);
                 if (isFood == true)
                 {
                     panel_Food.Controls.Add(picBox);
@@ -239,6 +268,7 @@ namespace GUI
                     panel_Food.Controls.Add(picDelete);
                     panel_Food.Controls.Add(txtName);
                     panel_Food.Controls.Add(txtDescription);
+                    panel_Food.Controls.Add(labelPrice);
                     // panel_Food.Controls.Add(picEdit);
                 }
                 else
@@ -249,12 +279,37 @@ namespace GUI
                     panel_Drink.Controls.Add(picDelete);
                     panel_Drink.Controls.Add(txtName);
                     panel_Drink.Controls.Add(txtDescription);
+                    panel_Drink.Controls.Add(labelPrice);
                     // panel_Drink.Controls.Add(picEdit);
                 }
 
                 count++;
             }
         }
+
+        private void TxtPrice_TextChanged(object sender, EventArgs e)
+        {
+            myTextEdit txt = sender as myTextEdit;
+            txt.objectText = txt.Text;
+
+            foreach (var item in lsFoodDrink_Temp)
+            {
+                if (item.FoodDrinkID == txt.objectID)
+                {
+                    try
+                    {
+                        item.FoodPrice = Double.Parse(txt.Text);
+                    }
+                   catch (Exception ex)
+                    {
+                        MessageBox.Show(" " + ex);
+                    }
+                    //MessageBox.Show(" " + item.Description);
+                }
+
+            }
+        }
+
         public void LoadData()
         {
             
@@ -288,9 +343,13 @@ namespace GUI
                 item.Visible = false;
             //foreach (var item in lspicBox)
             //    item.Visible = false;
+            foreach (var item in lslabelPrice)
+                item.Visible = false;
             foreach (var item in lstxtDes)
                 item.Visible = true;
             foreach (var item in lstxtName)
+                item.Visible = true;
+            foreach (var item in lstxtPrice)
                 item.Visible = true;
             foreach (var item in lspicDelete)
             {
@@ -312,7 +371,7 @@ namespace GUI
             {
                 //yes...
                 this.Hide();
-               // mainform.loadUCMenuEdit();
+                mainform.loadUCMenuEdit();
             }
         }
 

@@ -94,13 +94,14 @@ namespace GUI
                 PictureBox picBox = new PictureBox();
                 Label labelName = new Label();
                 Label description = new Label();
-                
+                Label labelPrice = new Label();
                 x = (count % 2 == 0) ? 0 : x + 500;
 
                 picBox.Location = new Point(x, y);
                 labelName.Location = new Point(x + width + 10, y);
+                labelPrice.Location = new Point(x + width + 210, y);
                 description.Location = new Point(x + width + 10, y + 30);
-
+                
                 if (count % 2 != 0)
                     y += 100;
 
@@ -118,6 +119,13 @@ namespace GUI
                 description.Width = 200;
                 description.Height = 50;
 
+                labelPrice.Text = Convert.ToString(item.FoodPrice);
+                labelPrice.AutoSize = false;
+                labelPrice.Width = 100;
+                labelPrice.Height = 30;
+                labelPrice.Font = new Font("SVN-Avo", 15);
+                labelPrice.ForeColor = Color.Black;
+
                 picBox.ImageLocation = item.ImageURL;
                 picBox.ClientSize = new Size(width, height);
                 picBox.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -126,12 +134,15 @@ namespace GUI
                     panel_Food.Controls.Add(picBox);
                     panel_Food.Controls.Add(labelName);
                     panel_Food.Controls.Add(description);
+                    panel_Food.Controls.Add(labelPrice);
+
                 }
                 else
                 {
                     panel_Drink.Controls.Add(picBox);
                     panel_Drink.Controls.Add(labelName);
                     panel_Drink.Controls.Add(description);
+                    panel_Drink.Controls.Add(labelPrice);
                 }
 
                 count++;
