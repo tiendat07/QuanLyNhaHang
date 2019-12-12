@@ -137,19 +137,23 @@ namespace DataAccessLayer
         }
         public List<Employee> LoadRecord(int page, int recordNum)
         {
+            // Cái chỗ này mình nên làm là 
             List<Employee> result = new List<Employee>();
+
             result = dbContext.Employees.Where(e => e.Status == 1).OrderBy(s=> s.EmployeeID).Skip((page - 1) * recordNum).Take(recordNum).ToList(); //bỏ qua những cái đã load chỉ lấy phần cần lấy
             
             return result;
         }
        
-        public List<Employee> Sreach(string x,int k)
+        public List<Employee> Sreach(string x,int k,int page, int recordNum)
         {
             if(k==0) // cac loai ko can phan loai
             {
-                return dbContext.Employees.Where(y => y.Name.StartsWith(x)|| y.Address.StartsWith(x)|| y.CMND.StartsWith(x) 
+                return dbContext.Employees.Where(y => y.Name.Contains(x)|| y.Address.StartsWith(x)|| y.CMND.StartsWith(x) 
                 || EntityFunctions.TruncateTime(y.DateOfBirth).ToString().Contains(x)|| y.Email.StartsWith(x) 
-                || SqlFunctions.StringConvert((double)y.EmployeeID).TrimStart().StartsWith(x) || y.PhoneNumber.Contains(x)).ToList();
+                || SqlFunctions.StringConvert((double)y.EmployeeID).TrimStart().StartsWith(x) || y.PhoneNumber.Contains(x))
+                .OrderBy(s => s.EmployeeID).Skip((page - 1) * recordNum).Take(recordNum).ToList();
+                
             }
             if(k==1) //nam
             {
@@ -169,31 +173,35 @@ namespace DataAccessLayer
             }
             if(k==5)//nam + string x
             {
-                return dbContext.Employees.Where(y => y.IsFemale==false && (y.Name.StartsWith(x) || y.Address.StartsWith(x) 
+                return dbContext.Employees.Where(y => y.IsFemale==false && (y.Name.Contains(x) || y.Address.StartsWith(x) 
                 || y.CMND.StartsWith(x) || y.Email.StartsWith(x) || y.PhoneNumber.Contains(x)
                 || EntityFunctions.TruncateTime(y.DateOfBirth).ToString().Contains(x) 
-                || SqlFunctions.StringConvert((double)y.EmployeeID).TrimStart().StartsWith(x))).ToList();
+                || SqlFunctions.StringConvert((double)y.EmployeeID).TrimStart().StartsWith(x)))
+                .OrderBy(s => s.EmployeeID).Skip((page - 1) * recordNum).Take(recordNum).ToList();
             }
             if (k == 6)//nu + string x
             {
-                return dbContext.Employees.Where(y => y.IsFemale == true && (y.Name.StartsWith(x) || y.Address.StartsWith(x)
+                return dbContext.Employees.Where(y => y.IsFemale == true && (y.Name.Contains(x) || y.Address.StartsWith(x)
                 || y.CMND.StartsWith(x) || y.Email.StartsWith(x) || y.PhoneNumber.Contains(x)
                 || EntityFunctions.TruncateTime(y.DateOfBirth).ToString().Contains(x)
-                || SqlFunctions.StringConvert((double)y.EmployeeID).TrimStart().StartsWith(x))).ToList();
+                || SqlFunctions.StringConvert((double)y.EmployeeID).TrimStart().StartsWith(x)))
+                .OrderBy(s => s.EmployeeID).Skip((page - 1) * recordNum).Take(recordNum).ToList();
             }
             if (k == 7)//admin + string x
             {
-                return dbContext.Employees.Where(y => y.IsAdmin == true && (y.Name.StartsWith(x) || y.Address.StartsWith(x)
+                return dbContext.Employees.Where(y => y.IsAdmin == true && (y.Name.Contains(x) || y.Address.StartsWith(x)
                 || y.CMND.StartsWith(x) || y.Email.StartsWith(x) || y.PhoneNumber.Contains(x)
                 || EntityFunctions.TruncateTime(y.DateOfBirth).ToString().Contains(x)
-                || SqlFunctions.StringConvert((double)y.EmployeeID).TrimStart().StartsWith(x))).ToList();
+                || SqlFunctions.StringConvert((double)y.EmployeeID).TrimStart().StartsWith(x)))
+                .OrderBy(s => s.EmployeeID).Skip((page - 1) * recordNum).Take(recordNum).ToList();
             }
             if (k == 8)//employee + string x
             {
-                return dbContext.Employees.Where(y => y.IsAdmin == false && (y.Name.StartsWith(x) || y.Address.StartsWith(x)
+                return dbContext.Employees.Where(y => y.IsAdmin == false && (y.Name.Contains(x) || y.Address.StartsWith(x)
                 || y.CMND.StartsWith(x) || y.Email.StartsWith(x) || y.PhoneNumber.Contains(x)
                 || EntityFunctions.TruncateTime(y.DateOfBirth).ToString().Contains(x)
-                || SqlFunctions.StringConvert((double)y.EmployeeID).TrimStart().StartsWith(x))).ToList();
+                || SqlFunctions.StringConvert((double)y.EmployeeID).TrimStart().StartsWith(x)))
+                .OrderBy(s => s.EmployeeID).Skip((page - 1) * recordNum).Take(recordNum).ToList();
             }
             return dbContext.Employees.ToList();
 
@@ -208,7 +216,7 @@ namespace DataAccessLayer
                     if (storedHash != null)
                         return BCrypt.Net.BCrypt.Verify(Password, storedHash);
                 }
-                catch(Exception e)
+                catch(Exception ex)
                 {
                     return false;
                 }

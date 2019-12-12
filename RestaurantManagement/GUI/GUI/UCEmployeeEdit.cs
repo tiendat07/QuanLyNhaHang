@@ -24,6 +24,8 @@ namespace GUI
             mainform = form;
             InitializeComponent();
             loadData();
+            dgtEmployeeEdit.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
+            this.dgtEmployeeEdit.Columns["ID"].Visible = false;
         }
 
         public void loadData()

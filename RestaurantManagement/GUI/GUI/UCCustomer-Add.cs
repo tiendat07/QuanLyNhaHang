@@ -44,11 +44,8 @@ namespace GUI
                 ctm.Name = txtName.Text;
                 ctm.CMND = txtCMND.Text;
                 ctm.PhoneNumber = txtPhone.Text;
+                ctm.Status = 1;
                 ctm.IsFemale = (cbGender.SelectedItem.ToString() == "Female") ? true : false;
-                if (ctm.IsFemale == true)
-                    MessageBox.Show("Female");
-                else
-                    MessageBox.Show("Male");
                 if (customerBLL.AddCustomer(ctm) == true)
                 {
                     DialogResult dialog = MessageBox.Show("Saved successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
