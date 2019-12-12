@@ -427,6 +427,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search.png" />
+    <None Include="Resources\icons8_delete_64.png" />
+    <None Include="Resources\icons8_search_64.png" />
+    <None Include="Resources\icons8_search_32.png" />
     <None Include="Resources\splash-screen.gif" />
     <None Include="Resources\next.png" />
     <None Include="Resources\icons8_delete_sign_64px.png" />

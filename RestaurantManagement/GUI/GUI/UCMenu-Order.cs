@@ -20,9 +20,15 @@ namespace GUI
         List<FoodDrink> lsFood;
         List<myNumericUpDown> lsNumeric;
         List<OrderDetail> lsOrder;
+        List<FoodDrink> lstFoodDrink;
+        List<FoodDrink> lstFood;
+        List<FoodDrink> lstDrink;
         int EmpID, TabID;
         public UCMenu_Order(Form_Restaurant form1, int EmployeeID, int TableID)
         {
+            lstFood = new List<FoodDrink>();
+            lstDrink = new List<FoodDrink>();
+
             EmpID = EmployeeID;
             TabID = TableID;
             orderDetailBLL = new OrderDetailBLL();
@@ -66,6 +72,7 @@ namespace GUI
                         item.Enabled = true;
                         btnSave.Visible = true;
                         btnSave.Enabled = true;
+
                         btnCancel.Visible = true;
                         btnCancel.Enabled = true;
                         OrderDetail orderDetail = new OrderDetail();
@@ -82,8 +89,10 @@ namespace GUI
             {
                 btnSave.Visible = false;
                 btnSave.Enabled = false;
+
                 btnCancel.Visible = false;
                 btnCancel.Enabled = false;
+
                 if (lsOrder.Any() == true)
                 {
                     
@@ -199,9 +208,7 @@ namespace GUI
         }
         public void LoadData()
         {
-            List<FoodDrink> lstFoodDrink = foodDrinkBLL.GetListFoodDrink();
-            List<FoodDrink> lstFood = new List<FoodDrink>();
-            List<FoodDrink> lstDrink = new List<FoodDrink>();
+            lstFoodDrink = foodDrinkBLL.GetListFoodDrink();
             foreach (FoodDrink item in lstFoodDrink)
             {
                 if (item.IsFood == true)
@@ -229,6 +236,65 @@ namespace GUI
                 MessageBox.Show("Please choose your choice");
             }
                 
+        }
+
+        private void txtSearch1_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch1.Text != "Search...")
+            {
+                List<FoodDrink> lsFood = foodDrinkBLL.Search(txtSearch1.Text, 0);
+                panel_Food.Controls.Clear();
+                Load(lsFood, true);
+            }
+        }
+
+        private void txtSearch2_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch2.Text != "Search...")
+            {
+                List<FoodDrink> lsDrink = foodDrinkBLL.Search(txtSearch2.Text, 1);
+                panel_Drink.Controls.Clear();
+                Load(lsDrink, false);
+            }
+        }
+
+        private void txtSearch2_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch2.Text == "Search...")
+                txtSearch2.Text = "";
+        }
+
+        private void txtSearch1_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch1.Text == "Search...")
+                txtSearch1.Text = "";
+        }
+
+        private void txtSearch1_Leave(object sender, EventArgs e)
+        {
+            if (txtSearch1.Text == "")
+                txtSearch1.Text = "Search...";
+        }
+
+        private void txtSearch2_Leave(object sender, EventArgs e)
+        {
+            if (txtSearch2.Text == "")
+                txtSearch2.Text = "Search...";
+
+        }
+
+        private void btnDelete1_Click(object sender, EventArgs e)
+        {
+            txtSearch1.Text = "";
+            panel_Food.Controls.Clear();
+            Load(lstFood, true);
+        }
+
+        private void btnDelete2_Click(object sender, EventArgs e)
+        {
+            txtSearch2.Text = "";
+            panel_Drink.Controls.Clear();
+            Load(lstDrink, false);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

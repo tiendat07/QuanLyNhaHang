@@ -38,5 +38,9 @@ namespace BLL
         {
             return foodDrinkDAL.GetFoodPrice(FoodID);
         }
+        public List<FoodDrink> Search(string x, int k)
+        {
+            return foodDrinkDAL.Search(x, k);
+        }
     }
 }

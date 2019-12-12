@@ -17,6 +17,7 @@ namespace GUI
 {
     public partial class UCMenu_Edit : UserControl
     {
+        bool isEdit = false;
         FoodDrinkBLL foodDrinkBLL;
         string picturePath;
         Form_Restaurant mainform;
@@ -28,9 +29,15 @@ namespace GUI
         List<myTextEdit> lstxtName;
         List<myTextEdit> lstxtDes;
         List<FoodDrink> lsFoodDrink_Temp;
+        List<FoodDrink> lstFoodDrink;
+        List<FoodDrink> lstFood;
+        List<FoodDrink> lstDrink;
         public UCMenu_Edit(Form_Restaurant form1)
         {
+            lstFood = new List<FoodDrink>();
+            lstDrink = new List<FoodDrink>();
             foodDrinkBLL = new FoodDrinkBLL();
+            lstFoodDrink = foodDrinkBLL.GetListFoodDrink();
             lslabelName = new List<myLabelEdit>();
             lsdescription = new List<myLabelEdit>();
             lspicBox = new List<myButtonEdit>();
@@ -70,19 +77,20 @@ namespace GUI
         private void ButtonChangeClick(object sender, EventArgs e)
         {
             //ShowDialog
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            if (isEdit == true)
             {
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                using (OpenFileDialog openFileDialog = new OpenFileDialog())
                 {
-                    openFileDialog.Filter = "Image files|*.bmp;*.jpg;*.gif;*.png;*.tif";
-                    picturePath = openFileDialog.FileName;
-                    myButtonEdit btn = sender as myButtonEdit;
-                    //MessageBox.Show(" " + btn.objectID);
-                    foreach (var item in lsFoodDrink_Temp)
-                        if (item.FoodDrinkID == btn.objectID)
-                            item.ImageURL = picturePath;
-                    // Truy vấn xuống database để chạy lại
+                    if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        openFileDialog.Filter = "Image files|*.bmp;*.jpg;*.gif;*.png;*.tif";
+                        picturePath = openFileDialog.FileName;
+                        myButtonEdit btn = sender as myButtonEdit;
+                        foreach (var item in lsFoodDrink_Temp)
+                            if (item.FoodDrinkID == btn.objectID)
+                                item.ImageURL = picturePath;
 
+                    }
                 }
             }
         }
@@ -249,9 +257,7 @@ namespace GUI
         }
         public void LoadData()
         {
-            List<FoodDrink> lstFoodDrink = foodDrinkBLL.GetListFoodDrink();
-            List<FoodDrink> lstFood = new List<FoodDrink>();
-            List<FoodDrink> lstDrink = new List<FoodDrink>();
+            
             foreach (FoodDrink item in lstFoodDrink)
             {
                 if (item.IsFood == true)
@@ -266,6 +272,7 @@ namespace GUI
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            isEdit = true;
             btnEdit.Visible = false;
             btnAdd.Visible = false;
             btnSave.Enabled = true;
@@ -294,8 +301,8 @@ namespace GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Form_AddFood f = new Form_AddFood();
-            f.Show();
+            Form_AddFood f = new Form_AddFood(mainform);
+            f.ShowDialog();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -331,6 +338,65 @@ namespace GUI
             }
 
 
+        }
+
+        private void txtSearch1_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch1.Text != "Search...")
+            {
+                List<FoodDrink> lsFood = foodDrinkBLL.Search(txtSearch1.Text, 0);
+                panel_Food.Controls.Clear();
+                Load(lsFood, true);
+            }
+        }
+
+        private void txtSearch2_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch2.Text != "Search...")
+            {
+                List<FoodDrink> lsDrink = foodDrinkBLL.Search(txtSearch2.Text, 1);
+                panel_Drink.Controls.Clear();
+                Load(lsDrink, false);
+            }
+        }
+
+        private void btnDelete1_Click(object sender, EventArgs e)
+        {
+            txtSearch1.Text = "";
+            panel_Food.Controls.Clear();
+            Load(lstFood, true);
+        }
+
+        private void btnDelete2_Click(object sender, EventArgs e)
+        {
+            txtSearch2.Text = "";
+            panel_Drink.Controls.Clear();
+            Load(lstDrink, false);
+        }
+
+        private void txtSearch1_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch1.Text == "Search...")
+                txtSearch1.Text = "";
+        }
+
+        private void txtSearch1_Leave(object sender, EventArgs e)
+        {
+            if (txtSearch1.Text == "")
+                txtSearch1.Text = "Search...";
+        }
+
+        private void txtSearch2_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch2.Text == "Search...")
+                txtSearch2.Text = "";
+
+        }
+
+        private void txtSearch2_Leave(object sender, EventArgs e)
+        {
+            if (txtSearch2.Text == "")
+                txtSearch2.Text = "Search...";
         }
     }
 }

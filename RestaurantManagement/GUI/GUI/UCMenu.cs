@@ -18,13 +18,69 @@ namespace GUI
     {
         FoodDrinkBLL foodDrinkBLL;
         Form_Restaurant mainform;
+        List<FoodDrink> lstFoodDrink;
+        List<FoodDrink> lstFood;
+        List<FoodDrink> lstDrink;
+        BackgroundWorker backgroundWorker1;
         public UCMenu(Form_Restaurant form1)
         {
             foodDrinkBLL = new FoodDrinkBLL();
+            lstFood = new List<FoodDrink>();
+            lstDrink = new List<FoodDrink>();
             mainform = form1;
             InitializeComponent();
+            //InitializeWorker();
             LoadData();
         }
+        private void InitializeWorker()
+        {
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            backgroundWorker1.WorkerReportsProgress = true;
+            backgroundWorker1.WorkerSupportsCancellation = true;
+            backgroundWorker1.DoWork += BackgroundWorker1_DoWork;
+            backgroundWorker1.RunWorkerCompleted += BackgroundWorker1_RunWorkerCompleted;
+            backgroundWorker1.ProgressChanged += BackgroundWorker1_ProgressChanged;
+        }
+
+        private void BackgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            ProgressBar1.Value = e.ProgressPercentage;
+        }
+
+        private void BackgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            
+        }
+
+        private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker worker = sender as BackgroundWorker;
+
+            if (worker.CancellationPending == true)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                LoadData();
+               // worker.ReportProgress(count / numberofFiles * 100);
+
+            }
+            
+        }
+
+        private void TxtSearch2_GotFocus(object sender, EventArgs e)
+        {
+            if (txtSearch2.Text == "Search...")
+                txtSearch2.Text = "";
+        }
+
+        private void TxtSearch1_GotFocus(object sender, EventArgs e)
+        {
+            if (txtSearch1.Text == "Search...")
+                txtSearch1.Text = "";
+        }
+
         public void Load (List <FoodDrink> lstFood, bool isFood)
         {
 
@@ -83,9 +139,7 @@ namespace GUI
         }
         public void LoadData()
         {
-            List<FoodDrink> lstFoodDrink = foodDrinkBLL.GetListFoodDrink();
-            List<FoodDrink> lstFood = new List<FoodDrink>();
-            List<FoodDrink> lstDrink = new List<FoodDrink>();
+            lstFoodDrink = foodDrinkBLL.GetListFoodDrink();
             foreach (FoodDrink item in lstFoodDrink)
             {
                 if (item.IsFood == true)
@@ -100,6 +154,66 @@ namespace GUI
         private void btnEditFood_Click_1(object sender, EventArgs e)
         {
             mainform.loadUCMenuEdit();
+        }
+        
+        private void txtSearch1_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch1.Text != "Search...")
+            {
+                List<FoodDrink> lsFood = foodDrinkBLL.Search(txtSearch1.Text, 0);
+                panel_Food.Controls.Clear();
+                Load(lsFood, true);
+            }
+           
+        }
+
+        private void txtSearch1_Leave(object sender, EventArgs e)
+        {
+            if (txtSearch1.Text == "")
+                txtSearch1.Text = "Search...";
+        }
+
+        private void txtSearch1_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch1.Text == "Search...")
+                txtSearch1.Text = "";
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            txtSearch1.Text = "";
+            panel_Food.Controls.Clear();
+            Load(lstFood, true);
+        }
+
+        private void btnDelete2_Click(object sender, EventArgs e)
+        {
+            txtSearch2.Text = "";
+            panel_Drink.Controls.Clear();
+            Load(lstDrink, false);
+        }
+
+        private void txtSearch2_Leave(object sender, EventArgs e)
+        {
+            if (txtSearch2.Text == "")
+                txtSearch2.Text = "Search...";
+
+        }
+
+        private void txtSearch2_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch2.Text == "Search...")
+                txtSearch2.Text = "";
+        }
+
+        private void txtSearch2_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch2.Text != "Search...")
+            {
+                List<FoodDrink> lsDrink = foodDrinkBLL.Search(txtSearch2.Text, 1);
+                panel_Drink.Controls.Clear();
+                Load(lsDrink, false);
+            } 
         }
     }
 }

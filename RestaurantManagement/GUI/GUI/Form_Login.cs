@@ -4,11 +4,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+using DataAccessLayer;
 namespace GUI
 {
     public partial class Form_Login : Form
@@ -67,6 +69,9 @@ namespace GUI
                 {
                     bool isAdmin = employeeBLL.CheckAdmin(tenDN);
                     int employeeID = employeeBLL.GetEmployeeID(tenDN);
+                    Employee employ = employeeBLL.FindEmployee(employeeID);
+                    MessageBox.Show("Hello " + employ.Name);
+
                     Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
                     this.Hide();
                     f.Closed += (s, args) => this.Close();
@@ -95,10 +100,13 @@ namespace GUI
                     {
                         bool isAdmin = employeeBLL.CheckAdmin(tenDN);
                         int employeeID = employeeBLL.GetEmployeeID(tenDN);
+                        Employee employ = employeeBLL.FindEmployee(employeeID);
+                        MessageBox.Show("Hello " + employ.Name);
+
                         Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
                         this.Hide();
-                        f.ShowDialog();
-                        this.Close();
+                        f.Closed += (s, args) => this.Close();
+                        f.Show();
                     }
                     else
                     {
@@ -136,13 +144,64 @@ namespace GUI
 
         void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            splashScreen.Close();
-            this.Visible = true;
+            try
+            {
+                splashScreen.Close();
+                this.Visible = true;
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(Convert.ToString(ex));
+            }
         }
 
         void worker_DoWork(object sender, DoWorkEventArgs e)
         {
             System.Threading.Thread.Sleep(5000);
+        }
+
+        private void txtPassword_OnValueChanged(object sender, EventArgs e)
+        {
+            if (btnSignIn.BackColor == Color.FromArgb(200, 237, 230))
+            {
+                btnSignIn.BackColor = Color.FromArgb(18, 37, 44);
+                btnSignIn.ForeColor = Color.White;
+            }
+        }
+
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter && txtPassword.Text != null)
+            {
+                string tenDN = txtUsername.Text;
+                string matkhau = txtPassword.Text;
+
+                if (string.IsNullOrEmpty(tenDN) || string.IsNullOrEmpty(matkhau))
+                {
+                    MessageBox.Show("Please insert your username and password correctly");
+                }
+                else
+                {
+                    if (employeeBLL.CheckLogin(tenDN, matkhau) == true)
+                    {
+                        bool isAdmin = employeeBLL.CheckAdmin(tenDN);
+                        int employeeID = employeeBLL.GetEmployeeID(tenDN);
+                        Employee employ = employeeBLL.FindEmployee(employeeID);
+                        MessageBox.Show("Hello " + employ.Name);
+                        Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
+                        this.Hide();
+                        f.Closed += (s, args) => this.Close();
+                        f.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Incorrect. Please try again !!");
+                    }
+
+
+                }
+            }
         }
     }
 }

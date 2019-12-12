@@ -14,8 +14,10 @@ namespace GUI
     public partial class Form_AddFood : Form
     {
         FoodDrinkBLL foodDrinkBLL;
-        public Form_AddFood()
+        Form_Restaurant mainform;
+        public Form_AddFood(Form_Restaurant f)
         {
+            mainform = f;
             foodDrinkBLL = new FoodDrinkBLL();
             InitializeComponent();
         }
@@ -44,6 +46,7 @@ namespace GUI
                     {
                         MessageBox.Show("Saved successfully");
                         this.Hide();
+                        mainform.loadUCMenuEdit();
                     }
                         
                     else
@@ -70,6 +73,7 @@ namespace GUI
                 {
                     openFileDialog.Filter = "Image files|*.bmp;*.jpg;*.gif;*.png;*.tif";
                     lbURLText.Text = openFileDialog.FileName;
+                    lbURLText.Visible = true;
                 }
             }
         }

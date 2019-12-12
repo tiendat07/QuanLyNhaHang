@@ -242,6 +242,7 @@ namespace GUI
             this.rB2.UseVisualStyleBackColor = true;
             this.rB2.Visible = false;
             this.rB2.CheckedChanged += new System.EventHandler(this.rB2_CheckedChanged);
+          
             // 
             // tableLayoutPanel5
             // 
