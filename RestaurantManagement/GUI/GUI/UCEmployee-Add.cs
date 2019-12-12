@@ -94,7 +94,7 @@ namespace GUI
                 || String.IsNullOrEmpty(dtpDOB.Text))
             {
                 MessageBox.Show("Please insert information fully !", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (cbGender.Text == "-select-") 
+                /*if (cbGender.Text == "-select-") 
                     errorGender.Text = " This need to be chosen";
                 if (String.IsNullOrEmpty(txtCMND.Text))
                     errorCMND.Text = " This cannot be empty";  
@@ -105,7 +105,7 @@ namespace GUI
                 if (String.IsNullOrEmpty(txtAddress.Text))
                     errorAddress.Text = " This cannot be empty";
                 if (String.IsNullOrEmpty(txtName.Text))
-                    errorName.Text = " This cannot be empty";
+                    errorName.Text = " This cannot be empty";*/
             }
             else
             {
