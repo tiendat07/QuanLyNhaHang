@@ -51,9 +51,9 @@ namespace BLL
             return customerDAL.LoadRecord(page, recordNum);
         }
 
-        public List<Customer> Sreach(string x, int k)
+        public List<Customer> Sreach(string x, int k,int page, int recordNum)
         {
-            return customerDAL.Sreach(x, k);
+            return customerDAL.Sreach(x, k, page, recordNum);
         }
     }
 }

@@ -26,6 +26,7 @@ namespace GUI
             loadData();
             dgvEmployee.ReadOnly = true;
             dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
+            this.dgvEmployee.Columns["ID"].Visible = false;
         }
 
         public void loadData()
@@ -49,7 +50,6 @@ namespace GUI
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "IsFemale";
             column.Name = "Gender";
-
             dgvEmployee.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
@@ -97,7 +97,7 @@ namespace GUI
         }
 
         int pageNumber = 1;
-        int numberRecord = 15;
+        int numberRecord = 20;
 
 
         private void brnComeback_Click(object sender, EventArgs e)
@@ -105,44 +105,10 @@ namespace GUI
             mainform.loadUCEmployee();
         }
         
-        private void dgvEmployee_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        /*private void dgvEmployee_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            var temp = dgvEmployee.Rows[e.RowIndex];
-            Employee emp = new Employee();
-            emp.EmployeeID = (int)temp.Cells["ID"].Value;
-            emp.Name = (string)temp.Cells["Name"].Value;
-            emp.Address = (string)temp.Cells["Address"].Value;
-            emp.CMND = (string)temp.Cells["CMND"].Value;
-            emp.DateOfBirth = (DateTime)temp.Cells["D.O.B"].Value;
-            emp.PhoneNumber = (string)temp.Cells["Phone"].Value;
-            emp.Email = (string)temp.Cells["Email"].Value;
-            emp.IsAdmin = (bool)temp.Cells["Is Admin"].Value;
-            emp.Username = (string)temp.Cells["Username"].Value;
-            emp.Password = (string)temp.Cells["Pasword"].Value;
-            emp.IsFemale = (bool)temp.Cells["Gender"].Value;
-            // Mỗi lần sửa, người đc sửa sẽ đc đưa vào danh sách đc sửa
-            ListEmpEdit.Add(emp);
-        }
-
-        private void dgvEmployee_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (this.dgvEmployee.Columns[e.ColumnIndex].Name == "Gender")
-            {
-                if (e.Value != null)
-                {
-                    int gender = Convert.ToInt32(e.Value);
-                    if (gender == 0)
-                    {
-                        e.Value = "Male";
-                    }
-                    else
-                    {
-                        e.Value = "Female";
-                    }
-                    e.FormattingApplied = true;
-                }
-            }
-        }
+            
+        }*/
 
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
@@ -230,6 +196,8 @@ namespace GUI
                 rB2.Visible = false;
                 dgvEmployee.DataSource = employeeBLL.GetListEmployee();
                 dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
+                if (txtSearch.Text == "Search...")
+                    dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
             }
         }
 
@@ -238,21 +206,16 @@ namespace GUI
             if (txtSearch.Text == "Search..." || txtSearch.Text == "")
             {
                 if (rB1.Text == "Admin" && rB1.Checked == true)
-                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 3);
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 3, pageNumber, numberRecord);
                 if (rB1.Text == "Male" && rB1.Checked == true)
-                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 1);
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 1, pageNumber, numberRecord);
             }
             else
             {
                 if (rB1.Text == "Admin" && rB1.Checked == true)
-                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 7);
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 7, pageNumber, numberRecord);
                 if (rB1.Text == "Male" && rB1.Checked == true)
-                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 5);
-            }
-            if (dgvEmployee.RowCount <= numberRecord)
-            {
-                btnPrevious.Visible = false;
-                btnNext.Visible = false;
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 5, pageNumber, numberRecord);
             }
         }
 
@@ -261,29 +224,58 @@ namespace GUI
             if (txtSearch.Text == "Search..." || txtSearch.Text == "")
             {
                 if (rB2.Text == "Employee" && rB2.Checked == true)
-                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 4);
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 4, pageNumber, numberRecord);
                 if (rB2.Text == "Female" && rB2.Checked == true)
-                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 2);
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 2, pageNumber, numberRecord);
             }
             else
             {
                 if (rB2.Text == "Employee" && rB2.Checked == true)
-                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 8);
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 8, pageNumber, numberRecord);
                 if (rB2.Text == "Female" && rB2.Checked == true)
-                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 6);
-            }
-            if (dgvEmployee.RowCount <= numberRecord)
-            {
-                btnPrevious.Visible = false;
-                btnNext.Visible = false;
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 6, pageNumber, numberRecord);
             }
         }
 
-        private void txtSearch_Enter(object sender, EventArgs e)
+        private void btnDeletetxt_Click(object sender, EventArgs e)
         {
-            if (txtSearch.Text == "Search...")
-                txtSearch.Text = "";
+            txtSearch.Text = "";
             dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            //0: cac loai ko can phan loai,1-5:nam,2-6:nu,3-7:admin,4-8:nhanvien
+            if (cbSearch.Text == "(...)" && txtSearch.Text != "")
+            {
+                dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
+            }
+            if (cbSearch.Text == "(...)")
+            {
+                dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 0, pageNumber, numberRecord);
+            }
+            if (txtSearch.Text != "")
+            {
+                if (rB1.Text == "Admin" && rB1.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 7, pageNumber, numberRecord);
+                if (rB1.Text == "Male" && rB1.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 5, pageNumber, numberRecord);
+                if (rB2.Text == "Employee" && rB2.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 8, pageNumber, numberRecord);
+                if (rB2.Text == "Female" && rB2.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 6, pageNumber, numberRecord);
+            }
+            else
+            {
+                if (rB1.Text == "Admin" && rB1.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 3, pageNumber, numberRecord);
+                if (rB1.Text == "Male" && rB1.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 1, pageNumber, numberRecord);
+                if (rB2.Text == "Employee" && rB2.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 4, pageNumber, numberRecord);
+                if (rB2.Text == "Female" && rB2.Checked == true)
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 2, pageNumber, numberRecord);
+            }
         }
 
         private void txtSearch_Leave(object sender, EventArgs e)
@@ -293,50 +285,31 @@ namespace GUI
             dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
         }
 
-        private void txtSearch_OnValueChanged(object sender, EventArgs e)
+        private void txtSearch_Enter(object sender, EventArgs e)
         {
-            //0: cac loai ko can phan loai,1-5:nam,2-6:nu,3-7:admin,4-8:nhanvien
-            if (cbSearch.Text == "(...)" && txtSearch.Text != "")
-            {
-                dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
-            }
-            if (cbSearch.Text == "(...)")
-            {
-                dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 0);
-            }
-            if (txtSearch.Text != "")
-            {
-                if (rB1.Text == "Admin" && rB1.Checked == true)
-                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 7);
-                if (rB1.Text == "Male" && rB1.Checked == true)
-                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 5);
-                if (rB2.Text == "Employee" && rB2.Checked == true)
-                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 8);
-                if (rB2.Text == "Female" && rB2.Checked == true)
-                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 6);
-            }
-            else
-            {
-                if (rB1.Text == "Admin" && rB1.Checked == true)
-                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 3);
-                if (rB1.Text == "Male" && rB1.Checked == true)
-                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 1);
-                if (rB2.Text == "Employee" && rB2.Checked == true)
-                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 4);
-                if (rB2.Text == "Female" && rB2.Checked == true)
-                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 2);
-            }
-            if (dgvEmployee.RowCount <= numberRecord)
-            {
-                btnPrevious.Visible = false;
-                btnNext.Visible = false;
-            }
+            if (txtSearch.Text == "Search...")
+                txtSearch.Text = "";
+            dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
         }
 
-        private void btnDeletetxt_Click(object sender, EventArgs e)
+        private void dgvEmployee_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            txtSearch.Text = "";
-            dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
+            if (this.dgvEmployee.Columns[e.ColumnIndex].Name == "Gender")
+            {
+                if (e.Value != null)
+                {
+                    int gender = Convert.ToInt32(e.Value);
+                    if (gender == 0)
+                    {
+                        e.Value = "Male";
+                    }
+                    else
+                    {
+                        e.Value = "Female";
+                    }
+                    e.FormattingApplied = true;
+                }
+            }
         }
     }
 }

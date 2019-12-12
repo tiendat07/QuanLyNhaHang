@@ -77,12 +77,12 @@ namespace DataAccessLayer
             .Select(c => c.Name).ToList();
         }
 
-        public List<Customer> Sreach(string x, int k)
+        public List<Customer> Sreach(string x, int k, int page, int recordNum)
         {
             if (k == 0) // cac loai ko can phan loai
             {
-                return dbContext.Customers.Where(y => y.Name.StartsWith(x) ||  y.CMND.StartsWith(x)|| y.CMND.StartsWith(x)
-                || SqlFunctions.StringConvert((double)y.CustomerID).TrimStart().StartsWith(x) || y.PhoneNumber.Contains(x)).ToList();
+                return dbContext.Customers.Where(y => y.Name.Contains(x) || y.CMND.StartsWith(x) || y.PhoneNumber.Contains(x))
+                    .OrderBy(s => s.CustomerID).Skip((page - 1) * recordNum).Take(recordNum).ToList();
             }
             if (k == 1) //nam
             {
@@ -94,13 +94,17 @@ namespace DataAccessLayer
             }
             if (k == 3)//nam + string x
             {
-                return dbContext.Customers.Where(y => y.IsFemale == false && (y.Name.StartsWith(x) || y.CMND.StartsWith(x) || y.CMND.StartsWith(x)
-                || SqlFunctions.StringConvert((double)y.CustomerID).TrimStart().StartsWith(x) || y.PhoneNumber.Contains(x))).ToList();
+                return dbContext.Customers.Where(y => y.IsFemale == false && (y.Name.Contains(x) 
+                || y.CMND.StartsWith(x) || y.PhoneNumber.Contains(x)
+                || SqlFunctions.StringConvert((double)y.CustomerID).TrimStart().StartsWith(x)))
+                .OrderBy(s => s.CustomerID).Skip((page - 1) * recordNum).Take(recordNum).ToList();
             }
             if (k == 4)//nu + string x
             {
-                return dbContext.Customers.Where(y => y.IsFemale == true && (y.Name.StartsWith(x) || y.CMND.StartsWith(x) || y.CMND.StartsWith(x)
-                || SqlFunctions.StringConvert((double)y.CustomerID).TrimStart().StartsWith(x) || y.PhoneNumber.Contains(x))).ToList();
+                return dbContext.Customers.Where(y => y.IsFemale == true && (y.Name.Contains(x) 
+                || y.CMND.StartsWith(x) || y.PhoneNumber.Contains(x)
+                || SqlFunctions.StringConvert((double)y.CustomerID).TrimStart().StartsWith(x)))
+                .OrderBy(s => s.CustomerID).Skip((page - 1) * recordNum).Take(recordNum).ToList();
             }
             return dbContext.Customers.ToList();
 

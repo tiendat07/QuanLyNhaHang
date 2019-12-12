@@ -39,25 +39,31 @@ namespace GUI
             this.rB1 = new System.Windows.Forms.RadioButton();
             this.rB2 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.pbDelete = new System.Windows.Forms.PictureBox();
-            this.txtSearch = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.btnEdit = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btnPrevious = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnNext = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvEmployee = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEdit = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.pnSearch = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnDelete = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.pnSearch.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -66,25 +72,25 @@ namespace GUI
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel7, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.375F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.211538F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.884615F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.13141F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.522436F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.21332F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 0.8016032F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.310621F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.703407F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.22245F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.19841F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.535142F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.535142F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1928, 1248);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1714, 998);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // bunifuCustomLabel1
@@ -97,7 +103,7 @@ namespace GUI
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(4, 0);
             this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(1920, 117);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(1706, 93);
             this.bunifuCustomLabel1.TabIndex = 5;
             this.bunifuCustomLabel1.Text = "Employee Management";
             this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -111,19 +117,19 @@ namespace GUI
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.999362F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.65667F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.4799F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 358F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 328F));
             this.tableLayoutPanel2.Controls.Add(this.cbBSearch, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.rB1, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.rB2, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 122);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 97);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1920, 80);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1706, 64);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
             // cbBSearch
@@ -134,10 +140,10 @@ namespace GUI
             "Type",
             "Gender",
             "(...)"});
-            this.cbBSearch.Location = new System.Drawing.Point(238, 47);
-            this.cbBSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbBSearch.Location = new System.Drawing.Point(210, 35);
+            this.cbBSearch.Margin = new System.Windows.Forms.Padding(4);
             this.cbBSearch.Name = "cbBSearch";
-            this.cbBSearch.Size = new System.Drawing.Size(364, 28);
+            this.cbBSearch.Size = new System.Drawing.Size(320, 24);
             this.cbBSearch.TabIndex = 1;
             this.cbBSearch.Text = "(...)";
             this.cbBSearch.TextChanged += new System.EventHandler(this.cbBSearch_TextChanged);
@@ -147,10 +153,10 @@ namespace GUI
             this.rB1.AutoSize = true;
             this.rB1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.rB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rB1.Location = new System.Drawing.Point(656, 55);
-            this.rB1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rB1.Location = new System.Drawing.Point(579, 44);
+            this.rB1.Margin = new System.Windows.Forms.Padding(4);
             this.rB1.Name = "rB1";
-            this.rB1.Size = new System.Drawing.Size(205, 20);
+            this.rB1.Size = new System.Drawing.Size(180, 16);
             this.rB1.TabIndex = 3;
             this.rB1.TabStop = true;
             this.rB1.UseVisualStyleBackColor = true;
@@ -161,10 +167,10 @@ namespace GUI
             // 
             this.rB2.AutoSize = true;
             this.rB2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.rB2.Location = new System.Drawing.Point(869, 55);
-            this.rB2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rB2.Location = new System.Drawing.Point(767, 44);
+            this.rB2.Margin = new System.Windows.Forms.Padding(4);
             this.rB2.Name = "rB2";
-            this.rB2.Size = new System.Drawing.Size(686, 20);
+            this.rB2.Size = new System.Drawing.Size(604, 16);
             this.rB2.TabIndex = 4;
             this.rB2.TabStop = true;
             this.rB2.UseVisualStyleBackColor = true;
@@ -176,104 +182,12 @@ namespace GUI
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 0);
+            this.label1.Location = new System.Drawing.Point(23, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 80);
+            this.label1.Size = new System.Drawing.Size(180, 64);
             this.label1.TabIndex = 5;
             this.label1.Text = "Search by :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 6;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.504399F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.7478F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.812317F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.756598F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.692082F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.3695F));
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel6, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.txtSearch, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnEdit, 5, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 248);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 79F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 79F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 79F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 79F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1920, 79);
-            this.tableLayoutPanel3.TabIndex = 7;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel6.Controls.Add(this.pbDelete, 0, 1);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(1046, 5);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 2;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(65, 69);
-            this.tableLayoutPanel6.TabIndex = 3;
-            // 
-            // pbDelete
-            // 
-            this.pbDelete.BackgroundImage = global::GUI.Properties.Resources.delete_sign_100px;
-            this.pbDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbDelete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbDelete.Location = new System.Drawing.Point(4, 18);
-            this.pbDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pbDelete.Name = "pbDelete";
-            this.pbDelete.Size = new System.Drawing.Size(57, 46);
-            this.pbDelete.TabIndex = 0;
-            this.pbDelete.TabStop = false;
-            this.pbDelete.Click += new System.EventHandler(this.pbDelete_Click);
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BackColor = System.Drawing.Color.White;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.ForeColor = System.Drawing.Color.Silver;
-            this.txtSearch.HintForeColor = System.Drawing.Color.Empty;
-            this.txtSearch.HintText = "";
-            this.txtSearch.isPassword = false;
-            this.txtSearch.LineFocusedColor = System.Drawing.Color.Transparent;
-            this.txtSearch.LineIdleColor = System.Drawing.Color.Transparent;
-            this.txtSearch.LineMouseHoverColor = System.Drawing.Color.Transparent;
-            this.txtSearch.LineThickness = 3;
-            this.txtSearch.Location = new System.Drawing.Point(167, 5);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
-            this.txtSearch.Size = new System.Drawing.Size(871, 69);
-            this.txtSearch.TabIndex = 4;
-            this.txtSearch.Text = "Search...";
-            this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtSearch.OnValueChanged += new System.EventHandler(this.txtSearch_OnValueChanged);
-            this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
-            this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnEdit.Image = global::GUI.Properties.Resources.edit_96px;
-            this.btnEdit.Location = new System.Drawing.Point(1260, 3);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(77, 73);
-            this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnEdit.TabIndex = 5;
-            this.btnEdit.TabStop = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
             // 
             // tableLayoutPanel5
             // 
@@ -286,13 +200,13 @@ namespace GUI
             this.tableLayoutPanel5.Controls.Add(this.btnPrevious, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnNext, 3, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 1087);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 869);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1920, 71);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1706, 57);
             this.tableLayoutPanel5.TabIndex = 10;
             // 
             // btnPrevious
@@ -317,14 +231,14 @@ namespace GUI
             this.btnPrevious.IconVisible = true;
             this.btnPrevious.IconZoom = 90D;
             this.btnPrevious.IsTab = false;
-            this.btnPrevious.Location = new System.Drawing.Point(1702, 6);
-            this.btnPrevious.Margin = new System.Windows.Forms.Padding(6);
+            this.btnPrevious.Location = new System.Drawing.Point(1512, 5);
+            this.btnPrevious.Margin = new System.Windows.Forms.Padding(5);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Normalcolor = System.Drawing.Color.White;
             this.btnPrevious.OnHovercolor = System.Drawing.Color.White;
             this.btnPrevious.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnPrevious.selected = false;
-            this.btnPrevious.Size = new System.Drawing.Size(56, 59);
+            this.btnPrevious.Size = new System.Drawing.Size(51, 47);
             this.btnPrevious.TabIndex = 0;
             this.btnPrevious.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrevious.Textcolor = System.Drawing.Color.Black;
@@ -353,15 +267,15 @@ namespace GUI
             this.btnNext.IconVisible = true;
             this.btnNext.IconZoom = 90D;
             this.btnNext.IsTab = false;
-            this.btnNext.Location = new System.Drawing.Point(1779, 6);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(6);
+            this.btnNext.Location = new System.Drawing.Point(1581, 5);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(5);
             this.btnNext.Name = "btnNext";
             this.btnNext.Normalcolor = System.Drawing.Color.White;
             this.btnNext.OnHovercolor = System.Drawing.Color.White;
             this.btnNext.OnHoverTextColor = System.Drawing.Color.White;
             this.btnNext.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnNext.selected = false;
-            this.btnNext.Size = new System.Drawing.Size(53, 59);
+            this.btnNext.Size = new System.Drawing.Size(48, 47);
             this.btnNext.TabIndex = 1;
             this.btnNext.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNext.Textcolor = System.Drawing.Color.Black;
@@ -374,12 +288,12 @@ namespace GUI
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.Controls.Add(this.dgvEmployee, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(4, 356);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(4, 247);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1920, 706);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1706, 603);
             this.tableLayoutPanel7.TabIndex = 11;
             // 
             // dgvEmployee
@@ -415,7 +329,8 @@ namespace GUI
             this.dgvEmployee.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvEmployee.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(36)))), ((int)(((byte)(117)))));
             this.dgvEmployee.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvEmployee.Location = new System.Drawing.Point(3, 3);
+            this.dgvEmployee.Location = new System.Drawing.Point(3, 2);
+            this.dgvEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvEmployee.Name = "dgvEmployee";
             this.dgvEmployee.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -431,27 +346,148 @@ namespace GUI
             this.dgvEmployee.RowTemplate.Height = 25;
             this.dgvEmployee.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmployee.Size = new System.Drawing.Size(1914, 700);
+            this.dgvEmployee.Size = new System.Drawing.Size(1700, 599);
             this.dgvEmployee.TabIndex = 13;
+            this.dgvEmployee.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEmployee_CellFormatting);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnEdit);
+            this.panel1.Controls.Add(this.tableLayoutPanel3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 176);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1708, 47);
+            this.panel1.TabIndex = 12;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackgroundImage = global::GUI.Properties.Resources.edit_96px;
+            this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnEdit.Location = new System.Drawing.Point(1358, 0);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(137, 47);
+            this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEdit.TabIndex = 9;
+            this.btnEdit.TabStop = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 6;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.81296F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.31812F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.921944F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.5891016F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.724595F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.55965F));
+            this.tableLayoutPanel3.Controls.Add(this.pnSearch, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1358, 47);
+            this.tableLayoutPanel3.TabIndex = 8;
+            // 
+            // pnSearch
+            // 
+            this.pnSearch.BackColor = System.Drawing.Color.White;
+            this.pnSearch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnSearch.Controls.Add(this.tableLayoutPanel8);
+            this.pnSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnSearch.Location = new System.Drawing.Point(177, 3);
+            this.pnSearch.Name = "pnSearch";
+            this.pnSearch.Size = new System.Drawing.Size(623, 41);
+            this.pnSearch.TabIndex = 4;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 3;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.116409F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 84.43198F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.31136F));
+            this.tableLayoutPanel8.Controls.Add(this.txtSearch, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.btnDelete, 2, 0);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(619, 37);
+            this.tableLayoutPanel8.TabIndex = 0;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.Color.White;
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearch.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.Silver;
+            this.txtSearch.Location = new System.Drawing.Point(59, 3);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(517, 31);
+            this.txtSearch.TabIndex = 7;
+            this.txtSearch.Text = "Search...";
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
+            this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::GUI.Properties.Resources.search;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 31);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDelete.Image = global::GUI.Properties.Resources.delete1;
+            this.btnDelete.Location = new System.Drawing.Point(582, 3);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(34, 31);
+            this.btnDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDelete.TabIndex = 8;
+            this.btnDelete.TabStop = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // UCEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UCEmployee";
-            this.Size = new System.Drawing.Size(1928, 1248);
+            this.Size = new System.Drawing.Size(1714, 998);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.pnSearch.ResumeLayout(false);
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -463,17 +499,20 @@ namespace GUI
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.ComboBox cbBSearch;
         private System.Windows.Forms.RadioButton rB1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private Bunifu.Framework.UI.BunifuFlatButton btnPrevious;
         private Bunifu.Framework.UI.BunifuFlatButton btnNext;
         private System.Windows.Forms.RadioButton rB2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.PictureBox pbDelete;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtSearch;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvEmployee;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Panel pnSearch;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnDelete;
         private System.Windows.Forms.PictureBox btnEdit;
     }
 }
