@@ -30,7 +30,7 @@ namespace GUI
         }
 
         int pageNumber = 1;
-        int numberRecord = 20;
+        int numberRecord = 15;
         public DataGridView GetDataGridView()
         {
             return data;
