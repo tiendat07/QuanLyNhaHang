@@ -30,7 +30,7 @@ namespace GUI
             this.dgvEmployee.Columns["ID"].Visible = false;
         }
         int pageNumber = 1;
-        int numberRecord = 20;
+        int numberRecord = 15;
 
         public void loadData()
         {

@@ -116,7 +116,7 @@ namespace GUI
         }
 
         int pageNumber = 1;
-        int numberRecord = 20;
+        int numberRecord = 15;
 
         private void btnPrevious_Click(object sender, EventArgs e)
         {

@@ -291,7 +291,6 @@ namespace GUI
         {
             myTextEdit txt = sender as myTextEdit;
             txt.objectText = txt.Text;
-
             foreach (var item in lsFoodDrink_Temp)
             {
                 if (item.FoodDrinkID == txt.objectID)
@@ -304,7 +303,6 @@ namespace GUI
                     {
                         MessageBox.Show(" " + ex);
                     }
-                    //MessageBox.Show(" " + item.Description);
                 }
 
             }
@@ -334,9 +332,7 @@ namespace GUI
             btnCancel.Enabled = true;
             btnSave.Visible = true;
             btnCancel.Visible = true;
-
-            //LabelName
-
+            
             foreach (var item in lslabelName)
                 item.Visible = false;
             foreach (var item in lsdescription)
@@ -350,7 +346,11 @@ namespace GUI
             foreach (var item in lstxtName)
                 item.Visible = true;
             foreach (var item in lstxtPrice)
+            {
                 item.Visible = true;
+                MessageBox.Show("" + item.objectID);
+            }
+               
             foreach (var item in lspicDelete)
             {
                 item.Visible = false;
