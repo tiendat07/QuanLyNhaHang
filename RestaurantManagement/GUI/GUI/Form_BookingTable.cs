@@ -151,12 +151,13 @@ namespace GUI
                     {
                         if (tableBLL.ChangeTableStatus(TabID, false, false, true) == true)
                         {
-                            MessageBox.Show("Booking thành công");
+                            MessageBox.Show("Booked sucessfully");
                             this.Hide();
+                            mainform.loadUCTable();
                         }
                     }
                     else
-                        MessageBox.Show("Không thành công. Vui lòng thử lại");
+                        MessageBox.Show("Cannot book. Please try again ><");
                 }
             }
             else
