@@ -98,6 +98,7 @@ namespace GUI
             column.Name = "Password";
             column.Visible = false;
             dgvEmployee.Columns.Add(column);
+            dgvEmployee.Columns["Gender"].ReadOnly = true;
         }
 
         private void dgvEmployee_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -115,7 +116,15 @@ namespace GUI
             emp.IsAdmin = (bool)temp.Cells["Is Admin"].Value;
             emp.Username = (string)temp.Cells["Username"].Value;
             emp.Password = (string)temp.Cells["Password"].Value;
-            emp.IsFemale = (bool)temp.Cells["Gender"].Value;
+            try
+            {
+
+                emp.IsFemale = (bool)temp.Cells["Gender"].Value;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cannot edit Gender. Please try edit others");
+            }
             // Mỗi lần sửa, người đc sửa sẽ đc đưa vào danh sách đc sửa
             ListEmpEdit.Add(emp);
         }

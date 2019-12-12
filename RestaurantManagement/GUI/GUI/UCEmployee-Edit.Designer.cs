@@ -28,10 +28,10 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCEmployee_Edit));
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -119,31 +119,31 @@ namespace GUI
             // 
             // dgvEmployee
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
-            this.dgvEmployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
+            this.dgvEmployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEmployee.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvEmployee.BackgroundColor = System.Drawing.Color.White;
             this.dgvEmployee.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEmployee.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvEmployee.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(36)))), ((int)(((byte)(117)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(36)))), ((int)(((byte)(117)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dgvEmployee.ColumnHeadersHeight = 40;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(139)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmployee.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(139)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmployee.DefaultCellStyle = dataGridViewCellStyle19;
             this.dgvEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEmployee.DoubleBuffered = true;
             this.dgvEmployee.EnableHeadersVisualStyles = false;
@@ -154,14 +154,14 @@ namespace GUI
             this.dgvEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvEmployee.Name = "dgvEmployee";
             this.dgvEmployee.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(36)))), ((int)(((byte)(117)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(36)))), ((int)(((byte)(117)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dgvEmployee.RowHeadersVisible = false;
             this.dgvEmployee.RowTemplate.DividerHeight = 1;
             this.dgvEmployee.RowTemplate.Height = 25;
@@ -175,11 +175,11 @@ namespace GUI
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 8;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.263598F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.20346F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.13354F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.13354F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.985075F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.69719F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.98671F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.446494F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.494465F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.7380074F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.477612F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.21131F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 77F));
@@ -205,10 +205,10 @@ namespace GUI
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 12);
+            this.label1.Location = new System.Drawing.Point(4, 41);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 58);
+            this.label1.Size = new System.Drawing.Size(191, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Search by:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -218,10 +218,10 @@ namespace GUI
             this.rB1.AutoSize = true;
             this.rB1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.rB1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rB1.Location = new System.Drawing.Point(346, 48);
+            this.rB1.Location = new System.Drawing.Point(432, 48);
             this.rB1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rB1.Name = "rB1";
-            this.rB1.Size = new System.Drawing.Size(130, 20);
+            this.rB1.Size = new System.Drawing.Size(122, 20);
             this.rB1.TabIndex = 2;
             this.rB1.TabStop = true;
             this.rB1.UseVisualStyleBackColor = true;
@@ -233,10 +233,10 @@ namespace GUI
             this.rB2.AutoSize = true;
             this.rB2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.rB2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rB2.Location = new System.Drawing.Point(482, 48);
+            this.rB2.Location = new System.Drawing.Point(560, 48);
             this.rB2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rB2.Name = "rB2";
-            this.rB2.Size = new System.Drawing.Size(130, 20);
+            this.rB2.Size = new System.Drawing.Size(82, 20);
             this.rB2.TabIndex = 3;
             this.rB2.TabStop = true;
             this.rB2.UseVisualStyleBackColor = true;
@@ -249,13 +249,13 @@ namespace GUI
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.Controls.Add(this.cbSearch, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(114, 2);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(202, 2);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.62264F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.37736F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(226, 66);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(224, 66);
             this.tableLayoutPanel5.TabIndex = 6;
             // 
             // cbSearch
@@ -271,7 +271,7 @@ namespace GUI
             this.cbSearch.Location = new System.Drawing.Point(4, 31);
             this.cbSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbSearch.Name = "cbSearch";
-            this.cbSearch.Size = new System.Drawing.Size(218, 33);
+            this.cbSearch.Size = new System.Drawing.Size(216, 33);
             this.cbSearch.TabIndex = 0;
             this.cbSearch.Text = "(...)";
             this.cbSearch.TextChanged += new System.EventHandler(this.cbSearch_TextChanged);
@@ -287,7 +287,7 @@ namespace GUI
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(632, 62);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(634, 62);
             this.tableLayoutPanel6.TabIndex = 7;
             // 
             // pnSearch
@@ -299,7 +299,7 @@ namespace GUI
             this.pnSearch.Location = new System.Drawing.Point(3, 4);
             this.pnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnSearch.Name = "pnSearch";
-            this.pnSearch.Size = new System.Drawing.Size(626, 54);
+            this.pnSearch.Size = new System.Drawing.Size(628, 54);
             this.pnSearch.TabIndex = 5;
             // 
             // tableLayoutPanel7
@@ -317,21 +317,21 @@ namespace GUI
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(622, 50);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(624, 50);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // txtSearch
             // 
             this.txtSearch.BackColor = System.Drawing.Color.White;
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearch.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.Silver;
-            this.txtSearch.Location = new System.Drawing.Point(59, 24);
+            this.txtSearch.Location = new System.Drawing.Point(59, 4);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(519, 22);
+            this.txtSearch.Size = new System.Drawing.Size(521, 42);
             this.txtSearch.TabIndex = 7;
             this.txtSearch.Text = "Search...";
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
@@ -355,7 +355,7 @@ namespace GUI
             this.btnDelete.BackColor = System.Drawing.Color.Transparent;
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDelete.Image = global::GUI.Properties.Resources.delete1;
-            this.btnDelete.Location = new System.Drawing.Point(584, 4);
+            this.btnDelete.Location = new System.Drawing.Point(586, 4);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(35, 42);

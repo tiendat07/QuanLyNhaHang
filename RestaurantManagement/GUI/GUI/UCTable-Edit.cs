@@ -82,6 +82,7 @@ namespace GUI
             {
                 foreach (DataGridViewRow item in this.dgvTable.SelectedRows)
                 {
+                    // KHÔNG XÓA ĐƯỢC?????????
                     // Delete Datagridview
                     //dgvTable.Rows.RemoveAt(item.Index);
                     var itemToDelete = (Table)item.DataBoundItem;

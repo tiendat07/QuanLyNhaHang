@@ -66,6 +66,7 @@ namespace GUI
             column.DataPropertyName = "PhoneNumber";
             column.Name = "Phone";
             dGvCustomer.Columns.Add(column);
+            dGvCustomer.Columns["Gender"].ReadOnly = true;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
