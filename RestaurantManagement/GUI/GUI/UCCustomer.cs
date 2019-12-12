@@ -219,7 +219,7 @@ namespace GUI
         private void btnEdit_Click(object sender, EventArgs e)
         {
             Form_CustomerEditEvent f = new Form_CustomerEditEvent(mainform, this);
-            f.Show();
+            f.ShowDialog();
         }
     }
 }
