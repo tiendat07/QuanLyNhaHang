@@ -158,12 +158,12 @@ namespace GUI
 
         void worker_DoWork(object sender, DoWorkEventArgs e)
         {
-            System.Threading.Thread.Sleep(5000);
+            System.Threading.Thread.Sleep(3500);
         }
 
         private void txtPassword_OnValueChanged(object sender, EventArgs e)
         {
-            if (btnSignIn.BackColor == Color.FromArgb(200, 237, 230))
+            if (btnSignIn.BackColor == Color.FromArgb(200, 237, 230))  
             {
                 btnSignIn.BackColor = Color.FromArgb(18, 37, 44);
                 btnSignIn.ForeColor = Color.White;
