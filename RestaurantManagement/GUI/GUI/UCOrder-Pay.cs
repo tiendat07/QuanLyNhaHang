@@ -11,7 +11,7 @@ using DataAccessLayer;
 using BLL;
 namespace GUI
 {
-    public partial class UCOrder : UserControl
+    public partial class UCOrder_Pay : UserControl
     {
         FoodDrinkBLL foodDrinkBLL;
         OrderBLL orderBLL;
@@ -20,14 +20,11 @@ namespace GUI
         Form_Restaurant mainform;
         int EmpID;
         int TabID;
-        int CusID = -1;
-        int OrdID;
+        int CusID;
         List<OrderDetail> lsOrderDetail;
         Order orDer;
-        bool readOnly;
-        public UCOrder(Form_Restaurant form,List<OrderDetail> orderDetails, int EmployeeID, int TableID, bool ReadOnly)
+        public UCOrder_Pay(Form_Restaurant form, List<OrderDetail> orderDetails, int EmployeeID, int TableID)
         {
-            readOnly = ReadOnly;
             tableBLL = new TableBLL();
             orDer = new Order();
             orderBLL = new OrderBLL();
@@ -40,15 +37,9 @@ namespace GUI
             InitializeComponent();
             LoadData();
         }
+
         public void LoadData()
         {
-            if (readOnly == true)
-            {
-                btnSave.Visible = false;
-                btnSave.Enabled = false;
-                btnCancel.Visible = false;
-                btnCancel.Enabled = false;
-            }
             var dateNow = DateTime.Now;
             var date = dateNow.ToString("dd/MM/yyyy");
             lbDateOrder.Text = Convert.ToString(date);
@@ -61,6 +52,7 @@ namespace GUI
             orDer.IsPaid = false;
             orDer.TableID = TabID;
             orDer.OrderDate = dateNow;
+            orDer.OrderID = orderBLL.FindOrderIDByTableID(TabID);
             float total = 0;
             foreach (var item in lsOrderDetail)
                 total += (item.Price * item.Quantity);
@@ -96,74 +88,34 @@ namespace GUI
             column.Name = "Price";
             dataGridViewOrder.Columns.Add(column);
 
-            dataGridViewOrder.Columns[0].ReadOnly = true;
-            dataGridViewOrder.Columns[1].ReadOnly = true;
-            dataGridViewOrder.Columns[2].ReadOnly = true;
-            dataGridViewOrder.Columns[4].ReadOnly = true;
-            dataGridViewOrder.Columns[3].ReadOnly = false;
-            
         }
-        
-        private void btnSave_Click_1(object sender, EventArgs e)
+
+        private void btnPay_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to save?", "Save Notification", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Are you sure you want to pay?", "Pay Notification", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                //yes...
-                bool Check = false;
-                OrdID = (orderBLL.AddOrder(orDer, lsOrderDetail));
-                if (OrdID != -1)
+                myButton btn = sender as myButton;
+                if (orderBLL.SetPaid(TabID) == true)
                 {
-                    if (tableBLL.ChangeTableStatus(TabID, true, false, false) == true)
+                    if (tableBLL.ChangeTableStatus(TabID, false, true, false) == true)
                     {
-                        Table table = tableBLL.FindTableById(TabID);
-                        if (table.Status == 1)
-                        {
-                            // Bàn này đang được order và khách đến và order
-                            CustomerBLL customerBLL = new CustomerBLL();
-                            if (customerBLL.DeleteCustomer(CusID) == true)
-                                Check = true;
-                        }
-                        else
-                            Check = true;
+                        MessageBox.Show("You have paid sucessfully !");
+                        mainform.loadUCTable();
                     }
                 }
-                if (Check == true)
-                {
-                    MessageBox.Show("Saved sucessfully");
-                    orDer.OrderID = OrdID;
-                    mainform.loadUCTable();
-                }
                 else
-                    MessageBox.Show("Cannot save. Please try again!");
+                    MessageBox.Show("Cannot process. Please try again");
             }
         }
 
-        private void btnEdit_Click_1(object sender, EventArgs e)
+        private void btnPrint_Click(object sender, EventArgs e)
         {
-            mainform.loadUcMenu_Order(TabID);
-        }
-
-        private void btnCancel_Click_1(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Are you sure you want to cancel?", "Cancel Notification", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                //yes...
-                // Lưu mọi thứ xuống database
-                mainform.loadUCTable();
-            }
-        }
-        
-        private void dataGridViewOrder_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            var temp = dataGridViewOrder.Rows[e.RowIndex];
-            int id = (int)temp.Cells["Order ID"].Value;
-            string note = (string)temp.Cells["Note"].Value;
-            foreach (var item in lsOrderDetail)
-                if (item.FoodDrinkID == id)
-                    item.Note = note;
-            // Edit Data (NOTE)
+            Form_Invoice f = new Form_Invoice();
+            EmployeeBLL empBLL = new EmployeeBLL();
+            Employee emp = empBLL.FindEmployee(EmpID);
+            f.PrintInvoice(emp.Name, orDer, lsOrderDetail);
+            f.ShowDialog();
         }
 
         private void dataGridViewOrder_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

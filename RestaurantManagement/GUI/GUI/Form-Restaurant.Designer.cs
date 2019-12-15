@@ -45,6 +45,9 @@ namespace GUI
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lbHello = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.img_Max = new Bunifu.Framework.UI.BunifuImageButton();
@@ -58,6 +61,7 @@ namespace GUI
             this.panel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_Max)).BeginInit();
@@ -359,6 +363,7 @@ namespace GUI
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Controls.Add(this.bunifuImageButton1, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.label1, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.panel3, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -367,6 +372,7 @@ namespace GUI
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.66667F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.30864F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(478, 498);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
@@ -398,6 +404,36 @@ namespace GUI
             this.label1.Text = "Faragal";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.UseCompatibleTextRendering = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lbHello);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(472, 159);
+            this.panel3.TabIndex = 11;
+            // 
+            // lbHello
+            // 
+            this.lbHello.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbHello.Font = new System.Drawing.Font("SVN-Avo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHello.ForeColor = System.Drawing.Color.White;
+            this.lbHello.Location = new System.Drawing.Point(0, 26);
+            this.lbHello.Name = "lbHello";
+            this.lbHello.Size = new System.Drawing.Size(472, 98);
+            this.lbHello.TabIndex = 15;
+            this.lbHello.Text = "Hello";
+            this.lbHello.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 124);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(472, 35);
+            this.panel4.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
@@ -512,6 +548,7 @@ namespace GUI
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.img_Max)).EndInit();
@@ -543,6 +580,9 @@ namespace GUI
         private Bunifu.Framework.UI.BunifuFlatButton btn_Table;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Menu;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Home;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lbHello;
+        private System.Windows.Forms.Panel panel4;
         //private UCMenu ucMenu1;
         //private ucTable1 ucTable11;
     }
