@@ -17,13 +17,17 @@ namespace BLL
         {
             return orderDAL.GetListOrders();
         }
-        public bool AddOrder(Order o, List<OrderDetail> orderDetails)
+        public int AddOrder(Order o, List<OrderDetail> orderDetails)
         {
             return orderDAL.AddOrder(o, orderDetails);
         }
         public bool SetPaid(int ID)
         {
             return orderDAL.SetPaid(ID);
+        }
+        public int FindOrderIDByTableID(int TableID)
+        {
+            return orderDAL.FindOrderIDByTableID(TableID);
         }
     }
 }
