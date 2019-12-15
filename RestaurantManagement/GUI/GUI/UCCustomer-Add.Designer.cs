@@ -42,12 +42,16 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSave = new Bunifu.Framework.UI.BunifuTileButton();
-            this.btnCancel = new Bunifu.Framework.UI.BunifuTileButton();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnSave = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnComeback = new Bunifu.Framework.UI.BunifuThinButton2();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -72,7 +76,7 @@
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.MediumPurple;
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(3, 0);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
@@ -248,7 +252,6 @@
             this.cbGender.Size = new System.Drawing.Size(132, 33);
             this.cbGender.TabIndex = 9;
             this.cbGender.Text = "-select-";
-            this.cbGender.SelectedIndexChanged += new System.EventHandler(this.cbGender_SelectedIndexChanged);
             // 
             // tableLayoutPanel3
             // 
@@ -260,8 +263,8 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tableLayoutPanel3.Controls.Add(this.btnSave, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.btnCancel, 3, 1);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel6, 3, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 297);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -272,47 +275,85 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(582, 121);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.btnSave, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(294, 27);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(75, 30);
+            this.tableLayoutPanel5.TabIndex = 2;
+            // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.White;
-            this.btnSave.color = System.Drawing.Color.White;
-            this.btnSave.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnSave.ActiveBorderThickness = 1;
+            this.btnSave.ActiveCornerRadius = 20;
+            this.btnSave.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(85)))), ((int)(((byte)(233)))));
+            this.btnSave.ActiveForecolor = System.Drawing.Color.White;
+            this.btnSave.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(85)))), ((int)(((byte)(233)))));
+            this.btnSave.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSave.BackgroundImage")));
+            this.btnSave.ButtonText = "SAVE";
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.MediumPurple;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.ImagePosition = 21;
-            this.btnSave.ImageZoom = 50;
-            this.btnSave.LabelPosition = 35;
-            this.btnSave.LabelText = "SAVE";
-            this.btnSave.Location = new System.Drawing.Point(298, 30);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.IdleBorderThickness = 1;
+            this.btnSave.IdleCornerRadius = 20;
+            this.btnSave.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(36)))), ((int)(((byte)(117)))));
+            this.btnSave.IdleForecolor = System.Drawing.Color.White;
+            this.btnSave.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(85)))), ((int)(((byte)(233)))));
+            this.btnSave.Location = new System.Drawing.Point(4, 5);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(67, 24);
-            this.btnSave.TabIndex = 0;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Size = new System.Drawing.Size(67, 20);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
             // 
-            // btnCancel
+            // tableLayoutPanel6
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.White;
-            this.btnCancel.color = System.Drawing.Color.White;
-            this.btnCancel.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.MediumPurple;
-            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.ImagePosition = 21;
-            this.btnCancel.ImageZoom = 50;
-            this.btnCancel.LabelPosition = 35;
-            this.btnCancel.LabelText = "CANCEL";
-            this.btnCancel.Location = new System.Drawing.Point(396, 30);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(67, 24);
-            this.btnCancel.TabIndex = 1;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.btnComeback, 0, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(392, 27);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(75, 30);
+            this.tableLayoutPanel6.TabIndex = 3;
+            // 
+            // btnComeback
+            // 
+            this.btnComeback.ActiveBorderThickness = 1;
+            this.btnComeback.ActiveCornerRadius = 20;
+            this.btnComeback.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(85)))), ((int)(((byte)(233)))));
+            this.btnComeback.ActiveForecolor = System.Drawing.Color.White;
+            this.btnComeback.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(85)))), ((int)(((byte)(233)))));
+            this.btnComeback.BackColor = System.Drawing.SystemColors.Control;
+            this.btnComeback.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnComeback.BackgroundImage")));
+            this.btnComeback.ButtonText = "Come back";
+            this.btnComeback.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnComeback.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnComeback.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComeback.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnComeback.IdleBorderThickness = 1;
+            this.btnComeback.IdleCornerRadius = 20;
+            this.btnComeback.IdleFillColor = System.Drawing.Color.White;
+            this.btnComeback.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(36)))), ((int)(((byte)(117)))));
+            this.btnComeback.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(36)))), ((int)(((byte)(117)))));
+            this.btnComeback.Location = new System.Drawing.Point(5, 5);
+            this.btnComeback.Margin = new System.Windows.Forms.Padding(5);
+            this.btnComeback.Name = "btnComeback";
+            this.btnComeback.Size = new System.Drawing.Size(65, 20);
+            this.btnComeback.TabIndex = 3;
+            this.btnComeback.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnComeback.Click += new System.EventHandler(this.btnComeback_Click);
             // 
             // UCCustomer_Add
             // 
@@ -327,6 +368,8 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -344,9 +387,11 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPhone;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtName;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private Bunifu.Framework.UI.BunifuTileButton btnSave;
-        private Bunifu.Framework.UI.BunifuTileButton btnCancel;
         private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnSave;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnComeback;
     }
 }

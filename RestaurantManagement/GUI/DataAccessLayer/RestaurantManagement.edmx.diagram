@@ -5,7 +5,6 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="1c5ad6adba1c4c5b8fa4c787460e6455" Name="Diagram1">
-        <EntityTypeShape EntityType="RestaurantContextModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
         <EntityTypeShape EntityType="RestaurantContextModel.BookingTable" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="RestaurantContextModel.Customer" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
         <EntityTypeShape EntityType="RestaurantContextModel.Employee" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
@@ -20,6 +19,7 @@
         <AssociationConnector Association="RestaurantContextModel.FK_dbo_OrderDetails_dbo_FoodDrinks_FoodDrinkID" ManuallyRouted="false" />
         <AssociationConnector Association="RestaurantContextModel.FK_dbo_OrderDetails_dbo_Orders_OrderID" ManuallyRouted="false" />
         <AssociationConnector Association="RestaurantContextModel.FK_dbo_Orders_dbo_Tables_TableID" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="RestaurantContextModel.sysdiagram" Width="1.5" PointX="8.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
