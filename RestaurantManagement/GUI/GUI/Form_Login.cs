@@ -70,8 +70,6 @@ namespace GUI
                     bool isAdmin = employeeBLL.CheckAdmin(tenDN);
                     int employeeID = employeeBLL.GetEmployeeID(tenDN);
                     Employee employ = employeeBLL.FindEmployee(employeeID);
-                    MessageBox.Show("Hello " + employ.Name);
-
                     Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
                     this.Hide();
                     f.Closed += (s, args) => this.Close();
@@ -101,8 +99,6 @@ namespace GUI
                         bool isAdmin = employeeBLL.CheckAdmin(tenDN);
                         int employeeID = employeeBLL.GetEmployeeID(tenDN);
                         Employee employ = employeeBLL.FindEmployee(employeeID);
-                        MessageBox.Show("Hello " + employ.Name);
-
                         Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
                         this.Hide();
                         f.Closed += (s, args) => this.Close();
@@ -188,7 +184,6 @@ namespace GUI
                         bool isAdmin = employeeBLL.CheckAdmin(tenDN);
                         int employeeID = employeeBLL.GetEmployeeID(tenDN);
                         Employee employ = employeeBLL.FindEmployee(employeeID);
-                        MessageBox.Show("Hello " + employ.Name);
                         Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
                         this.Hide();
                         f.Closed += (s, args) => this.Close();

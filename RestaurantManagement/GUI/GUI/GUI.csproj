@@ -39,6 +39,9 @@
     <Reference Include="BCrypt.Net, Version=0.1.5073.29922, Culture=neutral, PublicKeyToken=6bcd409ee6bc9292, processorArchitecture=MSIL">
       <HintPath>..\packages\BCrypt-Official.0.1.109\lib\BCrypt.Net.dll</HintPath>
     </Reference>
+    <Reference Include="BunifuDataViz">
+      <HintPath>..\..\..\..\..\Downloads\Bunifu Dataviz Advanced 1.1.1.5\BunifuDataViz.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
@@ -46,6 +49,40 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.1.UI, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Export, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1.UI, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.Extensions, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.Wizard, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.1.Extensions, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -55,10 +92,15 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -81,11 +123,23 @@
     <Compile Include="Form-ChangePassword.Designer.cs">
       <DependentUpon>Form-ChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form-Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form-Invoice.Designer.cs">
+      <DependentUpon>Form-Invoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form-Loading.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form-Loading.Designer.cs">
       <DependentUpon>Form-Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form-MessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form-MessageBox.Designer.cs">
+      <DependentUpon>Form-MessageBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_CustomerEditEvent.cs">
       <SubType>Form</SubType>
@@ -110,6 +164,12 @@
     </Compile>
     <Compile Include="Form_Profile.Designer.cs">
       <DependentUpon>Form_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InvoiceReport.Designer.cs">
+      <DependentUpon>InvoiceReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -239,6 +299,12 @@
     <Compile Include="UCMenu.Designer.cs">
       <DependentUpon>UCMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCOrder-Pay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCOrder-Pay.Designer.cs">
+      <DependentUpon>UCOrder-Pay.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -266,8 +332,14 @@
     <EmbeddedResource Include="Form-ChangePassword.resx">
       <DependentUpon>Form-ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form-Invoice.resx">
+      <DependentUpon>Form-Invoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form-Loading.resx">
       <DependentUpon>Form-Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form-MessageBox.resx">
+      <DependentUpon>Form-MessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_CustomerEditEvent.resx">
       <DependentUpon>Form_CustomerEditEvent.cs</DependentUpon>
@@ -278,6 +350,10 @@
     <EmbeddedResource Include="Form_EmployeeEditEvent.resx">
       <DependentUpon>Form_EmployeeEditEvent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceReport.resx">
+      <DependentUpon>InvoiceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="UCCustomer-Add.resx">
       <DependentUpon>UCCustomer-Add.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,6 +415,9 @@
     <EmbeddedResource Include="UCMenu.resx">
       <DependentUpon>UCMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCOrder-Pay.resx">
+      <DependentUpon>UCOrder-Pay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCOrder.resx">
       <DependentUpon>UCOrder.cs</DependentUpon>
     </EmbeddedResource>
@@ -374,7 +453,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
@@ -435,6 +516,7 @@
     <None Include="Resources\add_96px.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8_back_to.ico" />
     <None Include="Resources\search.png" />
     <None Include="Resources\icons8_delete_64.png" />
     <None Include="Resources\icons8_search_64.png" />
@@ -486,6 +568,7 @@
     <None Include="Resources\Background-Restaurant1.png" />
     <Content Include="LICENSE.txt" />
     <None Include="Resources\delete1.png" />
+    <None Include="Resources\back_to_96px.png" />
     <Content Include="Resources\delete_64px.png" />
     <None Include="Resources\delete_64px.png" />
   </ItemGroup>

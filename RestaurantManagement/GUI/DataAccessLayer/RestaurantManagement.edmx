@@ -34,6 +34,7 @@
           <Property Name="IsFemale" Type="bit" Nullable="false" />
           <Property Name="PhoneNumber" Type="nvarchar(max)" Nullable="false" />
           <Property Name="CMND" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Status" Type="int" />
         </EntityType>
         <EntityType Name="Employees">
           <Key>
@@ -50,6 +51,7 @@
           <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
           <Property Name="IsAdmin" Type="bit" Nullable="false" />
+          <Property Name="Status" Type="int" />
         </EntityType>
         <EntityType Name="FoodDrinks">
           <Key>
@@ -249,6 +251,7 @@
           <Property Name="CMND" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="BookingTables" Relationship="Self.FK_dbo_BookingTables_dbo_Customers_CustomerID" FromRole="Customers" ToRole="BookingTables" />
           <NavigationProperty Name="Orders" Relationship="Self.FK_dbo_Orders_dbo_Customers_CustomerID" FromRole="Customers" ToRole="Orders" />
+          <Property Name="Status" Type="Int32" />
         </EntityType>
         <EntityType Name="Employee">
           <Key>
@@ -266,6 +269,7 @@
           <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="IsAdmin" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Orders" Relationship="Self.FK_dbo_Orders_dbo_Employees_EmployeeID" FromRole="Employees" ToRole="Orders" />
+          <Property Name="Status" Type="Int32" />
         </EntityType>
         <EntityType Name="FoodDrink">
           <Key>
@@ -484,6 +488,7 @@
           <EntitySetMapping Name="Customers">
             <EntityTypeMapping TypeName="RestaurantContextModel.Customer">
               <MappingFragment StoreEntitySet="Customers">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="IsFemale" ColumnName="IsFemale" />
@@ -495,6 +500,7 @@
           <EntitySetMapping Name="Employees">
             <EntityTypeMapping TypeName="RestaurantContextModel.Employee">
               <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="IsFemale" ColumnName="IsFemale" />
