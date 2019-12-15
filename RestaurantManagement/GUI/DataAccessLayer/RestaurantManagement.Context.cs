@@ -31,6 +31,5 @@ namespace DataAccessLayer
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Table> Tables { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }
