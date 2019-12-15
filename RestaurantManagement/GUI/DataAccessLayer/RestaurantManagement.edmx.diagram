@@ -20,6 +20,7 @@
         <AssociationConnector Association="RestaurantContextModel.FK_dbo_OrderDetails_dbo_FoodDrinks_FoodDrinkID" ManuallyRouted="false" />
         <AssociationConnector Association="RestaurantContextModel.FK_dbo_OrderDetails_dbo_Orders_OrderID" ManuallyRouted="false" />
         <AssociationConnector Association="RestaurantContextModel.FK_dbo_Orders_dbo_Tables_TableID" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="RestaurantContextModel.sysdiagram" Width="1.5" PointX="8.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

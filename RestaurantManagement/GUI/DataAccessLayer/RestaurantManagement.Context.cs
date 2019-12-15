@@ -24,8 +24,6 @@ namespace DataAccessLayer
         {
             throw new UnintentionalCodeFirstException();
         }
-    
-        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
         public virtual DbSet<BookingTable> BookingTables { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
@@ -33,5 +31,6 @@ namespace DataAccessLayer
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Table> Tables { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

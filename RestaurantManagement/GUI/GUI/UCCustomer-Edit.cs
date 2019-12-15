@@ -30,76 +30,49 @@ namespace GUI
             mainform = form;
             InitializeComponent();
             //loadData();
-            dGvCustomer.ReadOnly = false;
+            dgvCustomer.ReadOnly = false;
             loadData();
         }
         public void loadData()
         {
-            dGvCustomer.AutoGenerateColumns = false;
+            dgvCustomer.AutoGenerateColumns = false;
             List<Customer> lstCustomer = customerBLL.GetListCustomer();
-            dGvCustomer.DataSource = lstCustomer;
+            dgvCustomer.DataSource = lstCustomer;
 
             DataGridViewColumn column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "CustomerID";
             column.Name = "ID";
             column.Visible = false;
-            dGvCustomer.Columns.Add(column);
+            dgvCustomer.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "Name";
             column.Name = "Name";
             column.Visible = true;
-            dGvCustomer.Columns.Add(column);
+            dgvCustomer.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "IsFemale";
             column.Name = "Gender";
 
-            dGvCustomer.Columns.Add(column);
+            dgvCustomer.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "CMND";
             column.Name = "CMND";
-            dGvCustomer.Columns.Add(column);
+            dgvCustomer.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "PhoneNumber";
             column.Name = "Phone";
-            dGvCustomer.Columns.Add(column);
-            dGvCustomer.Columns["Gender"].ReadOnly = true;
+            dgvCustomer.Columns.Add(column);
+            dgvCustomer.Columns["Gender"].ReadOnly = true;
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            bool result = false;
-            foreach(var item in ListCtmEdit)
-            {
-                if (customerBLL.EditCustomer(item) == false)
-                {
-                    MessageBox.Show("Can't save !! Please try again");
-                    break;
-                }
-                else
-                    result = true;
-            }
-            if(result==true)
-            {
-                DialogResult dialog = MessageBox.Show("Save successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (dialog == DialogResult.OK)
-                {
-                    mainform.loadUCCustomer();
-                }
-            }
-        }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void dgvCustomer_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            mainform.loadUCCustomer();
-        }
-
-        private void dGvCustomer_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (this.dGvCustomer.Columns[e.ColumnIndex].Name == "Gender")
+            if (this.dgvCustomer.Columns[e.ColumnIndex].Name == "Gender")
             {
                 if (e.Value != null)
                 {
@@ -117,9 +90,9 @@ namespace GUI
             }
         }
 
-        private void dGvCustomer_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        private void dgvCustomer_CellEndEdit_1(object sender, DataGridViewCellEventArgs e)
         {
-            var tctm = dGvCustomer.Rows[e.RowIndex];
+            var tctm = dgvCustomer.Rows[e.RowIndex];
             Customer ctm = new Customer();
             ctm.CustomerID = (int)tctm.Cells["ID"].Value;
             ctm.Name = (string)tctm.Cells["Name"].Value;
@@ -130,9 +103,33 @@ namespace GUI
             ListCtmEdit.Add(ctm);
         }
 
-        private void dGvCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnSave_Click_1(object sender, EventArgs e)
         {
+            bool result = false;
+            foreach (var item in ListCtmEdit)
+            {
+                if (customerBLL.EditCustomer(item) == false)
+                {
+                    MessageBox.Show("Cannot save. Please try again");
+                    break;
+                }
+                else
+                    result = true;
+            }
+            if (result == true)
+            {
+                DialogResult dialog = MessageBox.Show("Saved successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (dialog == DialogResult.OK)
+                {
+                    mainform.loadUCCustomer();
+                }
+            }
+            //dgvCustomer.DataSource = customerBLL.LoadRecord(pageNumber, numberRecord);
+        }
 
+        private void btnComeback_Click(object sender, EventArgs e)
+        {
+            mainform.loadUCCustomer();
         }
     }
 }

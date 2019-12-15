@@ -25,12 +25,24 @@ namespace GUI
             mainform = form;
             InitializeComponent();
         }
-        private void btnCancel_Click(object sender, EventArgs e)
+      
+        private void txtPhone_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            mainform.loadUCCustomer();
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void txtCMND_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnSave_Click_1(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(txtCMND.Text) || cbGender.Text == "-select-"
              || String.IsNullOrEmpty(txtPhone.Text) || String.IsNullOrEmpty(txtName.Text))
@@ -61,25 +73,9 @@ namespace GUI
             }
         }
 
-        private void txtPhone_KeyPress_1(object sender, KeyPressEventArgs e)
+        private void btnComeback_Click(object sender, EventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txtCMND_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void cbGender_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            mainform.loadUCCustomer();
         }
     }
 }
