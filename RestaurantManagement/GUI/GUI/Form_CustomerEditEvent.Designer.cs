@@ -57,6 +57,7 @@
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(233)))), ((int)(((byte)(238)))));
             this.tableLayoutPanel2.ColumnCount = 5;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -80,15 +81,15 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.White;
             this.btnAdd.color = System.Drawing.Color.White;
-            this.btnAdd.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnAdd.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(233)))), ((int)(((byte)(238)))));
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.MediumPurple;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.DarkBlue;
             this.btnAdd.Image = null;
-            this.btnAdd.ImagePosition = 20;
+            this.btnAdd.ImagePosition = 18;
             this.btnAdd.ImageZoom = 50;
-            this.btnAdd.LabelPosition = 35;
+            this.btnAdd.LabelPosition = 32;
             this.btnAdd.LabelText = "ADD";
             this.btnAdd.Location = new System.Drawing.Point(464, 33);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
@@ -101,15 +102,15 @@
             // 
             this.btnEdit.BackColor = System.Drawing.Color.White;
             this.btnEdit.color = System.Drawing.Color.White;
-            this.btnEdit.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnEdit.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(233)))), ((int)(((byte)(238)))));
             this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEdit.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.MediumPurple;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.DarkBlue;
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.ImagePosition = 19;
+            this.btnEdit.ImagePosition = 17;
             this.btnEdit.ImageZoom = 50;
-            this.btnEdit.LabelPosition = 35;
+            this.btnEdit.LabelPosition = 32;
             this.btnEdit.LabelText = "EDIT";
             this.btnEdit.Location = new System.Drawing.Point(123, 35);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
@@ -121,9 +122,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(233)))), ((int)(((byte)(238)))));
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Indigo;
+            this.label1.ForeColor = System.Drawing.Color.SlateBlue;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(802, 237);
@@ -135,6 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(233)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(808, 475);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

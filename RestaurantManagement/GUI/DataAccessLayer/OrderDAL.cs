@@ -18,7 +18,8 @@ namespace DataAccessLayer
         {
             return dbContext.Orders.ToList();
         }
-        public bool AddOrder (Order o, List<OrderDetail> orderDetails)
+        // return lại giá trị orderID
+        public int AddOrder (Order o, List<OrderDetail> orderDetails)
         {
             using (DbContextTransaction transaction = dbContext.Database.BeginTransaction())
             {
@@ -42,12 +43,12 @@ namespace DataAccessLayer
                     }
                     dbContext.SaveChanges();
                     transaction.Commit();
-                    return true;
+                    return hoaDonTam.OrderID;
                 }
                 catch (Exception e)
                 {
                     transaction.Rollback();
-                    return false;
+                    return -1;
                 }
             }
 
@@ -67,6 +68,10 @@ namespace DataAccessLayer
                 return false;
             }
             return false;
+        }
+        public int FindOrderIDByTableID (int TableID)
+        {
+            return  dbContext.Orders.Where(o => o.TableID == TableID).Select(o => o.OrderID).FirstOrDefault();
         }
         
     }

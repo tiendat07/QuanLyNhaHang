@@ -61,9 +61,6 @@
       <DependentUpon>RestaurantManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="CustomerDAL.cs" />
-    <Compile Include="C__MigrationHistory.cs">
-      <DependentUpon>RestaurantManagement.tt</DependentUpon>
-    </Compile>
     <Compile Include="Employee.cs">
       <DependentUpon>RestaurantManagement.tt</DependentUpon>
     </Compile>
@@ -97,6 +94,7 @@
       <DependentUpon>RestaurantManagement.edmx</DependentUpon>
     </Compile>
     <Compile Include="StatisticDAL.cs" />
+    </Compile>
     <Compile Include="Table.cs">
       <DependentUpon>RestaurantManagement.tt</DependentUpon>
     </Compile>

@@ -1,13 +1,7 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Reflection;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using DataAccessLayer;
@@ -22,6 +16,7 @@ namespace GUI
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
+            
         }
 
         private void img_Min_Click_1(object sender, EventArgs e)
@@ -70,8 +65,6 @@ namespace GUI
                     bool isAdmin = employeeBLL.CheckAdmin(tenDN);
                     int employeeID = employeeBLL.GetEmployeeID(tenDN);
                     Employee employ = employeeBLL.FindEmployee(employeeID);
-                    MessageBox.Show("Hello " + employ.Name);
-
                     Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
                     this.Hide();
                     f.Closed += (s, args) => this.Close();
@@ -101,8 +94,6 @@ namespace GUI
                         bool isAdmin = employeeBLL.CheckAdmin(tenDN);
                         int employeeID = employeeBLL.GetEmployeeID(tenDN);
                         Employee employ = employeeBLL.FindEmployee(employeeID);
-                        MessageBox.Show("Hello " + employ.Name);
-
                         Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
                         this.Hide();
                         f.Closed += (s, args) => this.Close();
@@ -158,12 +149,12 @@ namespace GUI
 
         void worker_DoWork(object sender, DoWorkEventArgs e)
         {
-            System.Threading.Thread.Sleep(5000);
+            System.Threading.Thread.Sleep(3500);
         }
 
         private void txtPassword_OnValueChanged(object sender, EventArgs e)
         {
-            if (btnSignIn.BackColor == Color.FromArgb(200, 237, 230))
+            if (btnSignIn.BackColor == Color.FromArgb(200, 237, 230))  
             {
                 btnSignIn.BackColor = Color.FromArgb(18, 37, 44);
                 btnSignIn.ForeColor = Color.White;
@@ -188,7 +179,6 @@ namespace GUI
                         bool isAdmin = employeeBLL.CheckAdmin(tenDN);
                         int employeeID = employeeBLL.GetEmployeeID(tenDN);
                         Employee employ = employeeBLL.FindEmployee(employeeID);
-                        MessageBox.Show("Hello " + employ.Name);
                         Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
                         this.Hide();
                         f.Closed += (s, args) => this.Close();

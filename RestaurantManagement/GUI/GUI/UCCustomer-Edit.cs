@@ -30,75 +30,220 @@ namespace GUI
             mainform = form;
             InitializeComponent();
             //loadData();
-            dGvCustomer.ReadOnly = false;
+            dgvCustomer.ReadOnly = false;
             loadData();
+            dgvCustomer.DataSource = customerBLL.LoadRecord(pageNumber, numberRecord);
+            this.dgvCustomer.Columns["ID"].Visible = false;
         }
+        int pageNumber = 1;
+        int numberRecord = 15;
         public void loadData()
         {
-            dGvCustomer.AutoGenerateColumns = false;
+            dgvCustomer.AutoGenerateColumns = false;
             List<Customer> lstCustomer = customerBLL.GetListCustomer();
-            dGvCustomer.DataSource = lstCustomer;
+            dgvCustomer.DataSource = lstCustomer;
 
             DataGridViewColumn column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "CustomerID";
             column.Name = "ID";
             column.Visible = false;
-            dGvCustomer.Columns.Add(column);
+            dgvCustomer.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "Name";
             column.Name = "Name";
             column.Visible = true;
-            dGvCustomer.Columns.Add(column);
+            dgvCustomer.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "IsFemale";
             column.Name = "Gender";
 
-            dGvCustomer.Columns.Add(column);
+            dgvCustomer.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "CMND";
             column.Name = "CMND";
-            dGvCustomer.Columns.Add(column);
+            dgvCustomer.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "PhoneNumber";
             column.Name = "Phone";
-            dGvCustomer.Columns.Add(column);
+            dgvCustomer.Columns.Add(column);
+            dgvCustomer.Columns["Gender"].ReadOnly = true;
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+
+
+        private void btnSave_Click_1(object sender, EventArgs e)
         {
             bool result = false;
-            foreach(var item in ListCtmEdit)
+            foreach (var item in ListCtmEdit)
             {
                 if (customerBLL.EditCustomer(item) == false)
                 {
-                    MessageBox.Show("Can't save !! Please try again");
+                    MessageBox.Show("Cannot save. Please try again");
                     break;
                 }
                 else
                     result = true;
             }
-            if(result==true)
+            if (result == true)
             {
-                DialogResult dialog = MessageBox.Show("Save successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult dialog = MessageBox.Show("Saved successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (dialog == DialogResult.OK)
                 {
                     mainform.loadUCCustomer();
                 }
             }
+            //dgvCustomer.DataSource = customerBLL.LoadRecord(pageNumber, numberRecord);
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnComeback_Click(object sender, EventArgs e)
         {
             mainform.loadUCCustomer();
         }
 
-        private void dGvCustomer_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            if (this.dGvCustomer.Columns[e.ColumnIndex].Name == "Gender")
+            if (cbSearch.Text == "(...)" && txtSearch.Text != "")
+            {
+                dgvCustomer.DataSource = customerBLL.LoadRecord(pageNumber, numberRecord);
+            }
+            if (cbSearch.Text == "(...)")
+            {
+                dgvCustomer.DataSource = customerBLL.Sreach(txtSearch.Text, 0, pageNumber, numberRecord);
+            }
+            if (txtSearch.Text != "")
+            {
+                if (rB1.Text == "Male" && rB1.Checked == true)
+                    dgvCustomer.DataSource = customerBLL.Sreach(txtSearch.Text, 3, pageNumber, numberRecord);
+                if (rB2.Text == "Female" && rB2.Checked == true)
+                    dgvCustomer.DataSource = customerBLL.Sreach(txtSearch.Text, 4, pageNumber, numberRecord);
+            }
+            else
+            {
+                if (rB1.Text == "Male" && rB1.Checked == true)
+                    dgvCustomer.DataSource = customerBLL.Sreach(txtSearch.Text, 1, pageNumber, numberRecord);
+                if (rB2.Text == "Female" && rB2.Checked == true)
+                    dgvCustomer.DataSource = customerBLL.Sreach(txtSearch.Text, 2, pageNumber, numberRecord);
+            }
+        }
+
+        private void txtSearch_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "Search...")
+                txtSearch.Text = "";
+            dgvCustomer.DataSource = customerBLL.LoadRecord(pageNumber, numberRecord);
+        }
+
+        private void txtSearch_Leave(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "")
+                txtSearch.Text = "Search...";
+            dgvCustomer.DataSource = customerBLL.LoadRecord(pageNumber, numberRecord);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            txtSearch.Text = "";
+            dgvCustomer.DataSource = customerBLL.LoadRecord(pageNumber, numberRecord);
+        }
+
+        private void rB1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "Search..." || txtSearch.Text == "")
+            {
+                if (rB1.Checked == true)
+                    dgvCustomer.DataSource = customerBLL.Sreach(txtSearch.Text, 1, pageNumber, numberRecord);
+            }
+            else
+            {
+                if (rB1.Checked == true)
+                    dgvCustomer.DataSource = customerBLL.Sreach(txtSearch.Text, 3, pageNumber, numberRecord);
+            }
+            if (dgvCustomer.Columns.Count > numberRecord)
+            {
+                dgvCustomer.DataSource = customerBLL.LoadRecord(pageNumber, numberRecord);
+            }
+        }
+
+        private void rB2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "Search..." || txtSearch.Text == "")
+            {
+                if (rB2.Checked == true)
+                    dgvCustomer.DataSource = customerBLL.Sreach(txtSearch.Text, 2, pageNumber, numberRecord);
+            }
+            else
+            {
+                if (rB2.Checked == true)
+                    dgvCustomer.DataSource = customerBLL.Sreach(txtSearch.Text, 4, pageNumber, numberRecord);
+            }
+        }
+
+        private void cbSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (cbSearch.Text == "Gender")
+            {
+                rB1.Checked = false;
+                rB2.Checked = false;
+                rB1.Visible = true;
+                rB2.Visible = true;
+                rB1.Text = "Male";
+                rB2.Text = "Female";
+            }
+            if (cbSearch.Text == "(...)")
+            {
+                rB1.Checked = false;
+                rB2.Checked = false;
+                rB1.Visible = false;
+                rB2.Visible = false;
+                dgvCustomer.DataSource = customerBLL.GetListCustomer();
+                dgvCustomer.DataSource = customerBLL.LoadRecord(pageNumber, numberRecord);
+            }
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            if (pageNumber - 1 > 0)
+            {
+                pageNumber--;
+                dgvCustomer.DataSource = customerBLL.LoadRecord(pageNumber, numberRecord);
+            }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            int totalRecord = 0;
+            using (RestaurantContextEntities db = new RestaurantContextEntities())
+            {
+                totalRecord = db.Employees.Count();
+            }
+            if (pageNumber - 1 < totalRecord / numberRecord)
+            {
+                pageNumber++;
+                dgvCustomer.DataSource = customerBLL.LoadRecord(pageNumber, numberRecord);
+
+            }
+        }
+
+        private void dgvCustomer_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            var tctm = dgvCustomer.Rows[e.RowIndex];
+            Customer ctm = new Customer();
+            ctm.CustomerID = (int)tctm.Cells["ID"].Value;
+            ctm.Name = (string)tctm.Cells["Name"].Value;
+            bool genDer = (bool)tctm.Cells["Gender"].Value;
+            ctm.IsFemale = genDer;
+            ctm.PhoneNumber = (string)tctm.Cells["Phone"].Value;
+            ctm.CMND = (string)tctm.Cells["CMND"].Value;
+            ListCtmEdit.Add(ctm);
+        }
+
+        private void dgvCustomer_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dgvCustomer.Columns[e.ColumnIndex].Name == "Gender")
             {
                 if (e.Value != null)
                 {
@@ -114,24 +259,6 @@ namespace GUI
                     e.FormattingApplied = true;
                 }
             }
-        }
-
-        private void dGvCustomer_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            var tctm = dGvCustomer.Rows[e.RowIndex];
-            Customer ctm = new Customer();
-            ctm.CustomerID = (int)tctm.Cells["ID"].Value;
-            ctm.Name = (string)tctm.Cells["Name"].Value;
-            bool genDer = (bool)tctm.Cells["Gender"].Value;
-            ctm.IsFemale = genDer;
-            ctm.PhoneNumber = (string)tctm.Cells["Phone"].Value;
-            ctm.CMND = (string)tctm.Cells["CMND"].Value;
-            ListCtmEdit.Add(ctm);
-        }
-
-        private void dGvCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

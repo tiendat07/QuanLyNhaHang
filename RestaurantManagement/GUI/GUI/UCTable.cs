@@ -164,7 +164,7 @@ namespace GUI
                     }
                 }
                 mainform.loadUCOrder(orderDetails_ThisTable, btn.objectID, true);
-                this.Hide();
+                //this.Hide();
             }
         }
         private void btn_Edit_Click(object sender, EventArgs e)
@@ -189,22 +189,36 @@ namespace GUI
 
         private void btnPay_Click_1(object sender, EventArgs e)
         {
-
-            DialogResult result = MessageBox.Show("Are you sure you want to pay?", "Pay Notification", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            myButton btn = sender as myButton;
+            Table item = lsTable_temp.Find(x => x.TableID == btn.objectID);
+            List<Order> orders = orderBLL.GetListOrders();
+            List<OrderDetail> orderDetails_ThisTable = new List<OrderDetail>();
+            List<OrderDetail> allorderDetails = orderDetailBLL.GetListOrderDetails();
+            Order order = orders.Find(x => x.TableID == item.TableID && x.IsPaid == false);
+            foreach (var o in allorderDetails)
             {
-                myButton btn = sender as myButton;
-                if (orderBLL.SetPaid(btn.objectID) == true)
+                if (o.OrderID == order.OrderID)
                 {
-                    if (tableBLL.ChangeTableStatus(btn.objectID, false, true, false) == true)
-                    {
-                        MessageBox.Show("You have paid sucessfully !");
-                        mainform.loadUCTable();
-                    }
+                    orderDetails_ThisTable.Add(o);
                 }
-                else
-                    MessageBox.Show("Cannot process. Please try again");
             }
+            mainform.loadUCOrderPay(orderDetails_ThisTable, btn.objectID);
+
+            //DialogResult result = MessageBox.Show("Are you sure you want to pay?", "Pay Notification", MessageBoxButtons.YesNo);
+            //if (result == DialogResult.Yes)
+            //{
+            //    myButton btn = sender as myButton;
+            //    if (orderBLL.SetPaid(btn.objectID) == true)
+            //    {
+            //        if (tableBLL.ChangeTableStatus(btn.objectID, false, true, false) == true)
+            //        {
+            //            MessageBox.Show("You have paid sucessfully !");
+            //            mainform.loadUCTable();
+            //        }
+            //    }
+            //    else
+            //        MessageBox.Show("Cannot process. Please try again");
+            //}
         }
     }
 }

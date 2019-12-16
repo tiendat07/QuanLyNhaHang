@@ -40,6 +40,7 @@ namespace GUI
                 f.IsFood = (isFood == "Food") ? true : false;
                 string isAvailable = cbAvailable.Text;
                 f.IsAvailable = (isAvailable == "Available") ? true : false;
+                f.FoodPrice = Convert.ToInt32 (txtPrice.Text);
                 if (f.FoodDrinkID == 0)
                 {
                     if (foodDrinkBLL.AddFoodDrink(f) == true)
@@ -75,6 +76,20 @@ namespace GUI
                     lbURLText.Text = openFileDialog.FileName;
                     lbURLText.Visible = true;
                 }
+            }
+        }
+
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&  (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
             }
         }
     }

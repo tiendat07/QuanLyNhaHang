@@ -20,7 +20,8 @@ namespace GUI
         Form_Restaurant mainform;
         int EmpID;
         int TabID;
-        int CusID;
+        int CusID = -1;
+        int OrdID;
         List<OrderDetail> lsOrderDetail;
         Order orDer;
         bool readOnly;
@@ -64,7 +65,7 @@ namespace GUI
             foreach (var item in lsOrderDetail)
                 total += (item.Price * item.Quantity);
             orDer.Total = total;
-
+            lbTotal.Text = total.ToString();
 
             dataGridViewOrder.AutoGenerateColumns = false;
             dataGridViewOrder.DataSource = lsOrderDetail;
@@ -100,9 +101,9 @@ namespace GUI
             dataGridViewOrder.Columns[2].ReadOnly = true;
             dataGridViewOrder.Columns[4].ReadOnly = true;
             dataGridViewOrder.Columns[3].ReadOnly = false;
+            
         }
         
-
         private void btnSave_Click_1(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to save?", "Save Notification", MessageBoxButtons.YesNo);
@@ -110,7 +111,8 @@ namespace GUI
             {
                 //yes...
                 bool Check = false;
-                if (orderBLL.AddOrder(orDer, lsOrderDetail) == true)
+                OrdID = (orderBLL.AddOrder(orDer, lsOrderDetail));
+                if (OrdID != -1)
                 {
                     if (tableBLL.ChangeTableStatus(TabID, true, false, false) == true)
                     {
@@ -129,6 +131,7 @@ namespace GUI
                 if (Check == true)
                 {
                     MessageBox.Show("Saved sucessfully");
+                    orDer.OrderID = OrdID;
                     mainform.loadUCTable();
                 }
                 else
@@ -143,7 +146,7 @@ namespace GUI
 
         private void btnCancel_Click_1(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to save?", "Save Notification", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Are you sure you want to cancel?", "Cancel Notification", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 //yes...
@@ -151,22 +154,8 @@ namespace GUI
                 mainform.loadUCTable();
             }
         }
-
-        private void dataGridViewOrder_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (this.dataGridViewOrder.Columns[e.ColumnIndex].Name == "Food Drink Name")
-            {
-                if (e.Value != null)
-                {
-
-                    int ID = Convert.ToInt32(e.Value);
-                    e.Value = foodDrinkBLL.GetFoodDrinkName(ID);
-                    e.FormattingApplied = true;
-                }
-            }
-        }
-
-        private void dataGridViewOrder_CellEndEdit_1(object sender, DataGridViewCellEventArgs e)
+        
+        private void dataGridViewOrder_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             var temp = dataGridViewOrder.Rows[e.RowIndex];
             int id = (int)temp.Cells["Order ID"].Value;
@@ -175,6 +164,30 @@ namespace GUI
                 if (item.FoodDrinkID == id)
                     item.Note = note;
             // Edit Data (NOTE)
+        }
+
+        private void dataGridViewOrder_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dataGridViewOrder.Columns[e.ColumnIndex].Name == "Food Drink Name")
+            {
+                if (e.Value != null)
+                {
+                    int ID = Convert.ToInt32(e.Value);
+                    e.Value = foodDrinkBLL.GetFoodDrinkName(ID);
+                    e.FormattingApplied = true;
+                }
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to cancel?", "Cancel Notification", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                //yes...
+                // Lưu mọi thứ xuống database
+                mainform.loadUCTable();
+            }
         }
     }
 }

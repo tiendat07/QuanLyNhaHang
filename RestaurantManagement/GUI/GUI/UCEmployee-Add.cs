@@ -60,7 +60,6 @@ namespace GUI
                 result += "QL";
             else
                 result += "NV";
-            MessageBox.Show(result);
             return result;
         }
 
@@ -128,7 +127,6 @@ namespace GUI
                 emp.Username = Create_Username(Name);
                 emp.Password = Create_Password(Name, dtpDOB.Value);
                 emp.Status = 1;
-                MessageBox.Show(emp.Password);
                 emp.IsAdmin = (cbIsAdmin.Checked == true) ? true : false;
                 emp.DateOfBirth = dtpDOB.Value;
 

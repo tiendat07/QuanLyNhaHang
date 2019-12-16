@@ -16,7 +16,7 @@ namespace DataAccessLayer
         }
         public List<Table> GetListTable()
         {
-            return dbContext.Tables.ToList();
+            return dbContext.Tables.Where(t => t.Status != 3).ToList();
         }
         public bool ChangeTableStatus(int TableID, bool isOrdered, bool isPaid, bool isBooked)
         {

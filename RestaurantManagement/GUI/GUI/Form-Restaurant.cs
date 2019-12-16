@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 namespace GUI
 {
     public partial class Form_Restaurant : Form
@@ -17,6 +18,7 @@ namespace GUI
         UCCustomer ucCustomer;
         static bool AdminTrue;
         static int EmployeeID;
+        static bool ROnly;
         public static Form_Restaurant Instance
         {
             get
@@ -30,6 +32,7 @@ namespace GUI
         }
         public Form_Restaurant(bool isAdmin, int ID)
         {
+            ROnly = false;
             InitializeComponent();
             AdminTrue = isAdmin;
             EmployeeID = ID;
@@ -43,6 +46,9 @@ namespace GUI
             }
             this.LoadUCHome();
             this.Paint += Form_Restaurant_Paint;
+            EmployeeBLL employeeBLL = new EmployeeBLL();
+            Employee employ = employeeBLL.FindEmployee(EmployeeID);
+            lbHello.Text = "Hello \n" + employ.Name;
             
         }
 
@@ -166,7 +172,8 @@ namespace GUI
         {
             _obj = this;
             pnlContainer.Controls.Clear();
-            UCTable uc = new UCTable(this);
+            UCTable uc;
+            uc = new UCTable(this);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
@@ -220,6 +227,7 @@ namespace GUI
             _obj = this;
             pnlContainer.Controls.Clear();
             UCOrder uc = new UCOrder(this, orderDetails, EmployeeID, TableID, ReadOnly);
+            ROnly = ReadOnly;
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
@@ -267,6 +275,16 @@ namespace GUI
             _obj = this;
             pnlContainer.Controls.Clear();
             UCTable uc = new UCTable(this);
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+
+        }
+
+        public void loadUCOrderPay(List <OrderDetail> orderDetails, int TableID)
+        {
+            _obj = this;
+            pnlContainer.Controls.Clear();
+            UCOrder_Pay uc = new UCOrder_Pay(this,orderDetails,EmployeeID, TableID);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
 

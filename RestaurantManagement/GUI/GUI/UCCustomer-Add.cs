@@ -25,12 +25,24 @@ namespace GUI
             mainform = form;
             InitializeComponent();
         }
-        private void btnCancel_Click(object sender, EventArgs e)
+      
+        private void txtPhone_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            mainform.loadUCCustomer();
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void txtCMND_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnSave_Click_1(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(txtCMND.Text) || cbGender.Text == "-select-"
              || String.IsNullOrEmpty(txtPhone.Text) || String.IsNullOrEmpty(txtName.Text))
@@ -41,7 +53,13 @@ namespace GUI
             else
             {
                 Customer ctm = new Customer();
-                ctm.Name = txtName.Text;
+                string Name = txtName.Text;
+                while (Name.IndexOf("  ") != -1)
+                {
+                    Name = Name.Replace("   ", " ");
+                }
+                Name = Name.Trim();
+                ctm.Name = Name;
                 ctm.CMND = txtCMND.Text;
                 ctm.PhoneNumber = txtPhone.Text;
                 ctm.Status = 1;
@@ -61,25 +79,44 @@ namespace GUI
             }
         }
 
-        private void txtPhone_KeyPress_1(object sender, KeyPressEventArgs e)
+        private void btnComeback_Click(object sender, EventArgs e)
+        {
+            mainform.loadUCCustomer();
+        }
+
+        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
+                lbErrorPhone.Text = "This input requires numbers only";
                 e.Handled = true;
             }
+            else
+                lbErrorPhone.Text = "";
         }
 
-        private void txtCMND_KeyPress_1(object sender, KeyPressEventArgs e)
+        private void txtCMND_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
+            if (txtCMND.TextLength < 9)
+                lbErrorCMND.Text = "Incorrect input";
+            else
+                lbErrorCMND.Text = "";
         }
 
-        private void cbGender_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtPhone_Leave(object sender, EventArgs e)
         {
+            if (txtPhone.TextLength < 10)
+                lbErrorPhone.Text = "Incorrect input";
+            else
+                lbErrorPhone.Text = "";
+        }
 
+        private void txtCMND_Leave(object sender, EventArgs e)
+        {
+            if (txtCMND.TextLength < 9)
+                lbErrorCMND.Text = "Incorrect input";
+            else
+                lbErrorCMND.Text = "";
         }
     }
 }
