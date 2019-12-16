@@ -94,7 +94,6 @@
       <DependentUpon>RestaurantManagement.edmx</DependentUpon>
     </Compile>
     <Compile Include="StatisticDAL.cs" />
-    </Compile>
     <Compile Include="Table.cs">
       <DependentUpon>RestaurantManagement.tt</DependentUpon>
     </Compile>

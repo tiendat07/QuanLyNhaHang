@@ -34,14 +34,17 @@ namespace GUI
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lbTableID = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbEmployeeID = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbDateOrder = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -52,31 +55,28 @@ namespace GUI
             this.label2 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.lbTotal = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnBack = new System.Windows.Forms.PictureBox();
             this.btnCancel = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnEdit = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnSave = new Bunifu.Framework.UI.BunifuThinButton2();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).BeginInit();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -155,6 +155,17 @@ namespace GUI
             this.lbTableID.TabIndex = 4;
             this.lbTableID.Text = "5";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox3.Image = global::GUI.Properties.Resources.table_96px;
+            this.pictureBox3.Location = new System.Drawing.Point(98, 43);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(102, 97);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
             // panel8
             // 
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
@@ -195,6 +206,17 @@ namespace GUI
             this.lbEmployeeID.Size = new System.Drawing.Size(26, 29);
             this.lbEmployeeID.TabIndex = 4;
             this.lbEmployeeID.Text = "1";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox2.Image = global::GUI.Properties.Resources.id_card_96px;
+            this.pictureBox2.Location = new System.Drawing.Point(98, 43);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(102, 97);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
             // 
             // panel5
             // 
@@ -237,6 +259,17 @@ namespace GUI
             this.lbDateOrder.TabIndex = 4;
             this.lbDateOrder.Text = "14/11/2019";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.overtime_96px;
+            this.pictureBox1.Location = new System.Drawing.Point(98, 43);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(105, 97);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -265,8 +298,8 @@ namespace GUI
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 236);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.03509F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.96491F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1440, 513);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
@@ -277,12 +310,12 @@ namespace GUI
             this.tableLayoutPanel6.Controls.Add(this.panel10, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel11, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(103, 54);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(103, 74);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.8427F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.1573F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1232, 456);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1232, 436);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // panel10
@@ -292,7 +325,7 @@ namespace GUI
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(3, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1226, 385);
+            this.panel10.Size = new System.Drawing.Size(1226, 368);
             this.panel10.TabIndex = 0;
             // 
             // dataGridViewOrder
@@ -306,7 +339,7 @@ namespace GUI
             this.dataGridViewOrder.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewOrder.Name = "dataGridViewOrder";
             this.dataGridViewOrder.RowTemplate.Height = 28;
-            this.dataGridViewOrder.Size = new System.Drawing.Size(1226, 376);
+            this.dataGridViewOrder.Size = new System.Drawing.Size(1200, 376);
             this.dataGridViewOrder.TabIndex = 2;
             this.dataGridViewOrder.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewOrder_CellEndEdit);
             this.dataGridViewOrder.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewOrder_CellFormatting);
@@ -317,9 +350,9 @@ namespace GUI
             this.panel11.Controls.Add(this.panel12);
             this.panel11.Controls.Add(this.lbTotal);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(3, 394);
+            this.panel11.Location = new System.Drawing.Point(3, 377);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1226, 59);
+            this.panel11.Size = new System.Drawing.Size(1226, 56);
             this.panel11.TabIndex = 1;
             // 
             // label2
@@ -329,7 +362,7 @@ namespace GUI
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
             this.label2.Location = new System.Drawing.Point(821, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 59);
+            this.label2.Size = new System.Drawing.Size(144, 56);
             this.label2.TabIndex = 5;
             this.label2.Text = "Total:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -339,7 +372,7 @@ namespace GUI
             this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel12.Location = new System.Drawing.Point(965, 0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(20, 59);
+            this.panel12.Size = new System.Drawing.Size(20, 56);
             this.panel12.TabIndex = 4;
             // 
             // lbTotal
@@ -349,10 +382,22 @@ namespace GUI
             this.lbTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
             this.lbTotal.Location = new System.Drawing.Point(985, 0);
             this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(241, 59);
+            this.lbTotal.Size = new System.Drawing.Size(241, 56);
             this.lbTotal.TabIndex = 3;
             this.lbTotal.Text = "label3";
             this.lbTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnBack.Image = global::GUI.Properties.Resources.back_to_96px;
+            this.btnBack.Location = new System.Drawing.Point(103, 3);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(81, 65);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBack.TabIndex = 1;
+            this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -387,51 +432,6 @@ namespace GUI
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1231, 116);
             this.tableLayoutPanel5.TabIndex = 0;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox3.Image = global::GUI.Properties.Resources.table_96px;
-            this.pictureBox3.Location = new System.Drawing.Point(98, 43);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(102, 97);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Image = global::GUI.Properties.Resources.id_card_96px;
-            this.pictureBox2.Location = new System.Drawing.Point(98, 43);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(102, 97);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.overtime_96px;
-            this.pictureBox1.Location = new System.Drawing.Point(98, 43);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(105, 97);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnBack
-            // 
-            this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnBack.Image = global::GUI.Properties.Resources.back_to_96px;
-            this.btnBack.Location = new System.Drawing.Point(103, 3);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(81, 45);
-            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnBack.TabIndex = 1;
-            this.btnBack.TabStop = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnCancel
             // 
@@ -527,21 +527,21 @@ namespace GUI
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).EndInit();
             this.panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -119,7 +119,7 @@
             this.panel_Food.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Food.Location = new System.Drawing.Point(3, 90);
             this.panel_Food.Name = "panel_Food";
-            this.panel_Food.Size = new System.Drawing.Size(1370, 328);
+            this.panel_Food.Size = new System.Drawing.Size(1370, 327);
             this.panel_Food.TabIndex = 3;
             // 
             // tableLayoutPanel1
@@ -172,14 +172,14 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.910892F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.35336F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1376, 817);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1376, 816);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // panel_Drink
             // 
             this.panel_Drink.AutoScroll = true;
             this.panel_Drink.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Drink.Location = new System.Drawing.Point(3, 496);
+            this.panel_Drink.Location = new System.Drawing.Point(3, 495);
             this.panel_Drink.Name = "panel_Drink";
             this.panel_Drink.Size = new System.Drawing.Size(1370, 318);
             this.panel_Drink.TabIndex = 4;
@@ -190,11 +190,11 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.22537F));
             this.tableLayoutPanel5.Controls.Add(this.panel5, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 424);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 423);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 73F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1370, 66);
             this.tableLayoutPanel5.TabIndex = 6;
             // 
@@ -489,7 +489,7 @@
             // 
             this.panel3.Controls.Add(this.tableLayoutPanel6);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(31, 826);
+            this.panel3.Location = new System.Drawing.Point(31, 825);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1376, 98);
             this.panel3.TabIndex = 1;

@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCOrder_Pay));
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnPrint = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnPay = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label2 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.lbTotal = new System.Windows.Forms.Label();
@@ -38,44 +41,41 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnBack = new System.Windows.Forms.PictureBox();
             this.lbDateOrder = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbEmployeeID = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lbTableID = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnPrint = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnPay = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnBack = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).BeginInit();
             this.panel10.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel4
@@ -95,6 +95,74 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1440, 184);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.Controls.Add(this.btnPrint, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnPay, 1, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(104, 34);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1231, 116);
+            this.tableLayoutPanel5.TabIndex = 0;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.ActiveBorderThickness = 1;
+            this.btnPrint.ActiveCornerRadius = 20;
+            this.btnPrint.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnPrint.ActiveForecolor = System.Drawing.Color.White;
+            this.btnPrint.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnPrint.BackColor = System.Drawing.Color.White;
+            this.btnPrint.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrint.BackgroundImage")));
+            this.btnPrint.ButtonText = "Print";
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnPrint.IdleBorderThickness = 1;
+            this.btnPrint.IdleCornerRadius = 20;
+            this.btnPrint.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnPrint.IdleForecolor = System.Drawing.Color.White;
+            this.btnPrint.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnPrint.Location = new System.Drawing.Point(828, 9);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(394, 80);
+            this.btnPrint.TabIndex = 8;
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnPay
+            // 
+            this.btnPay.ActiveBorderThickness = 1;
+            this.btnPay.ActiveCornerRadius = 20;
+            this.btnPay.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnPay.ActiveForecolor = System.Drawing.Color.White;
+            this.btnPay.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnPay.BackColor = System.Drawing.Color.White;
+            this.btnPay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPay.BackgroundImage")));
+            this.btnPay.ButtonText = "Pay";
+            this.btnPay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnPay.IdleBorderThickness = 1;
+            this.btnPay.IdleCornerRadius = 20;
+            this.btnPay.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnPay.IdleForecolor = System.Drawing.Color.White;
+            this.btnPay.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
+            this.btnPay.Location = new System.Drawing.Point(418, 9);
+            this.btnPay.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(394, 80);
+            this.btnPay.TabIndex = 7;
+            this.btnPay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -102,7 +170,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
             this.label2.Location = new System.Drawing.Point(821, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 59);
+            this.label2.Size = new System.Drawing.Size(144, 57);
             this.label2.TabIndex = 5;
             this.label2.Text = "Total:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -112,7 +180,7 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel12.Location = new System.Drawing.Point(965, 0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(20, 59);
+            this.panel12.Size = new System.Drawing.Size(20, 57);
             this.panel12.TabIndex = 4;
             // 
             // lbTotal
@@ -122,7 +190,7 @@
             this.lbTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
             this.lbTotal.Location = new System.Drawing.Point(985, 0);
             this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(241, 59);
+            this.lbTotal.Size = new System.Drawing.Size(241, 57);
             this.lbTotal.TabIndex = 3;
             this.lbTotal.Text = "label3";
             this.lbTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -133,9 +201,9 @@
             this.panel11.Controls.Add(this.panel12);
             this.panel11.Controls.Add(this.lbTotal);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(3, 394);
+            this.panel11.Location = new System.Drawing.Point(3, 380);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1226, 59);
+            this.panel11.Size = new System.Drawing.Size(1226, 57);
             this.panel11.TabIndex = 1;
             // 
             // dataGridViewOrder
@@ -149,7 +217,7 @@
             this.dataGridViewOrder.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewOrder.Name = "dataGridViewOrder";
             this.dataGridViewOrder.RowTemplate.Height = 28;
-            this.dataGridViewOrder.Size = new System.Drawing.Size(1226, 376);
+            this.dataGridViewOrder.Size = new System.Drawing.Size(1200, 376);
             this.dataGridViewOrder.TabIndex = 2;
             this.dataGridViewOrder.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewOrder_CellFormatting);
             // 
@@ -160,7 +228,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(3, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1226, 385);
+            this.panel10.Size = new System.Drawing.Size(1226, 371);
             this.panel10.TabIndex = 0;
             // 
             // tableLayoutPanel6
@@ -170,12 +238,12 @@
             this.tableLayoutPanel6.Controls.Add(this.panel10, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel11, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(103, 54);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(103, 70);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.8427F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.1573F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1232, 456);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1232, 440);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -190,10 +258,22 @@
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 236);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.25536F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.74464F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1440, 513);
             this.tableLayoutPanel3.TabIndex = 2;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnBack.Image = global::GUI.Properties.Resources.back_to_96px;
+            this.btnBack.Location = new System.Drawing.Point(103, 3);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(81, 61);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBack.TabIndex = 2;
+            this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lbDateOrder
             // 
@@ -257,6 +337,17 @@
             this.panel4.Size = new System.Drawing.Size(472, 140);
             this.panel4.TabIndex = 1;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox2.Image = global::GUI.Properties.Resources.id_card_96px;
+            this.pictureBox2.Location = new System.Drawing.Point(98, 43);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(102, 97);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
@@ -306,6 +397,17 @@
             this.panel7.Size = new System.Drawing.Size(472, 140);
             this.panel7.TabIndex = 2;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox3.Image = global::GUI.Properties.Resources.table_96px;
+            this.pictureBox3.Location = new System.Drawing.Point(98, 43);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(102, 97);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -349,6 +451,17 @@
             this.panel1.Size = new System.Drawing.Size(472, 140);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.overtime_96px;
+            this.pictureBox1.Location = new System.Drawing.Point(98, 43);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(105, 97);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
@@ -369,119 +482,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1446, 1014);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.Controls.Add(this.btnPrint, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.btnPay, 1, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(104, 34);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1231, 116);
-            this.tableLayoutPanel5.TabIndex = 0;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox3.Image = global::GUI.Properties.Resources.table_96px;
-            this.pictureBox3.Location = new System.Drawing.Point(98, 43);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(102, 97);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Image = global::GUI.Properties.Resources.id_card_96px;
-            this.pictureBox2.Location = new System.Drawing.Point(98, 43);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(102, 97);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.overtime_96px;
-            this.pictureBox1.Location = new System.Drawing.Point(98, 43);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(105, 97);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.ActiveBorderThickness = 1;
-            this.btnPrint.ActiveCornerRadius = 20;
-            this.btnPrint.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.btnPrint.ActiveForecolor = System.Drawing.Color.White;
-            this.btnPrint.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.btnPrint.BackColor = System.Drawing.Color.White;
-            this.btnPrint.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrint.BackgroundImage")));
-            this.btnPrint.ButtonText = "Print";
-            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnPrint.IdleBorderThickness = 1;
-            this.btnPrint.IdleCornerRadius = 20;
-            this.btnPrint.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.btnPrint.IdleForecolor = System.Drawing.Color.White;
-            this.btnPrint.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.btnPrint.Location = new System.Drawing.Point(828, 9);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(394, 80);
-            this.btnPrint.TabIndex = 8;
-            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // btnPay
-            // 
-            this.btnPay.ActiveBorderThickness = 1;
-            this.btnPay.ActiveCornerRadius = 20;
-            this.btnPay.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.btnPay.ActiveForecolor = System.Drawing.Color.White;
-            this.btnPay.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.btnPay.BackColor = System.Drawing.Color.White;
-            this.btnPay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPay.BackgroundImage")));
-            this.btnPay.ButtonText = "Pay";
-            this.btnPay.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPay.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnPay.IdleBorderThickness = 1;
-            this.btnPay.IdleCornerRadius = 20;
-            this.btnPay.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.btnPay.IdleForecolor = System.Drawing.Color.White;
-            this.btnPay.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(129)))));
-            this.btnPay.Location = new System.Drawing.Point(418, 9);
-            this.btnPay.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(394, 80);
-            this.btnPay.TabIndex = 7;
-            this.btnPay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnBack.Image = global::GUI.Properties.Resources.back_to_96px;
-            this.btnBack.Location = new System.Drawing.Point(103, 3);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(81, 45);
-            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnBack.TabIndex = 2;
-            this.btnBack.TabStop = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // UCOrder_Pay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -491,25 +491,25 @@
             this.Name = "UCOrder_Pay";
             this.Size = new System.Drawing.Size(1446, 1014);
             this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).EndInit();
             this.panel10.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.ResumeLayout(false);
 
         }
