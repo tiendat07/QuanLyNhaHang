@@ -78,11 +78,11 @@ namespace GUI
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1726, 882);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1942, 1102);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // bunifuGradientPanel1
@@ -96,11 +96,11 @@ namespace GUI
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(41)))), ((int)(((byte)(90)))));
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(7)))), ((int)(((byte)(67)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(34)))), ((int)(((byte)(41)))));
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(4, 4);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(4, 5);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(423, 874);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(477, 1092);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
             // panel1
@@ -112,7 +112,7 @@ namespace GUI
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(423, 874);
+            this.panel1.Size = new System.Drawing.Size(477, 1092);
             this.panel1.TabIndex = 3;
             // 
             // panel2
@@ -124,10 +124,10 @@ namespace GUI
             this.panel2.Controls.Add(this.btn_Menu);
             this.panel2.Controls.Add(this.btn_Home);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 398);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(0, 622);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(425, 476);
+            this.panel2.Size = new System.Drawing.Size(478, 470);
             this.panel2.TabIndex = 1;
             // 
             // btn_Report
@@ -153,19 +153,19 @@ namespace GUI
             this.btn_Report.IconVisible = false;
             this.btn_Report.IconZoom = 90D;
             this.btn_Report.IsTab = false;
-            this.btn_Report.Location = new System.Drawing.Point(0, 239);
-            this.btn_Report.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btn_Report.Location = new System.Drawing.Point(0, 301);
+            this.btn_Report.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btn_Report.Name = "btn_Report";
             this.btn_Report.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Report.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(156)))), ((int)(((byte)(182)))));
             this.btn_Report.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Report.selected = false;
-            this.btn_Report.Size = new System.Drawing.Size(425, 46);
+            this.btn_Report.Size = new System.Drawing.Size(478, 58);
             this.btn_Report.TabIndex = 37;
             this.btn_Report.Text = "Report";
             this.btn_Report.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Report.Textcolor = System.Drawing.Color.White;
-            this.btn_Report.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Report.TextFont = new System.Drawing.Font("SVN-Avo", 10F);
             this.btn_Report.Click += new System.EventHandler(this.btn_Report_Click);
             // 
             // btn_Employee
@@ -191,19 +191,19 @@ namespace GUI
             this.btn_Employee.IconVisible = false;
             this.btn_Employee.IconZoom = 90D;
             this.btn_Employee.IsTab = false;
-            this.btn_Employee.Location = new System.Drawing.Point(0, 193);
-            this.btn_Employee.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btn_Employee.Location = new System.Drawing.Point(0, 243);
+            this.btn_Employee.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btn_Employee.Name = "btn_Employee";
             this.btn_Employee.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Employee.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(156)))), ((int)(((byte)(182)))));
             this.btn_Employee.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Employee.selected = false;
-            this.btn_Employee.Size = new System.Drawing.Size(425, 46);
+            this.btn_Employee.Size = new System.Drawing.Size(478, 58);
             this.btn_Employee.TabIndex = 36;
             this.btn_Employee.Text = "Employee";
             this.btn_Employee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Employee.Textcolor = System.Drawing.Color.White;
-            this.btn_Employee.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Employee.TextFont = new System.Drawing.Font("SVN-Avo", 10F);
             this.btn_Employee.Click += new System.EventHandler(this.btn_Employee_Click_1);
             // 
             // btn_Customer
@@ -229,19 +229,19 @@ namespace GUI
             this.btn_Customer.IconVisible = false;
             this.btn_Customer.IconZoom = 90D;
             this.btn_Customer.IsTab = false;
-            this.btn_Customer.Location = new System.Drawing.Point(0, 147);
-            this.btn_Customer.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btn_Customer.Location = new System.Drawing.Point(0, 185);
+            this.btn_Customer.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btn_Customer.Name = "btn_Customer";
             this.btn_Customer.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Customer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(156)))), ((int)(((byte)(182)))));
             this.btn_Customer.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Customer.selected = false;
-            this.btn_Customer.Size = new System.Drawing.Size(425, 46);
+            this.btn_Customer.Size = new System.Drawing.Size(478, 58);
             this.btn_Customer.TabIndex = 35;
             this.btn_Customer.Text = "Customer";
             this.btn_Customer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Customer.Textcolor = System.Drawing.Color.White;
-            this.btn_Customer.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Customer.TextFont = new System.Drawing.Font("SVN-Avo", 10F);
             this.btn_Customer.Click += new System.EventHandler(this.btn_Customer_Click);
             // 
             // btn_Table
@@ -267,19 +267,19 @@ namespace GUI
             this.btn_Table.IconVisible = false;
             this.btn_Table.IconZoom = 90D;
             this.btn_Table.IsTab = false;
-            this.btn_Table.Location = new System.Drawing.Point(0, 101);
-            this.btn_Table.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btn_Table.Location = new System.Drawing.Point(0, 127);
+            this.btn_Table.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btn_Table.Name = "btn_Table";
             this.btn_Table.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Table.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(156)))), ((int)(((byte)(182)))));
             this.btn_Table.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Table.selected = false;
-            this.btn_Table.Size = new System.Drawing.Size(425, 46);
+            this.btn_Table.Size = new System.Drawing.Size(478, 58);
             this.btn_Table.TabIndex = 33;
             this.btn_Table.Text = "Table";
             this.btn_Table.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Table.Textcolor = System.Drawing.Color.White;
-            this.btn_Table.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Table.TextFont = new System.Drawing.Font("SVN-Avo", 10F);
             this.btn_Table.Click += new System.EventHandler(this.btn_Table_Click_1);
             // 
             // btn_Menu
@@ -305,19 +305,19 @@ namespace GUI
             this.btn_Menu.IconVisible = false;
             this.btn_Menu.IconZoom = 90D;
             this.btn_Menu.IsTab = false;
-            this.btn_Menu.Location = new System.Drawing.Point(0, 55);
-            this.btn_Menu.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btn_Menu.Location = new System.Drawing.Point(0, 69);
+            this.btn_Menu.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btn_Menu.Name = "btn_Menu";
             this.btn_Menu.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Menu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(156)))), ((int)(((byte)(182)))));
             this.btn_Menu.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Menu.selected = false;
-            this.btn_Menu.Size = new System.Drawing.Size(425, 46);
+            this.btn_Menu.Size = new System.Drawing.Size(478, 58);
             this.btn_Menu.TabIndex = 32;
             this.btn_Menu.Text = "Menu";
             this.btn_Menu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Menu.Textcolor = System.Drawing.Color.White;
-            this.btn_Menu.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Menu.TextFont = new System.Drawing.Font("SVN-Avo", 10F);
             this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click_1);
             // 
             // btn_Home
@@ -344,18 +344,18 @@ namespace GUI
             this.btn_Home.IconZoom = 90D;
             this.btn_Home.IsTab = false;
             this.btn_Home.Location = new System.Drawing.Point(0, 0);
-            this.btn_Home.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Home.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_Home.Name = "btn_Home";
             this.btn_Home.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Home.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(156)))), ((int)(((byte)(182)))));
             this.btn_Home.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Home.selected = false;
-            this.btn_Home.Size = new System.Drawing.Size(425, 55);
+            this.btn_Home.Size = new System.Drawing.Size(478, 69);
             this.btn_Home.TabIndex = 31;
             this.btn_Home.Text = "Home";
             this.btn_Home.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Home.Textcolor = System.Drawing.Color.White;
-            this.btn_Home.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Home.TextFont = new System.Drawing.Font("SVN-Avo", 10F);
             this.btn_Home.Click += new System.EventHandler(this.btn_Home_Click);
             // 
             // tableLayoutPanel4
@@ -367,14 +367,14 @@ namespace GUI
             this.tableLayoutPanel4.Controls.Add(this.panel3, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.66667F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.30864F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(478, 498);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(477, 622);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // bunifuImageButton1
@@ -383,10 +383,10 @@ namespace GUI
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = global::GUI.Properties.Resources.restaurant_500px;
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(89, 141);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(100, 244);
             this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(245, 146);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(276, 182);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 6;
             this.bunifuImageButton1.TabStop = false;
@@ -397,11 +397,11 @@ namespace GUI
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("iCiel Smoothy Cursive", 24F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(237)))), ((int)(((byte)(230)))));
-            this.label1.Location = new System.Drawing.Point(3, 297);
+            this.label1.Location = new System.Drawing.Point(3, 464);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(417, 101);
+            this.label1.Size = new System.Drawing.Size(471, 158);
             this.label1.TabIndex = 10;
             this.label1.Text = "Faragal";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -412,9 +412,10 @@ namespace GUI
             this.panel3.Controls.Add(this.lbHello);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Location = new System.Drawing.Point(3, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(472, 159);
+            this.panel3.Size = new System.Drawing.Size(471, 198);
             this.panel3.TabIndex = 11;
             // 
             // lbHello
@@ -422,9 +423,9 @@ namespace GUI
             this.lbHello.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbHello.Font = new System.Drawing.Font("SVN-Avo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHello.ForeColor = System.Drawing.Color.White;
-            this.lbHello.Location = new System.Drawing.Point(0, 26);
+            this.lbHello.Location = new System.Drawing.Point(0, 32);
             this.lbHello.Name = "lbHello";
-            this.lbHello.Size = new System.Drawing.Size(472, 98);
+            this.lbHello.Size = new System.Drawing.Size(471, 122);
             this.lbHello.TabIndex = 15;
             this.lbHello.Text = "Hello";
             this.lbHello.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -432,9 +433,10 @@ namespace GUI
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 124);
+            this.panel4.Location = new System.Drawing.Point(0, 154);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(472, 35);
+            this.panel4.Size = new System.Drawing.Size(471, 44);
             this.panel4.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -444,13 +446,13 @@ namespace GUI
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.pnlContainer, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(435, 4);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(489, 5);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1287, 874);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1449, 1092);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -464,12 +466,12 @@ namespace GUI
             this.tableLayoutPanel3.Controls.Add(this.img_Max, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.img_Close, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.img_Min, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(1103, 2);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(1242, 2);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(181, 34);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(204, 42);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // img_Max
@@ -477,10 +479,10 @@ namespace GUI
             this.img_Max.BackColor = System.Drawing.Color.Transparent;
             this.img_Max.Image = global::GUI.Properties.Resources.icons8_maximize_window_64;
             this.img_Max.ImageActive = null;
-            this.img_Max.Location = new System.Drawing.Point(93, 2);
+            this.img_Max.Location = new System.Drawing.Point(105, 2);
             this.img_Max.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.img_Max.Name = "img_Max";
-            this.img_Max.Size = new System.Drawing.Size(37, 25);
+            this.img_Max.Size = new System.Drawing.Size(42, 31);
             this.img_Max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_Max.TabIndex = 2;
             this.img_Max.TabStop = false;
@@ -492,10 +494,10 @@ namespace GUI
             this.img_Close.BackColor = System.Drawing.Color.Transparent;
             this.img_Close.Image = global::GUI.Properties.Resources.delete_sign_100px;
             this.img_Close.ImageActive = null;
-            this.img_Close.Location = new System.Drawing.Point(138, 2);
+            this.img_Close.Location = new System.Drawing.Point(156, 2);
             this.img_Close.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.img_Close.Name = "img_Close";
-            this.img_Close.Size = new System.Drawing.Size(37, 25);
+            this.img_Close.Size = new System.Drawing.Size(42, 31);
             this.img_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_Close.TabIndex = 1;
             this.img_Close.TabStop = false;
@@ -507,10 +509,10 @@ namespace GUI
             this.img_Min.BackColor = System.Drawing.Color.Transparent;
             this.img_Min.Image = global::GUI.Properties.Resources.icons8_minus_64;
             this.img_Min.ImageActive = null;
-            this.img_Min.Location = new System.Drawing.Point(48, 2);
+            this.img_Min.Location = new System.Drawing.Point(54, 2);
             this.img_Min.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.img_Min.Name = "img_Min";
-            this.img_Min.Size = new System.Drawing.Size(37, 25);
+            this.img_Min.Size = new System.Drawing.Size(42, 31);
             this.img_Min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_Min.TabIndex = 3;
             this.img_Min.TabStop = false;
@@ -521,10 +523,10 @@ namespace GUI
             // 
             this.pnlContainer.BackColor = System.Drawing.Color.White;
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(3, 63);
+            this.pnlContainer.Location = new System.Drawing.Point(3, 78);
             this.pnlContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(1281, 809);
+            this.pnlContainer.Size = new System.Drawing.Size(1443, 1012);
             this.pnlContainer.TabIndex = 1;
             // 
             // bunifuDragControl1
@@ -536,11 +538,11 @@ namespace GUI
             // 
             // Form_Restaurant
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1726, 882);
+            this.ClientSize = new System.Drawing.Size(1942, 1102);
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
