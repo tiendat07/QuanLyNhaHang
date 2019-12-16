@@ -93,9 +93,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RestaurantManagement.edmx</DependentUpon>
     </Compile>
-    <!--<Compile Include="sysdiagram.cs">
-      <DependentUpon>RestaurantManagement.tt</DependentUpon>
-    </Compile>-->
+    <Compile Include="StatisticDAL.cs" />
+    </Compile>
     <Compile Include="Table.cs">
       <DependentUpon>RestaurantManagement.tt</DependentUpon>
     </Compile>
