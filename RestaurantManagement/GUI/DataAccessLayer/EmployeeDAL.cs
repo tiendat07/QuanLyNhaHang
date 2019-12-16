@@ -136,8 +136,7 @@ namespace DataAccessLayer
             return dbContext.Employees.Where(x => x.EmployeeID == id).FirstOrDefault();
         }
         public List<Employee> LoadRecord(int page, int recordNum)
-        {
-            // Cái chỗ này mình nên làm là 
+        { 
             List<Employee> result = new List<Employee>();
 
             result = dbContext.Employees.Where(e => e.Status == 1).OrderBy(s=> s.EmployeeID).Skip((page - 1) * recordNum).Take(recordNum).ToList(); //bỏ qua những cái đã load chỉ lấy phần cần lấy
