@@ -86,8 +86,8 @@
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.70192F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.26603F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.10234F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.18126F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.32692F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.86539F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1928, 1248);
@@ -143,7 +143,7 @@
             this.dataGridViewListCustomer.RowTemplate.Height = 25;
             this.dataGridViewListCustomer.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewListCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewListCustomer.Size = new System.Drawing.Size(1922, 582);
+            this.dataGridViewListCustomer.Size = new System.Drawing.Size(1922, 672);
             this.dataGridViewListCustomer.TabIndex = 14;
             this.dataGridViewListCustomer.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewListCustomer_CellFormatting);
             // 
@@ -185,14 +185,14 @@
             this.tableLayoutPanel5.Controls.Add(this.btnPrevious, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.btnNext, 2, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 963);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 1053);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.13605F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.2585F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.65823F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1920, 280);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.83333F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.16667F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1920, 190);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
             // btnPrevious
@@ -201,10 +201,10 @@
             this.btnPrevious.BackgroundImage = global::GUI.Properties.Resources.comback;
             this.btnPrevious.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnPrevious.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPrevious.Location = new System.Drawing.Point(1636, 118);
+            this.btnPrevious.Location = new System.Drawing.Point(1636, 81);
             this.btnPrevious.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(70, 120);
+            this.btnPrevious.Size = new System.Drawing.Size(70, 57);
             this.btnPrevious.TabIndex = 0;
             this.btnPrevious.TabStop = false;
             this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
@@ -215,10 +215,10 @@
             this.btnNext.BackgroundImage = global::GUI.Properties.Resources.next;
             this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNext.Location = new System.Drawing.Point(1714, 118);
+            this.btnNext.Location = new System.Drawing.Point(1714, 81);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(66, 120);
+            this.btnNext.Size = new System.Drawing.Size(66, 57);
             this.btnNext.TabIndex = 1;
             this.btnNext.TabStop = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
@@ -261,7 +261,7 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.150467F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.53213F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.21131F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
             this.tableLayoutPanel6.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.rB1, 2, 0);
             this.tableLayoutPanel6.Controls.Add(this.rB2, 3, 0);
@@ -334,7 +334,7 @@
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(848, 90);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(846, 90);
             this.tableLayoutPanel8.TabIndex = 7;
             // 
             // pnSearch
@@ -346,7 +346,7 @@
             this.pnSearch.Location = new System.Drawing.Point(3, 5);
             this.pnSearch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pnSearch.Name = "pnSearch";
-            this.pnSearch.Size = new System.Drawing.Size(842, 80);
+            this.pnSearch.Size = new System.Drawing.Size(840, 80);
             this.pnSearch.TabIndex = 5;
             // 
             // tableLayoutPanel9
@@ -364,7 +364,7 @@
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(838, 76);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(836, 76);
             this.tableLayoutPanel9.TabIndex = 0;
             // 
             // txtSearch
@@ -378,7 +378,7 @@
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(702, 45);
+            this.txtSearch.Size = new System.Drawing.Size(700, 45);
             this.txtSearch.TabIndex = 7;
             this.txtSearch.Text = "Search...";
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
@@ -402,7 +402,7 @@
             this.btnDeletetxt.BackColor = System.Drawing.Color.Transparent;
             this.btnDeletetxt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDeletetxt.Image = global::GUI.Properties.Resources.delete1;
-            this.btnDeletetxt.Location = new System.Drawing.Point(787, 5);
+            this.btnDeletetxt.Location = new System.Drawing.Point(785, 5);
             this.btnDeletetxt.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnDeletetxt.Name = "btnDeletetxt";
             this.btnDeletetxt.Size = new System.Drawing.Size(48, 66);
@@ -429,10 +429,10 @@
             this.btnEdit.BackgroundImage = global::GUI.Properties.Resources.edit_96px;
             this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEdit.Location = new System.Drawing.Point(1807, 105);
+            this.btnEdit.Location = new System.Drawing.Point(1805, 105);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(100, 68);
+            this.btnEdit.Size = new System.Drawing.Size(102, 68);
             this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEdit.TabIndex = 9;
             this.btnEdit.TabStop = false;

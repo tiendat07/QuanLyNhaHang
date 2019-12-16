@@ -164,7 +164,7 @@ namespace GUI
                 labelPrice.Location = new Point(x + width + 210, y);
                 txtName.Location = new Point(x + width + 10, y);
                 txtDescription.Location = new Point(x + width + 10, y + 30);
-                txtPrice.Location = new Point(x + width + 210, y);
+                txtPrice.Location = labelPrice.Location;
 
                 picDelete.Location = new Point(x + width + 300, y);
                 
@@ -184,7 +184,7 @@ namespace GUI
                 // Description
                 description.Text = item.Description;
                 description.Name = "FoodDes" + foodID;
-                description.Font = new Font("SVN-Avo", 12);
+                description.Font = new Font("SVN-Avo", 10);
                 description.ForeColor = Color.Black;
                 description.Width = 200;
                 description.Height = 70;
@@ -269,6 +269,7 @@ namespace GUI
                     panel_Food.Controls.Add(txtName);
                     panel_Food.Controls.Add(txtDescription);
                     panel_Food.Controls.Add(labelPrice);
+                    panel_Food.Controls.Add(txtPrice);
                     // panel_Food.Controls.Add(picEdit);
                 }
                 else
@@ -280,6 +281,7 @@ namespace GUI
                     panel_Drink.Controls.Add(txtName);
                     panel_Drink.Controls.Add(txtDescription);
                     panel_Drink.Controls.Add(labelPrice);
+                    panel_Drink.Controls.Add(txtPrice);
                     // panel_Drink.Controls.Add(picEdit);
                 }
 
@@ -348,7 +350,7 @@ namespace GUI
             foreach (var item in lstxtPrice)
             {
                 item.Visible = true;
-                MessageBox.Show("" + item.objectID);
+               // MessageBox.Show("" + item.objectID);
             }
                
             foreach (var item in lspicDelete)

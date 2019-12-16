@@ -32,58 +32,58 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSave = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnComeback = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lbErrorName = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.cbGender = new System.Windows.Forms.ComboBox();
-            this.lbErrorGender = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbErrorPhone = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.lbErrorCMND = new System.Windows.Forms.Label();
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lbErrorGender = new System.Windows.Forms.Label();
+            this.cbGender = new System.Windows.Forms.ComboBox();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbErrorName = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnSave = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnComeback = new Bunifu.Framework.UI.BunifuThinButton2();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -143,6 +143,340 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1920, 489);
             this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.bunifuCustomLabel5);
+            this.panel16.Controls.Add(this.panel17);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel16.Location = new System.Drawing.Point(963, 247);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(282, 239);
+            this.panel16.TabIndex = 19;
+            // 
+            // bunifuCustomLabel5
+            // 
+            this.bunifuCustomLabel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(0, 100);
+            this.bunifuCustomLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(282, 37);
+            this.bunifuCustomLabel5.TabIndex = 3;
+            this.bunifuCustomLabel5.Text = "CMND";
+            this.bunifuCustomLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel17
+            // 
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel17.Location = new System.Drawing.Point(0, 0);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(282, 100);
+            this.panel17.TabIndex = 2;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.bunifuCustomLabel4);
+            this.panel14.Controls.Add(this.panel15);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel14.Location = new System.Drawing.Point(963, 3);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(282, 238);
+            this.panel14.TabIndex = 18;
+            // 
+            // bunifuCustomLabel4
+            // 
+            this.bunifuCustomLabel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(0, 93);
+            this.bunifuCustomLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(282, 37);
+            this.bunifuCustomLabel4.TabIndex = 3;
+            this.bunifuCustomLabel4.Text = "Phone Number";
+            this.bunifuCustomLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel15
+            // 
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel15.Location = new System.Drawing.Point(0, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(282, 93);
+            this.panel15.TabIndex = 2;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.bunifuCustomLabel3);
+            this.panel12.Controls.Add(this.panel13);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel12.Location = new System.Drawing.Point(3, 247);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(282, 239);
+            this.panel12.TabIndex = 17;
+            // 
+            // bunifuCustomLabel3
+            // 
+            this.bunifuCustomLabel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(0, 100);
+            this.bunifuCustomLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(282, 37);
+            this.bunifuCustomLabel3.TabIndex = 3;
+            this.bunifuCustomLabel3.Text = "Gender";
+            this.bunifuCustomLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel13
+            // 
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(282, 100);
+            this.panel13.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lbErrorPhone);
+            this.panel2.Controls.Add(this.txtPhone);
+            this.panel2.Controls.Add(this.flowLayoutPanel3);
+            this.panel2.Controls.Add(this.panel7);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(1251, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(666, 238);
+            this.panel2.TabIndex = 15;
+            // 
+            // lbErrorPhone
+            // 
+            this.lbErrorPhone.BackColor = System.Drawing.Color.White;
+            this.lbErrorPhone.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbErrorPhone.Font = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbErrorPhone.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbErrorPhone.Location = new System.Drawing.Point(0, 134);
+            this.lbErrorPhone.Name = "lbErrorPhone";
+            this.lbErrorPhone.Size = new System.Drawing.Size(500, 77);
+            this.lbErrorPhone.TabIndex = 11;
+            this.lbErrorPhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtPhone.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Location = new System.Drawing.Point(0, 93);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(500, 41);
+            this.txtPhone.TabIndex = 10;
+            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
+            this.txtPhone.Leave += new System.EventHandler(this.txtPhone_Leave);
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(500, 93);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(166, 145);
+            this.flowLayoutPanel3.TabIndex = 1;
+            // 
+            // panel7
+            // 
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(666, 93);
+            this.panel7.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel8);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(1251, 247);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(666, 239);
+            this.panel4.TabIndex = 14;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.lbErrorCMND);
+            this.panel8.Controls.Add(this.txtCMND);
+            this.panel8.Controls.Add(this.flowLayoutPanel4);
+            this.panel8.Controls.Add(this.panel9);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(666, 239);
+            this.panel8.TabIndex = 10;
+            // 
+            // lbErrorCMND
+            // 
+            this.lbErrorCMND.BackColor = System.Drawing.Color.White;
+            this.lbErrorCMND.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbErrorCMND.Font = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbErrorCMND.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbErrorCMND.Location = new System.Drawing.Point(0, 134);
+            this.lbErrorCMND.Name = "lbErrorCMND";
+            this.lbErrorCMND.Size = new System.Drawing.Size(500, 77);
+            this.lbErrorCMND.TabIndex = 11;
+            this.lbErrorCMND.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtCMND
+            // 
+            this.txtCMND.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtCMND.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCMND.Location = new System.Drawing.Point(0, 93);
+            this.txtCMND.Name = "txtCMND";
+            this.txtCMND.Size = new System.Drawing.Size(500, 41);
+            this.txtCMND.TabIndex = 10;
+            this.txtCMND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCMND_KeyPress);
+            this.txtCMND.Leave += new System.EventHandler(this.txtCMND_Leave);
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(500, 93);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(166, 146);
+            this.flowLayoutPanel4.TabIndex = 1;
+            // 
+            // panel9
+            // 
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(666, 93);
+            this.panel9.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lbErrorGender);
+            this.panel3.Controls.Add(this.cbGender);
+            this.panel3.Controls.Add(this.flowLayoutPanel2);
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(291, 247);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(666, 239);
+            this.panel3.TabIndex = 11;
+            // 
+            // lbErrorGender
+            // 
+            this.lbErrorGender.BackColor = System.Drawing.Color.White;
+            this.lbErrorGender.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbErrorGender.Font = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbErrorGender.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbErrorGender.Location = new System.Drawing.Point(0, 143);
+            this.lbErrorGender.Name = "lbErrorGender";
+            this.lbErrorGender.Size = new System.Drawing.Size(500, 70);
+            this.lbErrorGender.TabIndex = 12;
+            this.lbErrorGender.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cbGender
+            // 
+            this.cbGender.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbGender.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbGender.FormattingEnabled = true;
+            this.cbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cbGender.Location = new System.Drawing.Point(0, 100);
+            this.cbGender.Name = "cbGender";
+            this.cbGender.Size = new System.Drawing.Size(500, 43);
+            this.cbGender.TabIndex = 3;
+            this.cbGender.Text = "-select-";
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(500, 100);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(166, 139);
+            this.flowLayoutPanel2.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(666, 100);
+            this.panel5.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lbErrorName);
+            this.panel1.Controls.Add(this.txtName);
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(291, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(666, 238);
+            this.panel1.TabIndex = 9;
+            // 
+            // lbErrorName
+            // 
+            this.lbErrorName.BackColor = System.Drawing.Color.White;
+            this.lbErrorName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbErrorName.Font = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbErrorName.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbErrorName.Location = new System.Drawing.Point(0, 134);
+            this.lbErrorName.Name = "lbErrorName";
+            this.lbErrorName.Size = new System.Drawing.Size(500, 77);
+            this.lbErrorName.TabIndex = 11;
+            this.lbErrorName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtName
+            // 
+            this.txtName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtName.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(0, 93);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(500, 41);
+            this.txtName.TabIndex = 10;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(500, 93);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(166, 145);
+            this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(666, 93);
+            this.panel6.TabIndex = 0;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.bunifuCustomLabel2);
+            this.panel10.Controls.Add(this.panel11);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(3, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(282, 238);
+            this.panel10.TabIndex = 16;
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(0, 93);
+            this.bunifuCustomLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(282, 37);
+            this.bunifuCustomLabel2.TabIndex = 3;
+            this.bunifuCustomLabel2.Text = "Name";
+            this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel11
+            // 
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(282, 93);
+            this.panel11.TabIndex = 2;
             // 
             // tableLayoutPanel3
             // 
@@ -242,338 +576,12 @@
             this.btnComeback.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(36)))), ((int)(((byte)(117)))));
             this.btnComeback.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(36)))), ((int)(((byte)(117)))));
             this.btnComeback.Location = new System.Drawing.Point(8, 8);
-            this.btnComeback.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btnComeback.Margin = new System.Windows.Forms.Padding(8);
             this.btnComeback.Name = "btnComeback";
             this.btnComeback.Size = new System.Drawing.Size(244, 83);
             this.btnComeback.TabIndex = 3;
             this.btnComeback.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnComeback.Click += new System.EventHandler(this.btnComeback_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.lbErrorGender);
-            this.panel3.Controls.Add(this.cbGender);
-            this.panel3.Controls.Add(this.flowLayoutPanel2);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(291, 247);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(666, 239);
-            this.panel3.TabIndex = 11;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.panel8);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(1251, 247);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(666, 239);
-            this.panel4.TabIndex = 14;
-            // 
-            // panel5
-            // 
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(666, 100);
-            this.panel5.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lbErrorName);
-            this.panel1.Controls.Add(this.txtName);
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(291, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(666, 238);
-            this.panel1.TabIndex = 9;
-            // 
-            // panel6
-            // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(666, 93);
-            this.panel6.TabIndex = 0;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(500, 93);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(166, 145);
-            this.flowLayoutPanel1.TabIndex = 1;
-            // 
-            // lbErrorName
-            // 
-            this.lbErrorName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbErrorName.Font = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbErrorName.Location = new System.Drawing.Point(0, 134);
-            this.lbErrorName.Name = "lbErrorName";
-            this.lbErrorName.Size = new System.Drawing.Size(500, 77);
-            this.lbErrorName.TabIndex = 11;
-            this.lbErrorName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtName
-            // 
-            this.txtName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtName.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(0, 93);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(500, 41);
-            this.txtName.TabIndex = 10;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(500, 100);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(166, 139);
-            this.flowLayoutPanel2.TabIndex = 2;
-            // 
-            // cbGender
-            // 
-            this.cbGender.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbGender.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbGender.FormattingEnabled = true;
-            this.cbGender.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.cbGender.Location = new System.Drawing.Point(0, 100);
-            this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(500, 43);
-            this.cbGender.TabIndex = 3;
-            this.cbGender.Text = "-select-";
-            // 
-            // lbErrorGender
-            // 
-            this.lbErrorGender.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbErrorGender.Font = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbErrorGender.Location = new System.Drawing.Point(0, 143);
-            this.lbErrorGender.Name = "lbErrorGender";
-            this.lbErrorGender.Size = new System.Drawing.Size(500, 70);
-            this.lbErrorGender.TabIndex = 12;
-            this.lbErrorGender.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lbErrorPhone);
-            this.panel2.Controls.Add(this.txtPhone);
-            this.panel2.Controls.Add(this.flowLayoutPanel3);
-            this.panel2.Controls.Add(this.panel7);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(1251, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(666, 238);
-            this.panel2.TabIndex = 15;
-            // 
-            // lbErrorPhone
-            // 
-            this.lbErrorPhone.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbErrorPhone.Font = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbErrorPhone.Location = new System.Drawing.Point(0, 134);
-            this.lbErrorPhone.Name = "lbErrorPhone";
-            this.lbErrorPhone.Size = new System.Drawing.Size(500, 77);
-            this.lbErrorPhone.TabIndex = 11;
-            this.lbErrorPhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtPhone.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(0, 93);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(500, 41);
-            this.txtPhone.TabIndex = 10;
-            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
-            this.txtPhone.Leave += new System.EventHandler(this.txtPhone_Leave);
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(500, 93);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(166, 145);
-            this.flowLayoutPanel3.TabIndex = 1;
-            // 
-            // panel7
-            // 
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(666, 93);
-            this.panel7.TabIndex = 0;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.lbErrorCMND);
-            this.panel8.Controls.Add(this.txtCMND);
-            this.panel8.Controls.Add(this.flowLayoutPanel4);
-            this.panel8.Controls.Add(this.panel9);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(666, 239);
-            this.panel8.TabIndex = 10;
-            // 
-            // lbErrorCMND
-            // 
-            this.lbErrorCMND.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbErrorCMND.Font = new System.Drawing.Font("SVN-Avo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbErrorCMND.Location = new System.Drawing.Point(0, 134);
-            this.lbErrorCMND.Name = "lbErrorCMND";
-            this.lbErrorCMND.Size = new System.Drawing.Size(500, 77);
-            this.lbErrorCMND.TabIndex = 11;
-            this.lbErrorCMND.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtCMND
-            // 
-            this.txtCMND.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtCMND.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCMND.Location = new System.Drawing.Point(0, 93);
-            this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(500, 41);
-            this.txtCMND.TabIndex = 10;
-            this.txtCMND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCMND_KeyPress);
-            this.txtCMND.Leave += new System.EventHandler(this.txtCMND_Leave);
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(500, 93);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(166, 146);
-            this.flowLayoutPanel4.TabIndex = 1;
-            // 
-            // panel9
-            // 
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(666, 93);
-            this.panel9.TabIndex = 0;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.bunifuCustomLabel2);
-            this.panel10.Controls.Add(this.panel11);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(3, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(282, 238);
-            this.panel10.TabIndex = 16;
-            // 
-            // panel11
-            // 
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(282, 93);
-            this.panel11.TabIndex = 2;
-            // 
-            // bunifuCustomLabel2
-            // 
-            this.bunifuCustomLabel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(0, 93);
-            this.bunifuCustomLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(282, 37);
-            this.bunifuCustomLabel2.TabIndex = 3;
-            this.bunifuCustomLabel2.Text = "Name";
-            this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.bunifuCustomLabel3);
-            this.panel12.Controls.Add(this.panel13);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(3, 247);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(282, 239);
-            this.panel12.TabIndex = 17;
-            // 
-            // bunifuCustomLabel3
-            // 
-            this.bunifuCustomLabel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(0, 100);
-            this.bunifuCustomLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(282, 37);
-            this.bunifuCustomLabel3.TabIndex = 3;
-            this.bunifuCustomLabel3.Text = "Gender";
-            this.bunifuCustomLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel13
-            // 
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(282, 100);
-            this.panel13.TabIndex = 2;
-            // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.bunifuCustomLabel4);
-            this.panel14.Controls.Add(this.panel15);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(963, 3);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(282, 238);
-            this.panel14.TabIndex = 18;
-            // 
-            // bunifuCustomLabel4
-            // 
-            this.bunifuCustomLabel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(0, 93);
-            this.bunifuCustomLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(282, 37);
-            this.bunifuCustomLabel4.TabIndex = 3;
-            this.bunifuCustomLabel4.Text = "Phone Number";
-            this.bunifuCustomLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel15
-            // 
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel15.Location = new System.Drawing.Point(0, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(282, 93);
-            this.panel15.TabIndex = 2;
-            // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.bunifuCustomLabel5);
-            this.panel16.Controls.Add(this.panel17);
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel16.Location = new System.Drawing.Point(963, 247);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(282, 239);
-            this.panel16.TabIndex = 19;
-            // 
-            // bunifuCustomLabel5
-            // 
-            this.bunifuCustomLabel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(0, 100);
-            this.bunifuCustomLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(282, 37);
-            this.bunifuCustomLabel5.TabIndex = 3;
-            this.bunifuCustomLabel5.Text = "CMND";
-            this.bunifuCustomLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel17
-            // 
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel17.Location = new System.Drawing.Point(0, 0);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(282, 100);
-            this.panel17.TabIndex = 2;
             // 
             // UCCustomer_Add
             // 
@@ -587,21 +595,21 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel10.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
