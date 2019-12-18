@@ -106,13 +106,21 @@ namespace GUI
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            if (cbSearch.Text == "(...)" && txtSearch.Text != "")
-            {
-                dgvCustomer.DataSource = customerBLL.LoadRecord(pageNumber, numberRecord);
-            }
             if (cbSearch.Text == "(...)")
             {
-                dgvCustomer.DataSource = customerBLL.Sreach(txtSearch.Text, 0, pageNumber, numberRecord);
+                if (txtSearch.Text != "")
+                    dgvCustomer.DataSource = customerBLL.Sreach(txtSearch.Text, 0, pageNumber, numberRecord);
+                else
+                {
+                    dgvCustomer.DataSource = customerBLL.LoadRecord(pageNumber, numberRecord);
+                    btnPrevious.Visible = true;
+                    btnNext.Visible = true;
+                }
+            }
+            else
+            {
+                btnPrevious.Visible = false;
+                btnNext.Visible = false;
             }
             if (txtSearch.Text != "")
             {
@@ -147,6 +155,10 @@ namespace GUI
         private void btnDelete_Click(object sender, EventArgs e)
         {
             txtSearch.Text = "";
+            btnPrevious.Visible = true;
+            btnNext.Visible = true;
+            rB1.Checked = false;
+            rB2.Checked = false;
             dgvCustomer.DataSource = customerBLL.LoadRecord(pageNumber, numberRecord);
         }
 
@@ -186,6 +198,8 @@ namespace GUI
         {
             if (cbSearch.Text == "Gender")
             {
+                btnPrevious.Visible = false;
+                btnNext.Visible = false;
                 rB1.Checked = false;
                 rB2.Checked = false;
                 rB1.Visible = true;
@@ -195,6 +209,8 @@ namespace GUI
             }
             if (cbSearch.Text == "(...)")
             {
+                btnPrevious.Visible = true;
+                btnNext.Visible = true;
                 rB1.Checked = false;
                 rB2.Checked = false;
                 rB1.Visible = false;
@@ -220,7 +236,7 @@ namespace GUI
             {
                 totalRecord = db.Employees.Count();
             }
-            if (pageNumber - 1 < totalRecord / numberRecord)
+            if (pageNumber -1 < totalRecord / numberRecord)
             {
                 pageNumber++;
                 dgvCustomer.DataSource = customerBLL.LoadRecord(pageNumber, numberRecord);

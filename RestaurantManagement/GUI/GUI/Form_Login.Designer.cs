@@ -247,7 +247,7 @@ namespace GUI
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(321, 97);
             this.txtPassword.TabIndex = 1;
-            this.txtPassword.Text = "bunifuMaterialTextbox2";
+            this.txtPassword.Text = "password";
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPassword.OnValueChanged += new System.EventHandler(this.txtPassword_OnValueChanged);
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
@@ -285,6 +285,7 @@ namespace GUI
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(325, 120);
             this.txtUsername.TabIndex = 0;
+            this.txtUsername.Text = "nganndt_QL";
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUsername.OnValueChanged += new System.EventHandler(this.txtUsername_OnValueChanged);
             this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsername_KeyDown);

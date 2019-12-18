@@ -110,20 +110,49 @@ namespace DataAccessLayer
         public SortedDictionary<int, float> TotalAll()
         {
             SortedDictionary<int, float> result = new SortedDictionary<int, float>();
-
-            var lsCTHD = dbContext.OrderDetails
+            var lsCTHD = dbContext.OrderDetails.Include("Orders").Where(o => o.Order.IsPaid == true)
                                 .GroupBy(o => new {o.FoodDrinkID})
-                                .Select(o1 => new { Key = o1.Key, Total = o1.Sum(o => o.Quantity*o.Price) });
+                                .Select(o1 => new { Key = o1.Key, Total = o1.Sum(o => o.Quantity*o.Price) })
+                                .OrderByDescending(o=> o.Total );
+            // Order By : Tăng dần => Top least
+            // Order by Descending: Giảm dần => Top most
             var totalall = dbContext.Orders.Where(o => o.IsPaid == true).Sum(o => o.Total);
-
+            int count = 1;
             foreach (var ct in lsCTHD)
             {
+                if (count > 5)
+                    break;
                 int id = ct.Key.FoodDrinkID;
                 result[id] = (ct.Total / totalall) * 100;
+                count++;
             }
 
             return result;
         }
-
+        public SortedDictionary<int, float> TotalAllLeast ()
+        {
+            SortedDictionary<int, float> result = new SortedDictionary<int, float>();
+            var lsCTHD = dbContext.OrderDetails.Include("Orders").Where(o => o.Order.IsPaid == true)
+                                .GroupBy(o => new { o.FoodDrinkID })
+                                .Select(o1 => new { Key = o1.Key, Total = o1.Sum(o => o.Quantity * o.Price) })
+                                .OrderBy(o => o.Total);
+            // Order By : Tăng dần => Top least
+            // Order by Descending: Giảm dần => Top most
+            var totalall = dbContext.Orders.Where(o => o.IsPaid == true).Sum(o => o.Total);
+            int count = 1;
+            foreach (var ct in lsCTHD)
+            {
+                if (count > 5)
+                    break;
+                int id = ct.Key.FoodDrinkID;
+                result[id] = (ct.Total / totalall) * 100;
+                count++;
+            }
+            return result;
+        }
+        public float GetTotalOrders()
+        {
+            return dbContext.Orders.Select(o => o.Total).Sum();
+        }
     }
 }

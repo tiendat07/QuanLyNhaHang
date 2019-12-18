@@ -195,14 +195,22 @@ namespace GUI
             List<OrderDetail> orderDetails_ThisTable = new List<OrderDetail>();
             List<OrderDetail> allorderDetails = orderDetailBLL.GetListOrderDetails();
             Order order = orders.Find(x => x.TableID == item.TableID && x.IsPaid == false);
+            bool check = true;
             foreach (var o in allorderDetails)
             {
-                if (o.OrderID == order.OrderID)
+                if (order == null || o == null)
+                {
+                    MessageBox.Show("Không thể thanh toán !");
+                    check = false;
+                    break;
+                }
+                if (o.OrderID == order.OrderID )
                 {
                     orderDetails_ThisTable.Add(o);
                 }
             }
-            mainform.loadUCOrderPay(orderDetails_ThisTable, btn.objectID);
+            if (check == true)
+             mainform.loadUCOrderPay(orderDetails_ThisTable, btn.objectID);
 
             //DialogResult result = MessageBox.Show("Are you sure you want to pay?", "Pay Notification", MessageBoxButtons.YesNo);
             //if (result == DialogResult.Yes)

@@ -108,40 +108,48 @@ namespace GUI
             }
             else
             {
-                Employee emp = new Employee();
-                string Name = txtName.Text;
-                while (Name.IndexOf("  ") != -1)
-                {
-                    Name = Name.Replace("   ", " ");
-                }
-                Name = Name.Trim();
-                emp.Name = Name;
-                emp.CMND = txtCMND.Text;
-                emp.PhoneNumber = txtPhone.Text;
-                emp.Address = txtAddress.Text;
-                if (cbGender.Text == "Female")
-                    emp.IsFemale = true;
-                if (cbGender.Text == "Male")
-                    emp.IsFemale = false;
-                emp.Email = txtEmail.Text;
-                emp.Username = Create_Username(Name);
-                emp.Password = Create_Password(Name, dtpDOB.Value);
-                emp.Status = 1;
-                emp.IsAdmin = (cbIsAdmin.Checked == true) ? true : false;
-                emp.DateOfBirth = dtpDOB.Value;
-
-                if (employeeBLL.AddEmployee(emp) == true)
-                {
-                    DialogResult dialog = MessageBox.Show("Saved successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (dialog == DialogResult.OK)  //click ok thì chuyển lại form đầu.
-                    {
-                        mainform.loadUCEmployee();
-                    }
-                }
+                bool check = true;
+                if (errorAddress.Text != "" || errorCMND.Text != "" || errorEmail.Text != ""
+                    || errorGender.Text != "" || errorName.Text != "" || errorPhone.Text != "")
+                    MessageBox.Show("Please correct your mistakes before save changes");
                 else
                 {
-                    MessageBox.Show("Saved unsuccessfully. Please try again!");
+                    Employee emp = new Employee();
+                    string Name = txtName.Text;
+                    while (Name.IndexOf("  ") != -1)
+                    {
+                        Name = Name.Replace("   ", " ");
+                    }
+                    Name = Name.Trim();
+                    emp.Name = Name;
+                    emp.CMND = txtCMND.Text;
+                    emp.PhoneNumber = txtPhone.Text;
+                    emp.Address = txtAddress.Text;
+                    if (cbGender.Text == "Female")
+                        emp.IsFemale = true;
+                    if (cbGender.Text == "Male")
+                        emp.IsFemale = false;
+                    emp.Email = txtEmail.Text;
+                    emp.Username = Create_Username(Name);
+                    emp.Password = Create_Password(Name, dtpDOB.Value);
+                    emp.Status = 1;
+                    emp.IsAdmin = (cbIsAdmin.Checked == true) ? true : false;
+                    emp.DateOfBirth = dtpDOB.Value;
+
+                    if (employeeBLL.AddEmployee(emp) == true)
+                    {
+                        DialogResult dialog = MessageBox.Show("Saved successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (dialog == DialogResult.OK)  //click ok thì chuyển lại form đầu.
+                        {
+                            mainform.loadUCEmployee();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Saved unsuccessfully. Please try again!");
+                    }
                 }
+                
 
             }
         }

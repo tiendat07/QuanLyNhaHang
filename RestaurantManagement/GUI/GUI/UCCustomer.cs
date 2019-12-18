@@ -93,7 +93,7 @@ namespace GUI
             {
                 totalRecord = db.Employees.Count();
             }
-            if (pageNumber - 1 < totalRecord / numberRecord)
+            if (pageNumber -1 < totalRecord / numberRecord)
             {
                 pageNumber++;
                 dataGridViewListCustomer.DataSource = customerBLL.LoadRecord(pageNumber, numberRecord);
@@ -123,6 +123,8 @@ namespace GUI
 
         private void rB1_CheckedChanged(object sender, EventArgs e)
         {
+            btnPrevious.Visible = false;
+            btnNext.Visible = false;
             if (txtSearch.Text == "Search..." || txtSearch.Text == "")
             {
                 dataGridViewListCustomer.DataSource = customerBLL.Sreach(txtSearch.Text, 1, pageNumber,numberRecord);
@@ -140,6 +142,8 @@ namespace GUI
 
         private void rB2_CheckedChanged(object sender, EventArgs e)
         {
+            btnPrevious.Visible = false;
+            btnNext.Visible = false;
             if (txtSearch.Text == "Search..." || txtSearch.Text == "")
             {
                 dataGridViewListCustomer.DataSource = customerBLL.Sreach(txtSearch.Text, 2, pageNumber, numberRecord);
@@ -159,14 +163,23 @@ namespace GUI
         {
             txtSearch.Text = "";
             dataGridViewListCustomer.DataSource = customerBLL.LoadRecord(pageNumber, numberRecord);
+            btnPrevious.Visible = true;
+            btnNext.Visible = true;
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             //0: cac loai ko can phan loai,1-3:nam,2-4:nu
-            if(txtSearch.Text!="")
+            btnPrevious.Visible = false;
+            btnNext.Visible = false;
+            if (txtSearch.Text!="")
             {
                 dataGridViewListCustomer.DataSource = customerBLL.LoadRecord(pageNumber, numberRecord);
+            }
+            else
+            {
+                btnPrevious.Visible = true;
+                btnNext.Visible = true;
             }
             if (rB1.Checked == false && rB2.Checked == false)
             {

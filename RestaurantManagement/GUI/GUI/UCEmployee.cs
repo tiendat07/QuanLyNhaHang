@@ -134,11 +134,11 @@ namespace GUI
             {
                 totalRecord = db.Employees.Count();
             }
-            pageNumber++;
-            if (pageNumber - 1 < totalRecord / numberRecord)
+            if (pageNumber < totalRecord / numberRecord)
+            {
+                pageNumber++;
                 dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
-
-
+            }
         }
 
         /*
@@ -151,6 +151,8 @@ namespace GUI
         {
             if (cbBSearch.Text == "Gender")
             {
+                btnPrevious.Visible = false;
+                btnNext.Visible = false;
                 rB1.Checked = false;
                 rB2.Checked = false;
                 rB1.Visible = true;
@@ -160,6 +162,8 @@ namespace GUI
             }
             if (cbBSearch.Text == "Type")
             {
+                btnPrevious.Visible = false;
+                btnNext.Visible = false;
                 rB1.Checked = false;
                 rB2.Checked = false;
                 rB1.Visible = true;
@@ -169,6 +173,8 @@ namespace GUI
             }
             if (cbBSearch.Text == "(...)")
             {
+                btnPrevious.Visible = true;
+                btnNext.Visible = true;
                 rB1.Checked = false;
                 rB2.Checked = false;
                 rB1.Visible = false;
@@ -217,13 +223,21 @@ namespace GUI
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             //0: cac loai ko can phan loai,1-5:nam,2-6:nu,3-7:admin,4-8:nhanvien
-            if (cbBSearch.Text == "(...)" && txtSearch.Text != "")
-            {
-                dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
-            }
             if (cbBSearch.Text == "(...)")
             {
-                dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 0, pageNumber, numberRecord);
+                if (txtSearch.Text != "")
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 0, pageNumber, numberRecord);
+                else
+                {
+                    dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
+                    btnPrevious.Visible = true;
+                    btnNext.Visible = true;
+                }
+            }
+            else
+            {
+                btnPrevious.Visible = false;
+                btnNext.Visible = false;
             }
             if (txtSearch.Text != "")
             {
@@ -251,6 +265,10 @@ namespace GUI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            btnPrevious.Visible = true;
+            btnNext.Visible = true;
+            rB1.Checked = false;
+            rB2.Checked = false;
             txtSearch.Text = "";
             dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
         }

@@ -165,7 +165,7 @@ namespace GUI
             {
                 totalRecord = db.Employees.Count();
             }
-            if (pageNumber - 1 < totalRecord / numberRecord)
+            if (pageNumber < totalRecord / numberRecord)
             {
                 pageNumber++;
                 dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
@@ -206,6 +206,8 @@ namespace GUI
         {
             if (cbSearch.Text == "Gender")
             {
+                btnPrevious.Visible = false;
+                btnNext.Visible = false;
                 rB1.Checked = false;
                 rB2.Checked = false;
                 rB1.Visible = true;
@@ -215,6 +217,8 @@ namespace GUI
             }
             if (cbSearch.Text == "Type")
             {
+                btnPrevious.Visible = false;
+                btnNext.Visible = false;
                 rB1.Checked = false;
                 rB2.Checked = false;
                 rB1.Visible = true;
@@ -224,6 +228,8 @@ namespace GUI
             }
             if (cbSearch.Text == "(...)")
             {
+                btnPrevious.Visible = true;
+                btnNext.Visible = true;
                 rB1.Checked = false;
                 rB2.Checked = false;
                 rB1.Visible = false;
@@ -276,19 +282,31 @@ namespace GUI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            btnPrevious.Visible = true;
+            btnNext.Visible = true;
+            rB1.Checked = false;
+            rB2.Checked = false;
             txtSearch.Text = "";
             dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            if (cbSearch.Text == "(...)" && txtSearch.Text != "")
-            {
-                dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
-            }
             if (cbSearch.Text == "(...)")
             {
-                dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 0, pageNumber, numberRecord);
+                if (txtSearch.Text != "")
+                    dgvEmployee.DataSource = employeeBLL.Sreach(txtSearch.Text, 0, pageNumber, numberRecord);
+                else
+                {
+                    dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
+                    btnPrevious.Visible = true;
+                    btnNext.Visible = true;
+                }
+            }
+            else
+            {
+                btnPrevious.Visible = false;
+                btnNext.Visible = false;
             }
             if (txtSearch.Text != "")
             {
@@ -326,6 +344,55 @@ namespace GUI
             if (txtSearch.Text == "Search...")
                 txtSearch.Text = "";
             dgvEmployee.DataSource = employeeBLL.LoadRecord(pageNumber, numberRecord);
+        }
+
+        private void dgvEmployee_CellEndEdit_1(object sender, DataGridViewCellEventArgs e)
+        {
+            var temp = dgvEmployee.Rows[e.RowIndex];
+            Employee emp = new Employee();
+            emp.EmployeeID = (int)temp.Cells["ID"].Value;
+            emp.Name = (string)temp.Cells["Name"].Value;
+            emp.Address = (string)temp.Cells["Address"].Value;
+            emp.CMND = (string)temp.Cells["CMND"].Value;
+            emp.DateOfBirth = (DateTime)temp.Cells["D.O.B"].Value;
+            emp.PhoneNumber = (string)temp.Cells["Phone"].Value;
+            emp.Email = (string)temp.Cells["Email"].Value;
+
+            emp.IsAdmin = (bool)temp.Cells["Is Admin"].Value;
+            emp.Username = (string)temp.Cells["Username"].Value;
+            emp.Password = (string)temp.Cells["Password"].Value;
+            try
+            {
+
+                emp.IsFemale = (bool)temp.Cells["Gender"].Value;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cannot edit Gender. Please try edit others");
+            }
+            // Mỗi lần sửa, người đc sửa sẽ đc đưa vào danh sách đc sửa
+            ListEmpEdit.Add(emp);
+
+        }
+
+        private void dgvEmployee_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dgvEmployee.Columns[e.ColumnIndex].Name == "Gender")
+            {
+                if (e.Value != null)
+                {
+                    int gender = Convert.ToInt32(e.Value);
+                    if (gender == 0)
+                    {
+                        e.Value = "Male";
+                    }
+                    else
+                    {
+                        e.Value = "Female";
+                    }
+                    e.FormattingApplied = true;
+                }
+            }
         }
     }
 }

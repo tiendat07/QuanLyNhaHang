@@ -149,7 +149,7 @@ namespace GUI
 
         void worker_DoWork(object sender, DoWorkEventArgs e)
         {
-            System.Threading.Thread.Sleep(3500);
+            System.Threading.Thread.Sleep(1500);
         }
 
         private void txtPassword_OnValueChanged(object sender, EventArgs e)
