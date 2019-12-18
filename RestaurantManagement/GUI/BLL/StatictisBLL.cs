@@ -28,9 +28,15 @@ namespace BLL
         {
             return statisticDAL.TotalofYear(year1, year2);
         }
-        public SortedDictionary<int, float> TotalAll()
+        public SortedDictionary<int, float> TotalAll(bool isTopMost)
         {
-            return statisticDAL.TotalAll();
+            if (isTopMost == true )
+                return statisticDAL.TotalAll();
+            return statisticDAL.TotalAllLeast();
+        }
+        public float GetTotal()
+        {
+            return statisticDAL.GetTotalOrders();
         }
     }
 }

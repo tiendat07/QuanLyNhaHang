@@ -22,7 +22,10 @@ namespace GUI
             Clear();
             dtpDen.CustomFormat = "dd-MM-yyyy";
             dtpTu.CustomFormat = "dd-MM-yyyy";
-            RenderChart1();
+            cbTop.SelectedItem = "Most Favorite";
+            lbTotal.Text = statictisBLL.GetTotal().ToString();
+            cBTypeTK.SelectedItem = "Day";
+            Statistic();
         }
 
         void Clear()
@@ -120,27 +123,99 @@ namespace GUI
             Clear();
         }
 
-        public void RenderChart1()
+        public void RenderChart1(bool isTopMost)
         {
-            Chart1.colorSet.Add(Color.FromArgb(255, 128, 255));
-            Chart1.colorSet.Add(Color.FromArgb(128, 128, 255));
-            Chart1.colorSet.Add(Color.FromArgb(128, 255, 255));
-            Chart1.colorSet.Add(Color.FromArgb(128, 255, 128));
-            Chart1.colorSet.Add(Color.FromArgb(255, 255, 128));
-            Chart1.colorSet.Add(Color.FromArgb(255, 192, 128));
-            Chart1.colorSet.Add(Color.FromArgb(255, 128, 128));
-            Chart1.colorSet.Add(Color.FromArgb(188, 143, 143));
-
+            Chart1.colorSet.Add(Color.FromArgb(55, 101, 177));
+            Chart1.colorSet.Add(Color.FromArgb(87, 151, 255));
+            Chart1.colorSet.Add(Color.FromArgb(17, 177, 193));
+            Chart1.colorSet.Add(Color.FromArgb(241, 77, 255));
+            Chart1.colorSet.Add(Color.FromArgb(148, 38, 131));
             Bunifu.DataViz.WinForms.Canvas canvas = new Bunifu.DataViz.WinForms.Canvas();
             Bunifu.DataViz.WinForms.DataPoint values = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_doughnut);
 
-            SortedDictionary<int, float> totalall = statictisBLL.TotalAll();
+            SortedDictionary<int, float> totalall = statictisBLL.TotalAll(isTopMost);
 
             foreach (var item in totalall)
                 values.addLabely("", item.Value);
-
+            
             canvas.addData(values);
             Chart1.Render(canvas);
+            LoadLegend(totalall);
+        }
+        public void LoadLegend(SortedDictionary<int, float> totalall)
+        {
+            FoodDrinkBLL foodDrinkBLL = new FoodDrinkBLL();
+            Dictionary<string, float> lsFoodName = new Dictionary<string, float>();
+            foreach (var item in totalall)
+            {
+                string name = foodDrinkBLL.GetFoodDrinkName(item.Key);
+                lsFoodName[name] = item.Value;
+            }
+
+            int count = 1;
+            int x = 0, y = 0, z = 0;
+            int pX = 3, pY =5;
+            foreach (var item in lsFoodName)
+            {
+                if (count > 5)
+                    break;
+                Bunifu.Framework.UI.BunifuCheckbox cb1 = new Bunifu.Framework.UI.BunifuCheckbox();
+                if (count == 1)
+                {
+                    //55, 101, 177
+                    x = 55; y = 101; z = 177;
+
+                }
+                else if (count == 2)
+                {
+                    //87, 151, 255
+                    x = 87; y = 151; z = 255;
+                }
+                else if (count == 3)
+                {
+                    //17, 177, 193
+                    x = 17; y = 177; z = 193;
+                }
+                else if (count == 4)
+                {
+                    //241, 77, 255
+                    x = 241; y = 77; z = 255;
+                }
+                else
+                {
+                    //148, 38, 131
+                    x = 148; y = 38; z = 131;
+                }
+                count++;
+                cb1.BackColor = Color.FromArgb(x, y, z);
+                cb1.CheckedOnColor = Color.FromArgb(x, y, z);
+                cb1.ChechedOffColor = Color.FromArgb(x, y, z);
+                cb1.Size = new Size(20, 20);
+                cb1.ForeColor = Color.FromArgb(x, y, z);
+                cb1.Location = new Point(pX, pY);
+
+                Label lName = new Label();
+                lName.Text = item.Key;
+                lName.Location = new Point(pX + 26, pY);
+
+
+
+                Label lPercent = new Label();
+                lPercent.Text = item.Value.ToString();
+                lPercent.AutoSize = false;
+                lPercent.Size = new Size(80, 23);
+                lPercent.Location = new Point(pX + 132, pY);
+
+
+                panelLegend.Controls.Add(cb1);
+                panelLegend.Controls.Add(lName);
+                panelLegend.Controls.Add(lPercent);
+                
+                pY += 26;
+            }
+
+
+
         }
         public void RenderChart2_Date()
         {
@@ -202,10 +277,10 @@ namespace GUI
         bool year1 = false;
         bool year2 = false;
 
-
-        private void btnStatistic1_Click(object sender, EventArgs e)
+        public void Statistic ()
         {
-            switch(cBTypeTK.SelectedIndex)
+
+            switch (cBTypeTK.SelectedIndex)
             {
                 case 0://ngay
                     {
@@ -261,6 +336,27 @@ namespace GUI
                         break;
                     }
             }
+        }
+        private void btnStatistic1_Click(object sender, EventArgs e)
+        {
+            Statistic();
+        }
+        
+        
+        private void cbTop_TextChanged(object sender, EventArgs e)
+        {
+            panelLegend.Controls.Clear();
+            if (cbTop.SelectedItem.ToString() == "Most Favorite")
+            {
+                RenderChart1(true);
+            }
+            if (cbTop.SelectedItem.ToString() == "Least Favorite")
+                RenderChart1(false);
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

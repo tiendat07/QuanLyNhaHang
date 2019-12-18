@@ -314,34 +314,34 @@ namespace GUI
             pnlContainer.Controls.Add(uc);
         }
 
-        Rectangle Bottom { get { return new Rectangle(0, this.ClientSize.Height - _, this.ClientSize.Width, _); } }
-        Rectangle Right { get { return new Rectangle(this.ClientSize.Width - _, 0, _, this.ClientSize.Height); } }
+        //Rectangle Bottom { get { return new Rectangle(0, this.ClientSize.Height - _, this.ClientSize.Width, _); } }
+        //Rectangle Right { get { return new Rectangle(this.ClientSize.Width - _, 0, _, this.ClientSize.Height); } }
 
-        Rectangle TopLeft { get { return new Rectangle(0, 0, _, _); } }
-        Rectangle TopRight { get { return new Rectangle(this.ClientSize.Width - _, 0, _, _); } }
-        Rectangle BottomLeft { get { return new Rectangle(0, this.ClientSize.Height - _, _, _); } }
-        Rectangle BottomRight { get { return new Rectangle(this.ClientSize.Width - _, this.ClientSize.Height - _, _, _); } }
+        //Rectangle TopLeft { get { return new Rectangle(0, 0, _, _); } }
+        //Rectangle TopRight { get { return new Rectangle(this.ClientSize.Width - _, 0, _, _); } }
+        //Rectangle BottomLeft { get { return new Rectangle(0, this.ClientSize.Height - _, _, _); } }
+        //Rectangle BottomRight { get { return new Rectangle(this.ClientSize.Width - _, this.ClientSize.Height - _, _, _); } }
 
 
-        protected override void WndProc(ref Message message)
-        {
-            base.WndProc(ref message);
+        //protected override void WndProc(ref Message message)
+        //{
+        //    base.WndProc(ref message);
 
-            if (message.Msg == 0x84) // WM_NCHITTEST
-            {
-                var cursor = this.PointToClient(Cursor.Position);
+        //    if (message.Msg == 0x84) // WM_NCHITTEST
+        //    {
+        //        var cursor = this.PointToClient(Cursor.Position);
 
-                if (TopLeft.Contains(cursor)) message.Result = (IntPtr)HTTOPLEFT;
-                else if (TopRight.Contains(cursor)) message.Result = (IntPtr)HTTOPRIGHT;
-                else if (BottomLeft.Contains(cursor)) message.Result = (IntPtr)HTBOTTOMLEFT;
-                else if (BottomRight.Contains(cursor)) message.Result = (IntPtr)HTBOTTOMRIGHT;
+        //        if (TopLeft.Contains(cursor)) message.Result = (IntPtr)HTTOPLEFT;
+        //        else if (TopRight.Contains(cursor)) message.Result = (IntPtr)HTTOPRIGHT;
+        //        else if (BottomLeft.Contains(cursor)) message.Result = (IntPtr)HTBOTTOMLEFT;
+        //        else if (BottomRight.Contains(cursor)) message.Result = (IntPtr)HTBOTTOMRIGHT;
 
-                else if (Top.Contains(cursor)) message.Result = (IntPtr)HTTOP;
-                else if (Left.Contains(cursor)) message.Result = (IntPtr)HTLEFT;
-                else if (Right.Contains(cursor)) message.Result = (IntPtr)HTRIGHT;
-                else if (Bottom.Contains(cursor)) message.Result = (IntPtr)HTBOTTOM;
-            }
-        }
+        //        else if (Top.Contains(cursor)) message.Result = (IntPtr)HTTOP;
+        //        else if (Left.Contains(cursor)) message.Result = (IntPtr)HTLEFT;
+        //        else if (Right.Contains(cursor)) message.Result = (IntPtr)HTRIGHT;
+        //        else if (Bottom.Contains(cursor)) message.Result = (IntPtr)HTBOTTOM;
+        //    }
+        //}
     }
 }
 

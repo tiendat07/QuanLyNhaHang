@@ -74,7 +74,7 @@ namespace GUI
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1285, 100);
+            this.panel1.Size = new System.Drawing.Size(1446, 125);
             this.panel1.TabIndex = 0;
             // 
             // bunifuCustomLabel1
@@ -85,10 +85,10 @@ namespace GUI
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(36)))), ((int)(((byte)(117)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(437, 25);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(492, 31);
             this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(408, 50);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(487, 59);
             this.bunifuCustomLabel1.TabIndex = 4;
             this.bunifuCustomLabel1.Text = "Employee Management";
             this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -97,19 +97,19 @@ namespace GUI
             // 
             this.panel2.Controls.Add(this.tableLayoutPanel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 613);
+            this.panel2.Location = new System.Drawing.Point(0, 766);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1285, 229);
+            this.panel2.Size = new System.Drawing.Size(1446, 286);
             this.panel2.TabIndex = 1;
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 5;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.18672F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.21162F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.44813F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.3444F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.69295F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.86307F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.37898F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.705394F));
             this.tableLayoutPanel2.Controls.Add(this.btnSave, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.txtClear, 2, 1);
@@ -122,7 +122,7 @@ namespace GUI
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.04949F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.49462F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.76344F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1285, 229);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1446, 286);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // btnSave
@@ -137,17 +137,17 @@ namespace GUI
             this.btnSave.ButtonText = "SAVE";
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.IdleBorderThickness = 1;
             this.btnSave.IdleCornerRadius = 20;
             this.btnSave.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(36)))), ((int)(((byte)(117)))));
             this.btnSave.IdleForecolor = System.Drawing.Color.White;
             this.btnSave.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(85)))), ((int)(((byte)(233)))));
-            this.btnSave.Location = new System.Drawing.Point(714, 47);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnSave.Location = new System.Drawing.Point(805, 59);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(172, 53);
+            this.btnSave.Size = new System.Drawing.Size(186, 65);
             this.btnSave.TabIndex = 0;
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -164,17 +164,17 @@ namespace GUI
             this.txtClear.ButtonText = "Clear";
             this.txtClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtClear.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClear.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClear.ForeColor = System.Drawing.Color.SeaGreen;
             this.txtClear.IdleBorderThickness = 1;
             this.txtClear.IdleCornerRadius = 20;
             this.txtClear.IdleFillColor = System.Drawing.Color.White;
             this.txtClear.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(36)))), ((int)(((byte)(117)))));
             this.txtClear.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(36)))), ((int)(((byte)(117)))));
-            this.txtClear.Location = new System.Drawing.Point(898, 47);
-            this.txtClear.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtClear.Location = new System.Drawing.Point(1005, 59);
+            this.txtClear.Margin = new System.Windows.Forms.Padding(8);
             this.txtClear.Name = "txtClear";
-            this.txtClear.Size = new System.Drawing.Size(146, 53);
+            this.txtClear.Size = new System.Drawing.Size(170, 65);
             this.txtClear.TabIndex = 1;
             this.txtClear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.txtClear.Click += new System.EventHandler(this.txtClear_Click);
@@ -191,17 +191,17 @@ namespace GUI
             this.btnComeback.ButtonText = "Come back";
             this.btnComeback.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnComeback.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnComeback.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComeback.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComeback.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnComeback.IdleBorderThickness = 1;
             this.btnComeback.IdleCornerRadius = 20;
             this.btnComeback.IdleFillColor = System.Drawing.Color.White;
             this.btnComeback.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(36)))), ((int)(((byte)(117)))));
             this.btnComeback.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(36)))), ((int)(((byte)(117)))));
-            this.btnComeback.Location = new System.Drawing.Point(1058, 47);
-            this.btnComeback.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.btnComeback.Location = new System.Drawing.Point(1191, 59);
+            this.btnComeback.Margin = new System.Windows.Forms.Padding(8);
             this.btnComeback.Name = "btnComeback";
-            this.btnComeback.Size = new System.Drawing.Size(144, 53);
+            this.btnComeback.Size = new System.Drawing.Size(163, 65);
             this.btnComeback.TabIndex = 2;
             this.btnComeback.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnComeback.Click += new System.EventHandler(this.btnComeback_Click_1);
@@ -210,10 +210,10 @@ namespace GUI
             // 
             this.panel3.Controls.Add(this.tableLayoutPanel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 100);
+            this.panel3.Location = new System.Drawing.Point(0, 125);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1285, 513);
+            this.panel3.Size = new System.Drawing.Size(1446, 641);
             this.panel3.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -250,7 +250,7 @@ namespace GUI
             this.tableLayoutPanel1.Controls.Add(this.txtEmail, 5, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.14675F));
@@ -262,18 +262,18 @@ namespace GUI
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.14675F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.14675F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.14675F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1285, 513);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1446, 641);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(76, 57);
+            this.label1.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(85, 71);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 57);
+            this.label1.Size = new System.Drawing.Size(104, 71);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -284,12 +284,12 @@ namespace GUI
             this.label2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Enabled = false;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(715, 57);
+            this.label2.Location = new System.Drawing.Point(805, 71);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 57);
+            this.label2.Size = new System.Drawing.Size(119, 71);
             this.label2.TabIndex = 1;
             this.label2.Text = "Address";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -298,11 +298,11 @@ namespace GUI
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(76, 168);
+            this.label3.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(85, 209);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 59);
+            this.label3.Size = new System.Drawing.Size(104, 73);
             this.label3.TabIndex = 2;
             this.label3.Text = "Gender";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -311,11 +311,11 @@ namespace GUI
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(76, 279);
+            this.label4.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(85, 347);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 25);
+            this.label4.Size = new System.Drawing.Size(104, 35);
             this.label4.TabIndex = 3;
             this.label4.Text = "D.O.B";
             this.label4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -324,11 +324,11 @@ namespace GUI
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(76, 397);
+            this.label5.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(85, 494);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 57);
+            this.label5.Size = new System.Drawing.Size(104, 71);
             this.label5.TabIndex = 4;
             this.label5.Text = "CMND";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -337,11 +337,11 @@ namespace GUI
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(715, 168);
+            this.label6.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(805, 209);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 59);
+            this.label6.Size = new System.Drawing.Size(119, 73);
             this.label6.TabIndex = 5;
             this.label6.Text = "Phone";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -350,11 +350,11 @@ namespace GUI
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(715, 279);
+            this.label7.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(805, 347);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 61);
+            this.label7.Size = new System.Drawing.Size(119, 76);
             this.label7.TabIndex = 6;
             this.label7.Text = "Email";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -363,11 +363,11 @@ namespace GUI
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(715, 397);
+            this.label8.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(805, 494);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(105, 57);
+            this.label8.Size = new System.Drawing.Size(119, 71);
             this.label8.TabIndex = 7;
             this.label8.Text = "Is Admin";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -376,10 +376,10 @@ namespace GUI
             // 
             this.cbIsAdmin.AutoSize = true;
             this.cbIsAdmin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbIsAdmin.Location = new System.Drawing.Point(828, 401);
-            this.cbIsAdmin.Margin = new System.Windows.Forms.Padding(4);
+            this.cbIsAdmin.Location = new System.Drawing.Point(932, 499);
+            this.cbIsAdmin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbIsAdmin.Name = "cbIsAdmin";
-            this.cbIsAdmin.Size = new System.Drawing.Size(378, 17);
+            this.cbIsAdmin.Size = new System.Drawing.Size(427, 21);
             this.cbIsAdmin.TabIndex = 15;
             this.cbIsAdmin.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.cbIsAdmin.UseVisualStyleBackColor = true;
@@ -389,25 +389,27 @@ namespace GUI
             this.dtpDOB.Cursor = System.Windows.Forms.Cursors.Default;
             this.dtpDOB.CustomFormat = "dd-MM-yyyy";
             this.dtpDOB.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpDOB.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDOB.Location = new System.Drawing.Point(175, 283);
-            this.dtpDOB.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpDOB.Location = new System.Drawing.Point(197, 352);
+            this.dtpDOB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpDOB.Name = "dtpDOB";
-            this.dtpDOB.Size = new System.Drawing.Size(385, 22);
+            this.dtpDOB.Size = new System.Drawing.Size(435, 30);
             this.dtpDOB.TabIndex = 16;
             this.dtpDOB.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
             // cbGender
             // 
             this.cbGender.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbGender.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGender.FormattingEnabled = true;
             this.cbGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cbGender.Location = new System.Drawing.Point(175, 172);
-            this.cbGender.Margin = new System.Windows.Forms.Padding(4);
+            this.cbGender.Location = new System.Drawing.Point(197, 214);
+            this.cbGender.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(385, 24);
+            this.cbGender.Size = new System.Drawing.Size(435, 31);
             this.cbGender.TabIndex = 17;
             this.cbGender.Text = "-select-";
             // 
@@ -415,82 +417,86 @@ namespace GUI
             // 
             this.errorGender.AutoSize = true;
             this.errorGender.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.errorGender.ForeColor = System.Drawing.Color.Red;
-            this.errorGender.Location = new System.Drawing.Point(175, 227);
+            this.errorGender.ForeColor = System.Drawing.Color.DarkRed;
+            this.errorGender.Location = new System.Drawing.Point(197, 282);
             this.errorGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.errorGender.Name = "errorGender";
-            this.errorGender.Size = new System.Drawing.Size(385, 52);
+            this.errorGender.Size = new System.Drawing.Size(435, 65);
             this.errorGender.TabIndex = 24;
             // 
             // errorCMND
             // 
             this.errorCMND.AutoSize = true;
             this.errorCMND.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.errorCMND.ForeColor = System.Drawing.Color.Red;
-            this.errorCMND.Location = new System.Drawing.Point(175, 454);
+            this.errorCMND.ForeColor = System.Drawing.Color.DarkRed;
+            this.errorCMND.Location = new System.Drawing.Point(197, 565);
             this.errorCMND.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.errorCMND.Name = "errorCMND";
-            this.errorCMND.Size = new System.Drawing.Size(385, 59);
+            this.errorCMND.Size = new System.Drawing.Size(435, 76);
             this.errorCMND.TabIndex = 26;
             // 
             // errorPhone
             // 
             this.errorPhone.AutoSize = true;
             this.errorPhone.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.errorPhone.ForeColor = System.Drawing.Color.Red;
-            this.errorPhone.Location = new System.Drawing.Point(828, 227);
+            this.errorPhone.ForeColor = System.Drawing.Color.DarkRed;
+            this.errorPhone.Location = new System.Drawing.Point(932, 282);
             this.errorPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.errorPhone.Name = "errorPhone";
-            this.errorPhone.Size = new System.Drawing.Size(378, 52);
+            this.errorPhone.Size = new System.Drawing.Size(427, 65);
             this.errorPhone.TabIndex = 28;
             // 
             // errorEmail
             // 
             this.errorEmail.AutoSize = true;
             this.errorEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.errorEmail.ForeColor = System.Drawing.Color.Red;
-            this.errorEmail.Location = new System.Drawing.Point(828, 340);
+            this.errorEmail.ForeColor = System.Drawing.Color.DarkRed;
+            this.errorEmail.Location = new System.Drawing.Point(932, 423);
             this.errorEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.errorEmail.Name = "errorEmail";
-            this.errorEmail.Size = new System.Drawing.Size(378, 57);
+            this.errorEmail.Size = new System.Drawing.Size(427, 71);
             this.errorEmail.TabIndex = 29;
             // 
             // errorName
             // 
             this.errorName.AutoSize = true;
             this.errorName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.errorName.ForeColor = System.Drawing.Color.Red;
-            this.errorName.Location = new System.Drawing.Point(174, 114);
+            this.errorName.ForeColor = System.Drawing.Color.DarkRed;
+            this.errorName.Location = new System.Drawing.Point(196, 142);
             this.errorName.Name = "errorName";
-            this.errorName.Size = new System.Drawing.Size(387, 54);
+            this.errorName.Size = new System.Drawing.Size(437, 67);
             this.errorName.TabIndex = 30;
             // 
             // errorAddress
             // 
             this.errorAddress.AutoSize = true;
             this.errorAddress.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.errorAddress.ForeColor = System.Drawing.Color.Red;
-            this.errorAddress.Location = new System.Drawing.Point(827, 114);
+            this.errorAddress.ForeColor = System.Drawing.Color.DarkRed;
+            this.errorAddress.Location = new System.Drawing.Point(931, 142);
             this.errorAddress.Name = "errorAddress";
-            this.errorAddress.Size = new System.Drawing.Size(380, 54);
+            this.errorAddress.Size = new System.Drawing.Size(429, 67);
             this.errorAddress.TabIndex = 31;
             // 
             // txtName
             // 
             this.txtName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtName.Location = new System.Drawing.Point(174, 60);
+            this.txtName.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(196, 75);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(387, 37);
+            this.txtName.Size = new System.Drawing.Size(437, 45);
             this.txtName.TabIndex = 32;
             // 
             // txtCMND
             // 
             this.txtCMND.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtCMND.Location = new System.Drawing.Point(174, 400);
+            this.txtCMND.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCMND.Location = new System.Drawing.Point(196, 498);
+            this.txtCMND.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCMND.Multiline = true;
             this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(387, 37);
+            this.txtCMND.Size = new System.Drawing.Size(437, 45);
             this.txtCMND.TabIndex = 33;
             this.txtCMND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCMND_KeyPress);
             this.txtCMND.Leave += new System.EventHandler(this.txtCMND_Leave);
@@ -498,19 +504,23 @@ namespace GUI
             // txtAddress
             // 
             this.txtAddress.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtAddress.Location = new System.Drawing.Point(827, 60);
+            this.txtAddress.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(931, 75);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(380, 37);
+            this.txtAddress.Size = new System.Drawing.Size(429, 45);
             this.txtAddress.TabIndex = 34;
             // 
             // txtPhone
             // 
             this.txtPhone.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtPhone.Location = new System.Drawing.Point(827, 171);
+            this.txtPhone.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Location = new System.Drawing.Point(931, 213);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhone.Multiline = true;
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(380, 38);
+            this.txtPhone.Size = new System.Drawing.Size(429, 46);
             this.txtPhone.TabIndex = 35;
             this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             this.txtPhone.Leave += new System.EventHandler(this.txtPhone_Leave);
@@ -518,16 +528,18 @@ namespace GUI
             // txtEmail
             // 
             this.txtEmail.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEmail.Location = new System.Drawing.Point(827, 282);
+            this.txtEmail.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(931, 351);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(380, 40);
+            this.txtEmail.Size = new System.Drawing.Size(429, 49);
             this.txtEmail.TabIndex = 36;
             this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // UCEmployee_Add
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel3);
@@ -535,7 +547,7 @@ namespace GUI
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCEmployee_Add";
-            this.Size = new System.Drawing.Size(1285, 842);
+            this.Size = new System.Drawing.Size(1446, 1052);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

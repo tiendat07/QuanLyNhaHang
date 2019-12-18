@@ -52,30 +52,37 @@ namespace GUI
             }
             else
             {
-                Customer ctm = new Customer();
-                string Name = txtName.Text;
-                while (Name.IndexOf("  ") != -1)
-                {
-                    Name = Name.Replace("   ", " ");
-                }
-                Name = Name.Trim();
-                ctm.Name = Name;
-                ctm.CMND = txtCMND.Text;
-                ctm.PhoneNumber = txtPhone.Text;
-                ctm.Status = 1;
-                ctm.IsFemale = (cbGender.SelectedItem.ToString() == "Female") ? true : false;
-                if (customerBLL.AddCustomer(ctm) == true)
-                {
-                    DialogResult dialog = MessageBox.Show("Saved successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (dialog == DialogResult.OK)
-                    {
-                        mainform.loadUCCustomer();
-                    }
-                }
+                if (lbErrorCMND.Visible == true || lbErrorGender.Visible == true
+                    || lbErrorName.Visible == true || lbErrorPhone.Visible == true)
+                    MessageBox.Show("Please correct your mistakes before save changes");
                 else
                 {
-                    MessageBox.Show("Can't save !!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Customer ctm = new Customer();
+                    string Name = txtName.Text;
+                    while (Name.IndexOf("  ") != -1)
+                    {
+                        Name = Name.Replace("   ", " ");
+                    }
+                    Name = Name.Trim();
+                    ctm.Name = Name;
+                    ctm.CMND = txtCMND.Text;
+                    ctm.PhoneNumber = txtPhone.Text;
+                    ctm.Status = 1;
+                    ctm.IsFemale = (cbGender.SelectedItem.ToString() == "Female") ? true : false;
+                    if (customerBLL.AddCustomer(ctm) == true)
+                    {
+                        DialogResult dialog = MessageBox.Show("Saved successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (dialog == DialogResult.OK)
+                        {
+                            mainform.loadUCCustomer();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Can't save !!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
+               
             }
         }
 
