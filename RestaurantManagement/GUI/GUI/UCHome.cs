@@ -41,7 +41,7 @@ namespace GUI
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
             Form_ChangePassword f = new Form_ChangePassword(EmpID);
-            f.ShowDialog();
+            f.ShowDialog( );
         }
     }
 }

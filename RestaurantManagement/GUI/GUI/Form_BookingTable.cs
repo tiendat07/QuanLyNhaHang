@@ -113,7 +113,8 @@ namespace GUI
                 //}
                 foreach (var item in lsCustomer)
                 {
-                    source.Add(item);
+                    if (item != null)
+                        source.Add(item);
                 }
                 txtName.AutoCompleteCustomSource = source;
                 txtName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
@@ -136,28 +137,36 @@ namespace GUI
                     // Add Booking Tables
                     // Sau khi Add xong thì getCustomerID
                     Customer customer = customerBLL.SearchCustomerByName(txtName.Text);
-                    int CustomerID = customerBLL.GetCustomerID(customer);
-                    // Tính ExpireTime
-                    DateTime ExpireTime = dtpTime.Value.AddHours(1);
-                    // Tạo BookingTable
-                    BookingTable bookingTable = new BookingTable();
-                    bookingTable.BookingDate = dtpTime.Value;
-                    bookingTable.CustomerID = CustomerID;
-                    bookingTable.ExpiredTime = ExpireTime;
-                    bookingTable.TableID = TabID;
-
-                    // Add xuống DB
-                    if (bookingTableBLL.AddBookingTable(bookingTable) == true)
+                    if (customer != null)
                     {
-                        if (tableBLL.ChangeTableStatus(TabID, false, false, true) == true)
+                        int CustomerID = customerBLL.GetCustomerID(customer);
+                        if (CustomerID != -1)
                         {
-                            MessageBox.Show("Booked sucessfully");
-                            this.Hide();
-                            mainform.loadUCTable();
+                            // Tính ExpireTime
+                            DateTime ExpireTime = dtpTime.Value.AddHours(1);
+                            // Tạo BookingTable
+                            BookingTable bookingTable = new BookingTable();
+                            bookingTable.BookingDate = dtpTime.Value;
+                            bookingTable.CustomerID = CustomerID;
+                            bookingTable.ExpiredTime = ExpireTime;
+                            bookingTable.TableID = TabID;
+
+                            // Add xuống DB
+                            if (bookingTableBLL.AddBookingTable(bookingTable) == true)
+                            {
+                                if (tableBLL.ChangeTableStatus(TabID, false, false, true) == true)
+                                {
+                                    MessageBox.Show("Booked sucessfully");
+                                    this.Hide();
+                                    mainform.loadUCTable();
+                                }
+                            }
+                            else
+                                MessageBox.Show("Cannot book. Please try again ><");
                         }
-                    }
-                    else
                         MessageBox.Show("Cannot book. Please try again ><");
+                    }
+                    MessageBox.Show("Cannot book. Please try again ><");
                 }
             }
             else
@@ -183,29 +192,37 @@ namespace GUI
                     {
                         // Sau khi Add xong thì getCustomerID
                         int CustomerID = customerBLL.GetCustomerID(customer);
-                        // Tính ExpireTime
-                        DateTime ExpireTime = dtpTime.Value.AddHours(1);
-                        // Tạo BookingTable
-                        BookingTable bookingTable = new BookingTable();
-                        bookingTable.BookingDate = dtpTime.Value;
-                        bookingTable.CustomerID = CustomerID;
-                        bookingTable.ExpiredTime = ExpireTime;
-                        bookingTable.TableID = TabID;
-
-                        // Add xuống DB
-                        if (bookingTableBLL.AddBookingTable(bookingTable) == true)
+                        if (CustomerID != -1)
                         {
-                            if (tableBLL.ChangeTableStatus(TabID, false, false, true) == true)
+                            // Tính ExpireTime
+                            DateTime ExpireTime = dtpTime.Value.AddHours(1);
+                            // Tạo BookingTable
+                            BookingTable bookingTable = new BookingTable();
+                            bookingTable.BookingDate = dtpTime.Value;
+                            bookingTable.CustomerID = CustomerID;
+                            bookingTable.ExpiredTime = ExpireTime;
+                            bookingTable.TableID = TabID;
+
+                            // Add xuống DB
+                            if (bookingTableBLL.AddBookingTable(bookingTable) == true)
                             {
-                                MessageBox.Show("Booking thành công");
-                                this.Hide();
+                                if (tableBLL.ChangeTableStatus(TabID, false, false, true) == true)
+                                {
+                                    MessageBox.Show("Booking thành công");
+                                    this.Hide();
+                                }
+                                else
+                                    MessageBox.Show("Không thành công. Vui lòng thử lại");
                             }
+                            else
+                                MessageBox.Show("Không thành công. Vui lòng thử lại");
                         }
                         else
                             MessageBox.Show("Không thành công. Vui lòng thử lại");
 
                     }
-
+                    else
+                        MessageBox.Show("Không thành công. Vui lòng thử lại");
                 }
             }
 

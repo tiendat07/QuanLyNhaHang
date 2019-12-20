@@ -17,5 +17,9 @@ namespace BLL
         {
             return bookingTableDAL.AddBookingTable(bookingTable);
         }
+        public int FindCustomerIDByTableID(int TableID)
+        {
+            return bookingTableDAL.FindCustomerIDByTableID(TableID);
+        }
     }
 }

@@ -25,25 +25,29 @@ namespace DataAccessLayer
             {
                 try
                 {
-                    var hoaDonTam = dbContext.Orders.Add(new Order()
+                    if (o != null)
                     {
-                        OrderDate = o.OrderDate,
-                        IsPaid = false,
-                        Total = o.Total,
-                        CustomerID = o.CustomerID,
-                        TableID = o.TableID,
-                        EmployeeID = o.EmployeeID,
-                        OrderDetails = orderDetails
-                    });
-                    dbContext.SaveChanges();
-                    foreach (OrderDetail chiTiet in o.OrderDetails)
-                    {
-                        chiTiet.OrderID = hoaDonTam.OrderID;
-                        dbContext.OrderDetails.Add(chiTiet);
+                        var hoaDonTam = dbContext.Orders.Add(new Order()
+                        {
+                            OrderDate = o.OrderDate,
+                            IsPaid = false,
+                            Total = o.Total,
+                            CustomerID = o.CustomerID,
+                            TableID = o.TableID,
+                            EmployeeID = o.EmployeeID,
+                            OrderDetails = orderDetails
+                        });
+                        dbContext.SaveChanges();
+                        foreach (OrderDetail chiTiet in o.OrderDetails)
+                        {
+                            chiTiet.OrderID = hoaDonTam.OrderID;
+                            dbContext.OrderDetails.Add(chiTiet);
+                        }
+                        dbContext.SaveChanges();
+                        transaction.Commit();
+                        return hoaDonTam.OrderID;
                     }
-                    dbContext.SaveChanges();
-                    transaction.Commit();
-                    return hoaDonTam.OrderID;
+                    return -1;
                 }
                 catch (Exception e)
                 {
@@ -55,23 +59,40 @@ namespace DataAccessLayer
         }
         public bool SetPaid(int ID)
         {
-            if (ID > 0)
+            try
             {
-                Order x = dbContext.Orders.Where(o => o.TableID == ID).FirstOrDefault();
-                if (x != null)
+                if (ID > 0)
                 {
-                    x.IsPaid = true;
-                    dbContext.SaveChanges();
-                    return true;
+                    Order x = dbContext.Orders.Where(o => o.TableID == ID).FirstOrDefault();
+                    if (x != null)
+                    {
+                        x.IsPaid = true;
+                        dbContext.SaveChanges();
+                        return true;
 
+                    }
+                    return false;
                 }
                 return false;
             }
-            return false;
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
         public int FindOrderIDByTableID (int TableID)
         {
-            return  dbContext.Orders.Where(o => o.TableID == TableID).Select(o => o.OrderID).FirstOrDefault();
+            try
+            {
+                if (TableID >0)
+                    return dbContext.Orders.Where(o => o.TableID == TableID).Select(o => o.OrderID).FirstOrDefault();
+                return -1;
+            }
+            catch (Exception ex)
+            {
+                return -1;
+            }
+
         }
         
     }

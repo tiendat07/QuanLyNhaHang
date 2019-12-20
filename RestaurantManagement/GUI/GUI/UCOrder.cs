@@ -20,13 +20,14 @@ namespace GUI
         Form_Restaurant mainform;
         int EmpID;
         int TabID;
-        int CusID = -1;
+        int CusID;
         int OrdID;
         List<OrderDetail> lsOrderDetail;
         Order orDer;
         bool readOnly;
-        public UCOrder(Form_Restaurant form,List<OrderDetail> orderDetails, int EmployeeID, int TableID, bool ReadOnly)
+        public UCOrder(Form_Restaurant form,List<OrderDetail> orderDetails, int EmployeeID, int TableID,int CustomerID, bool ReadOnly)
         {
+            CusID = CustomerID;
             readOnly = ReadOnly;
             tableBLL = new TableBLL();
             orDer = new Order();
@@ -56,7 +57,8 @@ namespace GUI
             lbTableID.Text = Convert.ToString(TabID);
 
             // Order
-            orDer.CustomerID = 10;
+            orDer.CustomerID = CusID;
+                //orDer.CustomerID = 10;
             orDer.EmployeeID = EmpID;
             orDer.IsPaid = false;
             orDer.TableID = TabID;
@@ -141,7 +143,7 @@ namespace GUI
 
         private void btnEdit_Click_1(object sender, EventArgs e)
         {
-            mainform.loadUcMenu_Order(TabID);
+            mainform.loadUcMenu_Order(TabID, CusID);
         }
 
         private void btnCancel_Click_1(object sender, EventArgs e)

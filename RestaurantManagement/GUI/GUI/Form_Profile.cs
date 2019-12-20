@@ -50,26 +50,31 @@ namespace GUI
         public void LoadData()
         {
             employee = employeeBLL.FindEmployee(EmpID);
-            txtName.Text = employee.Name;
-            // Lưu ý chỗ combo box?
-            cbGender.SelectedIndex = (employee.IsFemale == true) ? 0 : 1;
-            dtpDOB.Value = employee.DateOfBirth;
-            txtPhoneNumber.Text = employee.PhoneNumber;
-            txtAddress.Text = employee.Address;
-            txtCMND.Text = employee.CMND;
-            txtEmail.Text = employee.Email;
-            txtUsername.Text = employee.Username;
-            // Thay đổi password? : Phải mã hóa xuống liền luôn trc khi lưu xuống db?
+            if (employee != null)
+            {
+                txtName.Text = employee.Name;
+                // Lưu ý chỗ combo box?
+                cbGender.SelectedIndex = (employee.IsFemale == true) ? 0 : 1;
+                dtpDOB.Value = employee.DateOfBirth;
+                txtPhoneNumber.Text = employee.PhoneNumber;
+                txtAddress.Text = employee.Address;
+                txtCMND.Text = employee.CMND;
+                txtEmail.Text = employee.Email;
+                txtUsername.Text = employee.Username;
+                // Thay đổi password? : Phải mã hóa xuống liền luôn trc khi lưu xuống db?
 
-            lbName.Text = employee.Name;
-            // Lưu ý chỗ combo box?
-            lbGender.Text = (employee.IsFemale == true) ? "Female" : "Male";
-            lbDOB.Text = employee.DateOfBirth.ToShortDateString().ToString();
-            lbPhone.Text = employee.PhoneNumber;
-            lbAddress.Text = employee.Address;
-            lbCMND.Text = employee.CMND;
-            lbEmail.Text = employee.Email;
-            lbUsername.Text = employee.Username;
+                lbName.Text = employee.Name;
+                // Lưu ý chỗ combo box?
+                lbGender.Text = (employee.IsFemale == true) ? "Female" : "Male";
+                lbDOB.Text = employee.DateOfBirth.ToShortDateString().ToString();
+                lbPhone.Text = employee.PhoneNumber;
+                lbAddress.Text = employee.Address;
+                lbCMND.Text = employee.CMND;
+                lbEmail.Text = employee.Email;
+                lbUsername.Text = employee.Username;
+            }
+            else
+                MessageBox.Show("Cannot find your profile");
         }
         
         private void txtName_Leave(object sender, EventArgs e)

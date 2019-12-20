@@ -20,29 +20,36 @@ namespace DataAccessLayer
         }
         public bool ChangeTableStatus(int TableID, bool isOrdered, bool isPaid, bool isBooked)
         {
-            if (TableID > 0)
+            try
             {
-                var x = dbContext.Tables.Where(t => t.TableID == TableID).FirstOrDefault();
-                if (x != null)
+                if (TableID > 0)
                 {
-                    if (isOrdered == true)
+                    var x = dbContext.Tables.Where(t => t.TableID == TableID).FirstOrDefault();
+                    if (x != null)
                     {
-                        x.Status = 2;
+                        if (isOrdered == true)
+                        {
+                            x.Status = 2;
+                        }
+                        else if (isPaid == true)
+                        {
+                            x.Status = 0;
+                        }
+                        else if (isBooked == true)
+                        {
+                            x.Status = 1;
+                        }
+                        dbContext.SaveChanges();
+                        return true;
                     }
-                    else if (isPaid == true)
-                    {
-                        x.Status = 0;
-                    }
-                    else if (isBooked == true)
-                    {
-                        x.Status = 1;
-                    }
-                    dbContext.SaveChanges();
-                    return true;
+                    return false;
                 }
                 return false;
             }
-            return false;
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
         public bool EditTable(Table table)
         {
@@ -86,30 +93,48 @@ namespace DataAccessLayer
         }
         public bool DeleteTable(int ID)
         {
-            if (ID >= 0)
+            try
             {
-                Table tab = dbContext.Tables.Where(t => t.TableID == ID).FirstOrDefault();
-                try
+                if (ID >= 0)
                 {
-                    if (tab != null)
+                    Table tab = dbContext.Tables.Where(t => t.TableID == ID).FirstOrDefault();
+                    try
                     {
-                        tab.Status = 3;
-                        // 3 Nghĩa là ẩn bàn hiện tại
-                        dbContext.SaveChanges();
-                        return true;
+                        if (tab != null)
+                        {
+                            tab.Status = 3;
+                            // 3 Nghĩa là ẩn bàn hiện tại
+                            dbContext.SaveChanges();
+                            return true;
+                        }
+                        return false;
                     }
-                    return false;
+                    catch (Exception ex)
+                    {
+                        return false;
+                    }
                 }
-                catch (Exception ex)
-                {
-                    return false;
-                }
+                return false;
             }
-            return false;
+            catch (Exception ex)
+            {
+                return false ;
+            }
+            
         }
         public Table FindTableById(int ID)
         {
-            return dbContext.Tables.Where(t => t.TableID == ID).FirstOrDefault();
+            try
+            {
+                if (ID >0)
+                    return dbContext.Tables.Where(t => t.TableID == ID).FirstOrDefault();
+                return null;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            
         }
     }
 }

@@ -70,13 +70,36 @@ namespace DataAccessLayer
         }
         public string GetFoodDrinkName(int FoodID)
         {
-            var x = dbContext.FoodDrinks.Where(f => f.FoodDrinkID == FoodID).FirstOrDefault();
-            return x.FoodDrinkName;
+            try
+            {
+                if (FoodID > 0)
+                {
+                    var x = dbContext.FoodDrinks.Where(f => f.FoodDrinkID == FoodID).FirstOrDefault();
+                    return x.FoodDrinkName;
+                }
+                return null;
+            }
+           catch (Exception ex)
+            {
+                return null;
+            }
         }
         public double GetFoodPrice(int FoodID)
         {
-            var x = dbContext.FoodDrinks.Where(f => f.FoodDrinkID == FoodID).FirstOrDefault();
-            return Convert.ToDouble(x.FoodPrice);
+            try
+            {
+                if (FoodID > 0)
+                {
+                    var x = dbContext.FoodDrinks.Where(f => f.FoodDrinkID == FoodID).FirstOrDefault();
+                    return Convert.ToDouble(x.FoodPrice);
+                }
+                return -1;
+            }
+            catch (Exception ex)
+            {
+                return -1;
+            }
+            
         }
         public List<FoodDrink> Search(string x, int k)
         {

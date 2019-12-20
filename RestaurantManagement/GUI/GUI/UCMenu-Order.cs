@@ -23,12 +23,12 @@ namespace GUI
         List<FoodDrink> lstFoodDrink;
         List<FoodDrink> lstFood;
         List<FoodDrink> lstDrink;
-        int EmpID, TabID;
-        public UCMenu_Order(Form_Restaurant form1, int EmployeeID, int TableID)
+        int EmpID, TabID, CusID;
+        public UCMenu_Order(Form_Restaurant form1, int EmployeeID, int TableID, int CustomerID)
         {
             lstFood = new List<FoodDrink>();
             lstDrink = new List<FoodDrink>();
-
+            CusID = CustomerID;
             EmpID = EmployeeID;
             TabID = TableID;
             orderDetailBLL = new OrderDetailBLL();
@@ -229,7 +229,7 @@ namespace GUI
             {
                 MessageBox.Show("Saved successfully");
                 this.Hide();
-                mainform.loadUCOrder(lsOrder, TabID, false);
+                mainform.loadUCOrder(lsOrder, TabID, false, CusID);
             }
             else
             {

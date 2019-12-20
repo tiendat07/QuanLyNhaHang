@@ -339,7 +339,7 @@ namespace GUI
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.985075F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.477612F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.21131F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
             this.tableLayoutPanel4.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.rB1, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.rB2, 3, 0);
@@ -365,7 +365,7 @@ namespace GUI
             this.label1.Location = new System.Drawing.Point(4, 39);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 35);
+            this.label1.Size = new System.Drawing.Size(214, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "Search by:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -375,7 +375,7 @@ namespace GUI
             this.rB1.AutoSize = true;
             this.rB1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.rB1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rB1.Location = new System.Drawing.Point(486, 52);
+            this.rB1.Location = new System.Drawing.Point(485, 52);
             this.rB1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rB1.Name = "rB1";
             this.rB1.Size = new System.Drawing.Size(160, 20);
@@ -390,7 +390,7 @@ namespace GUI
             this.rB2.AutoSize = true;
             this.rB2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.rB2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rB2.Location = new System.Drawing.Point(652, 52);
+            this.rB2.Location = new System.Drawing.Point(651, 52);
             this.rB2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rB2.Name = "rB2";
             this.rB2.Size = new System.Drawing.Size(170, 20);
@@ -406,7 +406,7 @@ namespace GUI
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.Controls.Add(this.cbSearch, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(226, 2);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(225, 2);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
@@ -424,7 +424,7 @@ namespace GUI
             "(...)",
             "Gender",
             "Type"});
-            this.cbSearch.Location = new System.Drawing.Point(4, 28);
+            this.cbSearch.Location = new System.Drawing.Point(4, 37);
             this.cbSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbSearch.Name = "cbSearch";
             this.cbSearch.Size = new System.Drawing.Size(246, 37);
@@ -437,12 +437,12 @@ namespace GUI
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Controls.Add(this.pnSearch, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(963, 4);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(962, 4);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(855, 66);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(853, 66);
             this.tableLayoutPanel6.TabIndex = 7;
             // 
             // pnSearch
@@ -454,7 +454,7 @@ namespace GUI
             this.pnSearch.Location = new System.Drawing.Point(3, 4);
             this.pnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnSearch.Name = "pnSearch";
-            this.pnSearch.Size = new System.Drawing.Size(849, 58);
+            this.pnSearch.Size = new System.Drawing.Size(847, 58);
             this.pnSearch.TabIndex = 5;
             // 
             // tableLayoutPanel7
@@ -472,7 +472,7 @@ namespace GUI
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(845, 54);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(843, 54);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // txtSearch
@@ -486,7 +486,7 @@ namespace GUI
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(719, 31);
+            this.txtSearch.Size = new System.Drawing.Size(717, 31);
             this.txtSearch.TabIndex = 7;
             this.txtSearch.Text = "Search...";
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
@@ -510,7 +510,7 @@ namespace GUI
             this.btnDeletetxt.BackColor = System.Drawing.Color.Transparent;
             this.btnDeletetxt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDeletetxt.Image = global::GUI.Properties.Resources.delete1;
-            this.btnDeletetxt.Location = new System.Drawing.Point(793, 4);
+            this.btnDeletetxt.Location = new System.Drawing.Point(791, 4);
             this.btnDeletetxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDeletetxt.Name = "btnDeletetxt";
             this.btnDeletetxt.Size = new System.Drawing.Size(49, 46);

@@ -222,21 +222,21 @@ namespace GUI
             pnlContainer.Controls.Add(uc);
         }
 
-        public void loadUCOrder(List<OrderDetail> orderDetails, int TableID, bool ReadOnly)
+        public void loadUCOrder(List<OrderDetail> orderDetails, int TableID, bool ReadOnly, int CusID)
         {
             _obj = this;
             pnlContainer.Controls.Clear();
-            UCOrder uc = new UCOrder(this, orderDetails, EmployeeID, TableID, ReadOnly);
+            UCOrder uc = new UCOrder(this, orderDetails, EmployeeID, TableID, CusID, ReadOnly);
             ROnly = ReadOnly;
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
 
-        public void loadUcMenu_Order(int TableID)
+        public void loadUcMenu_Order(int TableID, int CustomerID)
         {
             _obj = this;
             pnlContainer.Controls.Clear();
-            UCMenu_Order uc = new UCMenu_Order(this, EmployeeID, TableID);
+            UCMenu_Order uc = new UCMenu_Order(this, EmployeeID, TableID, CustomerID);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
         }
@@ -280,11 +280,11 @@ namespace GUI
 
         }
 
-        public void loadUCOrderPay(List <OrderDetail> orderDetails, int TableID)
+        public void loadUCOrderPay(List <OrderDetail> orderDetails, int TableID, int CusID)
         {
             _obj = this;
             pnlContainer.Controls.Clear();
-            UCOrder_Pay uc = new UCOrder_Pay(this,orderDetails,EmployeeID, TableID);
+            UCOrder_Pay uc = new UCOrder_Pay(this,orderDetails,EmployeeID, TableID, CusID);
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
 

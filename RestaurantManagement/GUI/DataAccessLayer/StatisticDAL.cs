@@ -15,144 +15,191 @@ namespace DataAccessLayer
             dbContext = new RestaurantContextEntities();
         }
 
-        public SortedDictionary<string, float> TotalofDate(DateTime date1,DateTime date2)
+        public SortedDictionary<string, float> TotalofDate(DateTime date1, DateTime date2)
         {
-            date1 = date1.Date;
-            date2 = date2.Date.AddDays(1).AddTicks(-1);
-
-            SortedDictionary<string, float> result = new SortedDictionary<string, float>();
-
-            var lsCTHD = dbContext.Orders
-                                .Where(o => o.OrderDate >= date1 && o.OrderDate <= date2&&o.IsPaid==true)
-                                .GroupBy(o1 => new { o1.OrderDate })
-                                .Select(o2 => new { Key = o2.Key, Total = o2.Sum(o => o.Total) });
-
-            foreach(var ct in lsCTHD)
+            
+            try
             {
-                string dateTime = Convert.ToDateTime(ct.Key.OrderDate).ToString("dd-MM-yy");
-                result[dateTime] = ct.Total;
-            }
+                date1 = date1.Date;
+                date2 = date2.Date.AddDays(1).AddTicks(-1);
 
-            for (DateTime date=date1;date<=date2;date=date2.AddDays(1))
-            {
-                string dateTime = date.ToString("dd-MM-yy");
-                if(!result.ContainsKey(dateTime))
+                SortedDictionary<string, float> result = new SortedDictionary<string, float>();
+
+                var lsCTHD = dbContext.Orders
+                                    .Where(o => o.OrderDate >= date1 && o.OrderDate <= date2 && o.IsPaid == true)
+                                    .GroupBy(o1 => new { o1.OrderDate })
+                                    .Select(o2 => new { Key = o2.Key, Total = o2.Sum(o => o.Total) });
+                foreach (var ct in lsCTHD)
                 {
-                    result[dateTime] = 0;
+                    string dateTime = Convert.ToDateTime(ct.Key.OrderDate).ToString("dd-MM-yy");
+                    result[dateTime] = ct.Total;
                 }
-            }
 
-            return result;
+                for (DateTime date = date1; date <= date2; date = date2.AddDays(1))
+                {
+                    string dateTime = date.ToString("dd-MM-yy");
+                    if (!result.ContainsKey(dateTime))
+                    {
+                        result[dateTime] = 0;
+                    }
+                }
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
 
-        public SortedDictionary<string, float> TotalofMonth(int month1,int year1,int month2, int year2 )
-        {
-            DateTime date1 = new DateTime(year1, month1, 1);
-            int LastDay2 = DateTime.DaysInMonth(year2, month2);
-            DateTime date2 = new DateTime(year2, month2, LastDay2);
-
-            SortedDictionary<string, float> result = new SortedDictionary<string, float>();
-
-            var lsCTHD = dbContext.Orders
-                                .Where(o => o.OrderDate >= date1 && o.OrderDate <= date2&&o.IsPaid==true)
-                                .GroupBy(o1 => new { o1.OrderDate.Month,o1.OrderDate.Year})
-                                .Select(o2 => new { Key = o2.Key, Total = o2.Sum(o => o.Total) });
-
-            foreach (var ct in lsCTHD)
+            public SortedDictionary<string, float> TotalofMonth(int month1,int year1,int month2, int year2 )
+         {
+            try
             {
-                int month = ct.Key.Month;
-                int year = ct.Key.Year;
-                string dateTime = Convert.ToDateTime(month + "/" + year).ToString("M/yy");
-                result[dateTime] = ct.Total;
-            }
+                DateTime date1 = new DateTime(year1, month1, 1);
+                int LastDay2 = DateTime.DaysInMonth(year2, month2);
+                DateTime date2 = new DateTime(year2, month2, LastDay2);
+            
+                SortedDictionary<string, float> result = new SortedDictionary<string, float>();
+            
+                var lsCTHD = dbContext.Orders
+                                    .Where(o => o.OrderDate >= date1 && o.OrderDate <= date2 && o.IsPaid == true)
+                                    .GroupBy(o1 => new { o1.OrderDate.Month, o1.OrderDate.Year })
+                                    .Select(o2 => new { Key = o2.Key, Total = o2.Sum(o => o.Total) });
 
-            for (DateTime date = date1; date <= date2; date = date.AddMonths(1))
-            {
-                string dateTime = date.ToString("M/yy");
-                if (!result.ContainsKey(dateTime))
+                foreach (var ct in lsCTHD)
                 {
-                    result[dateTime] = 0;
+                    int month = ct.Key.Month;
+                    int year = ct.Key.Year;
+                    string dateTime = Convert.ToDateTime(month + "/" + year).ToString("M/yy");
+                    result[dateTime] = ct.Total;
                 }
-            }
 
-            return result;
+                for (DateTime date = date1; date <= date2; date = date.AddMonths(1))
+                {
+                    string dateTime = date.ToString("M/yy");
+                    if (!result.ContainsKey(dateTime))
+                    {
+                        result[dateTime] = 0;
+                    }
+                }
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
 
         public SortedDictionary<int, float> TotalofYear(int year1,int year2)
         {
-            DateTime date1 = new DateTime(year1, 1, 1);
-            DateTime date2 = new DateTime(year2, 12, 31);
-
-            SortedDictionary<int, float> result = new SortedDictionary<int, float>();
-
-            var lsCTHD = dbContext.Orders
-                                .Where(o => o.OrderDate >= date1 && o.OrderDate <= date2 && o.IsPaid == true)
-                                .GroupBy(o1 => new { o1.OrderDate.Year })
-                                .Select(o2 => new { Key = o2.Key, Total = o2.Sum(o => o.Total) });
-
-            foreach (var ct in lsCTHD)
+            try
             {
-                int year = ct.Key.Year;
-                result[year] = ct.Total;
-            }
+                DateTime date1 = new DateTime(year1, 1, 1);
+                DateTime date2 = new DateTime(year2, 12, 31);
 
-            for (int year = year1; year <= year2; year++)
-            {
-                if (!result.ContainsKey(year))
+                SortedDictionary<int, float> result = new SortedDictionary<int, float>();
+
+                var lsCTHD = dbContext.Orders
+                                    .Where(o => o.OrderDate >= date1 && o.OrderDate <= date2 && o.IsPaid == true)
+                                    .GroupBy(o1 => new { o1.OrderDate.Year })
+                                    .Select(o2 => new { Key = o2.Key, Total = o2.Sum(o => o.Total) });
+
+                foreach (var ct in lsCTHD)
                 {
-                    result[year] = 0;
+                    int year = ct.Key.Year;
+                    result[year] = ct.Total;
                 }
-            }
 
-            return result;
+                for (int year = year1; year <= year2; year++)
+                {
+                    if (!result.ContainsKey(year))
+                    {
+                        result[year] = 0;
+                    }
+                }
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
 
         public SortedDictionary<int, float> TotalAll()
         {
-            SortedDictionary<int, float> result = new SortedDictionary<int, float>();
+            try
+            {
+                SortedDictionary<int, float> result = new SortedDictionary<int, float>();
             var lsCTHD = dbContext.OrderDetails.Include("Orders").Where(o => o.Order.IsPaid == true)
                                 .GroupBy(o => new {o.FoodDrinkID})
                                 .Select(o1 => new { Key = o1.Key, Total = o1.Sum(o => o.Quantity*o.Price) })
                                 .OrderByDescending(o=> o.Total );
             // Order By : Tăng dần => Top least
             // Order by Descending: Giảm dần => Top most
-            var totalall = dbContext.Orders.Where(o => o.IsPaid == true).Sum(o => o.Total);
-            int count = 1;
-            foreach (var ct in lsCTHD)
-            {
-                if (count > 5)
-                    break;
-                int id = ct.Key.FoodDrinkID;
-                result[id] = (ct.Total / totalall) * 100;
-                count++;
-            }
+            
+                var totalall = dbContext.Orders.Where(o => o.IsPaid == true).Sum(o => o.Total);
 
-            return result;
+                int count = 1;
+                foreach (var ct in lsCTHD)
+                {
+                    if (count > 5)
+                        break;
+                    int id = ct.Key.FoodDrinkID;
+                     result[id] = (ct.Total / totalall) * 100;
+
+                    count++;
+                }
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+                
         }
         public SortedDictionary<int, float> TotalAllLeast ()
         {
-            SortedDictionary<int, float> result = new SortedDictionary<int, float>();
-            var lsCTHD = dbContext.OrderDetails.Include("Orders").Where(o => o.Order.IsPaid == true)
-                                .GroupBy(o => new { o.FoodDrinkID })
-                                .Select(o1 => new { Key = o1.Key, Total = o1.Sum(o => o.Quantity * o.Price) })
-                                .OrderBy(o => o.Total);
-            // Order By : Tăng dần => Top least
-            // Order by Descending: Giảm dần => Top most
-            var totalall = dbContext.Orders.Where(o => o.IsPaid == true).Sum(o => o.Total);
-            int count = 1;
-            foreach (var ct in lsCTHD)
+            try
             {
-                if (count > 5)
-                    break;
-                int id = ct.Key.FoodDrinkID;
-                result[id] = (ct.Total / totalall) * 100;
-                count++;
+                SortedDictionary<int, float> result = new SortedDictionary<int, float>();
+                var lsCTHD = dbContext.OrderDetails.Include("Orders").Where(o => o.Order.IsPaid == true)
+                                    .GroupBy(o => new { o.FoodDrinkID })
+                                    .Select(o1 => new { Key = o1.Key, Total = o1.Sum(o => o.Quantity * o.Price) })
+                                    .OrderBy(o => o.Total);
+                // Order By : Tăng dần => Top least
+                // Order by Descending: Giảm dần => Top most
+                var totalall = dbContext.Orders.Where(o => o.IsPaid == true).Sum(o => o.Total);
+                int count = 1;
+                foreach (var ct in lsCTHD)
+                {
+                    if (count > 5)
+                        break;
+                    int id = ct.Key.FoodDrinkID;
+                    result[id] = (ct.Total / totalall) * 100;
+
+                    count++;
+                }
+                return result;
             }
-            return result;
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
         public float GetTotalOrders()
         {
-            return dbContext.Orders.Select(o => o.Total).Sum();
+            try
+            {
+                return dbContext.Orders.Select(o => o.Total).Sum();
+            }
+            catch (Exception ex)
+            {
+                return -1;
+            }
         }
     }
 }

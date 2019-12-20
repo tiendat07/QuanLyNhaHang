@@ -150,22 +150,46 @@ namespace GUI
         {
             myButton btn = sender as myButton;
             Table item = lsTable_temp.Find(x => x.TableID == btn.objectID);
-            if (item.Status == 2)
+            if (item != null)
             {
-                List<Order> orders = orderBLL.GetListOrders();
-                List<OrderDetail> orderDetails_ThisTable = new List<OrderDetail>();
-                List<OrderDetail> allorderDetails = orderDetailBLL.GetListOrderDetails();
-                Order order = orders.Find(x => x.TableID == item.TableID && x.IsPaid == false);
-                foreach (var o in allorderDetails)
+                if (item.Status == 2)
                 {
-                    if (o.OrderID == order.OrderID)
+                    List<Order> orders = orderBLL.GetListOrders();
+                    List<OrderDetail> orderDetails_ThisTable = new List<OrderDetail>();
+                    List<OrderDetail> allorderDetails = orderDetailBLL.GetListOrderDetails();
+                    if (allorderDetails != null)
                     {
-                        orderDetails_ThisTable.Add(o);
+
+                        Order order = orders.Find(x => x.TableID == item.TableID && x.IsPaid == false);
+                        if (order != null )
+                        {
+                            foreach (var o in allorderDetails)
+                            {
+                                if (o.OrderID == order.OrderID && o != null)
+                                {
+                                    orderDetails_ThisTable.Add(o);
+                                }
+                            }
+                            BookingTableBLL bookingTableBLL = new BookingTableBLL();
+                            int cusID = bookingTableBLL.FindCustomerIDByTableID(btn.objectID);
+                            if (cusID > 0)
+                                mainform.loadUCOrder(orderDetails_ThisTable, btn.objectID, true, cusID);
+                            else
+                                mainform.loadUCOrder(orderDetails_ThisTable, btn.objectID, true, 10);
+                        }
+                        else
+                            MessageBox.Show("Không thể thực hiện!");
+
                     }
+                    else
+                        MessageBox.Show("Không thể thực hiện!");
                 }
-                mainform.loadUCOrder(orderDetails_ThisTable, btn.objectID, true);
-                //this.Hide();
+                else
+                    MessageBox.Show("Không thể thực hiện!");
             }
+            else
+                MessageBox.Show("Không thể thực hiện!");
+
         }
         private void btn_Edit_Click(object sender, EventArgs e)
         {
@@ -183,50 +207,71 @@ namespace GUI
         private void btnOrder_Click_1(object sender, EventArgs e)
         {
             myButton btn = sender as myButton;
-            mainform.loadUcMenu_Order(btn.objectID);
-            this.Hide();
+            BookingTableBLL bookingTableBLL = new BookingTableBLL();
+            int cusID = bookingTableBLL.FindCustomerIDByTableID(btn.objectID);
+            if (cusID >0)
+                mainform.loadUcMenu_Order(btn.objectID, cusID);
+            else
+                mainform.loadUcMenu_Order(btn.objectID, 10);
+
+
         }
 
         private void btnPay_Click_1(object sender, EventArgs e)
         {
             myButton btn = sender as myButton;
             Table item = lsTable_temp.Find(x => x.TableID == btn.objectID);
-            List<Order> orders = orderBLL.GetListOrders();
-            List<OrderDetail> orderDetails_ThisTable = new List<OrderDetail>();
-            List<OrderDetail> allorderDetails = orderDetailBLL.GetListOrderDetails();
-            Order order = orders.Find(x => x.TableID == item.TableID && x.IsPaid == false);
-            bool check = true;
-            foreach (var o in allorderDetails)
+            if(item != null)
             {
-                if (order == null || o == null)
+                List<Order> orders = orderBLL.GetListOrders();
+                if (orders != null)
                 {
-                    MessageBox.Show("Không thể thanh toán !");
-                    check = false;
-                    break;
-                }
-                if (o.OrderID == order.OrderID )
-                {
-                    orderDetails_ThisTable.Add(o);
-                }
-            }
-            if (check == true)
-             mainform.loadUCOrderPay(orderDetails_ThisTable, btn.objectID);
+                    List<OrderDetail> orderDetails_ThisTable = new List<OrderDetail>();
+                    List<OrderDetail> allorderDetails = orderDetailBLL.GetListOrderDetails();
+                    if (allorderDetails != null)
+                    {
+                        Order order = orders.Find(x => x.TableID == item.TableID && x.IsPaid == false);
+                        if (order != null)
+                        {
+                            bool check = true;
+                            foreach (var o in allorderDetails)
+                            {
+                                if (order == null || o == null)
+                                {
+                                    MessageBox.Show("Không thể thanh toán !");
+                                    check = false;
+                                    break;
+                                }
+                                if (o.OrderID == order.OrderID)
+                                {
+                                    orderDetails_ThisTable.Add(o);
+                                }
+                            }
+                            if (check == true)
+                            {
+                                BookingTableBLL bookingTableBLL = new BookingTableBLL();
+                                int cusID = bookingTableBLL.FindCustomerIDByTableID(btn.objectID);
+                                if (cusID > 0)
+                                    mainform.loadUCOrderPay(orderDetails_ThisTable, btn.objectID, cusID);
+                                else
+                                    mainform.loadUCOrderPay(orderDetails_ThisTable, btn.objectID, 10);
 
-            //DialogResult result = MessageBox.Show("Are you sure you want to pay?", "Pay Notification", MessageBoxButtons.YesNo);
-            //if (result == DialogResult.Yes)
-            //{
-            //    myButton btn = sender as myButton;
-            //    if (orderBLL.SetPaid(btn.objectID) == true)
-            //    {
-            //        if (tableBLL.ChangeTableStatus(btn.objectID, false, true, false) == true)
-            //        {
-            //            MessageBox.Show("You have paid sucessfully !");
-            //            mainform.loadUCTable();
-            //        }
-            //    }
-            //    else
-            //        MessageBox.Show("Cannot process. Please try again");
-            //}
+                            }
+                            else
+                                MessageBox.Show("Không thể thanh toán !");
+                        }
+                        else
+                            MessageBox.Show("Không thể thanh toán !");
+                    }
+                    else
+                        MessageBox.Show("Không thể thanh toán !");
+                }
+                else
+                    MessageBox.Show("Không thể thanh toán !");
+            }
+            else 
+                MessageBox.Show("Không thể thanh toán !");
+            
         }
     }
 }

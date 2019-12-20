@@ -23,5 +23,20 @@ namespace DataAccessLayer
             }
             return false;
         }
+        public int FindCustomerIDByTableID (int TableID)
+        {
+            try
+            {
+                if (TableID > 0)
+                {
+                    return dbContext.BookingTables.Where(t => t.TableID == TableID).Select(t => t.CustomerID).FirstOrDefault();
+                }
+                return -1;
+            }
+            catch (Exception ex)
+            {
+                return -1;
+            }
+        }
     }
 }

@@ -306,11 +306,11 @@ namespace GUI
             // 
             // panelLegend
             // 
-            this.panelLegend.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLegend.Location = new System.Drawing.Point(0, 259);
+            this.panelLegend.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLegend.Location = new System.Drawing.Point(0, 269);
             this.panelLegend.Name = "panelLegend";
-            this.panelLegend.Size = new System.Drawing.Size(380, 358);
-            this.panelLegend.TabIndex = 12;
+            this.panelLegend.Size = new System.Drawing.Size(380, 305);
+            this.panelLegend.TabIndex = 14;
             // 
             // Chart1
             // 
@@ -335,8 +335,8 @@ namespace GUI
             this.Chart1.Location = new System.Drawing.Point(0, 0);
             this.Chart1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Chart1.Name = "Chart1";
-            this.Chart1.Size = new System.Drawing.Size(380, 259);
-            this.Chart1.TabIndex = 10;
+            this.Chart1.Size = new System.Drawing.Size(380, 269);
+            this.Chart1.TabIndex = 13;
             this.Chart1.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme1;
             this.Chart1.Title = "";
             // 
@@ -977,9 +977,9 @@ namespace GUI
         private Bunifu.DataViz.WinForms.BunifuDataViz Chart2;
         private System.Windows.Forms.Panel panel2;
         private BunifuCards bunifuCards5;
-        private Bunifu.DataViz.WinForms.BunifuDataViz Chart1;
-        private System.Windows.Forms.Panel panelLegend;
         private System.Windows.Forms.ComboBox cBTypeTK;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panelLegend;
+        private Bunifu.DataViz.WinForms.BunifuDataViz Chart1;
     }
 }

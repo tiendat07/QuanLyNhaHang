@@ -127,13 +127,37 @@ namespace DataAccessLayer
         public int GetEmployeeID (string username)
 
         {
-            var x = dbContext.Employees.Where(n => n.Username == username).FirstOrDefault();
-            return x.EmployeeID;
+            try
+            {
+                if (username != null)
+                {
+                    var x = dbContext.Employees.Where(n => n.Username == username).FirstOrDefault();
+                    return x.EmployeeID;
+                }
+                return -1;
+            }
+            catch (Exception ex)
+            {
+                return -1;
+            }
+            
         }
 
         public Employee FindEmployee (int id)
         {
-            return dbContext.Employees.Where(x => x.EmployeeID == id).FirstOrDefault();
+            try
+            {
+                if (id > 0)
+                {
+                    return dbContext.Employees.Where(x => x.EmployeeID == id).FirstOrDefault();
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            
         }
         public List<Employee> LoadRecord(int page, int recordNum)
         { 

@@ -68,13 +68,32 @@ namespace DataAccessLayer
         public Customer SearchCustomerByName(string name)
         {
             // Trả về ds nếu có người có tên giống nhau
-            return dbContext.Customers.Where(c => c.Name == name).FirstOrDefault();
+            try
+            {
+                if (name != null)
+                     return dbContext.Customers.Where(c => c.Name == name).FirstOrDefault();
+                return null;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
         public List<string> Name_SearchCustomerByName(string name)
         {
             // Trả về ds nếu có người có tên giống nhau
-            return dbContext.Customers.Where(x => x.Name.StartsWith(name))
-            .Select(c => c.Name).ToList();
+            try
+            {
+                if (name != null)
+                    return dbContext.Customers.Where(x => x.Name.StartsWith(name))
+                             .Select(c => c.Name).ToList();
+                return null;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            
         }
 
         public List<Customer> Sreach(string x, int k, int page, int recordNum)
@@ -138,7 +157,17 @@ namespace DataAccessLayer
         }
         public int GetCustomerID (Customer c)
         {
-            return dbContext.Customers.Where(x => x.CustomerID == c.CustomerID).Select(y => y.CustomerID).FirstOrDefault();
+            try
+            {
+                if (c != null)
+                    return dbContext.Customers.Where(x => x.CustomerID == c.CustomerID).Select(y => y.CustomerID).FirstOrDefault();
+                return -1;
+            }
+            catch (Exception ex)
+            {
+                return -1;
+            }
+            
         }
     }
 }

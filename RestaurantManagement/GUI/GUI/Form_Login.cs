@@ -93,11 +93,21 @@ namespace GUI
                     {
                         bool isAdmin = employeeBLL.CheckAdmin(tenDN);
                         int employeeID = employeeBLL.GetEmployeeID(tenDN);
-                        Employee employ = employeeBLL.FindEmployee(employeeID);
-                        Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
-                        this.Hide();
-                        f.Closed += (s, args) => this.Close();
-                        f.Show();
+                        if (employeeID != -1 )
+                        {
+                            Employee employ = employeeBLL.FindEmployee(employeeID);
+                            if (employ != null)
+                            {
+                                Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
+                                this.Hide();
+                                f.Closed += (s, args) => this.Close();
+                                f.Show();
+                            }
+                            else
+                                MessageBox.Show("Incorrect. Please try again !!");
+                        }
+                        else
+                            MessageBox.Show("Incorrect. Please try again !!");
                     }
                     else
                     {
@@ -178,11 +188,22 @@ namespace GUI
                     {
                         bool isAdmin = employeeBLL.CheckAdmin(tenDN);
                         int employeeID = employeeBLL.GetEmployeeID(tenDN);
-                        Employee employ = employeeBLL.FindEmployee(employeeID);
-                        Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
-                        this.Hide();
-                        f.Closed += (s, args) => this.Close();
-                        f.Show();
+                        
+                        if (employeeID != -1)
+                        {
+                            Employee employ = employeeBLL.FindEmployee(employeeID);
+                            if (employ != null)
+                            {
+                                Form_Restaurant f = new Form_Restaurant(isAdmin, employeeID);
+                                this.Hide();
+                                f.Closed += (s, args) => this.Close();
+                                f.Show();
+                            }
+                            else
+                                MessageBox.Show("Incorrect. Please try again !!");
+                        }
+                        else
+                            MessageBox.Show("Incorrect. Please try again !!");
                     }
                     else
                     {

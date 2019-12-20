@@ -23,8 +23,9 @@ namespace GUI
         int CusID;
         List<OrderDetail> lsOrderDetail;
         Order orDer;
-        public UCOrder_Pay(Form_Restaurant form, List<OrderDetail> orderDetails, int EmployeeID, int TableID)
+        public UCOrder_Pay(Form_Restaurant form, List<OrderDetail> orderDetails, int EmployeeID, int TableID, int CustomerID)
         {
+            CusID = CustomerID;
             tableBLL = new TableBLL();
             orDer = new Order();
             orderBLL = new OrderBLL();
@@ -47,7 +48,7 @@ namespace GUI
             lbTableID.Text = Convert.ToString(TabID);
 
             // Order
-            orDer.CustomerID = 10;
+            orDer.CustomerID = CusID;
             orDer.EmployeeID = EmpID;
             orDer.IsPaid = false;
             orDer.TableID = TabID;
@@ -58,7 +59,6 @@ namespace GUI
                 total += (item.Price * item.Quantity);
             orDer.Total = total;
             lbTotal.Text = total.ToString();
-
             dataGridViewOrder.AutoGenerateColumns = false;
             dataGridViewOrder.DataSource = lsOrderDetail;
             dataGridViewOrder.ReadOnly = false;
@@ -103,6 +103,8 @@ namespace GUI
                         MessageBox.Show("You have paid sucessfully !");
                         mainform.loadUCTable();
                     }
+                    else
+                        MessageBox.Show("Cannot process. Please try again");
                 }
                 else
                     MessageBox.Show("Cannot process. Please try again");
