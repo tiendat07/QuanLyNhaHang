@@ -45,8 +45,6 @@ namespace GUI
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cbIsAdmin = new System.Windows.Forms.CheckBox();
             this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.errorGender = new System.Windows.Forms.Label();
@@ -54,17 +52,24 @@ namespace GUI
             this.errorPhone = new System.Windows.Forms.Label();
             this.errorEmail = new System.Windows.Forms.Label();
             this.errorName = new System.Windows.Forms.Label();
-            this.errorAddress = new System.Windows.Forms.Label();
+            this.errorUsername = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.cbIsAdmin = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.errorAddress = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -220,11 +225,11 @@ namespace GUI
             // 
             this.tableLayoutPanel1.ColumnCount = 7;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.662678F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.742846F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.62469F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.44092F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.817428F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.08299F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.091287F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.29046F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.4426F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.51176F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.32227F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.588167F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 4, 1);
@@ -233,8 +238,6 @@ namespace GUI
             this.tableLayoutPanel1.Controls.Add(this.label5, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.label6, 4, 3);
             this.tableLayoutPanel1.Controls.Add(this.label7, 4, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label8, 4, 7);
-            this.tableLayoutPanel1.Controls.Add(this.cbIsAdmin, 5, 7);
             this.tableLayoutPanel1.Controls.Add(this.dtpDOB, 2, 5);
             this.tableLayoutPanel1.Controls.Add(this.cbGender, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.errorGender, 2, 4);
@@ -242,12 +245,16 @@ namespace GUI
             this.tableLayoutPanel1.Controls.Add(this.errorPhone, 5, 4);
             this.tableLayoutPanel1.Controls.Add(this.errorEmail, 5, 6);
             this.tableLayoutPanel1.Controls.Add(this.errorName, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.errorAddress, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.errorUsername, 5, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtName, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtCMND, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.txtAddress, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtUsername, 5, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtPhone, 5, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtEmail, 5, 5);
+            this.tableLayoutPanel1.Controls.Add(this.panel4, 3, 8);
+            this.tableLayoutPanel1.Controls.Add(this.label9, 4, 7);
+            this.tableLayoutPanel1.Controls.Add(this.txtAddress, 5, 7);
+            this.tableLayoutPanel1.Controls.Add(this.errorAddress, 5, 8);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -273,7 +280,7 @@ namespace GUI
             this.label1.Location = new System.Drawing.Point(85, 71);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 71);
+            this.label1.Size = new System.Drawing.Size(109, 71);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -286,12 +293,12 @@ namespace GUI
             this.label2.Enabled = false;
             this.label2.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(805, 71);
+            this.label2.Location = new System.Drawing.Point(791, 71);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 71);
+            this.label2.Size = new System.Drawing.Size(144, 71);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Address";
+            this.label2.Text = "Username";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label3
@@ -302,7 +309,7 @@ namespace GUI
             this.label3.Location = new System.Drawing.Point(85, 209);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 73);
+            this.label3.Size = new System.Drawing.Size(109, 73);
             this.label3.TabIndex = 2;
             this.label3.Text = "Gender";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -315,7 +322,7 @@ namespace GUI
             this.label4.Location = new System.Drawing.Point(85, 347);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 35);
+            this.label4.Size = new System.Drawing.Size(109, 35);
             this.label4.TabIndex = 3;
             this.label4.Text = "D.O.B";
             this.label4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -328,7 +335,7 @@ namespace GUI
             this.label5.Location = new System.Drawing.Point(85, 494);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 71);
+            this.label5.Size = new System.Drawing.Size(109, 71);
             this.label5.TabIndex = 4;
             this.label5.Text = "CMND";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -338,10 +345,10 @@ namespace GUI
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(805, 209);
+            this.label6.Location = new System.Drawing.Point(791, 209);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 73);
+            this.label6.Size = new System.Drawing.Size(144, 73);
             this.label6.TabIndex = 5;
             this.label6.Text = "Phone";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -351,38 +358,13 @@ namespace GUI
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(805, 347);
+            this.label7.Location = new System.Drawing.Point(791, 347);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 76);
+            this.label7.Size = new System.Drawing.Size(144, 76);
             this.label7.TabIndex = 6;
             this.label7.Text = "Email";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(805, 494);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 71);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Is Admin";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // cbIsAdmin
-            // 
-            this.cbIsAdmin.AutoSize = true;
-            this.cbIsAdmin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbIsAdmin.Location = new System.Drawing.Point(932, 499);
-            this.cbIsAdmin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbIsAdmin.Name = "cbIsAdmin";
-            this.cbIsAdmin.Size = new System.Drawing.Size(427, 21);
-            this.cbIsAdmin.TabIndex = 15;
-            this.cbIsAdmin.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.cbIsAdmin.UseVisualStyleBackColor = true;
             // 
             // dtpDOB
             // 
@@ -391,10 +373,10 @@ namespace GUI
             this.dtpDOB.Dock = System.Windows.Forms.DockStyle.Top;
             this.dtpDOB.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDOB.Location = new System.Drawing.Point(197, 352);
+            this.dtpDOB.Location = new System.Drawing.Point(202, 352);
             this.dtpDOB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpDOB.Name = "dtpDOB";
-            this.dtpDOB.Size = new System.Drawing.Size(435, 30);
+            this.dtpDOB.Size = new System.Drawing.Size(430, 30);
             this.dtpDOB.TabIndex = 16;
             this.dtpDOB.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
@@ -406,10 +388,10 @@ namespace GUI
             this.cbGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cbGender.Location = new System.Drawing.Point(197, 214);
+            this.cbGender.Location = new System.Drawing.Point(202, 214);
             this.cbGender.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(435, 31);
+            this.cbGender.Size = new System.Drawing.Size(430, 31);
             this.cbGender.TabIndex = 17;
             this.cbGender.Text = "-select-";
             // 
@@ -418,10 +400,10 @@ namespace GUI
             this.errorGender.AutoSize = true;
             this.errorGender.Dock = System.Windows.Forms.DockStyle.Fill;
             this.errorGender.ForeColor = System.Drawing.Color.DarkRed;
-            this.errorGender.Location = new System.Drawing.Point(197, 282);
+            this.errorGender.Location = new System.Drawing.Point(202, 282);
             this.errorGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.errorGender.Name = "errorGender";
-            this.errorGender.Size = new System.Drawing.Size(435, 65);
+            this.errorGender.Size = new System.Drawing.Size(430, 65);
             this.errorGender.TabIndex = 24;
             // 
             // errorCMND
@@ -429,10 +411,10 @@ namespace GUI
             this.errorCMND.AutoSize = true;
             this.errorCMND.Dock = System.Windows.Forms.DockStyle.Fill;
             this.errorCMND.ForeColor = System.Drawing.Color.DarkRed;
-            this.errorCMND.Location = new System.Drawing.Point(197, 565);
+            this.errorCMND.Location = new System.Drawing.Point(202, 565);
             this.errorCMND.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.errorCMND.Name = "errorCMND";
-            this.errorCMND.Size = new System.Drawing.Size(435, 76);
+            this.errorCMND.Size = new System.Drawing.Size(430, 76);
             this.errorCMND.TabIndex = 26;
             // 
             // errorPhone
@@ -440,10 +422,10 @@ namespace GUI
             this.errorPhone.AutoSize = true;
             this.errorPhone.Dock = System.Windows.Forms.DockStyle.Fill;
             this.errorPhone.ForeColor = System.Drawing.Color.DarkRed;
-            this.errorPhone.Location = new System.Drawing.Point(932, 282);
+            this.errorPhone.Location = new System.Drawing.Point(943, 282);
             this.errorPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.errorPhone.Name = "errorPhone";
-            this.errorPhone.Size = new System.Drawing.Size(427, 65);
+            this.errorPhone.Size = new System.Drawing.Size(416, 65);
             this.errorPhone.TabIndex = 28;
             // 
             // errorEmail
@@ -451,10 +433,10 @@ namespace GUI
             this.errorEmail.AutoSize = true;
             this.errorEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.errorEmail.ForeColor = System.Drawing.Color.DarkRed;
-            this.errorEmail.Location = new System.Drawing.Point(932, 423);
+            this.errorEmail.Location = new System.Drawing.Point(943, 423);
             this.errorEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.errorEmail.Name = "errorEmail";
-            this.errorEmail.Size = new System.Drawing.Size(427, 71);
+            this.errorEmail.Size = new System.Drawing.Size(416, 71);
             this.errorEmail.TabIndex = 29;
             // 
             // errorName
@@ -462,65 +444,67 @@ namespace GUI
             this.errorName.AutoSize = true;
             this.errorName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.errorName.ForeColor = System.Drawing.Color.DarkRed;
-            this.errorName.Location = new System.Drawing.Point(196, 142);
+            this.errorName.Location = new System.Drawing.Point(201, 142);
             this.errorName.Name = "errorName";
-            this.errorName.Size = new System.Drawing.Size(437, 67);
+            this.errorName.Size = new System.Drawing.Size(432, 67);
             this.errorName.TabIndex = 30;
             // 
-            // errorAddress
+            // errorUsername
             // 
-            this.errorAddress.AutoSize = true;
-            this.errorAddress.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.errorAddress.ForeColor = System.Drawing.Color.DarkRed;
-            this.errorAddress.Location = new System.Drawing.Point(931, 142);
-            this.errorAddress.Name = "errorAddress";
-            this.errorAddress.Size = new System.Drawing.Size(429, 67);
-            this.errorAddress.TabIndex = 31;
+            this.errorUsername.AutoSize = true;
+            this.errorUsername.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.errorUsername.ForeColor = System.Drawing.Color.DarkRed;
+            this.errorUsername.Location = new System.Drawing.Point(942, 142);
+            this.errorUsername.Name = "errorUsername";
+            this.errorUsername.Size = new System.Drawing.Size(418, 67);
+            this.errorUsername.TabIndex = 31;
             // 
             // txtName
             // 
             this.txtName.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtName.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(196, 75);
+            this.txtName.Location = new System.Drawing.Point(201, 75);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(437, 45);
+            this.txtName.Size = new System.Drawing.Size(432, 45);
             this.txtName.TabIndex = 32;
+            this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
             // 
             // txtCMND
             // 
             this.txtCMND.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtCMND.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCMND.Location = new System.Drawing.Point(196, 498);
+            this.txtCMND.Location = new System.Drawing.Point(201, 498);
             this.txtCMND.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCMND.Multiline = true;
             this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(437, 45);
+            this.txtCMND.Size = new System.Drawing.Size(432, 45);
             this.txtCMND.TabIndex = 33;
             this.txtCMND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCMND_KeyPress);
             this.txtCMND.Leave += new System.EventHandler(this.txtCMND_Leave);
             // 
-            // txtAddress
+            // txtUsername
             // 
-            this.txtAddress.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtAddress.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(931, 75);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtAddress.Multiline = true;
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(429, 45);
-            this.txtAddress.TabIndex = 34;
+            this.txtUsername.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtUsername.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(942, 75);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUsername.Multiline = true;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(418, 45);
+            this.txtUsername.TabIndex = 34;
+            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // txtPhone
             // 
             this.txtPhone.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtPhone.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(931, 213);
+            this.txtPhone.Location = new System.Drawing.Point(942, 213);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhone.Multiline = true;
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(429, 46);
+            this.txtPhone.Size = new System.Drawing.Size(418, 46);
             this.txtPhone.TabIndex = 35;
             this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             this.txtPhone.Leave += new System.EventHandler(this.txtPhone_Leave);
@@ -529,13 +513,80 @@ namespace GUI
             // 
             this.txtEmail.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtEmail.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(931, 351);
+            this.txtEmail.Location = new System.Drawing.Point(942, 351);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(429, 49);
+            this.txtEmail.Size = new System.Drawing.Size(418, 49);
             this.txtEmail.TabIndex = 36;
             this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.cbIsAdmin);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(639, 568);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(145, 70);
+            this.panel4.TabIndex = 37;
+            // 
+            // cbIsAdmin
+            // 
+            this.cbIsAdmin.AutoSize = true;
+            this.cbIsAdmin.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cbIsAdmin.Location = new System.Drawing.Point(119, 0);
+            this.cbIsAdmin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbIsAdmin.Name = "cbIsAdmin";
+            this.cbIsAdmin.Size = new System.Drawing.Size(22, 70);
+            this.cbIsAdmin.TabIndex = 16;
+            this.cbIsAdmin.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.cbIsAdmin.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label8.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(0, 0);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(119, 70);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Is Admin";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9.Font = new System.Drawing.Font("SVN-Avo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(791, 494);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(144, 71);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "Address";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtAddress.Font = new System.Drawing.Font("SVN-Avo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(942, 498);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(418, 45);
+            this.txtAddress.TabIndex = 39;
+            // 
+            // errorAddress
+            // 
+            this.errorAddress.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.errorAddress.Location = new System.Drawing.Point(942, 565);
+            this.errorAddress.Name = "errorAddress";
+            this.errorAddress.Size = new System.Drawing.Size(418, 76);
+            this.errorAddress.TabIndex = 40;
+            this.errorAddress.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // UCEmployee_Add
             // 
@@ -555,6 +606,8 @@ namespace GUI
             this.panel3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -575,7 +628,6 @@ namespace GUI
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox cbIsAdmin;
         private System.Windows.Forms.DateTimePicker dtpDOB;
         private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.Label errorGender;
@@ -586,11 +638,16 @@ namespace GUI
         private Bunifu.Framework.UI.BunifuThinButton2 txtClear;
         private Bunifu.Framework.UI.BunifuThinButton2 btnComeback;
         private System.Windows.Forms.Label errorName;
-        private System.Windows.Forms.Label errorAddress;
+        private System.Windows.Forms.Label errorUsername;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtCMND;
-        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.CheckBox cbIsAdmin;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.Label errorAddress;
     }
 }

@@ -69,6 +69,9 @@ namespace BLL
         {
             return employeeDAL.CheckPassword(EmployeeID, Password);
         }
-        
+        public bool IsDuplicated(string username)
+        {
+            return employeeDAL.IsDuplicated(username);
+        }
     }
 }

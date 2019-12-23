@@ -239,12 +239,17 @@ namespace DataAccessLayer
                     if (storedHash != null)
                         return BCrypt.Net.BCrypt.Verify(Password, storedHash);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     return false;
                 }
             }
             return false;
+        }
+        public bool IsDuplicated (string username)
+        {
+            var x = dbContext.Employees.Where(e => e.Username == username).FirstOrDefault();
+            return (x != null) ? true : false;
         }
     }
 }

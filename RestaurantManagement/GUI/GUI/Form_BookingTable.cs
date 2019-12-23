@@ -164,9 +164,11 @@ namespace GUI
                             else
                                 MessageBox.Show("Cannot book. Please try again ><");
                         }
-                        MessageBox.Show("Cannot book. Please try again ><");
+                        else
+                            MessageBox.Show("Cannot book. Please try again ><");
                     }
-                    MessageBox.Show("Cannot book. Please try again ><");
+                    else
+                        MessageBox.Show("Cannot book. Please try again ><");
                 }
             }
             else

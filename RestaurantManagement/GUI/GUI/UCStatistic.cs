@@ -9,9 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using DataAccessLayer;
+using System.Globalization;
 
 namespace GUI
 {
+   
     public partial class UCStatistic : UserControl
     {
         public StatictisBLL statictisBLL;
@@ -23,7 +25,8 @@ namespace GUI
             dtpDen.CustomFormat = "dd-MM-yyyy";
             dtpTu.CustomFormat = "dd-MM-yyyy";
             cbTop.SelectedItem = "Most Favorite";
-            lbTotal.Text = statictisBLL.GetTotal().ToString();
+            float total = statictisBLL.GetTotal();
+            lbTotal.Text = ((decimal)total).ToKMB();
             cBTypeTK.SelectedItem = "Day";
             Statistic();
         }
@@ -57,6 +60,7 @@ namespace GUI
             cBdenNam.Text = "";
             cBTypeTK.Text = "-Select-";
         }
+        
         private void cBTypeTK_TextChanged(object sender, EventArgs e)
         {
             if(cBTypeTK.Text=="Day")
@@ -400,6 +404,36 @@ namespace GUI
         private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+    }
+    public static class Number
+    {
+        public static string ToKMB(this decimal num)
+        {
+            if (num > 999999999 || num < -999999999)
+            {
+                return num.ToString("0,,,.###B", CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                if (num > 999999 || num < -999999)
+                {
+                    return num.ToString("0,,.##M", CultureInfo.InvariantCulture);
+                }
+                else
+                {
+                    if (num > 999 || num < -999)
+                    {
+                        return num.ToString("0,.#K", CultureInfo.InvariantCulture);
+                    }
+                    else
+                    {
+                        return num.ToString(CultureInfo.InvariantCulture);
+                    }
+                }
+           
+            }
+            
         }
     }
 }

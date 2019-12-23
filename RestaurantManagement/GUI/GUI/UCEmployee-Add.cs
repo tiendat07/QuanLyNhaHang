@@ -60,6 +60,15 @@ namespace GUI
                 result += "QL";
             else
                 result += "NV";
+            // Nếu trùng rồi thì sao? Tạm cho rỗng....???
+            //if (employeeBLL.IsDuplicated(result) == true)
+            //    return null;
+            List <Employee> lsEmp = employeeBLL.GetListEmployee();
+            Employee lastEmp = lsEmp[lsEmp.Count - 1];
+            if (lastEmp == null || lsEmp == null)
+                result = result + "_" + 1;
+            else
+                result = result + "_" + lastEmp.EmployeeID;
             return result;
         }
 
@@ -87,10 +96,10 @@ namespace GUI
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtAddress.Text) || String.IsNullOrEmpty(txtCMND.Text)
+            if (String.IsNullOrEmpty(txtUsername.Text) || String.IsNullOrEmpty(txtCMND.Text)
                 || String.IsNullOrEmpty(txtPhone.Text) || String.IsNullOrEmpty(txtName.Text)
                 || String.IsNullOrEmpty(txtEmail.Text)|| cbGender.Text == "-select-" 
-                || String.IsNullOrEmpty(dtpDOB.Text))
+                || String.IsNullOrEmpty(dtpDOB.Text)   || string.IsNullOrEmpty (txtUsername.Text))
             {
                 MessageBox.Show("Please insert information fully !", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 /*if (cbGender.Text == "-select-") 
@@ -109,7 +118,7 @@ namespace GUI
             else
             {
                 bool check = true;
-                if (errorAddress.Text != "" || errorCMND.Text != "" || errorEmail.Text != ""
+                if (errorUsername.Text != "" || errorCMND.Text != "" || errorEmail.Text != ""
                     || errorGender.Text != "" || errorName.Text != "" || errorPhone.Text != "")
                     MessageBox.Show("Please correct your mistakes before save changes");
                 else
@@ -124,13 +133,14 @@ namespace GUI
                     emp.Name = Name;
                     emp.CMND = txtCMND.Text;
                     emp.PhoneNumber = txtPhone.Text;
-                    emp.Address = txtAddress.Text;
+                    emp.Address = txtUsername.Text;
                     if (cbGender.Text == "Female")
                         emp.IsFemale = true;
                     if (cbGender.Text == "Male")
                         emp.IsFemale = false;
                     emp.Email = txtEmail.Text;
-                    emp.Username = Create_Username(Name);
+                    // emp.Username = Create_Username(Name);
+                    emp.Username = txtUsername.Text;
                     emp.Password = Create_Password(Name, dtpDOB.Value);
                     emp.Status = 1;
                     emp.IsAdmin = (cbIsAdmin.Checked == true) ? true : false;
@@ -156,7 +166,7 @@ namespace GUI
 
         private void txtClear_Click(object sender, EventArgs e)
         {
-            txtAddress.Text = "";
+            txtUsername.Text = "";
             txtCMND.Text = "";
             txtEmail.Text = "";
             txtName.Text = "";
@@ -229,6 +239,23 @@ namespace GUI
                     errorEmail.Text = "";
             }
         }
-        
+
+        private void txtName_Leave(object sender, EventArgs e)
+        {
+            string Name = txtName.Text;
+            while (Name.IndexOf("  ") != -1)
+            {
+                Name = Name.Replace("   ", " ");
+            }
+            Name = Name.Trim();
+            txtUsername.Text = Create_Username(Name);
+        }
+
+        private void txtUsername_Leave(object sender, EventArgs e)
+        {
+            if (employeeBLL.IsDuplicated(txtUsername.Text) == true)
+                errorUsername.Text = "This username had been chosen. You need to user a different username";
+           
+        }
     }
 }

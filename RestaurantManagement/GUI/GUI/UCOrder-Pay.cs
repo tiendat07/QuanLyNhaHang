@@ -58,7 +58,7 @@ namespace GUI
             foreach (var item in lsOrderDetail)
                 total += (item.Price * item.Quantity);
             orDer.Total = total;
-            lbTotal.Text = total.ToString();
+            lbTotal.Text = ((decimal)total).ToKMB();
             dataGridViewOrder.AutoGenerateColumns = false;
             dataGridViewOrder.DataSource = lsOrderDetail;
             dataGridViewOrder.ReadOnly = false;
@@ -144,4 +144,5 @@ namespace GUI
             }
         }
     }
+
 }
