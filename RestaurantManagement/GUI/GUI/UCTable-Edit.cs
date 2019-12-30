@@ -27,7 +27,7 @@ namespace GUI
         public void LoadData()
         {
             dgvTable.AutoGenerateColumns = false;
-            List<Table> lstEmployee = tableBLL.GetListTable();
+            List<Table> lstEmployee = tableBLL.GetListTable_NotUsed();
             dgvTable.DataSource = lstEmployee;
 
             DataGridViewColumn column = new DataGridViewTextBoxColumn();

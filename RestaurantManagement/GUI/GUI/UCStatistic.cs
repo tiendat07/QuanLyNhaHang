@@ -406,6 +406,7 @@ namespace GUI
 
         }
     }
+
     public static class Number
     {
         public static string ToKMB(this decimal num)

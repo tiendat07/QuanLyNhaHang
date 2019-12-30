@@ -49,7 +49,8 @@ namespace GUI
                 if (item.FoodDrinkID == n.objectID)
                 {
                     item.Quantity = Convert.ToInt32(n.Value);
-                    item.Price *= item.Quantity;
+                    item.Price = float.Parse(foodDrinkBLL.GetFoodPrice(item.FoodDrinkID).ToString());
+                   // item.Price *= item.Quantity;
                 }
                     
             }
@@ -80,7 +81,7 @@ namespace GUI
                         orderDetail.Quantity = 1;
                         orderDetail.Note = "None";
                         orderDetail.Price = (float)foodDrinkBLL.GetFoodPrice(cb.objectID);
-                        orderDetail.OrderID = 10;
+                        //orderDetail.OrderID = 10;
                         lsOrder.Add(orderDetail);
                     }
                 }

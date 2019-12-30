@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccessLayer;
 using BLL;
+using System.Globalization;
+
 namespace GUI
 {
     public partial class UCOrder : UserControl
@@ -69,8 +71,7 @@ namespace GUI
                 total += (item.Price * item.Quantity);
             }
             orDer.Total = total;
-            // lbTotal.Text = total.ToString();
-            lbTotal.Text = ((decimal)total).ToKMB();
+            lbTotal.Text = total.ToString("#,#", CultureInfo.InvariantCulture);
             dataGridViewOrder.AutoGenerateColumns = false;
             dataGridViewOrder.DataSource = lsOrderDetail;
             dataGridViewOrder.ReadOnly = false;
@@ -97,7 +98,7 @@ namespace GUI
 
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "Price";
-            column.Name = "Price";
+            column.Name = "Unit Price";
             dataGridViewOrder.Columns.Add(column);
 
             dataGridViewOrder.Columns[0].ReadOnly = true;
@@ -178,6 +179,15 @@ namespace GUI
                 {
                     int ID = Convert.ToInt32(e.Value);
                     e.Value = foodDrinkBLL.GetFoodDrinkName(ID);
+                    e.FormattingApplied = true;
+                }
+            }
+            if (this.dataGridViewOrder.Columns[e.ColumnIndex].Name == "Unit Price")
+            {
+                if (e.Value != null)
+                {
+                    double Price = Convert.ToDouble(e.Value);
+                    e.Value = Price.ToString("#,#", CultureInfo.InvariantCulture);
                     e.FormattingApplied = true;
                 }
             }

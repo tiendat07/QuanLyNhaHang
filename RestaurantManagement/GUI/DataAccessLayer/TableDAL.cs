@@ -136,5 +136,9 @@ namespace DataAccessLayer
             }
             
         }
+        public List<Table> GetListTable_NotUsed ()
+        {
+            return dbContext.Tables.Where(t => t.Status == 0).ToList();
+        }
     }
 }

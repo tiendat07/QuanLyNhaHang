@@ -60,9 +60,6 @@ namespace GUI
                 result += "QL";
             else
                 result += "NV";
-            // Nếu trùng rồi thì sao? Tạm cho rỗng....???
-            //if (employeeBLL.IsDuplicated(result) == true)
-            //    return null;
             List <Employee> lsEmp = employeeBLL.GetListEmployee();
             Employee lastEmp = lsEmp[lsEmp.Count - 1];
             if (lastEmp == null || lsEmp == null)

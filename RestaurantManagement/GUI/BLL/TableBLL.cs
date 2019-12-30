@@ -38,5 +38,9 @@ namespace BLL
         {
             return tableDAL.FindTableById(ID);
         }
+        public List<Table> GetListTable_NotUsed()
+        {
+            return tableDAL.GetListTable_NotUsed();
+        }
     }
 }
